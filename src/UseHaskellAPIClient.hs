@@ -29,4 +29,4 @@ uploadFile :: UserFile -> ClientM Bool
 -- | The following provides the implementations of these types
 -- Note that the order of the functions must match the endpoints in the type API from UseHaskell.hs
 
-(loadEnvVars :<|> getREADME :<|> storeMessage :<|> searchMessage :<|> performRestCall :<|> uploadFile) = client restAPI
+(loadEnvVars :<|> getREADME :<|> storeMessage :<|> searchMessage :<|> performRestCall :<|> uploadFile :<|> searchFile) = client restAPI
