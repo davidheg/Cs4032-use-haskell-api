@@ -64,4 +64,4 @@ type API = "load_environment_variables" :> QueryParam "name" String :> Get '[JSO
       :<|> "searchMessage"              :> QueryParam "name" String :> Get '[JSON] [Message]
       :<|> "performRESTCall"            :> QueryParam "filter" String  :> Get '[JSON] ResponseData
       :<|> "uploadFile"                 :> ReqBody '[JSON] UserFile  :> Post '[JSON] Bool
-      :<|> "searchFiles"                 :> QueryParam "filename" String :> Get '[JSON] [UserFile]
+      :<|> "searchFiles"                :> QueryParam "filename" String :> Get '[JSON] [UserFile]
