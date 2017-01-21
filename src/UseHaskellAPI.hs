@@ -7,7 +7,7 @@
 {-# LANGUAGE TypeOperators        #-}
 {-# LANGUAGE TypeSynonymInstances #-}
 
-module UseHaskellAPI (Message(..), UserFile(..), ResponseData(..), API(..)) where
+module UseHaskellAPI (Message(..), UserFile(..), ResponseData(..), API(..), UserInfo(..)) where
 
 
 import           Data.Aeson
@@ -33,12 +33,15 @@ deriving instance ToBSON   String
 
 data UserFile = UserFile { filename :: String
                          , path :: String
-                         , user :: String
+                         , users :: String
                          , contents :: String
                          } deriving (Show, Generic, FromJSON, ToJSON, ToBSON, FromBSON)
 
-
-
+data UserInfo = UserInfo { username :: String
+                 , password :: String
+                 , ip :: String
+                 , port :: String
+                 } deriving (Show, Generic, FromJSON, ToJSON, ToBSON, FromBSON)
 
 -- | We will also define a simple data type for returning data from a REST call, again with nothing special or
 -- particular in the response, but instead merely as a demonstration.
@@ -65,3 +68,4 @@ type API = "load_environment_variables" :> QueryParam "name" String :> Get '[JSO
       :<|> "performRESTCall"            :> QueryParam "filter" String  :> Get '[JSON] ResponseData
       :<|> "uploadFile"                 :> ReqBody '[JSON] UserFile  :> Post '[JSON] Bool
       :<|> "searchFiles"                :> QueryParam "filename" String :> Get '[JSON] [UserFile]
+      :<|> "fileTypeTwo"                :> ReqBody '[JSON] UserFile:> ReqBody '[JSON] UserInfo :> Post '[JSON] Bool
