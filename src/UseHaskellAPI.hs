@@ -27,6 +27,8 @@ data Message = Message { name    :: String
                        , message :: String
                        } deriving (Show, Generic, FromJSON, ToJSON, ToBSON, FromBSON)
 
+deriving instance FromBSON String  -- we need these as BSON does not provide
+deriving instance ToBSON   String
 
 data UserFile = UserFile { filename :: String
                          , path :: String
@@ -38,22 +40,15 @@ data UserInfo = UserInfo { username :: String
                          , password :: String
                          } deriving (Show, Generic, FromJSON, ToJSON, ToBSON, FromBSON)
 
-data UserRequest = UserRequest { user :: UserInfo
-                               , file :: UserFile
+data UserRequest = UserRequest { user :: String
+                               , file :: String
                                } deriving (Show, Generic, FromJSON, ToJSON, ToBSON, FromBSON)
-
-deriving instance FromBSON String  -- we need these as BSON does not provide
-deriving instance ToBSON   String
 
 -- | We will also define a simple data type for returning data from a REST call, again with nothing special or
 -- particular in the response, but instead merely as a demonstration.
 
 data ResponseData = ResponseData { response :: String
                                  } deriving (Generic, ToJSON, FromJSON,FromBSON, Show)
-
-deriving instance FromBSON String  -- we need these as BSON does not provide
-deriving instance ToBSON   String
-
 
 -- | Next we will define the API for the REST service. This is defined as a 'type' using a special syntax from the
 -- Servant Library. A REST endpoint is defined by chaining together a series of elements in the format `A :> B :> C`. A
