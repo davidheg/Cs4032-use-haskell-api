@@ -21,6 +21,13 @@
   (major1) == 4 && (major2) <  9 || \
   (major1) == 4 && (major2) == 9 && (minor) <= 0)
 
+/* package bson-0.3.2.3 */
+#define VERSION_bson "0.3.2.3"
+#define MIN_VERSION_bson(major1,major2,minor) (\
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  3 || \
+  (major1) == 0 && (major2) == 3 && (minor) <= 2)
+
 /* package bson-generic-0.0.8 */
 #define VERSION_bson_generic "0.0.8"
 #define MIN_VERSION_bson_generic(major1,major2,minor) (\
@@ -112,7 +119,7 @@
   (major1) == 2 && (major2) <  26 || \
   (major1) == 2 && (major2) == 26 && (minor) <= 0)
 
-#define CURRENT_COMPONENT_ID "use-haskell-api-0.1.0.0-8U6A5fFvQy56LmiagZ7Kxn"
+#define CURRENT_COMPONENT_ID "use-haskell-api-0.1.0.0-BMdoTiygfXD7gReVYgFKEJ"
 
-#define CURRENT_PACKAGE_KEY "use-haskell-api-0.1.0.0-8U6A5fFvQy56LmiagZ7Kxn"
+#define CURRENT_PACKAGE_KEY "use-haskell-api-0.1.0.0-BMdoTiygfXD7gReVYgFKEJ"
 
