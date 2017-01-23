@@ -1,0 +1,18 @@
+Configuring safe-0.3.10...
+Building safe-0.3.10...
+Preprocessing library safe-0.3.10...
+[1 of 4] Compiling Safe.Util        ( Safe\Util.hs, .stack-work\dist\b7fec021\build\Safe\Util.o )
+[2 of 4] Compiling Safe.Exact       ( Safe\Exact.hs, .stack-work\dist\b7fec021\build\Safe\Exact.o )
+[3 of 4] Compiling Safe.Foldable    ( Safe\Foldable.hs, .stack-work\dist\b7fec021\build\Safe\Foldable.o )
+[4 of 4] Compiling Safe             ( Safe.hs, .stack-work\dist\b7fec021\build\Safe.o )
+Installing library in
+C:\sr\snapshots\a2932497\lib\x86_64-windows-ghc-8.0.1\safe-0.3.10-1VyrsjWhmjvGnGud5lgW7f
+Registering safe-0.3.10...
+setup-Simple-Cabal-1.24.0.0-ghc-8.0.1.exe: 'C:\Users\David
+Hegarty\AppData\Local\Programs\stack\x86_64-windows\ghc-8.0.1\bin\ghc-pkg.EXE'
+exited with an error:
+safe-0.3.10: Warning: haddock-interfaces:
+C:\sr\snapshots\a2932497\doc\safe-0.3.10\safe.haddock doesn't exist or isn't a
+file
+ghc-pkg.EXE: C:\sr\snapshots\a2932497\pkgdb\package.cache: you don't have
+permission to modify this file

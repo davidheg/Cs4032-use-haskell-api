@@ -1,7 +1,58 @@
-Configuring use-haskell-api-0.1.0.0...
 Preprocessing library use-haskell-api-0.1.0.0...
-[2 of 3] Compiling UseHaskellAPI    ( src/UseHaskellAPI.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/UseHaskellAPI.o )
-[3 of 3] Compiling UseHaskellAPIClient ( src/UseHaskellAPIClient.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/UseHaskellAPIClient.o )
-Installing library in
-/home/dheg/Documents/Cs4032-use-haskell-api/.stack-work/install/x86_64-linux/lts-7.10/8.0.1/lib/x86_64-linux-ghc-8.0.1/use-haskell-api-0.1.0.0-8U6A5fFvQy56LmiagZ7Kxn
-Registering use-haskell-api-0.1.0.0...
+[1 of 3] Compiling UseHaskellAPI    ( src\UseHaskellAPI.hs, .stack-work\dist\b7fec021\build\UseHaskellAPI.o )
+
+src\UseHaskellAPI.hs:28:69: error:
+    * Overlapping instances for ToBSON String
+        arising from the first field of `Message' (type `String')
+      Matching instances:
+        instance ToBSON [Char] -- Defined at src\UseHaskellAPI.hs:46:1
+        instance ToBSON [Char] -- Defined at src\UseHaskellAPI.hs:55:1
+    * When deriving the instance for (ToBSON Message)
+
+src\UseHaskellAPI.hs:28:77: error:
+    * Overlapping instances for FromBSON String
+        arising from the first field of `Message' (type `String')
+      Matching instances:
+        instance FromBSON [Char] -- Defined at src\UseHaskellAPI.hs:45:1
+        instance FromBSON [Char] -- Defined at src\UseHaskellAPI.hs:54:1
+    * When deriving the instance for (FromBSON Message)
+
+src\UseHaskellAPI.hs:35:71: error:
+    * Overlapping instances for ToBSON String
+        arising from the first field of `UserFile' (type `String')
+      Matching instances:
+        instance ToBSON [Char] -- Defined at src\UseHaskellAPI.hs:46:1
+        instance ToBSON [Char] -- Defined at src\UseHaskellAPI.hs:55:1
+    * When deriving the instance for (ToBSON UserFile)
+
+src\UseHaskellAPI.hs:35:79: error:
+    * Overlapping instances for FromBSON String
+        arising from the first field of `UserFile' (type `String')
+      Matching instances:
+        instance FromBSON [Char] -- Defined at src\UseHaskellAPI.hs:45:1
+        instance FromBSON [Char] -- Defined at src\UseHaskellAPI.hs:54:1
+    * When deriving the instance for (FromBSON UserFile)
+
+src\UseHaskellAPI.hs:39:71: error:
+    * Overlapping instances for ToBSON String
+        arising from the first field of `UserInfo' (type `String')
+      Matching instances:
+        instance ToBSON [Char] -- Defined at src\UseHaskellAPI.hs:46:1
+        instance ToBSON [Char] -- Defined at src\UseHaskellAPI.hs:55:1
+    * When deriving the instance for (ToBSON UserInfo)
+
+src\UseHaskellAPI.hs:39:79: error:
+    * Overlapping instances for FromBSON String
+        arising from the first field of `UserInfo' (type `String')
+      Matching instances:
+        instance FromBSON [Char] -- Defined at src\UseHaskellAPI.hs:45:1
+        instance FromBSON [Char] -- Defined at src\UseHaskellAPI.hs:54:1
+    * When deriving the instance for (FromBSON UserInfo)
+
+src\UseHaskellAPI.hs:52:72: error:
+    * Overlapping instances for FromBSON String
+        arising from the first field of `ResponseData' (type `String')
+      Matching instances:
+        instance FromBSON [Char] -- Defined at src\UseHaskellAPI.hs:45:1
+        instance FromBSON [Char] -- Defined at src\UseHaskellAPI.hs:54:1
+    * When deriving the instance for (FromBSON ResponseData)
