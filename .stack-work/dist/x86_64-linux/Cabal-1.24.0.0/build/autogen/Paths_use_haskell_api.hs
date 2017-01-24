@@ -30,7 +30,7 @@ version = Version [0,1,0,0] []
 bindir, libdir, datadir, libexecdir, sysconfdir :: FilePath
 
 bindir     = "/home/dheg/Documents/Cs4032-use-haskell-api/.stack-work/install/x86_64-linux/lts-7.10/8.0.1/bin"
-libdir     = "/home/dheg/Documents/Cs4032-use-haskell-api/.stack-work/install/x86_64-linux/lts-7.10/8.0.1/lib/x86_64-linux-ghc-8.0.1/use-haskell-api-0.1.0.0-BMdoTiygfXD7gReVYgFKEJ"
+libdir     = "/home/dheg/Documents/Cs4032-use-haskell-api/.stack-work/install/x86_64-linux/lts-7.10/8.0.1/lib/x86_64-linux-ghc-8.0.1/use-haskell-api-0.1.0.0-3nD5NWCHf1N83LkkK3wDn9"
 datadir    = "/home/dheg/Documents/Cs4032-use-haskell-api/.stack-work/install/x86_64-linux/lts-7.10/8.0.1/share/x86_64-linux-ghc-8.0.1/use-haskell-api-0.1.0.0"
 libexecdir = "/home/dheg/Documents/Cs4032-use-haskell-api/.stack-work/install/x86_64-linux/lts-7.10/8.0.1/libexec"
 sysconfdir = "/home/dheg/Documents/Cs4032-use-haskell-api/.stack-work/install/x86_64-linux/lts-7.10/8.0.1/etc"

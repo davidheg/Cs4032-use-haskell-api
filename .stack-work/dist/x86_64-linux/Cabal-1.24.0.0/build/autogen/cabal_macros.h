@@ -63,6 +63,13 @@
   (major1) == 0 && (major2) <  9 || \
   (major1) == 0 && (major2) == 9 && (minor) <= 1)
 
+/* package time-1.6.0.1 */
+#define VERSION_time "1.6.0.1"
+#define MIN_VERSION_time(major1,major2,minor) (\
+  (major1) <  1 || \
+  (major1) == 1 && (major2) <  6 || \
+  (major1) == 1 && (major2) == 6 && (minor) <= 0)
+
 /* tool gcc-5.4.0 */
 #define TOOL_VERSION_gcc "5.4.0"
 #define MIN_TOOL_VERSION_gcc(major1,major2,minor) (\
@@ -119,7 +126,7 @@
   (major1) == 2 && (major2) <  26 || \
   (major1) == 2 && (major2) == 26 && (minor) <= 0)
 
-#define CURRENT_COMPONENT_ID "use-haskell-api-0.1.0.0-BMdoTiygfXD7gReVYgFKEJ"
+#define CURRENT_COMPONENT_ID "use-haskell-api-0.1.0.0-3nD5NWCHf1N83LkkK3wDn9"
 
-#define CURRENT_PACKAGE_KEY "use-haskell-api-0.1.0.0-BMdoTiygfXD7gReVYgFKEJ"
+#define CURRENT_PACKAGE_KEY "use-haskell-api-0.1.0.0-3nD5NWCHf1N83LkkK3wDn9"
 
