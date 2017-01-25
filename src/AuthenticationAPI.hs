@@ -7,7 +7,7 @@
 {-# LANGUAGE TypeOperators        #-}
 {-# LANGUAGE TypeSynonymInstances #-}
 
-module UseHaskellAPI (Message(..), UserFile(..), ResponseData(..), API(..), UserInfo(..), UserRequest(..), FileTime(..)) where
+module AuthenticationAPI (ResponseData(..), API(..), UserInfo(..), LoginRequest(..), Token(..)) where
 
 
 import           Data.Aeson
@@ -24,30 +24,27 @@ import           Data.Time.Clock
 
 -- The relevant code is thus commented out here and the use-haskell-api library content is used instead
 
-data Message = Message { name    :: String
-                       , message :: String
-                       } deriving (Show, Generic, FromJSON, ToJSON, ToBSON, FromBSON)
 
-deriving instance FromBSON String  -- we need these as BSON does not provide
-deriving instance ToBSON   String
-
-data UserFile = UserFile { filename :: String
-                         , path :: String
-                         , users :: String
-                         , contents :: String
-                         } deriving (Show, Generic, FromJSON, ToJSON, ToBSON, FromBSON)
 
 data UserInfo = UserInfo { username :: String
                          , password :: String
                          } deriving (Show, Generic, FromJSON, ToJSON, ToBSON, FromBSON)
 
-data FileTime = UserQuery { fileName :: String
-                          , time :: String
-                          } deriving (Show, Generic, FromJSON, ToJSON, ToBSON, FromBSON)
+data Token = Token { ticket     :: String
+                   , sessionKey :: String
+                   , timeout    :: String
+                   , user       :: String
+                   } deriving (Show, Generic, FromJSON, ToJSON, ToBSON, FromBSON)
 
-data UserRequest = UserRequest { user :: String
-                               , file :: String
-                               } deriving (Show, Generic, FromJSON, ToJSON, ToBSON, FromBSON)
+
+data LoginRequest = LoginRequest { username :: String
+                                 , password :: String
+                                 , key      :: String
+                                 } deriving (Show, Generic, FromJSON, ToJSON, ToBSON, FromBSON)
+
+
+deriving instance FromBSON String  -- we need these as BSON does not provide
+deriving instance ToBSON   String
 
 -- | We will also define a simple data type for returning data from a REST call, again with nothing special or
 -- particular in the response, but instead merely as a demonstration.
@@ -65,15 +62,7 @@ data ResponseData = ResponseData { response :: String
 -- is Post, then there will be a single ReqBody element that defines the type being transmitted. The return type for
 -- each method is noted in the last element in the :> chain.
 
-type API = "load_environment_variables" :> QueryParam "name" String     :> Get '[JSON] ResponseData
-      :<|> "getREADME"                  :> Get '[JSON] ResponseData
-      :<|> "storeMessage"               :> ReqBody '[JSON] Message      :> Post '[JSON] Bool
-      :<|> "searchMessage"              :> QueryParam "name" String     :> Get '[JSON] [Message]
-      :<|> "performRESTCall"            :> QueryParam "filter" String   :> Get '[JSON] ResponseData
-      :<|> "uploadFile"                 :> ReqBody '[JSON] UserFile     :> Post '[JSON] Bool
-      :<|> "searchFiles"                :> QueryParam "filename" String :> Get '[JSON] [UserFile]
-      :<|> "fileTypeTwo"                :> ReqBody '[JSON] UserRequest  :> Post '[JSON] Bool
-      :<|> "fileUpdate"                 :> ReqBody '[JSON] FileTime     :> Post '[JSON] Bool
+type API = "login" :> ReqBody '[JSON] LoginRequest :> Get '[JSON] Token
 
 
 
