@@ -25,7 +25,6 @@ import           Data.Time.Clock
 -- The relevant code is thus commented out here and the use-haskell-api library content is used instead
 
 
-
 data UserInfo = UserInfo { username :: String
                          , password :: String
                          } deriving (Show, Generic, FromJSON, ToJSON, ToBSON, FromBSON)
@@ -33,15 +32,13 @@ data UserInfo = UserInfo { username :: String
 data Token = Token { ticket     :: String
                    , sessionKey :: String
                    , timeout    :: String
-                   , user       :: String
+                   , user   :: String
                    } deriving (Show, Generic, FromJSON, ToJSON, ToBSON, FromBSON)
 
 
-data LoginRequest = LoginRequest { username :: String
-                                 , password :: String
-                                 , key      :: String
+data LoginRequest = LoginRequest { userInfo :: String
+                                 , key  :: String
                                  } deriving (Show, Generic, FromJSON, ToJSON, ToBSON, FromBSON)
-
 
 deriving instance FromBSON String  -- we need these as BSON does not provide
 deriving instance ToBSON   String
@@ -62,7 +59,8 @@ data ResponseData = ResponseData { response :: String
 -- is Post, then there will be a single ReqBody element that defines the type being transmitted. The return type for
 -- each method is noted in the last element in the :> chain.
 
-type API = "login" :> ReqBody '[JSON] LoginRequest :> Get '[JSON] Token
+type API = "login"    :> ReqBody '[JSON] LoginRequest :> Get  '[JSON] Token
+      :<|> "register" :> ReqBody '[JSON] UserInfo     :> Post '[JSON] Bool 
 
 
 
