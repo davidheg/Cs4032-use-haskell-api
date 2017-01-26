@@ -1,19 +1,19 @@
 
 ==================== FINAL INTERFACE ====================
-2017-01-25 13:07:23.367615 UTC
+2017-01-26 15:22:31.539982 UTC
 
 interface use-haskell-api-0.1.0.0-3nD5NWCHf1N83LkkK3wDn9:UseHaskellAPI [orphan module] [family instance module] 8001
-  interface hash: 5e6d9fb5c1c611e7064b7e20aa79b79d
-  ABI hash: 06a397fe76c17ac361a9c0edb6318df0
-  export-list hash: 16a0002797fea90432ec08b6464c6255
-  orphan hash: c217278e069ddfce5efe2fe0541bbf58
+  interface hash: ad68e8b832c6638eb66af8ce7d20283d
+  ABI hash: e9f1b83526e56817a6e90b7d7c8c715d
+  export-list hash: b057b951c1e4d2c254c17d42eae210ea
+  orphan hash: 47c9b332ed32c7720f35c8ced109fc5e
   flag hash: b0e3f8b573d72bae0f984477a0acb626
   sig of: Nothing
   used TH splices: False
   where
 exports:
   UseHaskellAPI.API
-  UseHaskellAPI.FileTime{UseHaskellAPI.UserQuery fileName time}
+  UseHaskellAPI.FileTime{UseHaskellAPI.FileTime fileName time}
   UseHaskellAPI.Message{UseHaskellAPI.Message message name}
   UseHaskellAPI.ResponseData{UseHaskellAPI.ResponseData response}
   UseHaskellAPI.UserFile{UseHaskellAPI.UserFile contents filename path users}
@@ -158,7 +158,7 @@ import  -/  servant-0.9.1.1@servant-0.9.1.1-1YvZcaz0OLV3uNDBdJkKrY:Servant.API.S
 import  -/  servant-0.9.1.1@servant-0.9.1.1-1YvZcaz0OLV3uNDBdJkKrY:Servant.API.Verbs 16180854d75d1ecf87215b310ce5d353
 import  -/  servant-server-0.9.1.1@servant-server-0.9.1.1-FKQvXJjQ1586gh3lj2fX3G:Servant a941d94ca23174dd63fc0fee91773582
 import  -/  time-1.6.0.1@time-1.6.0.1:Data.Time.Clock b91051c7767d1f23314064be1d4311d7
-8929dba5181508e68500706baa66db0a
+e39e0a92ceb0571f4cef67a5b3fda47d
   $fFromBSONFileTime ::
     Data.Bson.Generic.FromBSON UseHaskellAPI.FileTime
   DFunId
@@ -238,7 +238,7 @@ b63a0b2dab40d3412555cca5b0a0349e
 eea5da9c8a69ffad845f5995c4e93532
   $fFromBSONFileTime8 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "fileName"#) -}
-8929dba5181508e68500706baa66db0a
+e39e0a92ceb0571f4cef67a5b3fda47d
   $fFromBSONFileTime_$cfromBSON ::
     Data.Bson.Document -> GHC.Base.Maybe UseHaskellAPI.FileTime
   {- Arity: 1, Strictness: <S,U>,
@@ -273,7 +273,7 @@ eea5da9c8a69ffad845f5995c4e93532
                         GHC.Base.Just x1
                         -> GHC.Base.Just
                              @ UseHaskellAPI.FileTime
-                             (UseHaskellAPI.UserQuery
+                             (UseHaskellAPI.FileTime
                                 x `cast`
                                 (Trans
                                      (GHC.Generics.N:M1[0]
@@ -2710,7 +2710,7 @@ cdac0e5e497bdf44c4e71b5766127f46
 9ed6f11849407f851df8fcdfcfb6d557
   $fFromBSON[]_lvl47 :: GHC.Types.Int
   {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 2#) -}
-8929dba5181508e68500706baa66db0a
+e39e0a92ceb0571f4cef67a5b3fda47d
   $fFromJSONFileTime ::
     Data.Aeson.Types.Class.FromJSON UseHaskellAPI.FileTime
   DFunId
@@ -2810,7 +2810,7 @@ f491616bb8b484af22ba5081e8a7fb49
                                 (GHC.Generics.Rec0 GHC.Base.String))
                              a) ->
                  GHC.Types.False) -}
-8929dba5181508e68500706baa66db0a
+e39e0a92ceb0571f4cef67a5b3fda47d
   $fFromJSONFileTime_$cparseJSON ::
     Data.Aeson.Types.Internal.Value
     -> Data.Aeson.Types.Internal.Parser UseHaskellAPI.FileTime
@@ -2938,7 +2938,7 @@ f491616bb8b484af22ba5081e8a7fb49
                                 GHC.Prim.Any) ->
                      ks
                        (case a2 of wild { GHC.Generics.:*: ds ds1 ->
-                        UseHaskellAPI.UserQuery
+                        UseHaskellAPI.FileTime
                           ds
                             `cast`
                           (Trans
@@ -4406,7 +4406,7 @@ ebf13a81c225e867101e2cf50c63e33c
                    `cast`
                  (Sym (Data.Aeson.Types.Internal.N:Parser[0]
                            <UseHaskellAPI.UserRequest>_R))) -}
-8929dba5181508e68500706baa66db0a
+e39e0a92ceb0571f4cef67a5b3fda47d
   $fGenericFileTime :: GHC.Generics.Generic UseHaskellAPI.FileTime
   DFunId
   {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -4414,13 +4414,13 @@ ebf13a81c225e867101e2cf50c63e33c
                   @ UseHaskellAPI.FileTime
                   UseHaskellAPI.$fGenericFileTime_$cfrom
                   UseHaskellAPI.$fGenericFileTime_$cto -}
-8929dba5181508e68500706baa66db0a
+e39e0a92ceb0571f4cef67a5b3fda47d
   $fGenericFileTime_$cfrom ::
     UseHaskellAPI.FileTime -> GHC.Generics.Rep UseHaskellAPI.FileTime x
   {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U,U)>m,
      Unfolding: InlineRule (1, True, False)
                 (\ @ x (ds :: UseHaskellAPI.FileTime) ->
-                 case ds of wild { UseHaskellAPI.UserQuery g1 g2 ->
+                 case ds of wild { UseHaskellAPI.FileTime g1 g2 ->
                  (GHC.Generics.:*:
                     @ (GHC.Generics.M1
                          GHC.Generics.S
@@ -4470,7 +4470,7 @@ ebf13a81c225e867101e2cf50c63e33c
                       (Sym (GHC.Generics.N:M1[0]
                                 <GHC.Generics.C>_P
                                 <'GHC.Generics.MetaCons
-                                   "UserQuery" 'GHC.Generics.PrefixI 'GHC.Types.True>_P
+                                   "FileTime" 'GHC.Generics.PrefixI 'GHC.Types.True>_P
                                 <GHC.Generics.M1
                                    GHC.Generics.S
                                    ('GHC.Generics.MetaSel
@@ -4499,7 +4499,7 @@ ebf13a81c225e867101e2cf50c63e33c
                                      <GHC.Generics.M1
                                         GHC.Generics.C
                                         ('GHC.Generics.MetaCons
-                                           "UserQuery" 'GHC.Generics.PrefixI 'GHC.Types.True)
+                                           "FileTime" 'GHC.Generics.PrefixI 'GHC.Types.True)
                                         (GHC.Generics.M1
                                            GHC.Generics.S
                                            ('GHC.Generics.MetaSel
@@ -4518,7 +4518,7 @@ ebf13a81c225e867101e2cf50c63e33c
                                                             (GHC.Generics.K1
                                                                GHC.Generics.R GHC.Base.String))>_R))
                            (Sub (Sym (UseHaskellAPI.Rep_FileTime[0])))) <x>_N) }) -}
-8929dba5181508e68500706baa66db0a
+e39e0a92ceb0571f4cef67a5b3fda47d
   $fGenericFileTime_$cto ::
     GHC.Generics.Rep UseHaskellAPI.FileTime x -> UseHaskellAPI.FileTime
   {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U,U)>m,
@@ -4539,7 +4539,7 @@ ebf13a81c225e867101e2cf50c63e33c
                                      <GHC.Generics.M1
                                         GHC.Generics.C
                                         ('GHC.Generics.MetaCons
-                                           "UserQuery" 'GHC.Generics.PrefixI 'GHC.Types.True)
+                                           "FileTime" 'GHC.Generics.PrefixI 'GHC.Types.True)
                                         (GHC.Generics.M1
                                            GHC.Generics.S
                                            ('GHC.Generics.MetaSel
@@ -4560,7 +4560,7 @@ ebf13a81c225e867101e2cf50c63e33c
                                 (GHC.Generics.N:M1[0]
                                      <GHC.Generics.C>_P
                                      <'GHC.Generics.MetaCons
-                                        "UserQuery" 'GHC.Generics.PrefixI 'GHC.Types.True>_P
+                                        "FileTime" 'GHC.Generics.PrefixI 'GHC.Types.True>_P
                                      <GHC.Generics.M1
                                         GHC.Generics.S
                                         ('GHC.Generics.MetaSel
@@ -4579,7 +4579,7 @@ ebf13a81c225e867101e2cf50c63e33c
                                                          (GHC.Generics.K1
                                                             GHC.Generics.R
                                                             GHC.Base.String)>_R)) <x>_N) of wild { GHC.Generics.:*: ds1 ds2 ->
-                 UseHaskellAPI.UserQuery
+                 UseHaskellAPI.FileTime
                    ds1
                      `cast`
                    (Trans
@@ -5565,7 +5565,7 @@ be6ea76a420fdf3399242fa067c4073c
                              <GHC.Generics.K1 GHC.Generics.R GHC.Base.String>_R <x>_N)
                         (GHC.Generics.N:K1[0]
                              <GHC.Generics.R>_P <GHC.Base.String>_R <x>_P)) }) -}
-8929dba5181508e68500706baa66db0a
+e39e0a92ceb0571f4cef67a5b3fda47d
   $fShowFileTime :: GHC.Show.Show UseHaskellAPI.FileTime
   DFunId
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -5574,12 +5574,12 @@ be6ea76a420fdf3399242fa067c4073c
                   UseHaskellAPI.$fShowFileTime_$cshowsPrec
                   UseHaskellAPI.$fShowFileTime_$cshow
                   UseHaskellAPI.$fShowFileTime_$cshowList -}
-8929dba5181508e68500706baa66db0a
+e39e0a92ceb0571f4cef67a5b3fda47d
   $fShowFileTime1 :: UseHaskellAPI.FileTime -> GHC.Show.ShowS
   {- Arity: 2,
      Unfolding: (\ (w :: UseHaskellAPI.FileTime)
                    (w1 :: GHC.Base.String) ->
-                 case w of ww { UseHaskellAPI.UserQuery ww1 ww2 ->
+                 case w of ww { UseHaskellAPI.FileTime ww1 ww2 ->
                  UseHaskellAPI.$w$cshowsPrec 0# ww1 ww2 w1 }) -}
 6bce120f9d4ce53a30c6f91d428c0821
   $fShowFileTime2 :: [GHC.Types.Char]
@@ -5593,10 +5593,10 @@ a95ad19925f4430a29f900ee3308916c
 f068cf403185a06914b42fc0a2825564
   $fShowFileTime5 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "fileName = "#) -}
-6b990facc87461944603c02c0a5d1729
+57c8da77d9ac700c4ac0789102bca91e
   $fShowFileTime6 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "UserQuery {"#) -}
-8929dba5181508e68500706baa66db0a
+  {- Unfolding: (GHC.CString.unpackCString# "FileTime {"#) -}
+e39e0a92ceb0571f4cef67a5b3fda47d
   $fShowFileTime_$cshow :: UseHaskellAPI.FileTime -> GHC.Base.String
   {- Arity: 1, Strictness: <S,1*U(1*U,1*U)>,
      Unfolding: InlineRule (1, True, False)
@@ -5605,14 +5605,14 @@ f068cf403185a06914b42fc0a2825564
                    GHC.Show.shows22
                    x
                    (GHC.Types.[] @ GHC.Types.Char)) -}
-8929dba5181508e68500706baa66db0a
+e39e0a92ceb0571f4cef67a5b3fda47d
   $fShowFileTime_$cshowList ::
     [UseHaskellAPI.FileTime] -> GHC.Show.ShowS
   {- Arity: 2,
      Unfolding: (GHC.Show.showList__
                    @ UseHaskellAPI.FileTime
                    UseHaskellAPI.$fShowFileTime1) -}
-8929dba5181508e68500706baa66db0a
+e39e0a92ceb0571f4cef67a5b3fda47d
   $fShowFileTime_$cshowsPrec ::
     GHC.Types.Int -> UseHaskellAPI.FileTime -> GHC.Show.ShowS
   {- Arity: 3, Strictness: <S(S),1*U(U)><S,1*U(1*U,1*U)><L,U>,
@@ -5622,7 +5622,7 @@ f068cf403185a06914b42fc0a2825564
                    (w1 :: UseHaskellAPI.FileTime)
                    (w2 :: GHC.Base.String) ->
                  case w of ww { GHC.Types.I# ww1 ->
-                 case w1 of ww2 { UseHaskellAPI.UserQuery ww3 ww4 ->
+                 case w1 of ww2 { UseHaskellAPI.FileTime ww3 ww4 ->
                  UseHaskellAPI.$w$cshowsPrec ww1 ww3 ww4 w2 } }) -}
 4c1d25dbbebd49a40cf325aba716ef02
   $fShowMessage :: GHC.Show.Show UseHaskellAPI.Message
@@ -5895,7 +5895,7 @@ fe8f8b200839ca24736e8c33d972474e
                  case w of ww { GHC.Types.I# ww1 ->
                  case w1 of ww2 { UseHaskellAPI.UserRequest ww3 ww4 ->
                  UseHaskellAPI.$w$cshowsPrec5 ww1 ww3 ww4 w2 } }) -}
-8929dba5181508e68500706baa66db0a
+e39e0a92ceb0571f4cef67a5b3fda47d
   $fToBSONFileTime :: Data.Bson.Generic.ToBSON UseHaskellAPI.FileTime
   DFunId
   {- Arity: 1, Strictness: <L,1*U(U,U)>, Inline: INLINE (sat-args=0),
@@ -5903,9 +5903,9 @@ fe8f8b200839ca24736e8c33d972474e
                 UseHaskellAPI.$fToBSONFileTime_$ctoBSON
                   `cast`
                 (Sym (Data.Bson.Generic.N:ToBSON[0] <UseHaskellAPI.FileTime>_N)) -}
-efc79f03253c4bd5e8ba8d6dc816a6de
+c78d947e14566f459bfe1496324a944b
   $fToBSONFileTime1 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "UserQuery"#) -}
+  {- Unfolding: (GHC.CString.unpackCString# "FileTime"#) -}
 a1a5428a21708920b03a40ffb8177962
   $fToBSONFileTime2 ::
     GHC.Types.Int
@@ -5988,7 +5988,7 @@ e891e30a37a4dae0733a9de16276c95f
                    UseHaskellAPI.$fFromBSONFileTime8
                    0#
                    ipv }) -}
-8929dba5181508e68500706baa66db0a
+e39e0a92ceb0571f4cef67a5b3fda47d
   $fToBSONFileTime_$ctoBSON ::
     UseHaskellAPI.FileTime -> Data.Bson.Document
   {- Arity: 1, Strictness: <L,1*U(U,U)>,
@@ -6010,7 +6010,7 @@ e891e30a37a4dae0733a9de16276c95f
                                             'GHC.Generics.DecidedLazy)
                                          (GHC.Generics.Rec0 GHC.Base.String))
                    @ ('GHC.Generics.MetaCons
-                        "UserQuery" 'GHC.Generics.PrefixI 'GHC.Types.True)
+                        "FileTime" 'GHC.Generics.PrefixI 'GHC.Types.True)
                    UseHaskellAPI.$fToBSONFileTime2
                      `cast`
                    (Sym (Data.Bson.Generic.N:GToBSON[0]
@@ -6033,7 +6033,7 @@ e891e30a37a4dae0733a9de16276c95f
                    UseHaskellAPI.$fToBSONFileTime_$s$fConstructorMetaMetaCons
                    @ GHC.Prim.Any
                    1#
-                   (case a1 of wild { UseHaskellAPI.UserQuery g1 g2 ->
+                   (case a1 of wild { UseHaskellAPI.FileTime g1 g2 ->
                     (GHC.Generics.:*:
                        @ (GHC.Generics.M1
                             GHC.Generics.S
@@ -6084,7 +6084,7 @@ e891e30a37a4dae0733a9de16276c95f
                     (Sym (GHC.Generics.N:M1[0]
                               <GHC.Generics.C>_P
                               <'GHC.Generics.MetaCons
-                                 "UserQuery" 'GHC.Generics.PrefixI 'GHC.Types.True>_P
+                                 "FileTime" 'GHC.Generics.PrefixI 'GHC.Types.True>_P
                               <GHC.Generics.M1
                                  GHC.Generics.S
                                  ('GHC.Generics.MetaSel
@@ -6103,25 +6103,25 @@ e891e30a37a4dae0733a9de16276c95f
                                                   (GHC.Generics.K1
                                                      GHC.Generics.R
                                                      GHC.Base.String)>_R) <GHC.Prim.Any>_N) })) -}
-91b207ecf9016fa038a1a926fe4ca7b8
+6b48f7e922a353ee9bfae82b2e6f82bf
   $fToBSONFileTime_$s$fConstructorMetaMetaCons ::
     GHC.Generics.Constructor
       ('GHC.Generics.MetaCons
-         "UserQuery" 'GHC.Generics.PrefixI 'GHC.Types.True)
+         "FileTime" 'GHC.Generics.PrefixI 'GHC.Types.True)
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
      Unfolding: DFun:.
                   @ GHC.Generics.Meta
                   @ ('GHC.Generics.MetaCons
-                       "UserQuery" 'GHC.Generics.PrefixI 'GHC.Types.True)
+                       "FileTime" 'GHC.Generics.PrefixI 'GHC.Types.True)
                   (GHC.Generics.$fConstructorMetaMetaCons_$cconName
-                     @ "UserQuery"
+                     @ "FileTime"
                      @ 'GHC.Generics.PrefixI
                      @ 'GHC.Types.True
                      UseHaskellAPI.$fToBSONFileTime1
                        `cast`
                      (Trans
-                          (Sym (GHC.TypeLits.N:SSymbol[0] <"UserQuery">_P))
-                          (Sym (GHC.TypeLits.N:KnownSymbol[0]) <"UserQuery">_N))
+                          (Sym (GHC.TypeLits.N:SSymbol[0] <"FileTime">_P))
+                          (Sym (GHC.TypeLits.N:KnownSymbol[0]) <"FileTime">_N))
                      GHC.Generics.$WSPrefix
                        `cast`
                      (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.FixityI>_N <'GHC.Generics.PrefixI>_N)
@@ -6129,14 +6129,14 @@ e891e30a37a4dae0733a9de16276c95f
                        `cast`
                      (Sym (GHC.Generics.N:SingI[0]) <GHC.Types.Bool>_N <'GHC.Types.True>_N))
                   (GHC.Generics.$fConstructorMetaMetaCons_$cconFixity
-                     @ "UserQuery"
+                     @ "FileTime"
                      @ 'GHC.Generics.PrefixI
                      @ 'GHC.Types.True
                      UseHaskellAPI.$fToBSONFileTime1
                        `cast`
                      (Trans
-                          (Sym (GHC.TypeLits.N:SSymbol[0] <"UserQuery">_P))
-                          (Sym (GHC.TypeLits.N:KnownSymbol[0]) <"UserQuery">_N))
+                          (Sym (GHC.TypeLits.N:SSymbol[0] <"FileTime">_P))
+                          (Sym (GHC.TypeLits.N:KnownSymbol[0]) <"FileTime">_N))
                      GHC.Generics.$WSPrefix
                        `cast`
                      (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.FixityI>_N <'GHC.Generics.PrefixI>_N)
@@ -6144,14 +6144,14 @@ e891e30a37a4dae0733a9de16276c95f
                        `cast`
                      (Sym (GHC.Generics.N:SingI[0]) <GHC.Types.Bool>_N <'GHC.Types.True>_N))
                   (GHC.Generics.$fConstructorMetaMetaCons_$cconIsRecord
-                     @ "UserQuery"
+                     @ "FileTime"
                      @ 'GHC.Generics.PrefixI
                      @ 'GHC.Types.True
                      UseHaskellAPI.$fToBSONFileTime1
                        `cast`
                      (Trans
-                          (Sym (GHC.TypeLits.N:SSymbol[0] <"UserQuery">_P))
-                          (Sym (GHC.TypeLits.N:KnownSymbol[0]) <"UserQuery">_N))
+                          (Sym (GHC.TypeLits.N:SSymbol[0] <"FileTime">_P))
+                          (Sym (GHC.TypeLits.N:KnownSymbol[0]) <"FileTime">_N))
                      GHC.Generics.$WSPrefix
                        `cast`
                      (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.FixityI>_N <'GHC.Generics.PrefixI>_N)
@@ -8119,7 +8119,7 @@ d2aa91dbf7b8393f267c0b713f90d36a
                       @ GHC.Types.Char
                       @ GHC.Prim.Any
                       x)) -}
-8929dba5181508e68500706baa66db0a
+e39e0a92ceb0571f4cef67a5b3fda47d
   $fToJSONFileTime ::
     Data.Aeson.Types.Class.ToJSON UseHaskellAPI.FileTime
   DFunId
@@ -8128,7 +8128,7 @@ d2aa91dbf7b8393f267c0b713f90d36a
                   @ UseHaskellAPI.FileTime
                   UseHaskellAPI.$fToJSONFileTime_$ctoJSON
                   UseHaskellAPI.$fToJSONFileTime_$ctoEncoding -}
-8929dba5181508e68500706baa66db0a
+e39e0a92ceb0571f4cef67a5b3fda47d
   $fToJSONFileTime1 ::
     UseHaskellAPI.FileTime
     -> Data.Aeson.Types.Generic.Tagged
@@ -8136,7 +8136,7 @@ d2aa91dbf7b8393f267c0b713f90d36a
   {- Arity: 1, Strictness: <S,1*U(1*U,1*U)>m1, Inline: INLINE[0],
      Unfolding: InlineRule (1, True, False)
                 (\ (w :: UseHaskellAPI.FileTime) ->
-                 case w of ww { UseHaskellAPI.UserQuery ww1 ww2 ->
+                 case w of ww { UseHaskellAPI.FileTime ww1 ww2 ->
                  case UseHaskellAPI.$w$ctoJSON ww1 ww2 of ww3 { Unit# ww4 ->
                  (Data.Aeson.Types.Internal.Object ww4)
                    `cast`
@@ -8196,7 +8196,7 @@ d2aa91dbf7b8393f267c0b713f90d36a
                    UseHaskellAPI.$fFromBSONFileTime8
                    0#
                    ipv }) -}
-8929dba5181508e68500706baa66db0a
+e39e0a92ceb0571f4cef67a5b3fda47d
   $fToJSONFileTime_$ctoEncoding ::
     UseHaskellAPI.FileTime -> Data.Aeson.Types.Internal.Encoding
   {- Arity: 1, Strictness: <S,1*U(1*U,1*U)>,
@@ -8208,7 +8208,7 @@ d2aa91dbf7b8393f267c0b713f90d36a
                   `cast`
                 (<UseHaskellAPI.FileTime>_R
                  ->_R Sym (Data.Aeson.Types.Internal.N:Encoding[0])) -}
-8929dba5181508e68500706baa66db0a
+e39e0a92ceb0571f4cef67a5b3fda47d
   $fToJSONFileTime_$ctoJSON ::
     UseHaskellAPI.FileTime -> Data.Aeson.Types.Internal.Value
   {- Arity: 1, Strictness: <S,1*U(1*U,1*U)>m1,
@@ -8751,6 +8751,18 @@ be6ea76a420fdf3399242fa067c4073c
                  ->_R Data.Aeson.Types.Generic.N:Tagged[0]
                           <Data.Aeson.Types.Generic.True>_P
                           <Data.Aeson.Types.Internal.Value>_R) -}
+c6c0205068096b8394f93ceee89ae188
+  $tc'FileTime :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   14474396687652944450##
+                   6889702260707423828##
+                   UseHaskellAPI.$trModule
+                   UseHaskellAPI.$tc'FileTime1) -}
+67489a0cb1e9ed62fc5189da6f635692
+  $tc'FileTime1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'FileTime"#) -}
 688352e135073f8e5e4e9b26d319ffaa
   $tc'Message :: GHC.Types.TyCon
   {- HasNoCafRefs, Strictness: m,
@@ -8799,18 +8811,6 @@ e160a6280ba2ecd35c8ac30615f15b55
   $tc'UserInfo1 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "'UserInfo"#) -}
-3dcfdec35443c7157d8ff515c1b4c8ff
-  $tc'UserQuery :: GHC.Types.TyCon
-  {- HasNoCafRefs, Strictness: m,
-     Unfolding: (GHC.Types.TyCon
-                   7168213868905709640##
-                   8508485048961259118##
-                   UseHaskellAPI.$trModule
-                   UseHaskellAPI.$tc'UserQuery1) -}
-5bbb52277df098cb71b35128b0b6ccc7
-  $tc'UserQuery1 :: GHC.Types.TrName
-  {- HasNoCafRefs, Strictness: m1,
-     Unfolding: (GHC.Types.TrNameS "'UserQuery"#) -}
 7c2b711ece814228d6094b207c2fade0
   $tc'UserRequest :: GHC.Types.TyCon
   {- HasNoCafRefs, Strictness: m,
@@ -8910,7 +8910,7 @@ e966d3127cf1d66985933668a3165f75
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS
                    "use-haskell-api-0.1.0.0-3nD5NWCHf1N83LkkK3wDn9"#) -}
-3ae6d621c6b354f3a3d953706856ff74
+4ae4ac9ec577ca720912034b779e205f
   $w$cshowsPrec ::
     GHC.Prim.Int#
     -> GHC.Base.String
@@ -13400,7 +13400,7 @@ d5f10a4078b811251430e6da0425194c
           Data.Text.Internal.Text #)
   {- Arity: 5, Strictness: <L,U(U)><L,U(U)><S,1*U><S,U><S,U>,
      Inline: [0] -}
-12a7a480542c5c4c427446e669838f1d
+0837d39f92cce6a1ac43778e902ed112
   type API =
     ("load_environment_variables"
      Servant.API.Sub.:> (Servant.API.QueryParam.QueryParam
@@ -13461,13 +13461,13 @@ d5f10a4078b811251430e6da0425194c
                                                                                                                                                                                                                                                                         Servant.API.Sub.:> Servant.API.Verbs.Post
                                                                                                                                                                                                                                                                                              '[Servant.API.ContentTypes.JSON]
                                                                                                                                                                                                                                                                                              GHC.Types.Bool)))))))))
-8929dba5181508e68500706baa66db0a
+e39e0a92ceb0571f4cef67a5b3fda47d
   data FileTime
-    = UserQuery {fileName :: GHC.Base.String, time :: GHC.Base.String}
+    = FileTime {fileName :: GHC.Base.String, time :: GHC.Base.String}
 4c1d25dbbebd49a40cf325aba716ef02
   data Message
     = Message {name :: GHC.Base.String, message :: GHC.Base.String}
-8929dba5181508e68500706baa66db0a
+e39e0a92ceb0571f4cef67a5b3fda47d
   axiom Rep_FileTime::
       GHC.Generics.Rep UseHaskellAPI.FileTime
         = GHC.Generics.D1
@@ -13478,7 +13478,7 @@ d5f10a4078b811251430e6da0425194c
                'GHC.Types.False)
             (GHC.Generics.C1
                ('GHC.Generics.MetaCons
-                  "UserQuery" 'GHC.Generics.PrefixI 'GHC.Types.True)
+                  "FileTime" 'GHC.Generics.PrefixI 'GHC.Types.True)
                (GHC.Generics.S1
                   ('GHC.Generics.MetaSel
                      ('GHC.Base.Just "fileName")
@@ -13660,13 +13660,13 @@ be6ea76a420fdf3399242fa067c4073c
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: UseHaskellAPI.UserRequest) ->
                  case ds of wild { UseHaskellAPI.UserRequest ds1 ds2 -> ds2 }) -}
-664900f105987a2c5cafe15ba43a001d
+1a2db63d073ce06e98f9ef519db9c872
   fileName :: UseHaskellAPI.FileTime -> GHC.Base.String
   RecSel Left UseHaskellAPI.FileTime
   {- Arity: 1, HasNoCafRefs, Strictness: <S(SL),1*U(1*U,A)>,
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: UseHaskellAPI.FileTime) ->
-                 case ds of wild { UseHaskellAPI.UserQuery ds1 ds2 -> ds1 }) -}
+                 case ds of wild { UseHaskellAPI.FileTime ds1 ds2 -> ds1 }) -}
 8441f0621c107c3d3f27cd06b47c5875
   filename :: UseHaskellAPI.UserFile -> GHC.Base.String
   RecSel Left UseHaskellAPI.UserFile
@@ -13711,13 +13711,13 @@ d294aa19bb1e655f12ad8943463242be
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: UseHaskellAPI.ResponseData) ->
                  case ds of wild { UseHaskellAPI.ResponseData ds1 -> ds1 }) -}
-d9f36d170e4421ca3d0221c402fd5884
+5bfb0d188a648fe649c1fc923929c3f4
   time :: UseHaskellAPI.FileTime -> GHC.Base.String
   RecSel Left UseHaskellAPI.FileTime
   {- Arity: 1, HasNoCafRefs, Strictness: <S(LS),1*U(A,1*U)>,
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: UseHaskellAPI.FileTime) ->
-                 case ds of wild { UseHaskellAPI.UserQuery ds1 ds2 -> ds2 }) -}
+                 case ds of wild { UseHaskellAPI.FileTime ds1 ds2 -> ds2 }) -}
 26c5215add8046e198e899f5ad0f38a7
   user :: UseHaskellAPI.UserRequest -> GHC.Base.String
   RecSel Left UseHaskellAPI.UserRequest
@@ -13873,6 +13873,19 @@ family instance GHC.Generics.Rep [UseHaskellAPI.Message]
                                          $dSingI
                                          $dSingI1
   = UseHaskellAPI.$fToBSON[]_$s$fConstructorMetaMetaCons
+"SPEC/UseHaskellAPI $fConstructorMetaMetaCons @ "FileTime" @ 'PrefixI @ 'True" [ALWAYS] forall ($dKnownSymbol :: GHC.TypeLits.KnownSymbol
+                                                                                                                   "FileTime")
+                                                                                               ($dSingI :: GHC.Generics.SingI
+                                                                                                             'GHC.Generics.PrefixI)
+                                                                                               ($dSingI1 :: GHC.Generics.SingI
+                                                                                                              'GHC.Types.True)
+  GHC.Generics.$fConstructorMetaMetaCons @ "FileTime"
+                                         @ 'GHC.Generics.PrefixI
+                                         @ 'GHC.Types.True
+                                         $dKnownSymbol
+                                         $dSingI
+                                         $dSingI1
+  = UseHaskellAPI.$fToBSONFileTime_$s$fConstructorMetaMetaCons
 "SPEC/UseHaskellAPI $fConstructorMetaMetaCons @ "Message" @ 'PrefixI @ 'True" [ALWAYS] forall ($dKnownSymbol :: GHC.TypeLits.KnownSymbol
                                                                                                                   "Message")
                                                                                               ($dSingI :: GHC.Generics.SingI
@@ -13912,19 +13925,6 @@ family instance GHC.Generics.Rep [UseHaskellAPI.Message]
                                          $dSingI
                                          $dSingI1
   = UseHaskellAPI.$fToBSONUserInfo_$s$fConstructorMetaMetaCons
-"SPEC/UseHaskellAPI $fConstructorMetaMetaCons @ "UserQuery" @ 'PrefixI @ 'True" [ALWAYS] forall ($dKnownSymbol :: GHC.TypeLits.KnownSymbol
-                                                                                                                    "UserQuery")
-                                                                                                ($dSingI :: GHC.Generics.SingI
-                                                                                                              'GHC.Generics.PrefixI)
-                                                                                                ($dSingI1 :: GHC.Generics.SingI
-                                                                                                               'GHC.Types.True)
-  GHC.Generics.$fConstructorMetaMetaCons @ "UserQuery"
-                                         @ 'GHC.Generics.PrefixI
-                                         @ 'GHC.Types.True
-                                         $dKnownSymbol
-                                         $dSingI
-                                         $dSingI1
-  = UseHaskellAPI.$fToBSONFileTime_$s$fConstructorMetaMetaCons
 "SPEC/UseHaskellAPI $fConstructorMetaMetaCons @ "UserRequest" @ 'PrefixI @ 'True" [ALWAYS] forall ($dKnownSymbol :: GHC.TypeLits.KnownSymbol
                                                                                                                       "UserRequest")
                                                                                                   ($dSingI :: GHC.Generics.SingI

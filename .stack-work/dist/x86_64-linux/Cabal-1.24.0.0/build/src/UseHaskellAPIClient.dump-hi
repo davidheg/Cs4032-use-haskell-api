@@ -1,11 +1,11 @@
 
 ==================== FINAL INTERFACE ====================
-2017-01-26 13:07:51.826985 UTC
+2017-01-26 15:22:37.893079 UTC
 
 interface use-haskell-api-0.1.0.0-3nD5NWCHf1N83LkkK3wDn9:UseHaskellAPIClient 8001
-  interface hash: e873d35e11a8597fa3ae4719690cce1d
-  ABI hash: 21a496fc06f6312ade21cf412796d2f3
-  export-list hash: 0d91ad6cb5a92ed79acdd5d226201906
+  interface hash: aaa40485fcd3fe68d6edfbe36034a473
+  ABI hash: 0156dbcde141e128b519f84b3e09dd46
+  export-list hash: 22df825035a25aa16ad3b30a95e0a0b8
   orphan hash: b7a6cd08d7ed8262a3704ccd70ded034
   flag hash: c0019f874b7b051e01cc1d441922ac04
   sig of: Nothing
@@ -167,10 +167,10 @@ import  -/  servant-0.9.1.1@servant-0.9.1.1-1YvZcaz0OLV3uNDBdJkKrY:Servant.API 9
 import  -/  servant-0.9.1.1@servant-0.9.1.1-1YvZcaz0OLV3uNDBdJkKrY:Servant.API.Alternative a8f3f7a60f7890ff9e0a1e9385ffa181
 import  -/  servant-client-0.9.1.1@servant-client-0.9.1.1-2qgn4HLUhDF108ixpaTeg8:Servant.Client 8b7ae71607f6884bbd925274a2a97ffe
 import  -/  servant-client-0.9.1.1@servant-client-0.9.1.1-2qgn4HLUhDF108ixpaTeg8:Servant.Common.Req ac79c9e42e8ab6edbf3cb34d80d7e914
-import  -/  UseHaskellAPI 06a397fe76c17ac361a9c0edb6318df0
-  exports: 16a0002797fea90432ec08b6464c6255
-  API 12a7a480542c5c4c427446e669838f1d
-  FileTime 8929dba5181508e68500706baa66db0a
+import  -/  UseHaskellAPI e9f1b83526e56817a6e90b7d7c8c715d
+  exports: b057b951c1e4d2c254c17d42eae210ea
+  API 0837d39f92cce6a1ac43778e902ed112
+  FileTime e39e0a92ceb0571f4cef67a5b3fda47d
   Message 4c1d25dbbebd49a40cf325aba716ef02
   ResponseData 93cc54404beb4e0e5c49acc2b2f03d3e
   UserFile 203cae548ea585a44186038e6962eb5b
@@ -614,7 +614,7 @@ c84e59a71423288a48e51cd88325588c
                    @ '[Servant.API.ContentTypes.JSON]
                    @ '[Servant.API.ContentTypes.JSON]
                    @~ <'[Servant.API.ContentTypes.JSON]>_N) -}
-23805e82c991d5559ee3582837a13ce0
+960a5c390c8f696dc69a1edc1e74218e
   fileUpdate ::
     UseHaskellAPI.FileTime -> Servant.Common.Req.ClientM GHC.Types.Bool
   {- Arity: 1, Strictness: <L,1*U(1*U,1*U)>,
@@ -628,7 +628,7 @@ c84e59a71423288a48e51cd88325588c
                                <'Network.HTTP.Types.Method.POST>_N
                                <'[Servant.API.ContentTypes.JSON]>_N
                                <200>_N)) -}
-cdfa3a9ae6092b585001a27785e90f37
+eb573dd02a21ae6e153131f3f631ef71
   fileUpdate1 ::
     UseHaskellAPI.FileTime
     -> Servant.Client.Client
@@ -1044,7 +1044,7 @@ c3a95ca190977e2bbc2a4a7068d10baf
 c34a05359af593f487bac457d6a91c19
   performRestCall6 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "filter"#) -}
-de2730612b806333cd4b885e40db7d1b
+b2da0d163ef2d26662a4741ce123345f
   restAPI :: Data.Proxy.Proxy UseHaskellAPI.API
   {- HasNoCafRefs,
      Unfolding: InlineRule (0, True, True)

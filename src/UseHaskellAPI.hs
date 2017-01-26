@@ -41,7 +41,7 @@ data UserInfo = UserInfo { username :: String
                          , password :: String
                          } deriving (Show, Generic, FromJSON, ToJSON, ToBSON, FromBSON)
 
-data FileTime = UserQuery { fileName :: String
+data FileTime = FileTime { fileName :: String
                           , time :: String
                           } deriving (Show, Generic, FromJSON, ToJSON, ToBSON, FromBSON)
 
