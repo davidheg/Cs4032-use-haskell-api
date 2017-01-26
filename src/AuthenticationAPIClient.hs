@@ -19,10 +19,10 @@ authAPI = Proxy
 -- | The function type of the interface here.
 -- Each function matches one of the endpoints in type API from UseHaskellAPI.hs
 
+login 		::  LoginRequest -> ClientM Token
 register	::  UserInfo -> ClientM Bool
-login 		::  LoginRequest -> Token
 
 -- | The following provides the implementations of these types
 -- Note that the order of the functions must match the endpoints in the type API from UseHaskell.hs
 
-(register :<|> login) = client authAPI
+(login :<|> register) = client authAPI
