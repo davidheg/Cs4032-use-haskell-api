@@ -32,12 +32,12 @@ data UserInfo = UserInfo { username :: String
 data Token = Token { ticket     :: String
                    , sessionKey :: String
                    , timeout    :: String
-                   , user   :: String
+                   , user       :: String
                    } deriving (Show, Generic, FromJSON, ToJSON, ToBSON, FromBSON)
 
 
-data LoginRequest = LoginRequest { userInfo :: String
-                                 , key  :: String
+data LoginRequest = LoginRequest { encryptedPassword :: String
+                                 , name  :: String
                                  } deriving (Show, Generic, FromJSON, ToJSON, ToBSON, FromBSON)
 
 deriving instance FromBSON String  -- we need these as BSON does not provide
@@ -59,7 +59,7 @@ data ResponseData = ResponseData { response :: String
 -- is Post, then there will be a single ReqBody element that defines the type being transmitted. The return type for
 -- each method is noted in the last element in the :> chain.
 
-type API = "login"    :> ReqBody '[JSON] LoginRequest :> Get  '[JSON] Token
+type API = "login"    :> ReqBody '[JSON] LoginRequest :> Get  '[JSON] (Maybe Token)
       :<|> "register" :> ReqBody '[JSON] UserInfo     :> Post '[JSON] Bool 
 
 

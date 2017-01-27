@@ -1,19 +1,19 @@
 
 ==================== FINAL INTERFACE ====================
-2017-01-26 13:05:50.188886 UTC
+2017-01-27 23:40:33.207963 UTC
 
 interface use-haskell-api-0.1.0.0-3nD5NWCHf1N83LkkK3wDn9:AuthenticationAPI [orphan module] [family instance module] 8001
-  interface hash: 6d59b39c7b030cac2eb2959c0731fdae
-  ABI hash: a4af3b86e9494f408a34f18a340ebdb6
-  export-list hash: e1cfe6e0e13fdda7d3459a0860c5df43
-  orphan hash: 985ef3af7c433720079d15381d6a450e
+  interface hash: 7c01f222696d9b87502ba7816e7d34ea
+  ABI hash: 04b8c6d86ea03658cd468959b2053d81
+  export-list hash: 20b980e482bbd5853bb875d9483db491
+  orphan hash: 675699d6eeba00169d1e2437c1b7e806
   flag hash: b0e3f8b573d72bae0f984477a0acb626
   sig of: Nothing
   used TH splices: False
   where
 exports:
   AuthenticationAPI.API
-  AuthenticationAPI.LoginRequest{AuthenticationAPI.LoginRequest key userInfo}
+  AuthenticationAPI.LoginRequest{AuthenticationAPI.LoginRequest encryptedPassword name}
   AuthenticationAPI.ResponseData{AuthenticationAPI.ResponseData response}
   AuthenticationAPI.Token{AuthenticationAPI.Token sessionKey ticket timeout user}
   AuthenticationAPI.UserInfo{AuthenticationAPI.UserInfo password username}
@@ -155,7 +155,7 @@ import  -/  servant-0.9.1.1@servant-0.9.1.1-1YvZcaz0OLV3uNDBdJkKrY:Servant.API.S
 import  -/  servant-0.9.1.1@servant-0.9.1.1-1YvZcaz0OLV3uNDBdJkKrY:Servant.API.Verbs 16180854d75d1ecf87215b310ce5d353
 import  -/  servant-server-0.9.1.1@servant-server-0.9.1.1-FKQvXJjQ1586gh3lj2fX3G:Servant a941d94ca23174dd63fc0fee91773582
 import  -/  time-1.6.0.1@time-1.6.0.1:Data.Time.Clock b91051c7767d1f23314064be1d4311d7
-930d6613a18db703db5eee6dc3507e36
+e64325153e8d84eb262257c234eee83d
   $fFromBSONLoginRequest ::
     Data.Bson.Generic.FromBSON AuthenticationAPI.LoginRequest
   DFunId
@@ -165,9 +165,9 @@ import  -/  time-1.6.0.1@time-1.6.0.1:Data.Time.Clock b91051c7767d1f23314064be1d
                   `cast`
                 (Sym (Data.Bson.Generic.N:FromBSON[0]
                           <AuthenticationAPI.LoginRequest>_N)) -}
-0df565b10f2d69706b741d26beaa6319
+061e54f64308682b6b540b16a9442ce6
   $fFromBSONLoginRequest1 ::
-    GHC.Generics.SingI ('GHC.Base.Just "key")
+    GHC.Generics.SingI ('GHC.Base.Just "name")
   {- Unfolding: InlineRule (0, True, True)
                 AuthenticationAPI.$fFromBSONLoginRequest2
                   `cast`
@@ -175,34 +175,34 @@ import  -/  time-1.6.0.1@time-1.6.0.1:Data.Time.Clock b91051c7767d1f23314064be1d
                      (Sym (GHC.Generics.D:R:SingMaybeb0[0] <GHC.Types.Symbol>_N))
                      (Sym (GHC.Generics.N:SingI[0]) <GHC.Base.Maybe
                                                        GHC.Types.Symbol>_N) <'GHC.Base.Just
-                                                                               "key">_N) -}
-38d69dd75640d1cc9ea6ef2a5a4bbf27
+                                                                               "name">_N) -}
+153c1316e6031f0ed76bce762b2d111d
   $fFromBSONLoginRequest2 ::
-    GHC.Generics.R:SingMaybeb GHC.Types.Symbol ('GHC.Base.Just "key")
+    GHC.Generics.R:SingMaybeb GHC.Types.Symbol ('GHC.Base.Just "name")
   {- Unfolding: (GHC.Generics.SJust
                    @ GHC.Types.Symbol
-                   @ ('GHC.Base.Just "key")
-                   @ "key"
-                   @~ <'GHC.Base.Just "key">_N
+                   @ ('GHC.Base.Just "name")
+                   @ "name"
+                   @~ <'GHC.Base.Just "name">_N
                    AuthenticationAPI.$fFromBSONLoginRequest3
                      `cast`
-                   (Sym (GHC.Generics.D:R:SingSymbols0[0]) <"key">_N)) -}
-f134ac7033e8192cf88d22773a32dafe
-  $fFromBSONLoginRequest3 :: GHC.Generics.R:SingSymbols "key"
+                   (Sym (GHC.Generics.D:R:SingSymbols0[0]) <"name">_N)) -}
+21e0ecc81d8a1105eb1c83adabd33b89
+  $fFromBSONLoginRequest3 :: GHC.Generics.R:SingSymbols "name"
   {- Strictness: m,
      Unfolding: (GHC.Generics.SSym
-                   @ "key"
+                   @ "name"
                    AuthenticationAPI.$fFromBSONLoginRequest4
                      `cast`
                    (Trans
-                        (Sym (GHC.TypeLits.N:SSymbol[0] <"key">_P))
-                        (Sym (GHC.TypeLits.N:KnownSymbol[0]) <"key">_N))) -}
-2f35a71c7a98a4669027359c14961684
+                        (Sym (GHC.TypeLits.N:SSymbol[0] <"name">_P))
+                        (Sym (GHC.TypeLits.N:KnownSymbol[0]) <"name">_N))) -}
+01860db43deda3cd0180a01a1a1a6ecb
   $fFromBSONLoginRequest4 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "key"#) -}
-1c363109df2a48d3d131e819ed05cbed
+  {- Unfolding: (GHC.CString.unpackCString# "name"#) -}
+0c17eb3f9728f930f639628395377e98
   $fFromBSONLoginRequest5 ::
-    GHC.Generics.SingI ('GHC.Base.Just "userInfo")
+    GHC.Generics.SingI ('GHC.Base.Just "encryptedPassword")
   {- Unfolding: InlineRule (0, True, True)
                 AuthenticationAPI.$fFromBSONLoginRequest6
                   `cast`
@@ -210,33 +210,34 @@ f134ac7033e8192cf88d22773a32dafe
                      (Sym (GHC.Generics.D:R:SingMaybeb0[0] <GHC.Types.Symbol>_N))
                      (Sym (GHC.Generics.N:SingI[0]) <GHC.Base.Maybe
                                                        GHC.Types.Symbol>_N) <'GHC.Base.Just
-                                                                               "userInfo">_N) -}
-44bd5c6d825fea50458f61cf516bc13f
+                                                                               "encryptedPassword">_N) -}
+7ed60fb95100cc488ae436cf1cc1df6d
   $fFromBSONLoginRequest6 ::
     GHC.Generics.R:SingMaybeb
-      GHC.Types.Symbol ('GHC.Base.Just "userInfo")
+      GHC.Types.Symbol ('GHC.Base.Just "encryptedPassword")
   {- Unfolding: (GHC.Generics.SJust
                    @ GHC.Types.Symbol
-                   @ ('GHC.Base.Just "userInfo")
-                   @ "userInfo"
-                   @~ <'GHC.Base.Just "userInfo">_N
+                   @ ('GHC.Base.Just "encryptedPassword")
+                   @ "encryptedPassword"
+                   @~ <'GHC.Base.Just "encryptedPassword">_N
                    AuthenticationAPI.$fFromBSONLoginRequest7
                      `cast`
-                   (Sym (GHC.Generics.D:R:SingSymbols0[0]) <"userInfo">_N)) -}
-3a4c46252cb7f91ffa00df1c996ecee3
-  $fFromBSONLoginRequest7 :: GHC.Generics.R:SingSymbols "userInfo"
+                   (Sym (GHC.Generics.D:R:SingSymbols0[0]) <"encryptedPassword">_N)) -}
+2f895412ba15ee3ab926de43875a3287
+  $fFromBSONLoginRequest7 ::
+    GHC.Generics.R:SingSymbols "encryptedPassword"
   {- Strictness: m,
      Unfolding: (GHC.Generics.SSym
-                   @ "userInfo"
+                   @ "encryptedPassword"
                    AuthenticationAPI.$fFromBSONLoginRequest8
                      `cast`
                    (Trans
-                        (Sym (GHC.TypeLits.N:SSymbol[0] <"userInfo">_P))
-                        (Sym (GHC.TypeLits.N:KnownSymbol[0]) <"userInfo">_N))) -}
-9b490f9650d746ef6374d1dc0b02e782
+                        (Sym (GHC.TypeLits.N:SSymbol[0] <"encryptedPassword">_P))
+                        (Sym (GHC.TypeLits.N:KnownSymbol[0]) <"encryptedPassword">_N))) -}
+c7a4263d3ba14adaa8eb51729b767b56
   $fFromBSONLoginRequest8 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "userInfo"#) -}
-930d6613a18db703db5eee6dc3507e36
+  {- Unfolding: (GHC.CString.unpackCString# "encryptedPassword"#) -}
+e64325153e8d84eb262257c234eee83d
   $fFromBSONLoginRequest_$cfromBSON ::
     Data.Bson.Document -> GHC.Base.Maybe AuthenticationAPI.LoginRequest
   {- Arity: 1, Strictness: <S,U>,
@@ -244,7 +245,7 @@ f134ac7033e8192cf88d22773a32dafe
                  case Data.Bson.Generic.$w$cgenericFromBSON
                         @ [GHC.Types.Char]
                         @ ('GHC.Generics.MetaSel
-                             ('GHC.Base.Just "userInfo")
+                             ('GHC.Base.Just "encryptedPassword")
                              'GHC.Generics.NoSourceUnpackedness
                              'GHC.Generics.NoSourceStrictness
                              'GHC.Generics.DecidedLazy)
@@ -259,7 +260,7 @@ f134ac7033e8192cf88d22773a32dafe
                    -> case Data.Bson.Generic.$w$cgenericFromBSON
                              @ [GHC.Types.Char]
                              @ ('GHC.Generics.MetaSel
-                                  ('GHC.Base.Just "key")
+                                  ('GHC.Base.Just "name")
                                   'GHC.Generics.NoSourceUnpackedness
                                   'GHC.Generics.NoSourceStrictness
                                   'GHC.Generics.DecidedLazy)
@@ -279,7 +280,7 @@ f134ac7033e8192cf88d22773a32dafe
                                      (GHC.Generics.N:M1[0]
                                           <GHC.Generics.S>_P
                                           <'GHC.Generics.MetaSel
-                                             ('GHC.Base.Just "userInfo")
+                                             ('GHC.Base.Just "encryptedPassword")
                                              'GHC.Generics.NoSourceUnpackedness
                                              'GHC.Generics.NoSourceStrictness
                                              'GHC.Generics.DecidedLazy>_P
@@ -293,7 +294,7 @@ f134ac7033e8192cf88d22773a32dafe
                                      (GHC.Generics.N:M1[0]
                                           <GHC.Generics.S>_P
                                           <'GHC.Generics.MetaSel
-                                             ('GHC.Base.Just "key")
+                                             ('GHC.Base.Just "name")
                                              'GHC.Generics.NoSourceUnpackedness
                                              'GHC.Generics.NoSourceStrictness
                                              'GHC.Generics.DecidedLazy>_P
@@ -303,11 +304,11 @@ f134ac7033e8192cf88d22773a32dafe
                                           <GHC.Generics.R>_P
                                           <GHC.Base.String>_R
                                           <GHC.Prim.Any>_P))) } }) -}
-d2b6f556b2bb2739d2492a37240595e4
+5cdd67101a35096c2174abbbb388400d
   $fFromBSONLoginRequest_$s$fSelectorMetaMetaSel ::
     GHC.Generics.Selector
       ('GHC.Generics.MetaSel
-         ('GHC.Base.Just "key")
+         ('GHC.Base.Just "name")
          'GHC.Generics.NoSourceUnpackedness
          'GHC.Generics.NoSourceStrictness
          'GHC.Generics.DecidedLazy)
@@ -315,13 +316,13 @@ d2b6f556b2bb2739d2492a37240595e4
      Unfolding: DFun:.
                   @ GHC.Generics.Meta
                   @ ('GHC.Generics.MetaSel
-                       ('GHC.Base.Just "key")
+                       ('GHC.Base.Just "name")
                        'GHC.Generics.NoSourceUnpackedness
                        'GHC.Generics.NoSourceStrictness
                        'GHC.Generics.DecidedLazy)
                   AuthenticationAPI.$fFromBSONLoginRequest_$s$fSelectorMetaMetaSel_$cselName
                   (GHC.Generics.$fSelectorMetaMetaSel_$cselSourceUnpackedness
-                     @ ('GHC.Base.Just "key")
+                     @ ('GHC.Base.Just "name")
                      @ 'GHC.Generics.NoSourceUnpackedness
                      @ 'GHC.Generics.NoSourceStrictness
                      @ 'GHC.Generics.DecidedLazy
@@ -336,7 +337,7 @@ d2b6f556b2bb2739d2492a37240595e4
                        `cast`
                      (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.DecidedStrictness>_N <'GHC.Generics.DecidedLazy>_N))
                   (GHC.Generics.$fSelectorMetaMetaSel_$cselSourceStrictness
-                     @ ('GHC.Base.Just "key")
+                     @ ('GHC.Base.Just "name")
                      @ 'GHC.Generics.NoSourceUnpackedness
                      @ 'GHC.Generics.NoSourceStrictness
                      @ 'GHC.Generics.DecidedLazy
@@ -351,7 +352,7 @@ d2b6f556b2bb2739d2492a37240595e4
                        `cast`
                      (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.DecidedStrictness>_N <'GHC.Generics.DecidedLazy>_N))
                   (GHC.Generics.$fSelectorMetaMetaSel_$cselDecidedStrictness
-                     @ ('GHC.Base.Just "key")
+                     @ ('GHC.Base.Just "name")
                      @ 'GHC.Generics.NoSourceUnpackedness
                      @ 'GHC.Generics.NoSourceStrictness
                      @ 'GHC.Generics.DecidedLazy
@@ -365,11 +366,11 @@ d2b6f556b2bb2739d2492a37240595e4
                      GHC.Generics.$WSDecidedLazy
                        `cast`
                      (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.DecidedStrictness>_N <'GHC.Generics.DecidedLazy>_N)) -}
-95d439ffba281625a6f12105f1b1d767
+434bc8a56bf0172ef6e376016a5a9069
   $fFromBSONLoginRequest_$s$fSelectorMetaMetaSel1 ::
     GHC.Generics.Selector
       ('GHC.Generics.MetaSel
-         ('GHC.Base.Just "userInfo")
+         ('GHC.Base.Just "encryptedPassword")
          'GHC.Generics.NoSourceUnpackedness
          'GHC.Generics.NoSourceStrictness
          'GHC.Generics.DecidedLazy)
@@ -377,13 +378,13 @@ d2b6f556b2bb2739d2492a37240595e4
      Unfolding: DFun:.
                   @ GHC.Generics.Meta
                   @ ('GHC.Generics.MetaSel
-                       ('GHC.Base.Just "userInfo")
+                       ('GHC.Base.Just "encryptedPassword")
                        'GHC.Generics.NoSourceUnpackedness
                        'GHC.Generics.NoSourceStrictness
                        'GHC.Generics.DecidedLazy)
                   AuthenticationAPI.$fFromBSONLoginRequest_$s$fSelectorMetaMetaSel_$cselName1
                   (GHC.Generics.$fSelectorMetaMetaSel_$cselSourceUnpackedness
-                     @ ('GHC.Base.Just "userInfo")
+                     @ ('GHC.Base.Just "encryptedPassword")
                      @ 'GHC.Generics.NoSourceUnpackedness
                      @ 'GHC.Generics.NoSourceStrictness
                      @ 'GHC.Generics.DecidedLazy
@@ -398,7 +399,7 @@ d2b6f556b2bb2739d2492a37240595e4
                        `cast`
                      (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.DecidedStrictness>_N <'GHC.Generics.DecidedLazy>_N))
                   (GHC.Generics.$fSelectorMetaMetaSel_$cselSourceStrictness
-                     @ ('GHC.Base.Just "userInfo")
+                     @ ('GHC.Base.Just "encryptedPassword")
                      @ 'GHC.Generics.NoSourceUnpackedness
                      @ 'GHC.Generics.NoSourceStrictness
                      @ 'GHC.Generics.DecidedLazy
@@ -413,7 +414,7 @@ d2b6f556b2bb2739d2492a37240595e4
                        `cast`
                      (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.DecidedStrictness>_N <'GHC.Generics.DecidedLazy>_N))
                   (GHC.Generics.$fSelectorMetaMetaSel_$cselDecidedStrictness
-                     @ ('GHC.Base.Just "userInfo")
+                     @ ('GHC.Base.Just "encryptedPassword")
                      @ 'GHC.Generics.NoSourceUnpackedness
                      @ 'GHC.Generics.NoSourceStrictness
                      @ 'GHC.Generics.DecidedLazy
@@ -427,13 +428,13 @@ d2b6f556b2bb2739d2492a37240595e4
                      GHC.Generics.$WSDecidedLazy
                        `cast`
                      (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.DecidedStrictness>_N <'GHC.Generics.DecidedLazy>_N)) -}
-138a41503003b0d6fc65c5c87213ec02
+881b123a00ebc9eb7e8bc612db979ced
   $fFromBSONLoginRequest_$s$fSelectorMetaMetaSel_$cselName ::
     forall k (t :: GHC.Generics.Meta
                    -> (GHC.Types.* -> GHC.Types.*) -> k -> *) (f :: GHC.Types.*
                                                                     -> GHC.Types.*) (a :: k).
     t ('GHC.Generics.MetaSel
-         ('GHC.Base.Just "key")
+         ('GHC.Base.Just "name")
          'GHC.Generics.NoSourceUnpackedness
          'GHC.Generics.NoSourceStrictness
          'GHC.Generics.DecidedLazy) f a
@@ -446,18 +447,18 @@ d2b6f556b2bb2739d2492a37240595e4
                    @ (f :: GHC.Types.* -> GHC.Types.*)
                    @ (a :: k)
                    (ds1 :: t ('GHC.Generics.MetaSel
-                                ('GHC.Base.Just "key")
+                                ('GHC.Base.Just "name")
                                 'GHC.Generics.NoSourceUnpackedness
                                 'GHC.Generics.NoSourceStrictness
                                 'GHC.Generics.DecidedLazy) f a) ->
                  AuthenticationAPI.$fFromBSONLoginRequest4) -}
-bbdaf600d3590773b9ae6c861840ef58
+20a973e51729e9adc1811d4606deb3d7
   $fFromBSONLoginRequest_$s$fSelectorMetaMetaSel_$cselName1 ::
     forall k (t :: GHC.Generics.Meta
                    -> (GHC.Types.* -> GHC.Types.*) -> k -> *) (f :: GHC.Types.*
                                                                     -> GHC.Types.*) (a :: k).
     t ('GHC.Generics.MetaSel
-         ('GHC.Base.Just "userInfo")
+         ('GHC.Base.Just "encryptedPassword")
          'GHC.Generics.NoSourceUnpackedness
          'GHC.Generics.NoSourceStrictness
          'GHC.Generics.DecidedLazy) f a
@@ -470,7 +471,7 @@ bbdaf600d3590773b9ae6c861840ef58
                    @ (f :: GHC.Types.* -> GHC.Types.*)
                    @ (a :: k)
                    (ds1 :: t ('GHC.Generics.MetaSel
-                                ('GHC.Base.Just "userInfo")
+                                ('GHC.Base.Just "encryptedPassword")
                                 'GHC.Generics.NoSourceUnpackedness
                                 'GHC.Generics.NoSourceStrictness
                                 'GHC.Generics.DecidedLazy) f a) ->
@@ -2078,7 +2079,7 @@ c17692c9b13ce91cec40326742a3c062
 e1307e17b713018918e12356e7507082
   $fFromBSON[]_lvl47 :: GHC.Types.Int
   {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 2#) -}
-930d6613a18db703db5eee6dc3507e36
+e64325153e8d84eb262257c234eee83d
   $fFromJSONLoginRequest ::
     Data.Aeson.Types.Class.FromJSON AuthenticationAPI.LoginRequest
   DFunId
@@ -2088,7 +2089,7 @@ e1307e17b713018918e12356e7507082
                   `cast`
                 (Sym (Data.Aeson.Types.Class.N:FromJSON[0]
                           <AuthenticationAPI.LoginRequest>_N)) -}
-7591268153ee6d8c29fd3fcc9cc8adb5
+b7447da4f0cc18144fa771efde2774c3
   $fFromJSONLoginRequest1 ::
     Data.Aeson.Types.Internal.Options
     -> GHC.Base.Maybe Data.Text.Internal.Text
@@ -2099,14 +2100,14 @@ e1307e17b713018918e12356e7507082
             ((GHC.Generics.:*:)
                (GHC.Generics.S1
                   ('GHC.Generics.MetaSel
-                     ('GHC.Base.Just "userInfo")
+                     ('GHC.Base.Just "encryptedPassword")
                      'GHC.Generics.NoSourceUnpackedness
                      'GHC.Generics.NoSourceStrictness
                      'GHC.Generics.DecidedLazy)
                   (GHC.Generics.Rec0 GHC.Base.String))
                (GHC.Generics.S1
                   ('GHC.Generics.MetaSel
-                     ('GHC.Base.Just "key")
+                     ('GHC.Base.Just "name")
                      'GHC.Generics.NoSourceUnpackedness
                      'GHC.Generics.NoSourceStrictness
                      'GHC.Generics.DecidedLazy)
@@ -2135,13 +2136,13 @@ a0e36d83a42376a2c903bb35a455af37
 6caa6b743053929663ed0197ccbdff72
   $fFromJSONLoginRequest3 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "String"#) -}
-d78681a26c1973556bbc4b838e77a5ac
+5ddaede5df0b4425774daf7776de51ed
   $fFromJSONLoginRequest4 ::
     (GHC.Generics.:*:)
       (GHC.Generics.M1
          GHC.Generics.S
          ('GHC.Generics.MetaSel
-            ('GHC.Base.Just "userInfo")
+            ('GHC.Base.Just "encryptedPassword")
             'GHC.Generics.NoSourceUnpackedness
             'GHC.Generics.NoSourceStrictness
             'GHC.Generics.DecidedLazy)
@@ -2149,7 +2150,7 @@ d78681a26c1973556bbc4b838e77a5ac
       (GHC.Generics.M1
          GHC.Generics.S
          ('GHC.Generics.MetaSel
-            ('GHC.Base.Just "key")
+            ('GHC.Base.Just "name")
             'GHC.Generics.NoSourceUnpackedness
             'GHC.Generics.NoSourceStrictness
             'GHC.Generics.DecidedLazy)
@@ -2163,7 +2164,7 @@ d78681a26c1973556bbc4b838e77a5ac
                              (GHC.Generics.M1
                                 GHC.Generics.S
                                 ('GHC.Generics.MetaSel
-                                   ('GHC.Base.Just "userInfo")
+                                   ('GHC.Base.Just "encryptedPassword")
                                    'GHC.Generics.NoSourceUnpackedness
                                    'GHC.Generics.NoSourceStrictness
                                    'GHC.Generics.DecidedLazy)
@@ -2171,14 +2172,14 @@ d78681a26c1973556bbc4b838e77a5ac
                              (GHC.Generics.M1
                                 GHC.Generics.S
                                 ('GHC.Generics.MetaSel
-                                   ('GHC.Base.Just "key")
+                                   ('GHC.Base.Just "name")
                                    'GHC.Generics.NoSourceUnpackedness
                                    'GHC.Generics.NoSourceStrictness
                                    'GHC.Generics.DecidedLazy)
                                 (GHC.Generics.Rec0 GHC.Base.String))
                              a) ->
                  GHC.Types.False) -}
-930d6613a18db703db5eee6dc3507e36
+e64325153e8d84eb262257c234eee83d
   $fFromJSONLoginRequest_$cparseJSON ::
     Data.Aeson.Types.Internal.Value
     -> Data.Aeson.Types.Internal.Parser AuthenticationAPI.LoginRequest
@@ -2189,14 +2190,14 @@ d78681a26c1973556bbc4b838e77a5ac
                           ((GHC.Generics.:*:)
                              (GHC.Generics.S1
                                 ('GHC.Generics.MetaSel
-                                   ('GHC.Base.Just "userInfo")
+                                   ('GHC.Base.Just "encryptedPassword")
                                    'GHC.Generics.NoSourceUnpackedness
                                    'GHC.Generics.NoSourceStrictness
                                    'GHC.Generics.DecidedLazy)
                                 (GHC.Generics.Rec0 GHC.Base.String))
                              (GHC.Generics.S1
                                 ('GHC.Generics.MetaSel
-                                   ('GHC.Base.Just "key")
+                                   ('GHC.Base.Just "name")
                                    'GHC.Generics.NoSourceUnpackedness
                                    'GHC.Generics.NoSourceStrictness
                                    'GHC.Generics.DecidedLazy)
@@ -2205,14 +2206,14 @@ d78681a26c1973556bbc4b838e77a5ac
                    = Data.Aeson.Types.Generic.$fConsFromJSONf_$cconsParseJSON
                        @ (GHC.Generics.S1
                             ('GHC.Generics.MetaSel
-                               ('GHC.Base.Just "userInfo")
+                               ('GHC.Base.Just "encryptedPassword")
                                'GHC.Generics.NoSourceUnpackedness
                                'GHC.Generics.NoSourceStrictness
                                'GHC.Generics.DecidedLazy)
                             (GHC.Generics.Rec0 GHC.Base.String)
                           GHC.Generics.:*: GHC.Generics.S1
                                              ('GHC.Generics.MetaSel
-                                                ('GHC.Base.Just "key")
+                                                ('GHC.Base.Just "name")
                                                 'GHC.Generics.NoSourceUnpackedness
                                                 'GHC.Generics.NoSourceStrictness
                                                 'GHC.Generics.DecidedLazy)
@@ -2224,7 +2225,7 @@ d78681a26c1973556bbc4b838e77a5ac
                                  <GHC.Generics.M1
                                     GHC.Generics.S
                                     ('GHC.Generics.MetaSel
-                                       ('GHC.Base.Just "userInfo")
+                                       ('GHC.Base.Just "encryptedPassword")
                                        'GHC.Generics.NoSourceUnpackedness
                                        'GHC.Generics.NoSourceStrictness
                                        'GHC.Generics.DecidedLazy)
@@ -2232,7 +2233,7 @@ d78681a26c1973556bbc4b838e77a5ac
                                   GHC.Generics.:*: GHC.Generics.M1
                                                      GHC.Generics.S
                                                      ('GHC.Generics.MetaSel
-                                                        ('GHC.Base.Just "key")
+                                                        ('GHC.Base.Just "name")
                                                         'GHC.Generics.NoSourceUnpackedness
                                                         'GHC.Generics.NoSourceStrictness
                                                         'GHC.Generics.DecidedLazy)
@@ -2243,14 +2244,14 @@ d78681a26c1973556bbc4b838e77a5ac
                        (Sym (Data.Aeson.Types.Generic.N:ConsFromJSON'[0]
                                  <GHC.Generics.S1
                                     ('GHC.Generics.MetaSel
-                                       ('GHC.Base.Just "userInfo")
+                                       ('GHC.Base.Just "encryptedPassword")
                                        'GHC.Generics.NoSourceUnpackedness
                                        'GHC.Generics.NoSourceStrictness
                                        'GHC.Generics.DecidedLazy)
                                     (GHC.Generics.Rec0 GHC.Base.String)
                                   GHC.Generics.:*: GHC.Generics.S1
                                                      ('GHC.Generics.MetaSel
-                                                        ('GHC.Base.Just "key")
+                                                        ('GHC.Base.Just "name")
                                                         'GHC.Generics.NoSourceUnpackedness
                                                         'GHC.Generics.NoSourceStrictness
                                                         'GHC.Generics.DecidedLazy)
@@ -2271,14 +2272,14 @@ d78681a26c1973556bbc4b838e77a5ac
                        <(GHC.Generics.:*:)
                           (GHC.Generics.S1
                              ('GHC.Generics.MetaSel
-                                ('GHC.Base.Just "userInfo")
+                                ('GHC.Base.Just "encryptedPassword")
                                 'GHC.Generics.NoSourceUnpackedness
                                 'GHC.Generics.NoSourceStrictness
                                 'GHC.Generics.DecidedLazy)
                              (GHC.Generics.Rec0 GHC.Base.String))
                           (GHC.Generics.S1
                              ('GHC.Generics.MetaSel
-                                ('GHC.Base.Just "key")
+                                ('GHC.Base.Just "name")
                                 'GHC.Generics.NoSourceUnpackedness
                                 'GHC.Generics.NoSourceStrictness
                                 'GHC.Generics.DecidedLazy)
@@ -2291,14 +2292,14 @@ d78681a26c1973556bbc4b838e77a5ac
                     (\ (a2 :: (GHC.Generics.:*:)
                                 (GHC.Generics.S1
                                    ('GHC.Generics.MetaSel
-                                      ('GHC.Base.Just "userInfo")
+                                      ('GHC.Base.Just "encryptedPassword")
                                       'GHC.Generics.NoSourceUnpackedness
                                       'GHC.Generics.NoSourceStrictness
                                       'GHC.Generics.DecidedLazy)
                                    (GHC.Generics.Rec0 GHC.Base.String))
                                 (GHC.Generics.S1
                                    ('GHC.Generics.MetaSel
-                                      ('GHC.Base.Just "key")
+                                      ('GHC.Base.Just "name")
                                       'GHC.Generics.NoSourceUnpackedness
                                       'GHC.Generics.NoSourceStrictness
                                       'GHC.Generics.DecidedLazy)
@@ -2313,7 +2314,7 @@ d78681a26c1973556bbc4b838e77a5ac
                                (GHC.Generics.N:M1[0]
                                     <GHC.Generics.S>_P
                                     <'GHC.Generics.MetaSel
-                                       ('GHC.Base.Just "userInfo")
+                                       ('GHC.Base.Just "encryptedPassword")
                                        'GHC.Generics.NoSourceUnpackedness
                                        'GHC.Generics.NoSourceStrictness
                                        'GHC.Generics.DecidedLazy>_P
@@ -2327,7 +2328,7 @@ d78681a26c1973556bbc4b838e77a5ac
                                (GHC.Generics.N:M1[0]
                                     <GHC.Generics.S>_P
                                     <'GHC.Generics.MetaSel
-                                       ('GHC.Base.Just "key")
+                                       ('GHC.Base.Just "name")
                                        'GHC.Generics.NoSourceUnpackedness
                                        'GHC.Generics.NoSourceStrictness
                                        'GHC.Generics.DecidedLazy>_P
@@ -3257,7 +3258,7 @@ c71eafbc640e52900cabf44db346b563
                    `cast`
                  (Sym (Data.Aeson.Types.Internal.N:Parser[0]
                            <AuthenticationAPI.UserInfo>_R))) -}
-930d6613a18db703db5eee6dc3507e36
+e64325153e8d84eb262257c234eee83d
   $fGenericLoginRequest ::
     GHC.Generics.Generic AuthenticationAPI.LoginRequest
   DFunId
@@ -3266,7 +3267,7 @@ c71eafbc640e52900cabf44db346b563
                   @ AuthenticationAPI.LoginRequest
                   AuthenticationAPI.$fGenericLoginRequest_$cfrom
                   AuthenticationAPI.$fGenericLoginRequest_$cto -}
-930d6613a18db703db5eee6dc3507e36
+e64325153e8d84eb262257c234eee83d
   $fGenericLoginRequest_$cfrom ::
     AuthenticationAPI.LoginRequest
     -> GHC.Generics.Rep AuthenticationAPI.LoginRequest x
@@ -3278,7 +3279,7 @@ c71eafbc640e52900cabf44db346b563
                     @ (GHC.Generics.M1
                          GHC.Generics.S
                          ('GHC.Generics.MetaSel
-                            ('GHC.Base.Just "userInfo")
+                            ('GHC.Base.Just "encryptedPassword")
                             'GHC.Generics.NoSourceUnpackedness
                             'GHC.Generics.NoSourceStrictness
                             'GHC.Generics.DecidedLazy)
@@ -3286,7 +3287,7 @@ c71eafbc640e52900cabf44db346b563
                     @ (GHC.Generics.M1
                          GHC.Generics.S
                          ('GHC.Generics.MetaSel
-                            ('GHC.Base.Just "key")
+                            ('GHC.Base.Just "name")
                             'GHC.Generics.NoSourceUnpackedness
                             'GHC.Generics.NoSourceStrictness
                             'GHC.Generics.DecidedLazy)
@@ -3300,7 +3301,7 @@ c71eafbc640e52900cabf44db346b563
                          (Sym (GHC.Generics.N:M1[0]
                                    <GHC.Generics.S>_P
                                    <'GHC.Generics.MetaSel
-                                      ('GHC.Base.Just "userInfo")
+                                      ('GHC.Base.Just "encryptedPassword")
                                       'GHC.Generics.NoSourceUnpackedness
                                       'GHC.Generics.NoSourceStrictness
                                       'GHC.Generics.DecidedLazy>_P
@@ -3313,7 +3314,7 @@ c71eafbc640e52900cabf44db346b563
                          (Sym (GHC.Generics.N:M1[0]
                                    <GHC.Generics.S>_P
                                    <'GHC.Generics.MetaSel
-                                      ('GHC.Base.Just "key")
+                                      ('GHC.Base.Just "name")
                                       'GHC.Generics.NoSourceUnpackedness
                                       'GHC.Generics.NoSourceStrictness
                                       'GHC.Generics.DecidedLazy>_P
@@ -3327,7 +3328,7 @@ c71eafbc640e52900cabf44db346b563
                                 <GHC.Generics.M1
                                    GHC.Generics.S
                                    ('GHC.Generics.MetaSel
-                                      ('GHC.Base.Just "userInfo")
+                                      ('GHC.Base.Just "encryptedPassword")
                                       'GHC.Generics.NoSourceUnpackedness
                                       'GHC.Generics.NoSourceStrictness
                                       'GHC.Generics.DecidedLazy)
@@ -3335,7 +3336,7 @@ c71eafbc640e52900cabf44db346b563
                                  GHC.Generics.:*: GHC.Generics.M1
                                                     GHC.Generics.S
                                                     ('GHC.Generics.MetaSel
-                                                       ('GHC.Base.Just "key")
+                                                       ('GHC.Base.Just "name")
                                                        'GHC.Generics.NoSourceUnpackedness
                                                        'GHC.Generics.NoSourceStrictness
                                                        'GHC.Generics.DecidedLazy)
@@ -3356,7 +3357,7 @@ c71eafbc640e52900cabf44db346b563
                                         (GHC.Generics.M1
                                            GHC.Generics.S
                                            ('GHC.Generics.MetaSel
-                                              ('GHC.Base.Just "userInfo")
+                                              ('GHC.Base.Just "encryptedPassword")
                                               'GHC.Generics.NoSourceUnpackedness
                                               'GHC.Generics.NoSourceStrictness
                                               'GHC.Generics.DecidedLazy)
@@ -3364,14 +3365,14 @@ c71eafbc640e52900cabf44db346b563
                                          GHC.Generics.:*: GHC.Generics.M1
                                                             GHC.Generics.S
                                                             ('GHC.Generics.MetaSel
-                                                               ('GHC.Base.Just "key")
+                                                               ('GHC.Base.Just "name")
                                                                'GHC.Generics.NoSourceUnpackedness
                                                                'GHC.Generics.NoSourceStrictness
                                                                'GHC.Generics.DecidedLazy)
                                                             (GHC.Generics.K1
                                                                GHC.Generics.R GHC.Base.String))>_R))
                            (Sub (Sym (AuthenticationAPI.Rep_LoginRequest[0])))) <x>_N) }) -}
-930d6613a18db703db5eee6dc3507e36
+e64325153e8d84eb262257c234eee83d
   $fGenericLoginRequest_$cto ::
     GHC.Generics.Rep AuthenticationAPI.LoginRequest x
     -> AuthenticationAPI.LoginRequest
@@ -3397,7 +3398,7 @@ c71eafbc640e52900cabf44db346b563
                                         (GHC.Generics.M1
                                            GHC.Generics.S
                                            ('GHC.Generics.MetaSel
-                                              ('GHC.Base.Just "userInfo")
+                                              ('GHC.Base.Just "encryptedPassword")
                                               'GHC.Generics.NoSourceUnpackedness
                                               'GHC.Generics.NoSourceStrictness
                                               'GHC.Generics.DecidedLazy)
@@ -3405,7 +3406,7 @@ c71eafbc640e52900cabf44db346b563
                                          GHC.Generics.:*: GHC.Generics.M1
                                                             GHC.Generics.S
                                                             ('GHC.Generics.MetaSel
-                                                               ('GHC.Base.Just "key")
+                                                               ('GHC.Base.Just "name")
                                                                'GHC.Generics.NoSourceUnpackedness
                                                                'GHC.Generics.NoSourceStrictness
                                                                'GHC.Generics.DecidedLazy)
@@ -3418,7 +3419,7 @@ c71eafbc640e52900cabf44db346b563
                                      <GHC.Generics.M1
                                         GHC.Generics.S
                                         ('GHC.Generics.MetaSel
-                                           ('GHC.Base.Just "userInfo")
+                                           ('GHC.Base.Just "encryptedPassword")
                                            'GHC.Generics.NoSourceUnpackedness
                                            'GHC.Generics.NoSourceStrictness
                                            'GHC.Generics.DecidedLazy)
@@ -3426,7 +3427,7 @@ c71eafbc640e52900cabf44db346b563
                                       GHC.Generics.:*: GHC.Generics.M1
                                                          GHC.Generics.S
                                                          ('GHC.Generics.MetaSel
-                                                            ('GHC.Base.Just "key")
+                                                            ('GHC.Base.Just "name")
                                                             'GHC.Generics.NoSourceUnpackedness
                                                             'GHC.Generics.NoSourceStrictness
                                                             'GHC.Generics.DecidedLazy)
@@ -3440,7 +3441,7 @@ c71eafbc640e52900cabf44db346b563
                         (GHC.Generics.N:M1[0]
                              <GHC.Generics.S>_P
                              <'GHC.Generics.MetaSel
-                                ('GHC.Base.Just "userInfo")
+                                ('GHC.Base.Just "encryptedPassword")
                                 'GHC.Generics.NoSourceUnpackedness
                                 'GHC.Generics.NoSourceStrictness
                                 'GHC.Generics.DecidedLazy>_P
@@ -3453,7 +3454,7 @@ c71eafbc640e52900cabf44db346b563
                         (GHC.Generics.N:M1[0]
                              <GHC.Generics.S>_P
                              <'GHC.Generics.MetaSel
-                                ('GHC.Base.Just "key")
+                                ('GHC.Base.Just "name")
                                 'GHC.Generics.NoSourceUnpackedness
                                 'GHC.Generics.NoSourceStrictness
                                 'GHC.Generics.DecidedLazy>_P
@@ -4020,7 +4021,7 @@ c71eafbc640e52900cabf44db346b563
                              <GHC.Generics.K1 GHC.Generics.R GHC.Base.String>_R <x>_N)
                         (GHC.Generics.N:K1[0]
                              <GHC.Generics.R>_P <GHC.Base.String>_R <x>_P)) }) -}
-930d6613a18db703db5eee6dc3507e36
+e64325153e8d84eb262257c234eee83d
   $fShowLoginRequest :: GHC.Show.Show AuthenticationAPI.LoginRequest
   DFunId
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -4029,7 +4030,7 @@ c71eafbc640e52900cabf44db346b563
                   AuthenticationAPI.$fShowLoginRequest_$cshowsPrec
                   AuthenticationAPI.$fShowLoginRequest_$cshow
                   AuthenticationAPI.$fShowLoginRequest_$cshowList -}
-930d6613a18db703db5eee6dc3507e36
+e64325153e8d84eb262257c234eee83d
   $fShowLoginRequest1 ::
     AuthenticationAPI.LoginRequest -> GHC.Show.ShowS
   {- Arity: 2,
@@ -4040,19 +4041,20 @@ c71eafbc640e52900cabf44db346b563
 67e7d5559341b0801c55f5f1450f436f
   $fShowLoginRequest2 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "}"#) -}
-72b32dfa04a4932274595a20663af621
+1d9433f4bf11faccba86e4a9dde86508
   $fShowLoginRequest3 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "key = "#) -}
+  {- Unfolding: (GHC.CString.unpackCString# "name = "#) -}
 735bafa74d1f3cbe8d08427d692acb90
   $fShowLoginRequest4 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# ", "#) -}
-008b4b7d9fbd69cee9c52fd7a85d11ee
+66b04eb631927dc65daa1ae5dd3983a0
   $fShowLoginRequest5 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "userInfo = "#) -}
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "encryptedPassword = "#) -}
 492adc68669611e75b39bfffcc03e36c
   $fShowLoginRequest6 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "LoginRequest {"#) -}
-930d6613a18db703db5eee6dc3507e36
+e64325153e8d84eb262257c234eee83d
   $fShowLoginRequest_$cshow ::
     AuthenticationAPI.LoginRequest -> GHC.Base.String
   {- Arity: 1, Strictness: <S,1*U(1*U,1*U)>,
@@ -4062,14 +4064,14 @@ c71eafbc640e52900cabf44db346b563
                    GHC.Show.shows22
                    x
                    (GHC.Types.[] @ GHC.Types.Char)) -}
-930d6613a18db703db5eee6dc3507e36
+e64325153e8d84eb262257c234eee83d
   $fShowLoginRequest_$cshowList ::
     [AuthenticationAPI.LoginRequest] -> GHC.Show.ShowS
   {- Arity: 2,
      Unfolding: (GHC.Show.showList__
                    @ AuthenticationAPI.LoginRequest
                    AuthenticationAPI.$fShowLoginRequest1) -}
-930d6613a18db703db5eee6dc3507e36
+e64325153e8d84eb262257c234eee83d
   $fShowLoginRequest_$cshowsPrec ::
     GHC.Types.Int -> AuthenticationAPI.LoginRequest -> GHC.Show.ShowS
   {- Arity: 3, Strictness: <S(S),1*U(U)><S,1*U(1*U,1*U)><L,U>,
@@ -4247,7 +4249,7 @@ c71eafbc640e52900cabf44db346b563
                  case w of ww { GHC.Types.I# ww1 ->
                  case w1 of ww2 { AuthenticationAPI.UserInfo ww3 ww4 ->
                  AuthenticationAPI.$w$cshowsPrec3 ww1 ww3 ww4 w2 } }) -}
-930d6613a18db703db5eee6dc3507e36
+e64325153e8d84eb262257c234eee83d
   $fToBSONLoginRequest ::
     Data.Bson.Generic.ToBSON AuthenticationAPI.LoginRequest
   DFunId
@@ -4260,14 +4262,14 @@ c71eafbc640e52900cabf44db346b563
 f46acd663d4d46c44f063fd4661ed3e3
   $fToBSONLoginRequest1 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "LoginRequest"#) -}
-ebfd4a978e112b54c3da8403ae7fa6cd
+5230f6a9be84cb4e92a4b916b39dd0ce
   $fToBSONLoginRequest2 ::
     GHC.Types.Int
     -> (GHC.Generics.:*:)
          (GHC.Generics.M1
             GHC.Generics.S
             ('GHC.Generics.MetaSel
-               ('GHC.Base.Just "userInfo")
+               ('GHC.Base.Just "encryptedPassword")
                'GHC.Generics.NoSourceUnpackedness
                'GHC.Generics.NoSourceStrictness
                'GHC.Generics.DecidedLazy)
@@ -4275,7 +4277,7 @@ ebfd4a978e112b54c3da8403ae7fa6cd
          (GHC.Generics.M1
             GHC.Generics.S
             ('GHC.Generics.MetaSel
-               ('GHC.Base.Just "key")
+               ('GHC.Base.Just "name")
                'GHC.Generics.NoSourceUnpackedness
                'GHC.Generics.NoSourceStrictness
                'GHC.Generics.DecidedLazy)
@@ -4290,7 +4292,7 @@ ebfd4a978e112b54c3da8403ae7fa6cd
                             (GHC.Generics.M1
                                GHC.Generics.S
                                ('GHC.Generics.MetaSel
-                                  ('GHC.Base.Just "userInfo")
+                                  ('GHC.Base.Just "encryptedPassword")
                                   'GHC.Generics.NoSourceUnpackedness
                                   'GHC.Generics.NoSourceStrictness
                                   'GHC.Generics.DecidedLazy)
@@ -4298,7 +4300,7 @@ ebfd4a978e112b54c3da8403ae7fa6cd
                             (GHC.Generics.M1
                                GHC.Generics.S
                                ('GHC.Generics.MetaSel
-                                  ('GHC.Base.Just "key")
+                                  ('GHC.Base.Just "name")
                                   'GHC.Generics.NoSourceUnpackedness
                                   'GHC.Generics.NoSourceStrictness
                                   'GHC.Generics.DecidedLazy)
@@ -4306,7 +4308,7 @@ ebfd4a978e112b54c3da8403ae7fa6cd
                             a1) ->
                  case w1 of ww { GHC.Generics.:*: ww1 ww2 ->
                  AuthenticationAPI.$w$dGToBSON @ a1 ww1 ww2 }) -}
-7ab18341027cae068459ad2c8a1bd9b6
+8554a1bf2c309e00ed7811c36db8f376
   $fToBSONLoginRequest3 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld,
@@ -4324,7 +4326,7 @@ ebfd4a978e112b54c3da8403ae7fa6cd
                    AuthenticationAPI.$fFromBSONLoginRequest4
                    0#
                    ipv }) -}
-9fd494fd3c36d9a7c5a8781ce3696019
+9636ae71c738b155eb1ef91430579a4e
   $fToBSONLoginRequest4 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld,
@@ -4342,7 +4344,7 @@ ebfd4a978e112b54c3da8403ae7fa6cd
                    AuthenticationAPI.$fFromBSONLoginRequest8
                    0#
                    ipv }) -}
-930d6613a18db703db5eee6dc3507e36
+e64325153e8d84eb262257c234eee83d
   $fToBSONLoginRequest_$ctoBSON ::
     AuthenticationAPI.LoginRequest -> Data.Bson.Document
   {- Arity: 1, Strictness: <L,1*U(U,U)>,
@@ -4351,14 +4353,14 @@ ebfd4a978e112b54c3da8403ae7fa6cd
                  Data.Bson.Generic.$w$cgenericToBSON1
                    @ (GHC.Generics.S1
                         ('GHC.Generics.MetaSel
-                           ('GHC.Base.Just "userInfo")
+                           ('GHC.Base.Just "encryptedPassword")
                            'GHC.Generics.NoSourceUnpackedness
                            'GHC.Generics.NoSourceStrictness
                            'GHC.Generics.DecidedLazy)
                         (GHC.Generics.Rec0 GHC.Base.String)
                       GHC.Generics.:*: GHC.Generics.S1
                                          ('GHC.Generics.MetaSel
-                                            ('GHC.Base.Just "key")
+                                            ('GHC.Base.Just "name")
                                             'GHC.Generics.NoSourceUnpackedness
                                             'GHC.Generics.NoSourceStrictness
                                             'GHC.Generics.DecidedLazy)
@@ -4371,7 +4373,7 @@ ebfd4a978e112b54c3da8403ae7fa6cd
                              <GHC.Generics.M1
                                 GHC.Generics.S
                                 ('GHC.Generics.MetaSel
-                                   ('GHC.Base.Just "userInfo")
+                                   ('GHC.Base.Just "encryptedPassword")
                                    'GHC.Generics.NoSourceUnpackedness
                                    'GHC.Generics.NoSourceStrictness
                                    'GHC.Generics.DecidedLazy)
@@ -4379,7 +4381,7 @@ ebfd4a978e112b54c3da8403ae7fa6cd
                               GHC.Generics.:*: GHC.Generics.M1
                                                  GHC.Generics.S
                                                  ('GHC.Generics.MetaSel
-                                                    ('GHC.Base.Just "key")
+                                                    ('GHC.Base.Just "name")
                                                     'GHC.Generics.NoSourceUnpackedness
                                                     'GHC.Generics.NoSourceStrictness
                                                     'GHC.Generics.DecidedLazy)
@@ -4392,7 +4394,7 @@ ebfd4a978e112b54c3da8403ae7fa6cd
                        @ (GHC.Generics.M1
                             GHC.Generics.S
                             ('GHC.Generics.MetaSel
-                               ('GHC.Base.Just "userInfo")
+                               ('GHC.Base.Just "encryptedPassword")
                                'GHC.Generics.NoSourceUnpackedness
                                'GHC.Generics.NoSourceStrictness
                                'GHC.Generics.DecidedLazy)
@@ -4400,7 +4402,7 @@ ebfd4a978e112b54c3da8403ae7fa6cd
                        @ (GHC.Generics.M1
                             GHC.Generics.S
                             ('GHC.Generics.MetaSel
-                               ('GHC.Base.Just "key")
+                               ('GHC.Base.Just "name")
                                'GHC.Generics.NoSourceUnpackedness
                                'GHC.Generics.NoSourceStrictness
                                'GHC.Generics.DecidedLazy)
@@ -4414,7 +4416,7 @@ ebfd4a978e112b54c3da8403ae7fa6cd
                             (Sym (GHC.Generics.N:M1[0]
                                       <GHC.Generics.S>_P
                                       <'GHC.Generics.MetaSel
-                                         ('GHC.Base.Just "userInfo")
+                                         ('GHC.Base.Just "encryptedPassword")
                                          'GHC.Generics.NoSourceUnpackedness
                                          'GHC.Generics.NoSourceStrictness
                                          'GHC.Generics.DecidedLazy>_P
@@ -4428,7 +4430,7 @@ ebfd4a978e112b54c3da8403ae7fa6cd
                             (Sym (GHC.Generics.N:M1[0]
                                       <GHC.Generics.S>_P
                                       <'GHC.Generics.MetaSel
-                                         ('GHC.Base.Just "key")
+                                         ('GHC.Base.Just "name")
                                          'GHC.Generics.NoSourceUnpackedness
                                          'GHC.Generics.NoSourceStrictness
                                          'GHC.Generics.DecidedLazy>_P
@@ -4442,7 +4444,7 @@ ebfd4a978e112b54c3da8403ae7fa6cd
                               <GHC.Generics.M1
                                  GHC.Generics.S
                                  ('GHC.Generics.MetaSel
-                                    ('GHC.Base.Just "userInfo")
+                                    ('GHC.Base.Just "encryptedPassword")
                                     'GHC.Generics.NoSourceUnpackedness
                                     'GHC.Generics.NoSourceStrictness
                                     'GHC.Generics.DecidedLazy)
@@ -4450,7 +4452,7 @@ ebfd4a978e112b54c3da8403ae7fa6cd
                                GHC.Generics.:*: GHC.Generics.M1
                                                   GHC.Generics.S
                                                   ('GHC.Generics.MetaSel
-                                                     ('GHC.Base.Just "key")
+                                                     ('GHC.Base.Just "name")
                                                      'GHC.Generics.NoSourceUnpackedness
                                                      'GHC.Generics.NoSourceStrictness
                                                      'GHC.Generics.DecidedLazy)
@@ -5948,7 +5950,7 @@ dd2f47dc39c2be934ff6fd9c555f18bc
                       @ GHC.Types.Char
                       @ GHC.Prim.Any
                       x)) -}
-930d6613a18db703db5eee6dc3507e36
+e64325153e8d84eb262257c234eee83d
   $fToJSONLoginRequest ::
     Data.Aeson.Types.Class.ToJSON AuthenticationAPI.LoginRequest
   DFunId
@@ -5957,7 +5959,7 @@ dd2f47dc39c2be934ff6fd9c555f18bc
                   @ AuthenticationAPI.LoginRequest
                   AuthenticationAPI.$fToJSONLoginRequest_$ctoJSON
                   AuthenticationAPI.$fToJSONLoginRequest_$ctoEncoding -}
-930d6613a18db703db5eee6dc3507e36
+e64325153e8d84eb262257c234eee83d
   $fToJSONLoginRequest1 ::
     AuthenticationAPI.LoginRequest
     -> Data.Aeson.Types.Generic.Tagged
@@ -5972,14 +5974,14 @@ dd2f47dc39c2be934ff6fd9c555f18bc
                  (Sym (Data.Aeson.Types.Generic.N:Tagged[0]
                            <Data.Aeson.Types.Generic.True>_P
                            <Data.Aeson.Types.Internal.Value>_R)) } }) -}
-799b13125868382c51051c1c2dccaf18
+5b2b752809bc4b4027c3c6ebd749e748
   $fToJSONLoginRequest2 :: Data.Text.Internal.Text
   {- Unfolding: (case GHC.Magic.runRW#
                         @ 'GHC.Types.PtrRepLifted
                         @ Data.Text.Internal.Text
                         AuthenticationAPI.$fToJSONLoginRequest3 of ds7 { (#,#) ipv ipv1 ->
                  ipv1 }) -}
-72092524ab200a28664760688fe0bb17
+ce2e9c92f2218a5c8129de97a0caafe7
   $fToJSONLoginRequest3 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld,
@@ -6000,14 +6002,14 @@ dd2f47dc39c2be934ff6fd9c555f18bc
 23adc4dd3b4385d3294ce26cbf0a2896
   $fToJSONLoginRequest4 :: GHC.Types.Int
   {- HasNoCafRefs, Unfolding: (GHC.Types.I# 4#) -}
-1c09d338cec9ce7ef7aa201918964f73
+13948f629ba435e2a47ee8a3114fa062
   $fToJSONLoginRequest5 :: Data.Text.Internal.Text
   {- Unfolding: (case GHC.Magic.runRW#
                         @ 'GHC.Types.PtrRepLifted
                         @ Data.Text.Internal.Text
                         AuthenticationAPI.$fToJSONLoginRequest6 of ds7 { (#,#) ipv ipv1 ->
                  ipv1 }) -}
-ea7e3f8019551d421927e6911230b2da
+9883387b864277b3609f453110903e7f
   $fToJSONLoginRequest6 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld,
@@ -6025,7 +6027,7 @@ ea7e3f8019551d421927e6911230b2da
                    AuthenticationAPI.$fFromBSONLoginRequest8
                    0#
                    ipv }) -}
-930d6613a18db703db5eee6dc3507e36
+e64325153e8d84eb262257c234eee83d
   $fToJSONLoginRequest_$ctoEncoding ::
     AuthenticationAPI.LoginRequest
     -> Data.Aeson.Types.Internal.Encoding
@@ -6038,7 +6040,7 @@ ea7e3f8019551d421927e6911230b2da
                   `cast`
                 (<AuthenticationAPI.LoginRequest>_R
                  ->_R Sym (Data.Aeson.Types.Internal.N:Encoding[0])) -}
-930d6613a18db703db5eee6dc3507e36
+e64325153e8d84eb262257c234eee83d
   $fToJSONLoginRequest_$ctoJSON ::
     AuthenticationAPI.LoginRequest -> Data.Aeson.Types.Internal.Value
   {- Arity: 1, Strictness: <S,1*U(1*U,1*U)>m1,
@@ -6499,7 +6501,7 @@ a4df12e9ec7de7f931164630b6f872c4
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS
                    "use-haskell-api-0.1.0.0-3nD5NWCHf1N83LkkK3wDn9"#) -}
-47999d8fbd0661da2f49012bf2b4e42e
+088019827fc9a6ad3eb7b3ab41206e23
   $w$cshowsPrec ::
     GHC.Prim.Int#
     -> GHC.Base.String
@@ -6742,7 +6744,7 @@ a4df12e9ec7de7f931164630b6f872c4
                         @ GHC.Types.Char
                         GHC.Show.shows9
                         (p (GHC.Types.: @ GHC.Types.Char GHC.Show.shows6 w)) }) -}
-513950bc988dab9a0ab8add6831b64bc
+8750b30b3a7301e427caf0add6a8ead2
   $w$ctoJSON ::
     GHC.Base.String
     -> GHC.Base.String -> (# Data.Aeson.Types.Internal.Object #)
@@ -6816,7 +6818,7 @@ eca92295757df5b5bd868c9e0c1b2c19
                            @ Data.Text.Internal.Text
                            @ Data.Aeson.Types.Internal.Value) of dt { DEFAULT ->
                  (# dt #) }) -}
-2d3d5d9b64fea7acea85242ef80985eb
+a9d76d136270fbb797580ac2d951a674
   $w$dConsFromJSON' ::
     Data.Aeson.Types.Internal.Options
     -> Data.Aeson.Types.Internal.Value
@@ -6826,14 +6828,14 @@ eca92295757df5b5bd868c9e0c1b2c19
             ((GHC.Generics.:*:)
                (GHC.Generics.S1
                   ('GHC.Generics.MetaSel
-                     ('GHC.Base.Just "userInfo")
+                     ('GHC.Base.Just "encryptedPassword")
                      'GHC.Generics.NoSourceUnpackedness
                      'GHC.Generics.NoSourceStrictness
                      'GHC.Generics.DecidedLazy)
                   (GHC.Generics.Rec0 GHC.Base.String))
                (GHC.Generics.S1
                   ('GHC.Generics.MetaSel
-                     ('GHC.Base.Just "key")
+                     ('GHC.Base.Just "name")
                      'GHC.Generics.NoSourceUnpackedness
                      'GHC.Generics.NoSourceStrictness
                      'GHC.Generics.DecidedLazy)
@@ -6849,14 +6851,14 @@ eca92295757df5b5bd868c9e0c1b2c19
                          @ ((GHC.Generics.:*:)
                               (GHC.Generics.S1
                                  ('GHC.Generics.MetaSel
-                                    ('GHC.Base.Just "userInfo")
+                                    ('GHC.Base.Just "encryptedPassword")
                                     'GHC.Generics.NoSourceUnpackedness
                                     'GHC.Generics.NoSourceStrictness
                                     'GHC.Generics.DecidedLazy)
                                  (GHC.Generics.Rec0 GHC.Base.String))
                               (GHC.Generics.S1
                                  ('GHC.Generics.MetaSel
-                                    ('GHC.Base.Just "key")
+                                    ('GHC.Base.Just "name")
                                     'GHC.Generics.NoSourceUnpackedness
                                     'GHC.Generics.NoSourceStrictness
                                     'GHC.Generics.DecidedLazy)
@@ -6871,14 +6873,14 @@ eca92295757df5b5bd868c9e0c1b2c19
                                    ((GHC.Generics.:*:)
                                       (GHC.Generics.S1
                                          ('GHC.Generics.MetaSel
-                                            ('GHC.Base.Just "userInfo")
+                                            ('GHC.Base.Just "encryptedPassword")
                                             'GHC.Generics.NoSourceUnpackedness
                                             'GHC.Generics.NoSourceStrictness
                                             'GHC.Generics.DecidedLazy)
                                          (GHC.Generics.Rec0 GHC.Base.String))
                                       (GHC.Generics.S1
                                          ('GHC.Generics.MetaSel
-                                            ('GHC.Base.Just "key")
+                                            ('GHC.Base.Just "name")
                                             'GHC.Generics.NoSourceUnpackedness
                                             'GHC.Generics.NoSourceStrictness
                                             'GHC.Generics.DecidedLazy)
@@ -6890,7 +6892,7 @@ eca92295757df5b5bd868c9e0c1b2c19
                                (GHC.Generics.M1
                                   GHC.Generics.S
                                   ('GHC.Generics.MetaSel
-                                     ('GHC.Base.Just "key")
+                                     ('GHC.Base.Just "name")
                                      'GHC.Generics.NoSourceUnpackedness
                                      'GHC.Generics.NoSourceStrictness
                                      'GHC.Generics.DecidedLazy)
@@ -6898,7 +6900,7 @@ eca92295757df5b5bd868c9e0c1b2c19
                                   a)
                         = Data.Aeson.Types.Generic.$fFromRecordM10_$cparseRecord
                             @ ('GHC.Generics.MetaSel
-                                 ('GHC.Base.Just "key")
+                                 ('GHC.Base.Just "name")
                                  'GHC.Generics.NoSourceUnpackedness
                                  'GHC.Generics.NoSourceStrictness
                                  'GHC.Generics.DecidedLazy)
@@ -6918,7 +6920,7 @@ eca92295757df5b5bd868c9e0c1b2c19
                                (GHC.Generics.M1
                                   GHC.Generics.S
                                   ('GHC.Generics.MetaSel
-                                     ('GHC.Base.Just "userInfo")
+                                     ('GHC.Base.Just "encryptedPassword")
                                      'GHC.Generics.NoSourceUnpackedness
                                      'GHC.Generics.NoSourceStrictness
                                      'GHC.Generics.DecidedLazy)
@@ -6926,7 +6928,7 @@ eca92295757df5b5bd868c9e0c1b2c19
                                   a)
                         = Data.Aeson.Types.Generic.$fFromRecordM10_$cparseRecord
                             @ ('GHC.Generics.MetaSel
-                                 ('GHC.Base.Just "userInfo")
+                                 ('GHC.Base.Just "encryptedPassword")
                                  'GHC.Generics.NoSourceUnpackedness
                                  'GHC.Generics.NoSourceStrictness
                                  'GHC.Generics.DecidedLazy)
@@ -6950,7 +6952,7 @@ eca92295757df5b5bd868c9e0c1b2c19
                                      (GHC.Generics.M1
                                         GHC.Generics.S
                                         ('GHC.Generics.MetaSel
-                                           ('GHC.Base.Just "userInfo")
+                                           ('GHC.Base.Just "encryptedPassword")
                                            'GHC.Generics.NoSourceUnpackedness
                                            'GHC.Generics.NoSourceStrictness
                                            'GHC.Generics.DecidedLazy)
@@ -6958,7 +6960,7 @@ eca92295757df5b5bd868c9e0c1b2c19
                                      (GHC.Generics.M1
                                         GHC.Generics.S
                                         ('GHC.Generics.MetaSel
-                                           ('GHC.Base.Just "key")
+                                           ('GHC.Base.Just "name")
                                            'GHC.Generics.NoSourceUnpackedness
                                            'GHC.Generics.NoSourceStrictness
                                            'GHC.Generics.DecidedLazy)
@@ -6971,7 +6973,7 @@ eca92295757df5b5bd868c9e0c1b2c19
                             <GHC.Generics.M1
                                GHC.Generics.S
                                ('GHC.Generics.MetaSel
-                                  ('GHC.Base.Just "userInfo")
+                                  ('GHC.Base.Just "encryptedPassword")
                                   'GHC.Generics.NoSourceUnpackedness
                                   'GHC.Generics.NoSourceStrictness
                                   'GHC.Generics.DecidedLazy)
@@ -6984,7 +6986,7 @@ eca92295757df5b5bd868c9e0c1b2c19
                          (\ (a2 :: GHC.Generics.M1
                                      GHC.Generics.S
                                      ('GHC.Generics.MetaSel
-                                        ('GHC.Base.Just "userInfo")
+                                        ('GHC.Base.Just "encryptedPassword")
                                         'GHC.Generics.NoSourceUnpackedness
                                         'GHC.Generics.NoSourceStrictness
                                         'GHC.Generics.DecidedLazy)
@@ -6995,7 +6997,7 @@ eca92295757df5b5bd868c9e0c1b2c19
                                <GHC.Generics.M1
                                   GHC.Generics.S
                                   ('GHC.Generics.MetaSel
-                                     ('GHC.Base.Just "key")
+                                     ('GHC.Base.Just "name")
                                      'GHC.Generics.NoSourceUnpackedness
                                      'GHC.Generics.NoSourceStrictness
                                      'GHC.Generics.DecidedLazy)
@@ -7008,7 +7010,7 @@ eca92295757df5b5bd868c9e0c1b2c19
                             (\ (a3 :: GHC.Generics.M1
                                         GHC.Generics.S
                                         ('GHC.Generics.MetaSel
-                                           ('GHC.Base.Just "key")
+                                           ('GHC.Base.Just "name")
                                            'GHC.Generics.NoSourceUnpackedness
                                            'GHC.Generics.NoSourceStrictness
                                            'GHC.Generics.DecidedLazy)
@@ -7019,7 +7021,7 @@ eca92295757df5b5bd868c9e0c1b2c19
                                   @ (GHC.Generics.M1
                                        GHC.Generics.S
                                        ('GHC.Generics.MetaSel
-                                          ('GHC.Base.Just "userInfo")
+                                          ('GHC.Base.Just "encryptedPassword")
                                           'GHC.Generics.NoSourceUnpackedness
                                           'GHC.Generics.NoSourceStrictness
                                           'GHC.Generics.DecidedLazy)
@@ -7027,7 +7029,7 @@ eca92295757df5b5bd868c9e0c1b2c19
                                   @ (GHC.Generics.M1
                                        GHC.Generics.S
                                        ('GHC.Generics.MetaSel
-                                          ('GHC.Base.Just "key")
+                                          ('GHC.Base.Just "name")
                                           'GHC.Generics.NoSourceUnpackedness
                                           'GHC.Generics.NoSourceStrictness
                                           'GHC.Generics.DecidedLazy)
@@ -7042,7 +7044,7 @@ eca92295757df5b5bd868c9e0c1b2c19
                                         (GHC.Generics.M1
                                            GHC.Generics.S
                                            ('GHC.Generics.MetaSel
-                                              ('GHC.Base.Just "userInfo")
+                                              ('GHC.Base.Just "encryptedPassword")
                                               'GHC.Generics.NoSourceUnpackedness
                                               'GHC.Generics.NoSourceStrictness
                                               'GHC.Generics.DecidedLazy)
@@ -7050,7 +7052,7 @@ eca92295757df5b5bd868c9e0c1b2c19
                                         (GHC.Generics.M1
                                            GHC.Generics.S
                                            ('GHC.Generics.MetaSel
-                                              ('GHC.Base.Just "key")
+                                              ('GHC.Base.Just "name")
                                               'GHC.Generics.NoSourceUnpackedness
                                               'GHC.Generics.NoSourceStrictness
                                               'GHC.Generics.DecidedLazy)
@@ -7062,14 +7064,14 @@ eca92295757df5b5bd868c9e0c1b2c19
                                         ((GHC.Generics.:*:)
                                            (GHC.Generics.S1
                                               ('GHC.Generics.MetaSel
-                                                 ('GHC.Base.Just "userInfo")
+                                                 ('GHC.Base.Just "encryptedPassword")
                                                  'GHC.Generics.NoSourceUnpackedness
                                                  'GHC.Generics.NoSourceStrictness
                                                  'GHC.Generics.DecidedLazy)
                                               (GHC.Generics.Rec0 GHC.Base.String))
                                            (GHC.Generics.S1
                                               ('GHC.Generics.MetaSel
-                                                 ('GHC.Base.Just "key")
+                                                 ('GHC.Base.Just "name")
                                                  'GHC.Generics.NoSourceUnpackedness
                                                  'GHC.Generics.NoSourceStrictness
                                                  'GHC.Generics.DecidedLazy)
@@ -8980,12 +8982,12 @@ b0e642156a752e01bf66024c8678eed8
                    `cast`
                  (Sym (Data.Aeson.Types.Internal.N:Parser[0]
                            <GHC.Generics.K1 GHC.Generics.R [GHC.Types.Char] a1>_R))) -}
-50ca70102b23644877d8404c0a52a173
+7482e7d0e4f69b750f3be74ba0753f45
   $w$dGToBSON ::
     GHC.Generics.M1
       GHC.Generics.S
       ('GHC.Generics.MetaSel
-         ('GHC.Base.Just "userInfo")
+         ('GHC.Base.Just "encryptedPassword")
          'GHC.Generics.NoSourceUnpackedness
          'GHC.Generics.NoSourceStrictness
          'GHC.Generics.DecidedLazy)
@@ -8994,7 +8996,7 @@ b0e642156a752e01bf66024c8678eed8
     -> GHC.Generics.M1
          GHC.Generics.S
          ('GHC.Generics.MetaSel
-            ('GHC.Base.Just "key")
+            ('GHC.Base.Just "name")
             'GHC.Generics.NoSourceUnpackedness
             'GHC.Generics.NoSourceStrictness
             'GHC.Generics.DecidedLazy)
@@ -9006,7 +9008,7 @@ b0e642156a752e01bf66024c8678eed8
                    (ww :: GHC.Generics.M1
                             GHC.Generics.S
                             ('GHC.Generics.MetaSel
-                               ('GHC.Base.Just "userInfo")
+                               ('GHC.Base.Just "encryptedPassword")
                                'GHC.Generics.NoSourceUnpackedness
                                'GHC.Generics.NoSourceStrictness
                                'GHC.Generics.DecidedLazy)
@@ -9015,7 +9017,7 @@ b0e642156a752e01bf66024c8678eed8
                    (ww1 :: GHC.Generics.M1
                              GHC.Generics.S
                              ('GHC.Generics.MetaSel
-                                ('GHC.Base.Just "key")
+                                ('GHC.Base.Just "name")
                                 'GHC.Generics.NoSourceUnpackedness
                                 'GHC.Generics.NoSourceStrictness
                                 'GHC.Generics.DecidedLazy)
@@ -9050,7 +9052,7 @@ b0e642156a752e01bf66024c8678eed8
                                             (GHC.Generics.N:M1[0]
                                                  <GHC.Generics.S>_P
                                                  <'GHC.Generics.MetaSel
-                                                    ('GHC.Base.Just "userInfo")
+                                                    ('GHC.Base.Just "encryptedPassword")
                                                     'GHC.Generics.NoSourceUnpackedness
                                                     'GHC.Generics.NoSourceStrictness
                                                     'GHC.Generics.DecidedLazy>_P
@@ -9089,7 +9091,7 @@ b0e642156a752e01bf66024c8678eed8
                                             (GHC.Generics.N:M1[0]
                                                  <GHC.Generics.S>_P
                                                  <'GHC.Generics.MetaSel
-                                                    ('GHC.Base.Just "key")
+                                                    ('GHC.Base.Just "name")
                                                     'GHC.Generics.NoSourceUnpackedness
                                                     'GHC.Generics.NoSourceStrictness
                                                     'GHC.Generics.DecidedLazy>_P
@@ -9765,14 +9767,14 @@ bd7d97bf4a1dc1a29846e151d3738316
           Data.Text.Internal.Text #)
   {- Arity: 5, Strictness: <L,U(U)><L,U(U)><S,1*U><S,U><S,U>,
      Inline: [0] -}
-d4bb6e7d7bce9a72d85d86c5dc98b0dd
+c513225481b0b25a7c1afdce5201e89c
   type API =
     ("login"
      Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
                            '[Servant.API.ContentTypes.JSON] AuthenticationAPI.LoginRequest
                          Servant.API.Sub.:> Servant.API.Verbs.Get
                                               '[Servant.API.ContentTypes.JSON]
-                                              AuthenticationAPI.Token))
+                                              (GHC.Base.Maybe AuthenticationAPI.Token)))
     Servant.API.Alternative.:<|> ("register"
                                   Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
                                                         '[Servant.API.ContentTypes.JSON]
@@ -9780,11 +9782,11 @@ d4bb6e7d7bce9a72d85d86c5dc98b0dd
                                                       Servant.API.Sub.:> Servant.API.Verbs.Post
                                                                            '[Servant.API.ContentTypes.JSON]
                                                                            GHC.Types.Bool))
-930d6613a18db703db5eee6dc3507e36
+e64325153e8d84eb262257c234eee83d
   data LoginRequest
-    = LoginRequest {userInfo :: GHC.Base.String,
-                    key :: GHC.Base.String}
-930d6613a18db703db5eee6dc3507e36
+    = LoginRequest {encryptedPassword :: GHC.Base.String,
+                    name :: GHC.Base.String}
+e64325153e8d84eb262257c234eee83d
   axiom Rep_LoginRequest::
       GHC.Generics.Rep AuthenticationAPI.LoginRequest
         = GHC.Generics.D1
@@ -9798,14 +9800,14 @@ d4bb6e7d7bce9a72d85d86c5dc98b0dd
                   "LoginRequest" 'GHC.Generics.PrefixI 'GHC.Types.True)
                (GHC.Generics.S1
                   ('GHC.Generics.MetaSel
-                     ('GHC.Base.Just "userInfo")
+                     ('GHC.Base.Just "encryptedPassword")
                      'GHC.Generics.NoSourceUnpackedness
                      'GHC.Generics.NoSourceStrictness
                      'GHC.Generics.DecidedLazy)
                   (GHC.Generics.Rec0 GHC.Base.String)
                 GHC.Generics.:*: GHC.Generics.S1
                                    ('GHC.Generics.MetaSel
-                                      ('GHC.Base.Just "key")
+                                      ('GHC.Base.Just "name")
                                       'GHC.Generics.NoSourceUnpackedness
                                       'GHC.Generics.NoSourceStrictness
                                       'GHC.Generics.DecidedLazy)
@@ -9907,8 +9909,17 @@ c71eafbc640e52900cabf44db346b563
   data UserInfo
     = UserInfo {username :: GHC.Base.String,
                 password :: GHC.Base.String}
-4c2c2f8de2d936efa557d0517909cd40
-  key :: AuthenticationAPI.LoginRequest -> GHC.Base.String
+213b54cf416009082a7a03524a359aba
+  encryptedPassword ::
+    AuthenticationAPI.LoginRequest -> GHC.Base.String
+  RecSel Left AuthenticationAPI.LoginRequest
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SL),1*U(1*U,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: AuthenticationAPI.LoginRequest) ->
+                 case ds of wild { AuthenticationAPI.LoginRequest ds1 ds2 ->
+                 ds1 }) -}
+a96df1044faf2d8882de4c5d6db4f4c1
+  name :: AuthenticationAPI.LoginRequest -> GHC.Base.String
   RecSel Left AuthenticationAPI.LoginRequest
   {- Arity: 1, HasNoCafRefs, Strictness: <S(LS),1*U(A,1*U)>,
      Unfolding: InlineRule (1, True, False)
@@ -9961,14 +9972,6 @@ e4746f5ce085fd287af3287a751ec458
                 (\ (ds :: AuthenticationAPI.Token) ->
                  case ds of wild { AuthenticationAPI.Token ds1 ds2 ds3 ds4 ->
                  ds4 }) -}
-272ffa15f6f98d07d652958bcfaab0d2
-  userInfo :: AuthenticationAPI.LoginRequest -> GHC.Base.String
-  RecSel Left AuthenticationAPI.LoginRequest
-  {- Arity: 1, HasNoCafRefs, Strictness: <S(SL),1*U(1*U,A)>,
-     Unfolding: InlineRule (1, True, False)
-                (\ (ds :: AuthenticationAPI.LoginRequest) ->
-                 case ds of wild { AuthenticationAPI.LoginRequest ds1 ds2 ->
-                 ds1 }) -}
 878aa68a491156f53f8f8adac6d2730a
   username :: AuthenticationAPI.UserInfo -> GHC.Base.String
   RecSel Left AuthenticationAPI.UserInfo
@@ -10152,16 +10155,36 @@ family instance GHC.Generics.Rep [AuthenticationAPI.UserInfo]
                                      $dSingI3
   = AuthenticationAPI.$fFromBSON[]_$s$fSelectorMetaMetaSel
 "SPEC/AuthenticationAPI $fSelectorMetaMetaSel @ ('Just
-                                                  "key") @ 'NoSourceUnpackedness @ 'NoSourceStrictness @ 'DecidedLazy" [ALWAYS] forall ($dSingI :: GHC.Generics.SingI
-                                                                                                                                                                                                            ('GHC.Base.Just
-                                                                                                                                                                                                               "key"))
-                                                                                                                                                                                              ($dSingI1 :: GHC.Generics.SingI
-                                                                                                                                                                                                             'GHC.Generics.NoSourceUnpackedness)
-                                                                                                                                                                                              ($dSingI2 :: GHC.Generics.SingI
-                                                                                                                                                                                                             'GHC.Generics.NoSourceStrictness)
-                                                                                                                                                                                              ($dSingI3 :: GHC.Generics.SingI
-                                                                                                                                                                                                             'GHC.Generics.DecidedLazy)
-  GHC.Generics.$fSelectorMetaMetaSel @ ('GHC.Base.Just "key")
+                                                  "encryptedPassword") @ 'NoSourceUnpackedness @ 'NoSourceStrictness @ 'DecidedLazy" [ALWAYS] forall ($dSingI :: GHC.Generics.SingI
+                                                                                                                                                                                                                          ('GHC.Base.Just
+                                                                                                                                                                                                                             "encryptedPassword"))
+                                                                                                                                                                                                            ($dSingI1 :: GHC.Generics.SingI
+                                                                                                                                                                                                                           'GHC.Generics.NoSourceUnpackedness)
+                                                                                                                                                                                                            ($dSingI2 :: GHC.Generics.SingI
+                                                                                                                                                                                                                           'GHC.Generics.NoSourceStrictness)
+                                                                                                                                                                                                            ($dSingI3 :: GHC.Generics.SingI
+                                                                                                                                                                                                                           'GHC.Generics.DecidedLazy)
+  GHC.Generics.$fSelectorMetaMetaSel @ ('GHC.Base.Just
+                                          "encryptedPassword")
+                                     @ 'GHC.Generics.NoSourceUnpackedness
+                                     @ 'GHC.Generics.NoSourceStrictness
+                                     @ 'GHC.Generics.DecidedLazy
+                                     $dSingI
+                                     $dSingI1
+                                     $dSingI2
+                                     $dSingI3
+  = AuthenticationAPI.$fFromBSONLoginRequest_$s$fSelectorMetaMetaSel1
+"SPEC/AuthenticationAPI $fSelectorMetaMetaSel @ ('Just
+                                                  "name") @ 'NoSourceUnpackedness @ 'NoSourceStrictness @ 'DecidedLazy" [ALWAYS] forall ($dSingI :: GHC.Generics.SingI
+                                                                                                                                                                                                             ('GHC.Base.Just
+                                                                                                                                                                                                                "name"))
+                                                                                                                                                                                               ($dSingI1 :: GHC.Generics.SingI
+                                                                                                                                                                                                              'GHC.Generics.NoSourceUnpackedness)
+                                                                                                                                                                                               ($dSingI2 :: GHC.Generics.SingI
+                                                                                                                                                                                                              'GHC.Generics.NoSourceStrictness)
+                                                                                                                                                                                               ($dSingI3 :: GHC.Generics.SingI
+                                                                                                                                                                                                              'GHC.Generics.DecidedLazy)
+  GHC.Generics.$fSelectorMetaMetaSel @ ('GHC.Base.Just "name")
                                      @ 'GHC.Generics.NoSourceUnpackedness
                                      @ 'GHC.Generics.NoSourceStrictness
                                      @ 'GHC.Generics.DecidedLazy
@@ -10285,25 +10308,6 @@ family instance GHC.Generics.Rep [AuthenticationAPI.UserInfo]
                                      $dSingI3
   = AuthenticationAPI.$fFromBSONToken_$s$fSelectorMetaMetaSel
 "SPEC/AuthenticationAPI $fSelectorMetaMetaSel @ ('Just
-                                                  "userInfo") @ 'NoSourceUnpackedness @ 'NoSourceStrictness @ 'DecidedLazy" [ALWAYS] forall ($dSingI :: GHC.Generics.SingI
-                                                                                                                                                                                                                 ('GHC.Base.Just
-                                                                                                                                                                                                                    "userInfo"))
-                                                                                                                                                                                                   ($dSingI1 :: GHC.Generics.SingI
-                                                                                                                                                                                                                  'GHC.Generics.NoSourceUnpackedness)
-                                                                                                                                                                                                   ($dSingI2 :: GHC.Generics.SingI
-                                                                                                                                                                                                                  'GHC.Generics.NoSourceStrictness)
-                                                                                                                                                                                                   ($dSingI3 :: GHC.Generics.SingI
-                                                                                                                                                                                                                  'GHC.Generics.DecidedLazy)
-  GHC.Generics.$fSelectorMetaMetaSel @ ('GHC.Base.Just "userInfo")
-                                     @ 'GHC.Generics.NoSourceUnpackedness
-                                     @ 'GHC.Generics.NoSourceStrictness
-                                     @ 'GHC.Generics.DecidedLazy
-                                     $dSingI
-                                     $dSingI1
-                                     $dSingI2
-                                     $dSingI3
-  = AuthenticationAPI.$fFromBSONLoginRequest_$s$fSelectorMetaMetaSel1
-"SPEC/AuthenticationAPI $fSelectorMetaMetaSel @ ('Just
                                                   "username") @ 'NoSourceUnpackedness @ 'NoSourceStrictness @ 'DecidedLazy" [ALWAYS] forall ($dSingI :: GHC.Generics.SingI
                                                                                                                                                                                                                  ('GHC.Base.Just
                                                                                                                                                                                                                     "username"))
@@ -10340,17 +10344,37 @@ family instance GHC.Generics.Rep [AuthenticationAPI.UserInfo]
                                                $dSingI3
   = AuthenticationAPI.$fFromBSON[]_$s$fSelectorMetaMetaSel_$cselName
 "SPEC/AuthenticationAPI $fSelectorMetaMetaSel_$cselName @ ('Just
-                                                            "key") @ 'NoSourceUnpackedness @ 'NoSourceStrictness @ 'DecidedLazy" [ALWAYS] forall ($dSingI :: GHC.Generics.SingI
-                                                                                                                                                                                                                                ('GHC.Base.Just
-                                                                                                                                                                                                                                   "key"))
-                                                                                                                                                                                                                  ($dSingI1 :: GHC.Generics.SingI
-                                                                                                                                                                                                                                 'GHC.Generics.NoSourceUnpackedness)
-                                                                                                                                                                                                                  ($dSingI2 :: GHC.Generics.SingI
-                                                                                                                                                                                                                                 'GHC.Generics.NoSourceStrictness)
-                                                                                                                                                                                                                  ($dSingI3 :: GHC.Generics.SingI
-                                                                                                                                                                                                                                 'GHC.Generics.DecidedLazy)
+                                                            "encryptedPassword") @ 'NoSourceUnpackedness @ 'NoSourceStrictness @ 'DecidedLazy" [ALWAYS] forall ($dSingI :: GHC.Generics.SingI
+                                                                                                                                                                                                                                              ('GHC.Base.Just
+                                                                                                                                                                                                                                                 "encryptedPassword"))
+                                                                                                                                                                                                                                ($dSingI1 :: GHC.Generics.SingI
+                                                                                                                                                                                                                                               'GHC.Generics.NoSourceUnpackedness)
+                                                                                                                                                                                                                                ($dSingI2 :: GHC.Generics.SingI
+                                                                                                                                                                                                                                               'GHC.Generics.NoSourceStrictness)
+                                                                                                                                                                                                                                ($dSingI3 :: GHC.Generics.SingI
+                                                                                                                                                                                                                                               'GHC.Generics.DecidedLazy)
   GHC.Generics.$fSelectorMetaMetaSel_$cselName @ ('GHC.Base.Just
-                                                    "key")
+                                                    "encryptedPassword")
+                                               @ 'GHC.Generics.NoSourceUnpackedness
+                                               @ 'GHC.Generics.NoSourceStrictness
+                                               @ 'GHC.Generics.DecidedLazy
+                                               $dSingI
+                                               $dSingI1
+                                               $dSingI2
+                                               $dSingI3
+  = AuthenticationAPI.$fFromBSONLoginRequest_$s$fSelectorMetaMetaSel_$cselName1
+"SPEC/AuthenticationAPI $fSelectorMetaMetaSel_$cselName @ ('Just
+                                                            "name") @ 'NoSourceUnpackedness @ 'NoSourceStrictness @ 'DecidedLazy" [ALWAYS] forall ($dSingI :: GHC.Generics.SingI
+                                                                                                                                                                                                                                 ('GHC.Base.Just
+                                                                                                                                                                                                                                    "name"))
+                                                                                                                                                                                                                   ($dSingI1 :: GHC.Generics.SingI
+                                                                                                                                                                                                                                  'GHC.Generics.NoSourceUnpackedness)
+                                                                                                                                                                                                                   ($dSingI2 :: GHC.Generics.SingI
+                                                                                                                                                                                                                                  'GHC.Generics.NoSourceStrictness)
+                                                                                                                                                                                                                   ($dSingI3 :: GHC.Generics.SingI
+                                                                                                                                                                                                                                  'GHC.Generics.DecidedLazy)
+  GHC.Generics.$fSelectorMetaMetaSel_$cselName @ ('GHC.Base.Just
+                                                    "name")
                                                @ 'GHC.Generics.NoSourceUnpackedness
                                                @ 'GHC.Generics.NoSourceStrictness
                                                @ 'GHC.Generics.DecidedLazy
@@ -10479,26 +10503,6 @@ family instance GHC.Generics.Rep [AuthenticationAPI.UserInfo]
                                                $dSingI2
                                                $dSingI3
   = AuthenticationAPI.$fFromBSONToken_$s$fSelectorMetaMetaSel_$cselName
-"SPEC/AuthenticationAPI $fSelectorMetaMetaSel_$cselName @ ('Just
-                                                            "userInfo") @ 'NoSourceUnpackedness @ 'NoSourceStrictness @ 'DecidedLazy" [ALWAYS] forall ($dSingI :: GHC.Generics.SingI
-                                                                                                                                                                                                                                     ('GHC.Base.Just
-                                                                                                                                                                                                                                        "userInfo"))
-                                                                                                                                                                                                                       ($dSingI1 :: GHC.Generics.SingI
-                                                                                                                                                                                                                                      'GHC.Generics.NoSourceUnpackedness)
-                                                                                                                                                                                                                       ($dSingI2 :: GHC.Generics.SingI
-                                                                                                                                                                                                                                      'GHC.Generics.NoSourceStrictness)
-                                                                                                                                                                                                                       ($dSingI3 :: GHC.Generics.SingI
-                                                                                                                                                                                                                                      'GHC.Generics.DecidedLazy)
-  GHC.Generics.$fSelectorMetaMetaSel_$cselName @ ('GHC.Base.Just
-                                                    "userInfo")
-                                               @ 'GHC.Generics.NoSourceUnpackedness
-                                               @ 'GHC.Generics.NoSourceStrictness
-                                               @ 'GHC.Generics.DecidedLazy
-                                               $dSingI
-                                               $dSingI1
-                                               $dSingI2
-                                               $dSingI3
-  = AuthenticationAPI.$fFromBSONLoginRequest_$s$fSelectorMetaMetaSel_$cselName1
 "SPEC/AuthenticationAPI $fSelectorMetaMetaSel_$cselName @ ('Just
                                                             "username") @ 'NoSourceUnpackedness @ 'NoSourceStrictness @ 'DecidedLazy" [ALWAYS] forall ($dSingI :: GHC.Generics.SingI
                                                                                                                                                                                                                                      ('GHC.Base.Just

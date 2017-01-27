@@ -1,12 +1,12 @@
 
 ==================== FINAL INTERFACE ====================
-2017-01-26 13:07:50.970074 UTC
+2017-01-27 23:41:28.024273 UTC
 
 interface use-haskell-api-0.1.0.0-3nD5NWCHf1N83LkkK3wDn9:AuthenticationAPIClient 8001
-  interface hash: 89f888d3c67a715d74fe492a79055ebf
-  ABI hash: 6d0c7df8d1cf4b5fed7affebe23bdfeb
-  export-list hash: 1f5020a9b79787be7935585fe18c1ef7
-  orphan hash: ae0449cb8421512e5ffcc2dd79ab5a10
+  interface hash: bbbc390a0235bc767000401304b7c1a5
+  ABI hash: dfb2b95becfd57fa59644feb045d0841
+  export-list hash: 8e782665bdfce3419f8f191b3f393f58
+  orphan hash: ef4065dd26d04891c3108eb699d77ad1
   flag hash: c0019f874b7b051e01cc1d441922ac04
   sig of: Nothing
   used TH splices: False
@@ -159,14 +159,40 @@ import  -/  servant-0.9.1.1@servant-0.9.1.1-1YvZcaz0OLV3uNDBdJkKrY:Servant.API 9
 import  -/  servant-0.9.1.1@servant-0.9.1.1-1YvZcaz0OLV3uNDBdJkKrY:Servant.API.Alternative a8f3f7a60f7890ff9e0a1e9385ffa181
 import  -/  servant-client-0.9.1.1@servant-client-0.9.1.1-2qgn4HLUhDF108ixpaTeg8:Servant.Client 8b7ae71607f6884bbd925274a2a97ffe
 import  -/  servant-client-0.9.1.1@servant-client-0.9.1.1-2qgn4HLUhDF108ixpaTeg8:Servant.Common.Req ac79c9e42e8ab6edbf3cb34d80d7e914
-import  -/  AuthenticationAPI a4af3b86e9494f408a34f18a340ebdb6
-  exports: e1cfe6e0e13fdda7d3459a0860c5df43
-  API d4bb6e7d7bce9a72d85d86c5dc98b0dd
-  LoginRequest 930d6613a18db703db5eee6dc3507e36
+import  -/  AuthenticationAPI 04b8c6d86ea03658cd468959b2053d81
+  exports: 20b980e482bbd5853bb875d9483db491
+  API c513225481b0b25a7c1afdce5201e89c
+  LoginRequest e64325153e8d84eb262257c234eee83d
   Token 6ef54726812a5e88d458a645bb8062ce
   UserInfo c71eafbc640e52900cabf44db346b563
-2a6cd636aaffafa08b1c82726a0fe822
+d294dea00c00c71845a21ece0e277147
   $s$fMimeUnrenderTYPEJSONa ::
+    Servant.API.ContentTypes.MimeUnrender
+      Servant.API.ContentTypes.JSON
+      (GHC.Base.Maybe AuthenticationAPI.Token)
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ *
+                  @ Servant.API.ContentTypes.JSON
+                  @ (GHC.Base.Maybe AuthenticationAPI.Token)
+                  (Servant.API.ContentTypes.$fMimeUnrenderTYPEJSONa_$cp1MimeUnrender
+                     @ (GHC.Base.Maybe AuthenticationAPI.Token)
+                     AuthenticationAPIClient.$s$fMimeUnrenderTYPEJSONa_$dFromJSON)
+                  AuthenticationAPIClient.$s$fMimeUnrenderTYPEJSONa_$s$fMimeUnrenderTYPEJSONa_$cmimeUnrender -}
+fe5ad1e0cc0171520344fbbc5d6cf8e2
+  $s$fMimeUnrenderTYPEJSONa1 ::
+    Data.Aeson.Types.Internal.Value
+    -> Data.Aeson.Types.Internal.Parser
+         (GHC.Base.Maybe AuthenticationAPI.Token)
+  {- Arity: 1,
+     Unfolding: (Data.Aeson.Types.Instances.$fFromJSONMaybe_$cparseJSON
+                   @ AuthenticationAPI.Token
+                   AuthenticationAPI.$fFromJSONToken_$cparseJSON
+                     `cast`
+                   (Sym (Data.Aeson.Types.Class.N:FromJSON[0]
+                             <AuthenticationAPI.Token>_N))) -}
+5f478297311a666862ecf587b5a4b93b
+  $s$fMimeUnrenderTYPEJSONa2 ::
     Servant.API.ContentTypes.MimeUnrender
       Servant.API.ContentTypes.JSON GHC.Types.Bool
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -179,25 +205,33 @@ import  -/  AuthenticationAPI a4af3b86e9494f408a34f18a340ebdb6
                      Data.Aeson.Types.Instances.$fFromJSONBool_$cparseJSON
                        `cast`
                      (Sym (Data.Aeson.Types.Class.N:FromJSON[0] <GHC.Types.Bool>_N)))
-                  AuthenticationAPIClient.$s$fMimeUnrenderTYPEJSONa_$s$fMimeUnrenderTYPEJSONa_$cmimeUnrender -}
-71afb5c1644438c622f2807f4cac65d4
-  $s$fMimeUnrenderTYPEJSONa1 ::
-    Servant.API.ContentTypes.MimeUnrender
-      Servant.API.ContentTypes.JSON AuthenticationAPI.Token
-  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
-     Unfolding: DFun:.
-                  @ *
-                  @ Servant.API.ContentTypes.JSON
-                  @ AuthenticationAPI.Token
-                  (Servant.API.ContentTypes.$fMimeUnrenderTYPEJSONa_$cp1MimeUnrender
-                     @ AuthenticationAPI.Token
-                     AuthenticationAPI.$fFromJSONToken_$cparseJSON
-                       `cast`
-                     (Sym (Data.Aeson.Types.Class.N:FromJSON[0]
-                               <AuthenticationAPI.Token>_N)))
                   AuthenticationAPIClient.$s$fMimeUnrenderTYPEJSONa_$s$fMimeUnrenderTYPEJSONa_$cmimeUnrender1 -}
-1696d688bf7492d1bc6eff442aa7f30d
+f5109e73224934a17607ed8c0f30652f
+  $s$fMimeUnrenderTYPEJSONa_$dFromJSON ::
+    Data.Aeson.Types.Class.FromJSON
+      (GHC.Base.Maybe AuthenticationAPI.Token)
+  {- Arity: 1,
+     Unfolding: InlineRule (0, True, True)
+                AuthenticationAPIClient.$s$fMimeUnrenderTYPEJSONa1
+                  `cast`
+                (Sym (Data.Aeson.Types.Class.N:FromJSON[0]
+                          <GHC.Base.Maybe AuthenticationAPI.Token>_N)) -}
+703a90ed6be7b75e2d4fadf1ca461bd4
   $s$fMimeUnrenderTYPEJSONa_$s$fMimeUnrenderTYPEJSONa_$cmimeUnrender ::
+    Data.Proxy.Proxy Servant.API.ContentTypes.JSON
+    -> Data.ByteString.Lazy.Internal.ByteString
+    -> Data.Either.Either
+         GHC.Base.String (GHC.Base.Maybe AuthenticationAPI.Token)
+  {- Arity: 2, Strictness: <L,A><S,1*U>,
+     Unfolding: InlineRule (1, True, True)
+                (\ (ds :: Data.Proxy.Proxy Servant.API.ContentTypes.JSON)
+                   (eta :: Data.ByteString.Lazy.Internal.ByteString) ->
+                 Servant.API.ContentTypes.eitherDecodeLenient
+                   @ (GHC.Base.Maybe AuthenticationAPI.Token)
+                   AuthenticationAPIClient.$s$fMimeUnrenderTYPEJSONa_$dFromJSON
+                   eta) -}
+7646d23317c4a7c41319579d70abff4c
+  $s$fMimeUnrenderTYPEJSONa_$s$fMimeUnrenderTYPEJSONa_$cmimeUnrender1 ::
     Data.Proxy.Proxy Servant.API.ContentTypes.JSON
     -> Data.ByteString.Lazy.Internal.ByteString
     -> Data.Either.Either GHC.Base.String GHC.Types.Bool
@@ -210,22 +244,6 @@ import  -/  AuthenticationAPI a4af3b86e9494f408a34f18a340ebdb6
                    Data.Aeson.Types.Instances.$fFromJSONBool_$cparseJSON
                      `cast`
                    (Sym (Data.Aeson.Types.Class.N:FromJSON[0] <GHC.Types.Bool>_N))
-                   eta) -}
-93bfe4032bbda4b0a88f272c09cc0cfa
-  $s$fMimeUnrenderTYPEJSONa_$s$fMimeUnrenderTYPEJSONa_$cmimeUnrender1 ::
-    Data.Proxy.Proxy Servant.API.ContentTypes.JSON
-    -> Data.ByteString.Lazy.Internal.ByteString
-    -> Data.Either.Either GHC.Base.String AuthenticationAPI.Token
-  {- Arity: 2, Strictness: <L,A><S,1*U>,
-     Unfolding: InlineRule (1, True, True)
-                (\ (ds :: Data.Proxy.Proxy Servant.API.ContentTypes.JSON)
-                   (eta :: Data.ByteString.Lazy.Internal.ByteString) ->
-                 Servant.API.ContentTypes.eitherDecodeLenient
-                   @ AuthenticationAPI.Token
-                   AuthenticationAPI.$fFromJSONToken_$cparseJSON
-                     `cast`
-                   (Sym (Data.Aeson.Types.Class.N:FromJSON[0]
-                             <AuthenticationAPI.Token>_N))
                    eta) -}
 955dbc363de1a1405fd9eecac6642901
   $sclient2 :: [GHC.Types.Char]
@@ -269,15 +287,16 @@ fc1a5ef1936cee5c40a1b424bcf4002b
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS
                    "use-haskell-api-0.1.0.0-3nD5NWCHf1N83LkkK3wDn9"#) -}
-23ec548c9d3d901306a3907670da15bd
+898b963d080e9c56274da8aef3bde84f
   authAPI :: Data.Proxy.Proxy AuthenticationAPI.API
   {- HasNoCafRefs,
      Unfolding: InlineRule (0, True, True)
                 (Data.Proxy.Proxy @ * @ AuthenticationAPI.API) -}
-8d11111c9edc13d2fc38c08f864afb0e
+19896ebff0ec96529bbfbf6e68c8568c
   login ::
     AuthenticationAPI.LoginRequest
-    -> Servant.Common.Req.ClientM AuthenticationAPI.Token
+    -> Servant.Common.Req.ClientM
+         (GHC.Base.Maybe AuthenticationAPI.Token)
   {- Arity: 1, Strictness: <L,1*U(1*U,1*U)>,
      Unfolding: InlineRule (0, True, True)
                 AuthenticationAPIClient.login1
@@ -285,11 +304,11 @@ fc1a5ef1936cee5c40a1b424bcf4002b
                 (<AuthenticationAPI.LoginRequest>_R
                  ->_R Sub (Servant.Client.D:R:ClientTYPEVerb2[0]
                                <Network.HTTP.Types.Method.StdMethod>_N
-                               <AuthenticationAPI.Token>_N
+                               <GHC.Base.Maybe AuthenticationAPI.Token>_N
                                <'Network.HTTP.Types.Method.GET>_N
                                <'[Servant.API.ContentTypes.JSON]>_N
                                <200>_N)) -}
-aaafef90e35355b70412209c2aab4d59
+0331e437dfdaff2f335934f5e603ca0d
   login1 ::
     AuthenticationAPI.LoginRequest
     -> Servant.Client.Client
@@ -297,18 +316,18 @@ aaafef90e35355b70412209c2aab4d59
             'Network.HTTP.Types.Method.GET
             200
             '[Servant.API.ContentTypes.JSON]
-            AuthenticationAPI.Token)
+            (GHC.Base.Maybe AuthenticationAPI.Token))
   {- Arity: 1, Strictness: <L,1*U(1*U,1*U)>,
      Unfolding: (\ (body :: AuthenticationAPI.LoginRequest) ->
                  Servant.Client.$w$cclientWithRoute8
                    @ Network.HTTP.Types.Method.StdMethod
                    @ Servant.API.ContentTypes.JSON
-                   @ AuthenticationAPI.Token
+                   @ (GHC.Base.Maybe AuthenticationAPI.Token)
                    @ 'Network.HTTP.Types.Method.GET
                    @ '[Servant.API.ContentTypes.JSON]
                    @ '[]
                    @ 200
-                   AuthenticationAPIClient.$s$fMimeUnrenderTYPEJSONa1
+                   AuthenticationAPIClient.$s$fMimeUnrenderTYPEJSONa
                    Servant.API.Verbs.$fReflectMethodStdMethodGET_$creflectMethod
                      `cast`
                    (Sym (Servant.API.Verbs.N:ReflectMethod[0]
@@ -324,7 +343,7 @@ aaafef90e35355b70412209c2aab4d59
                            'Network.HTTP.Types.Method.GET
                            200
                            '[Servant.API.ContentTypes.JSON]
-                           AuthenticationAPI.Token))
+                           (GHC.Base.Maybe AuthenticationAPI.Token)))
                    (Servant.Common.Req.Req
                       AuthenticationAPIClient.login2
                       (GHC.Types.[]
@@ -349,7 +368,7 @@ aaafef90e35355b70412209c2aab4d59
                    @ GHC.Types.Char
                    (GHC.Types.[] @ GHC.Types.Char)
                    AuthenticationAPIClient.$sclient4) -}
-6e5b10a1f7ef76a78711dbb9ad76e441
+076e7f4149fbd52041155d26ec5a7287
   register ::
     AuthenticationAPI.UserInfo
     -> Servant.Common.Req.ClientM GHC.Types.Bool
@@ -364,7 +383,7 @@ aaafef90e35355b70412209c2aab4d59
                                <'Network.HTTP.Types.Method.POST>_N
                                <'[Servant.API.ContentTypes.JSON]>_N
                                <200>_N)) -}
-21e7bbd2ad65f5307b01f9148ccbb9d6
+12629b016b9fdd619bb8fbb5a04806f1
   register1 ::
     AuthenticationAPI.UserInfo
     -> Servant.Client.Client
@@ -383,7 +402,7 @@ aaafef90e35355b70412209c2aab4d59
                    @ '[Servant.API.ContentTypes.JSON]
                    @ '[]
                    @ 200
-                   AuthenticationAPIClient.$s$fMimeUnrenderTYPEJSONa
+                   AuthenticationAPIClient.$s$fMimeUnrenderTYPEJSONa2
                    Servant.API.Verbs.$fReflectMethodStdMethodPOST_$creflectMethod
                      `cast`
                    (Sym (Servant.API.Verbs.N:ReflectMethod[0]
@@ -424,24 +443,30 @@ aaafef90e35355b70412209c2aab4d59
                    @ GHC.Types.Char
                    (GHC.Types.[] @ GHC.Types.Char)
                    AuthenticationAPIClient.$sclient2) -}
+"SPEC/AuthenticationAPIClient $fMimeUnrenderTYPEJSONa @ (Maybe
+                                                          Token)" [ALWAYS] forall ($dFromJSON :: Data.Aeson.Types.Class.FromJSON
+                                                                                                                                                                  (GHC.Base.Maybe
+                                                                                                                                                                     AuthenticationAPI.Token))
+  Servant.API.ContentTypes.$fMimeUnrenderTYPEJSONa @ (GHC.Base.Maybe
+                                                        AuthenticationAPI.Token)
+                                                   $dFromJSON
+  = AuthenticationAPIClient.$s$fMimeUnrenderTYPEJSONa
 "SPEC/AuthenticationAPIClient $fMimeUnrenderTYPEJSONa @ Bool" [ALWAYS] forall ($dFromJSON :: Data.Aeson.Types.Class.FromJSON
                                                                                                GHC.Types.Bool)
   Servant.API.ContentTypes.$fMimeUnrenderTYPEJSONa @ GHC.Types.Bool
                                                    $dFromJSON
-  = AuthenticationAPIClient.$s$fMimeUnrenderTYPEJSONa
-"SPEC/AuthenticationAPIClient $fMimeUnrenderTYPEJSONa @ Token" [ALWAYS] forall ($dFromJSON :: Data.Aeson.Types.Class.FromJSON
-                                                                                                AuthenticationAPI.Token)
-  Servant.API.ContentTypes.$fMimeUnrenderTYPEJSONa @ AuthenticationAPI.Token
-                                                   $dFromJSON
-  = AuthenticationAPIClient.$s$fMimeUnrenderTYPEJSONa1
+  = AuthenticationAPIClient.$s$fMimeUnrenderTYPEJSONa2
+"SPEC/AuthenticationAPIClient $fMimeUnrenderTYPEJSONa_$cmimeUnrender @ (Maybe
+                                                                         Token)" [ALWAYS] forall ($dFromJSON :: Data.Aeson.Types.Class.FromJSON
+                                                                                                                                                                                                (GHC.Base.Maybe
+                                                                                                                                                                                                   AuthenticationAPI.Token))
+  Servant.API.ContentTypes.$fMimeUnrenderTYPEJSONa_$cmimeUnrender @ (GHC.Base.Maybe
+                                                                       AuthenticationAPI.Token)
+                                                                  $dFromJSON
+  = AuthenticationAPIClient.$s$fMimeUnrenderTYPEJSONa_$s$fMimeUnrenderTYPEJSONa_$cmimeUnrender
 "SPEC/AuthenticationAPIClient $fMimeUnrenderTYPEJSONa_$cmimeUnrender @ Bool" [ALWAYS] forall ($dFromJSON :: Data.Aeson.Types.Class.FromJSON
                                                                                                               GHC.Types.Bool)
   Servant.API.ContentTypes.$fMimeUnrenderTYPEJSONa_$cmimeUnrender @ GHC.Types.Bool
-                                                                  $dFromJSON
-  = AuthenticationAPIClient.$s$fMimeUnrenderTYPEJSONa_$s$fMimeUnrenderTYPEJSONa_$cmimeUnrender
-"SPEC/AuthenticationAPIClient $fMimeUnrenderTYPEJSONa_$cmimeUnrender @ Token" [ALWAYS] forall ($dFromJSON :: Data.Aeson.Types.Class.FromJSON
-                                                                                                               AuthenticationAPI.Token)
-  Servant.API.ContentTypes.$fMimeUnrenderTYPEJSONa_$cmimeUnrender @ AuthenticationAPI.Token
                                                                   $dFromJSON
   = AuthenticationAPIClient.$s$fMimeUnrenderTYPEJSONa_$s$fMimeUnrenderTYPEJSONa_$cmimeUnrender1
 vectorised variables:
