@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2017-01-28 00:13:41.59034 UTC
+2017-01-28 13:07:36.006264 UTC
 
 interface use-haskell-api-0.1.0.0-3nD5NWCHf1N83LkkK3wDn9:AuthenticationAPI [orphan module] [family instance module] 8001
-  interface hash: 9b7415d2025d10da4bc7def728a79968
-  ABI hash: a8cdc9eb172a8d002dea2b60586c5409
+  interface hash: 6f3c9c269944e14af39308340220511c
+  ABI hash: cb3bc99ca5153e32522393b424768695
   export-list hash: fe7bfa2922f5badab9958a14ba463167
   orphan hash: 8a49ff7294271e5e3d67b3995151735f
   flag hash: b0e3f8b573d72bae0f984477a0acb626
@@ -9867,14 +9867,14 @@ c3b7d700e4ed546a714f4c0bb1ba28d7
           Data.Text.Internal.Text #)
   {- Arity: 5, Strictness: <L,U(U)><L,U(U)><S,1*U><S,U><S,U>,
      Inline: [0] -}
-45ad0c2d3c1cb4fd35017b408af2073b
+c3a36c4298048fa52b872e37782d3aed
   type API =
     ("login"
      Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
                            '[Servant.API.ContentTypes.JSON] AuthenticationAPI.LoginRequest
                          Servant.API.Sub.:> Servant.API.Verbs.Get
                                               '[Servant.API.ContentTypes.JSON]
-                                              (GHC.Base.Maybe AuthenticationAPI.LoginRequest)))
+                                              (GHC.Base.Maybe AuthenticationAPI.LoginResponse)))
     Servant.API.Alternative.:<|> ("register"
                                   Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
                                                         '[Servant.API.ContentTypes.JSON]

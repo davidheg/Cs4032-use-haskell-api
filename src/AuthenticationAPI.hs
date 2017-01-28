@@ -60,7 +60,7 @@ data ResponseData = ResponseData { response :: String
 -- is Post, then there will be a single ReqBody element that defines the type being transmitted. The return type for
 -- each method is noted in the last element in the :> chain.
 
-type API = "login"    :> ReqBody '[JSON] LoginRequest :> Get  '[JSON] (Maybe LoginRequest)
+type API = "login"    :> ReqBody '[JSON] LoginRequest :> Get  '[JSON] (Maybe LoginResponse)
       :<|> "register" :> ReqBody '[JSON] UserInfo     :> Post '[JSON] Bool 
 
 
