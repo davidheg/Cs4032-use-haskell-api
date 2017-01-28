@@ -7,7 +7,7 @@
 {-# LANGUAGE TypeOperators        #-}
 {-# LANGUAGE TypeSynonymInstances #-}
 
-module AuthenticationAPI (ResponseData(..), API(..), UserInfo(..), LoginRequest(..), Token(..)) where
+module AuthenticationAPI (ResponseData(..), API(..), UserInfo(..), LoginRequest(..), Token(..), LoginResponse(..)) where
 
 
 import           Data.Aeson
@@ -35,9 +35,10 @@ data Token = Token { ticket     :: String
                    , user       :: String
                    } deriving (Show, Generic, FromJSON, ToJSON, ToBSON, FromBSON)
 
+data LoginResponse = LoginResponse { token :: String 
+                                   } deriving (Generic, ToJSON, FromJSON,FromBSON, Show)
 
-data LoginRequest = LoginRequest { encryptedPassword :: String
-                                 , name  :: String
+data LoginRequest = LoginRequest { userInfo :: String
                                  } deriving (Show, Generic, FromJSON, ToJSON, ToBSON, FromBSON)
 
 deriving instance FromBSON String  -- we need these as BSON does not provide
@@ -59,7 +60,7 @@ data ResponseData = ResponseData { response :: String
 -- is Post, then there will be a single ReqBody element that defines the type being transmitted. The return type for
 -- each method is noted in the last element in the :> chain.
 
-type API = "login"    :> ReqBody '[JSON] LoginRequest :> Get  '[JSON] (Maybe Token)
+type API = "login"    :> ReqBody '[JSON] LoginRequest :> Get  '[JSON] (Maybe LoginRequest)
       :<|> "register" :> ReqBody '[JSON] UserInfo     :> Post '[JSON] Bool 
 
 
