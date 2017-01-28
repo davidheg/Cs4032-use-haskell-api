@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2017-01-28 13:07:36.006264 UTC
+2017-01-28 14:14:02.09935 UTC
 
 interface use-haskell-api-0.1.0.0-3nD5NWCHf1N83LkkK3wDn9:AuthenticationAPI [orphan module] [family instance module] 8001
-  interface hash: 6f3c9c269944e14af39308340220511c
-  ABI hash: cb3bc99ca5153e32522393b424768695
+  interface hash: 640ab1fda5c9b5385dbe75ca18c5a59f
+  ABI hash: 6ecf4f8d413cc8a82ac8c203848cbf15
   export-list hash: fe7bfa2922f5badab9958a14ba463167
   orphan hash: 8a49ff7294271e5e3d67b3995151735f
   flag hash: b0e3f8b573d72bae0f984477a0acb626
@@ -145,8 +145,11 @@ import  -/  aeson-0.11.2.1@aeson-0.11.2.1-5ZQWuTFmffALcfpzDCXoOz:Data.Aeson.TH 8
 import  -/  aeson-0.11.2.1@aeson-0.11.2.1-5ZQWuTFmffALcfpzDCXoOz:Data.Aeson.Types.Class c9d74667288c52e23279e16b75c64023
 import  -/  base-4.9.0.0:GHC.Base 8ed3be81c0707b322f975a84ae1bb816
 import  -/  base-4.9.0.0:GHC.Generics 8e2a7658e8b966c1d29d0d5fd4129f38
+import  -/  base-4.9.0.0:GHC.Read 817c914615ac8e308afc0c675fb3f671
 import  -/  base-4.9.0.0:GHC.Show 952347a6ab730bcb25c0854d8bc6ca51
 import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
+import  -/  base-4.9.0.0:Text.ParserCombinators.ReadPrec 9512e2f4b227f507f87a150887202aed
+import  -/  base-4.9.0.0:Text.Read.Lex fe3dd7b823826bf6870140c5363f9596
 import  -/  bson-generic-0.0.8@bson-generic-0.0.8-DtORpoUHwQhDReLJ5Keop0:Data.Bson.Generic 8688e6671f6f36dd3a9c6c1c23977c50
 import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
 import  -/  servant-0.9.1.1@servant-0.9.1.1-1YvZcaz0OLV3uNDBdJkKrY:Servant.API.Alternative a8f3f7a60f7890ff9e0a1e9385ffa181
@@ -156,7 +159,41 @@ import  -/  servant-0.9.1.1@servant-0.9.1.1-1YvZcaz0OLV3uNDBdJkKrY:Servant.API.S
 import  -/  servant-0.9.1.1@servant-0.9.1.1-1YvZcaz0OLV3uNDBdJkKrY:Servant.API.Verbs 16180854d75d1ecf87215b310ce5d353
 import  -/  servant-server-0.9.1.1@servant-server-0.9.1.1-FKQvXJjQ1586gh3lj2fX3G:Servant a941d94ca23174dd63fc0fee91773582
 import  -/  time-1.6.0.1@time-1.6.0.1:Data.Time.Clock b91051c7767d1f23314064be1d4311d7
-6d91cc3fb807d3aaa3434356b2788b66
+415d56d50298b55d1498f2b8a7073204
+  $fEqUserInfo :: GHC.Classes.Eq AuthenticationAPI.UserInfo
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ AuthenticationAPI.UserInfo
+                  AuthenticationAPI.$fEqUserInfo_$c==
+                  AuthenticationAPI.$fEqUserInfo_$c/= -}
+415d56d50298b55d1498f2b8a7073204
+  $fEqUserInfo_$c/= ::
+    AuthenticationAPI.UserInfo
+    -> AuthenticationAPI.UserInfo -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SL),1*U(1*U,1*U)><S(SL),1*U(1*U,1*U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: AuthenticationAPI.UserInfo)
+                   (w1 :: AuthenticationAPI.UserInfo) ->
+                 case w of ww { AuthenticationAPI.UserInfo ww1 ww2 ->
+                 case w1 of ww3 { AuthenticationAPI.UserInfo ww4 ww5 ->
+                 AuthenticationAPI.$w$c/= ww1 ww2 ww4 ww5 } }) -}
+415d56d50298b55d1498f2b8a7073204
+  $fEqUserInfo_$c== ::
+    AuthenticationAPI.UserInfo
+    -> AuthenticationAPI.UserInfo -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SL),1*U(1*U,1*U)><S(SL),1*U(1*U,1*U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: AuthenticationAPI.UserInfo)
+                   (w1 :: AuthenticationAPI.UserInfo) ->
+                 case w of ww { AuthenticationAPI.UserInfo ww1 ww2 ->
+                 case w1 of ww3 { AuthenticationAPI.UserInfo ww4 ww5 ->
+                 AuthenticationAPI.$w$c== ww1 ww2 ww4 ww5 } }) -}
+fbc6afcf120c33d037eca21a8763339a
   $fFromBSONLoginRequest ::
     Data.Bson.Generic.FromBSON AuthenticationAPI.LoginRequest
   DFunId
@@ -202,7 +239,7 @@ import  -/  time-1.6.0.1@time-1.6.0.1:Data.Time.Clock b91051c7767d1f23314064be1d
 3bcdf4920612919bb8d041d64af00cf2
   $fFromBSONLoginRequest4 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "userInfo"#) -}
-6d91cc3fb807d3aaa3434356b2788b66
+fbc6afcf120c33d037eca21a8763339a
   $fFromBSONLoginRequest_$cfromBSON ::
     Data.Bson.Document -> GHC.Base.Maybe AuthenticationAPI.LoginRequest
   {- Arity: 1, Strictness: <S,1*U>,
@@ -327,7 +364,7 @@ c0eeddcb0fc8cd719b7eddd3a9486b84
                                 'GHC.Generics.NoSourceStrictness
                                 'GHC.Generics.DecidedLazy) f a) ->
                  AuthenticationAPI.$fFromBSONLoginRequest4) -}
-2db1ad9c0fbc6ed1e420977a6e778b23
+d714606d69514d42fd78eec3a8f84b4b
   $fFromBSONLoginResponse ::
     Data.Bson.Generic.FromBSON AuthenticationAPI.LoginResponse
   DFunId
@@ -372,7 +409,7 @@ c0eeddcb0fc8cd719b7eddd3a9486b84
 397ba3fdfad55816c9870b81bccba293
   $fFromBSONLoginResponse4 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "token"#) -}
-2db1ad9c0fbc6ed1e420977a6e778b23
+d714606d69514d42fd78eec3a8f84b4b
   $fFromBSONLoginResponse_$cfromBSON ::
     Data.Bson.Document
     -> GHC.Base.Maybe AuthenticationAPI.LoginResponse
@@ -669,7 +706,7 @@ cdcb402c9858382cee7116ffef1e28d5
                                 'GHC.Generics.NoSourceStrictness
                                 'GHC.Generics.DecidedLazy) f a) ->
                  AuthenticationAPI.$fFromBSONResponseData4) -}
-20ee82adf00866e71a884ff28ecb1cf9
+24334f840a91ca3e236dbff409821791
   $fFromBSONToken ::
     Data.Bson.Generic.FromBSON AuthenticationAPI.Token
   DFunId
@@ -858,7 +895,7 @@ b7519bc2df0043d77d9286b68eca6330
 7bf3d613c03c275e5336564ee71d1cb3
   $fFromBSONToken9 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "timeout"#) -}
-20ee82adf00866e71a884ff28ecb1cf9
+24334f840a91ca3e236dbff409821791
   $fFromBSONToken_$cfromBSON ::
     Data.Bson.Document -> GHC.Base.Maybe AuthenticationAPI.Token
   {- Arity: 1, Strictness: <S,U>,
@@ -956,7 +993,7 @@ b7519bc2df0043d77d9286b68eca6330
                                                                                         (GHC.Generics.Rec0
                                                                                            GHC.Base.String)))>_R))
                                      (Sub (Sym (AuthenticationAPI.Rep_Token[0])))) <GHC.Prim.Any>_N)) }) -}
-20ee82adf00866e71a884ff28ecb1cf9
+24334f840a91ca3e236dbff409821791
   $fFromBSONToken_$cto ::
     GHC.Generics.Rep AuthenticationAPI.Token x
     -> AuthenticationAPI.Token
@@ -1457,7 +1494,7 @@ e08c39a21ea8bd991850030ccbf02c3b
                                 'GHC.Generics.NoSourceStrictness
                                 'GHC.Generics.DecidedLazy) f a) ->
                  AuthenticationAPI.$fFromBSONToken17) -}
-23828aedb602d9d8f1cf58842874ba5c
+415d56d50298b55d1498f2b8a7073204
   $fFromBSONUserInfo ::
     Data.Bson.Generic.FromBSON AuthenticationAPI.UserInfo
   DFunId
@@ -1539,7 +1576,7 @@ eed05c11b67c0a52fb468352125c88a3
 a1926b3f0b5ff8a30f426a35ae2ccabf
   $fFromBSONUserInfo8 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "username"#) -}
-23828aedb602d9d8f1cf58842874ba5c
+415d56d50298b55d1498f2b8a7073204
   $fFromBSONUserInfo_$cfromBSON ::
     Data.Bson.Document -> GHC.Base.Maybe AuthenticationAPI.UserInfo
   {- Arity: 1, Strictness: <S,U>,
@@ -2101,7 +2138,7 @@ c17692c9b13ce91cec40326742a3c062
 e1307e17b713018918e12356e7507082
   $fFromBSON[]_lvl47 :: GHC.Types.Int
   {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 2#) -}
-6d91cc3fb807d3aaa3434356b2788b66
+fbc6afcf120c33d037eca21a8763339a
   $fFromJSONLoginRequest ::
     Data.Aeson.Types.Class.FromJSON AuthenticationAPI.LoginRequest
   DFunId
@@ -2228,7 +2265,7 @@ a0e36d83a42376a2c903bb35a455af37
                              (GHC.Generics.K1 GHC.Generics.R GHC.Base.String)
                              a) ->
                  GHC.Types.True) -}
-6d91cc3fb807d3aaa3434356b2788b66
+fbc6afcf120c33d037eca21a8763339a
   $fFromJSONLoginRequest_$cparseJSON ::
     Data.Aeson.Types.Internal.Value
     -> Data.Aeson.Types.Internal.Parser AuthenticationAPI.LoginRequest
@@ -2332,7 +2369,7 @@ a0e36d83a42376a2c903bb35a455af37
                    `cast`
                  (Sym (Data.Aeson.Types.Internal.N:Parser[0]
                            <AuthenticationAPI.LoginRequest>_R))) -}
-2db1ad9c0fbc6ed1e420977a6e778b23
+d714606d69514d42fd78eec3a8f84b4b
   $fFromJSONLoginResponse ::
     Data.Aeson.Types.Class.FromJSON AuthenticationAPI.LoginResponse
   DFunId
@@ -2456,7 +2493,7 @@ c72e527fcda1cfac568b97382d7381c2
                              (GHC.Generics.K1 GHC.Generics.R GHC.Base.String)
                              a) ->
                  GHC.Types.True) -}
-2db1ad9c0fbc6ed1e420977a6e778b23
+d714606d69514d42fd78eec3a8f84b4b
   $fFromJSONLoginResponse_$cparseJSON ::
     Data.Aeson.Types.Internal.Value
     -> Data.Aeson.Types.Internal.Parser AuthenticationAPI.LoginResponse
@@ -2788,7 +2825,7 @@ cdcb402c9858382cee7116ffef1e28d5
                    `cast`
                  (Sym (Data.Aeson.Types.Internal.N:Parser[0]
                            <AuthenticationAPI.ResponseData>_R))) -}
-20ee82adf00866e71a884ff28ecb1cf9
+24334f840a91ca3e236dbff409821791
   $fFromJSONToken ::
     Data.Aeson.Types.Class.FromJSON AuthenticationAPI.Token
   DFunId
@@ -2923,7 +2960,7 @@ a3decb2f345344bb253baae3d34f0e19
                                                  (GHC.Generics.Rec0 GHC.Base.String))
                              a) ->
                  GHC.Types.False) -}
-20ee82adf00866e71a884ff28ecb1cf9
+24334f840a91ca3e236dbff409821791
   $fFromJSONToken_$cparseJSON ::
     Data.Aeson.Types.Internal.Value
     -> Data.Aeson.Types.Internal.Parser AuthenticationAPI.Token
@@ -3222,7 +3259,7 @@ a3decb2f345344bb253baae3d34f0e19
                    `cast`
                  (Sym (Data.Aeson.Types.Internal.N:Parser[0]
                            <AuthenticationAPI.Token>_R))) -}
-23828aedb602d9d8f1cf58842874ba5c
+415d56d50298b55d1498f2b8a7073204
   $fFromJSONUserInfo ::
     Data.Aeson.Types.Class.FromJSON AuthenticationAPI.UserInfo
   DFunId
@@ -3319,7 +3356,7 @@ b2ab551f7842ca47388e4b390f4b47ae
                                 (GHC.Generics.Rec0 GHC.Base.String))
                              a) ->
                  GHC.Types.False) -}
-23828aedb602d9d8f1cf58842874ba5c
+415d56d50298b55d1498f2b8a7073204
   $fFromJSONUserInfo_$cparseJSON ::
     Data.Aeson.Types.Internal.Value
     -> Data.Aeson.Types.Internal.Parser AuthenticationAPI.UserInfo
@@ -3479,7 +3516,7 @@ b2ab551f7842ca47388e4b390f4b47ae
                    `cast`
                  (Sym (Data.Aeson.Types.Internal.N:Parser[0]
                            <AuthenticationAPI.UserInfo>_R))) -}
-6d91cc3fb807d3aaa3434356b2788b66
+fbc6afcf120c33d037eca21a8763339a
   $fGenericLoginRequest ::
     GHC.Generics.Generic AuthenticationAPI.LoginRequest
   DFunId
@@ -3488,7 +3525,7 @@ b2ab551f7842ca47388e4b390f4b47ae
                   @ AuthenticationAPI.LoginRequest
                   AuthenticationAPI.$fGenericLoginRequest_$cfrom
                   AuthenticationAPI.$fGenericLoginRequest_$cto -}
-6d91cc3fb807d3aaa3434356b2788b66
+fbc6afcf120c33d037eca21a8763339a
   $fGenericLoginRequest_$cfrom ::
     AuthenticationAPI.LoginRequest
     -> GHC.Generics.Rep AuthenticationAPI.LoginRequest x
@@ -3547,7 +3584,7 @@ b2ab551f7842ca47388e4b390f4b47ae
                                                      (GHC.Generics.K1
                                                         GHC.Generics.R GHC.Base.String))>_R))
                                      (Sub (Sym (AuthenticationAPI.Rep_LoginRequest[0]))))) <x>_N)) }) -}
-6d91cc3fb807d3aaa3434356b2788b66
+fbc6afcf120c33d037eca21a8763339a
   $fGenericLoginRequest_$cto ::
     GHC.Generics.Rep AuthenticationAPI.LoginRequest x
     -> AuthenticationAPI.LoginRequest
@@ -3606,7 +3643,7 @@ b2ab551f7842ca47388e4b390f4b47ae
                                                GHC.Generics.R GHC.Base.String>_R))) <x>_N)
                         (GHC.Generics.N:K1[0]
                              <GHC.Generics.R>_P <GHC.Base.String>_R <x>_P))) -}
-2db1ad9c0fbc6ed1e420977a6e778b23
+d714606d69514d42fd78eec3a8f84b4b
   $fGenericLoginResponse ::
     GHC.Generics.Generic AuthenticationAPI.LoginResponse
   DFunId
@@ -3615,7 +3652,7 @@ b2ab551f7842ca47388e4b390f4b47ae
                   @ AuthenticationAPI.LoginResponse
                   AuthenticationAPI.$fGenericLoginResponse_$cfrom
                   AuthenticationAPI.$fGenericLoginResponse_$cto -}
-2db1ad9c0fbc6ed1e420977a6e778b23
+d714606d69514d42fd78eec3a8f84b4b
   $fGenericLoginResponse_$cfrom ::
     AuthenticationAPI.LoginResponse
     -> GHC.Generics.Rep AuthenticationAPI.LoginResponse x
@@ -3676,7 +3713,7 @@ b2ab551f7842ca47388e4b390f4b47ae
                                                      (GHC.Generics.K1
                                                         GHC.Generics.R GHC.Base.String))>_R))
                                      (Sub (Sym (AuthenticationAPI.Rep_LoginResponse[0]))))) <x>_N)) }) -}
-2db1ad9c0fbc6ed1e420977a6e778b23
+d714606d69514d42fd78eec3a8f84b4b
   $fGenericLoginResponse_$cto ::
     GHC.Generics.Rep AuthenticationAPI.LoginResponse x
     -> AuthenticationAPI.LoginResponse
@@ -3863,7 +3900,7 @@ cdcb402c9858382cee7116ffef1e28d5
                                                GHC.Generics.R GHC.Base.String>_R))) <x>_N)
                         (GHC.Generics.N:K1[0]
                              <GHC.Generics.R>_P <GHC.Base.String>_R <x>_P))) -}
-20ee82adf00866e71a884ff28ecb1cf9
+24334f840a91ca3e236dbff409821791
   $fGenericToken :: GHC.Generics.Generic AuthenticationAPI.Token
   DFunId
   {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -3871,7 +3908,7 @@ cdcb402c9858382cee7116ffef1e28d5
                   @ AuthenticationAPI.Token
                   AuthenticationAPI.$fGenericToken_$cfrom
                   AuthenticationAPI.$fFromBSONToken_$cto -}
-20ee82adf00866e71a884ff28ecb1cf9
+24334f840a91ca3e236dbff409821791
   $fGenericToken_$cfrom ::
     AuthenticationAPI.Token
     -> GHC.Generics.Rep AuthenticationAPI.Token x
@@ -4093,7 +4130,7 @@ cdcb402c9858382cee7116ffef1e28d5
                                                                                  GHC.Generics.R
                                                                                  GHC.Base.String)))>_R))
                            (Sub (Sym (AuthenticationAPI.Rep_Token[0])))) <x>_N) }) -}
-23828aedb602d9d8f1cf58842874ba5c
+415d56d50298b55d1498f2b8a7073204
   $fGenericUserInfo ::
     GHC.Generics.Generic AuthenticationAPI.UserInfo
   DFunId
@@ -4102,7 +4139,7 @@ cdcb402c9858382cee7116ffef1e28d5
                   @ AuthenticationAPI.UserInfo
                   AuthenticationAPI.$fGenericUserInfo_$cfrom
                   AuthenticationAPI.$fGenericUserInfo_$cto -}
-23828aedb602d9d8f1cf58842874ba5c
+415d56d50298b55d1498f2b8a7073204
   $fGenericUserInfo_$cfrom ::
     AuthenticationAPI.UserInfo
     -> GHC.Generics.Rep AuthenticationAPI.UserInfo x
@@ -4207,7 +4244,7 @@ cdcb402c9858382cee7116ffef1e28d5
                                                             (GHC.Generics.K1
                                                                GHC.Generics.R GHC.Base.String))>_R))
                            (Sub (Sym (AuthenticationAPI.Rep_UserInfo[0])))) <x>_N) }) -}
-23828aedb602d9d8f1cf58842874ba5c
+415d56d50298b55d1498f2b8a7073204
   $fGenericUserInfo_$cto ::
     GHC.Generics.Rep AuthenticationAPI.UserInfo x
     -> AuthenticationAPI.UserInfo
@@ -4296,7 +4333,526 @@ cdcb402c9858382cee7116ffef1e28d5
                              <GHC.Generics.K1 GHC.Generics.R GHC.Base.String>_R <x>_N)
                         (GHC.Generics.N:K1[0]
                              <GHC.Generics.R>_P <GHC.Base.String>_R <x>_P)) }) -}
-6d91cc3fb807d3aaa3434356b2788b66
+fbc6afcf120c33d037eca21a8763339a
+  $fReadLoginRequest :: GHC.Read.Read AuthenticationAPI.LoginRequest
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ AuthenticationAPI.LoginRequest
+                  AuthenticationAPI.$fReadLoginRequest_$creadsPrec
+                  AuthenticationAPI.$fReadLoginRequest_$creadList
+                  AuthenticationAPI.$fReadLoginRequest_$creadPrec
+                  AuthenticationAPI.$fReadLoginRequest_$creadListPrec -}
+fbc6afcf120c33d037eca21a8763339a
+  $fReadLoginRequest1 ::
+    Text.ParserCombinators.ReadPrec.Prec
+    -> forall b.
+       ([AuthenticationAPI.LoginRequest]
+        -> Text.ParserCombinators.ReadP.P b)
+       -> Text.ParserCombinators.ReadP.P b
+  {- Arity: 2, Strictness: <L,A><L,C(U)>,
+     Unfolding: InlineRule (2, True, True)
+                (\ (eta :: Text.ParserCombinators.ReadPrec.Prec)
+                   @ b
+                   (eta1 :: [AuthenticationAPI.LoginRequest]
+                            -> Text.ParserCombinators.ReadP.P b) ->
+                 GHC.Read.$wlist
+                   @ AuthenticationAPI.LoginRequest
+                   AuthenticationAPI.$fReadLoginRequest2
+                     `cast`
+                   (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                             <AuthenticationAPI.LoginRequest>_R))
+                   @ b
+                   eta1) -}
+fbc6afcf120c33d037eca21a8763339a
+  $fReadLoginRequest2 ::
+    Text.ParserCombinators.ReadPrec.Prec
+    -> Text.ParserCombinators.ReadP.ReadP
+         AuthenticationAPI.LoginRequest
+  {- Arity: 1,
+     Unfolding: (GHC.Read.$fReadDouble10
+                   @ AuthenticationAPI.LoginRequest
+                   AuthenticationAPI.$fReadLoginRequest3
+                     `cast`
+                   (Trans
+                        (<Text.ParserCombinators.ReadPrec.Prec>_R
+                         ->_R Sym (Text.ParserCombinators.ReadP.N:ReadP[0]
+                                       <AuthenticationAPI.LoginRequest>_R))
+                        (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                  <AuthenticationAPI.LoginRequest>_R)))) -}
+fbc6afcf120c33d037eca21a8763339a
+  $fReadLoginRequest3 ::
+    Text.ParserCombinators.ReadPrec.Prec
+    -> forall b.
+       (AuthenticationAPI.LoginRequest
+        -> Text.ParserCombinators.ReadP.P b)
+       -> Text.ParserCombinators.ReadP.P b
+  {- Arity: 2, Strictness: <S(S),1*U(U)><L,C(U)>, Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Text.ParserCombinators.ReadPrec.Prec)
+                   @ b
+                   (w1 :: AuthenticationAPI.LoginRequest
+                          -> Text.ParserCombinators.ReadP.P b) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 AuthenticationAPI.$w$creadPrec ww1 @ b w1 }) -}
+fbc6afcf120c33d037eca21a8763339a
+  $fReadLoginRequest4 ::
+    Text.ParserCombinators.ReadP.P [AuthenticationAPI.LoginRequest]
+  {- Unfolding: (GHC.Read.$wlist
+                   @ AuthenticationAPI.LoginRequest
+                   AuthenticationAPI.$fReadLoginRequest2
+                     `cast`
+                   (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                             <AuthenticationAPI.LoginRequest>_R))
+                   @ [AuthenticationAPI.LoginRequest]
+                   (Text.ParserCombinators.ReadP.$fApplicativeP_$cpure
+                      @ [AuthenticationAPI.LoginRequest])) -}
+fbc6afcf120c33d037eca21a8763339a
+  $fReadLoginRequest_$creadList ::
+    Text.ParserCombinators.ReadP.ReadS [AuthenticationAPI.LoginRequest]
+  {- Arity: 1,
+     Unfolding: (Text.ParserCombinators.ReadP.run
+                   @ [AuthenticationAPI.LoginRequest]
+                   AuthenticationAPI.$fReadLoginRequest4) -}
+fbc6afcf120c33d037eca21a8763339a
+  $fReadLoginRequest_$creadListPrec ::
+    Text.ParserCombinators.ReadPrec.ReadPrec
+      [AuthenticationAPI.LoginRequest]
+  {- Arity: 2, Strictness: <L,A><L,C(U)>,
+     Unfolding: InlineRule (0, True, True)
+                AuthenticationAPI.$fReadLoginRequest1
+                  `cast`
+                (Trans
+                     (<Text.ParserCombinators.ReadPrec.Prec>_R
+                      ->_R Sym (Text.ParserCombinators.ReadP.N:ReadP[0]
+                                    <[AuthenticationAPI.LoginRequest]>_R))
+                     (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                               <[AuthenticationAPI.LoginRequest]>_R))) -}
+fbc6afcf120c33d037eca21a8763339a
+  $fReadLoginRequest_$creadPrec ::
+    Text.ParserCombinators.ReadPrec.ReadPrec
+      AuthenticationAPI.LoginRequest
+  {- Arity: 1,
+     Unfolding: InlineRule (0, True, True)
+                AuthenticationAPI.$fReadLoginRequest2
+                  `cast`
+                (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                          <AuthenticationAPI.LoginRequest>_R)) -}
+fbc6afcf120c33d037eca21a8763339a
+  $fReadLoginRequest_$creadsPrec ::
+    GHC.Types.Int
+    -> Text.ParserCombinators.ReadP.ReadS
+         AuthenticationAPI.LoginRequest
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (eta :: GHC.Types.Int) ->
+                 Text.ParserCombinators.ReadP.run
+                   @ AuthenticationAPI.LoginRequest
+                   ((GHC.Read.$fReadDouble10
+                       @ AuthenticationAPI.LoginRequest
+                       AuthenticationAPI.$fReadLoginRequest3
+                         `cast`
+                       (Trans
+                            (<Text.ParserCombinators.ReadPrec.Prec>_R
+                             ->_R Sym (Text.ParserCombinators.ReadP.N:ReadP[0]
+                                           <AuthenticationAPI.LoginRequest>_R))
+                            (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                      <AuthenticationAPI.LoginRequest>_R)))
+                       eta)
+                      `cast`
+                    (Text.ParserCombinators.ReadP.N:ReadP[0]
+                         <AuthenticationAPI.LoginRequest>_R)
+                      @ AuthenticationAPI.LoginRequest
+                      (Text.ParserCombinators.ReadP.$fApplicativeP_$cpure
+                         @ AuthenticationAPI.LoginRequest))) -}
+d714606d69514d42fd78eec3a8f84b4b
+  $fReadLoginResponse ::
+    GHC.Read.Read AuthenticationAPI.LoginResponse
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ AuthenticationAPI.LoginResponse
+                  AuthenticationAPI.$fReadLoginResponse_$creadsPrec
+                  AuthenticationAPI.$fReadLoginResponse_$creadList
+                  AuthenticationAPI.$fReadLoginResponse_$creadPrec
+                  AuthenticationAPI.$fReadLoginResponse_$creadListPrec -}
+d714606d69514d42fd78eec3a8f84b4b
+  $fReadLoginResponse1 ::
+    Text.ParserCombinators.ReadPrec.Prec
+    -> forall b.
+       ([AuthenticationAPI.LoginResponse]
+        -> Text.ParserCombinators.ReadP.P b)
+       -> Text.ParserCombinators.ReadP.P b
+  {- Arity: 2, Strictness: <L,A><L,C(U)>,
+     Unfolding: InlineRule (2, True, True)
+                (\ (eta :: Text.ParserCombinators.ReadPrec.Prec)
+                   @ b
+                   (eta1 :: [AuthenticationAPI.LoginResponse]
+                            -> Text.ParserCombinators.ReadP.P b) ->
+                 GHC.Read.$wlist
+                   @ AuthenticationAPI.LoginResponse
+                   AuthenticationAPI.$fReadLoginResponse2
+                     `cast`
+                   (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                             <AuthenticationAPI.LoginResponse>_R))
+                   @ b
+                   eta1) -}
+d714606d69514d42fd78eec3a8f84b4b
+  $fReadLoginResponse2 ::
+    Text.ParserCombinators.ReadPrec.Prec
+    -> Text.ParserCombinators.ReadP.ReadP
+         AuthenticationAPI.LoginResponse
+  {- Arity: 1,
+     Unfolding: (GHC.Read.$fReadDouble10
+                   @ AuthenticationAPI.LoginResponse
+                   AuthenticationAPI.$fReadLoginResponse3
+                     `cast`
+                   (Trans
+                        (<Text.ParserCombinators.ReadPrec.Prec>_R
+                         ->_R Sym (Text.ParserCombinators.ReadP.N:ReadP[0]
+                                       <AuthenticationAPI.LoginResponse>_R))
+                        (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                  <AuthenticationAPI.LoginResponse>_R)))) -}
+d714606d69514d42fd78eec3a8f84b4b
+  $fReadLoginResponse3 ::
+    Text.ParserCombinators.ReadPrec.Prec
+    -> forall b.
+       (AuthenticationAPI.LoginResponse
+        -> Text.ParserCombinators.ReadP.P b)
+       -> Text.ParserCombinators.ReadP.P b
+  {- Arity: 2, Strictness: <S(S),1*U(U)><L,C(U)>, Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Text.ParserCombinators.ReadPrec.Prec)
+                   @ b
+                   (w1 :: AuthenticationAPI.LoginResponse
+                          -> Text.ParserCombinators.ReadP.P b) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 AuthenticationAPI.$w$creadPrec1 ww1 @ b w1 }) -}
+d714606d69514d42fd78eec3a8f84b4b
+  $fReadLoginResponse4 ::
+    Text.ParserCombinators.ReadP.P [AuthenticationAPI.LoginResponse]
+  {- Unfolding: (GHC.Read.$wlist
+                   @ AuthenticationAPI.LoginResponse
+                   AuthenticationAPI.$fReadLoginResponse2
+                     `cast`
+                   (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                             <AuthenticationAPI.LoginResponse>_R))
+                   @ [AuthenticationAPI.LoginResponse]
+                   (Text.ParserCombinators.ReadP.$fApplicativeP_$cpure
+                      @ [AuthenticationAPI.LoginResponse])) -}
+d714606d69514d42fd78eec3a8f84b4b
+  $fReadLoginResponse_$creadList ::
+    Text.ParserCombinators.ReadP.ReadS
+      [AuthenticationAPI.LoginResponse]
+  {- Arity: 1,
+     Unfolding: (Text.ParserCombinators.ReadP.run
+                   @ [AuthenticationAPI.LoginResponse]
+                   AuthenticationAPI.$fReadLoginResponse4) -}
+d714606d69514d42fd78eec3a8f84b4b
+  $fReadLoginResponse_$creadListPrec ::
+    Text.ParserCombinators.ReadPrec.ReadPrec
+      [AuthenticationAPI.LoginResponse]
+  {- Arity: 2, Strictness: <L,A><L,C(U)>,
+     Unfolding: InlineRule (0, True, True)
+                AuthenticationAPI.$fReadLoginResponse1
+                  `cast`
+                (Trans
+                     (<Text.ParserCombinators.ReadPrec.Prec>_R
+                      ->_R Sym (Text.ParserCombinators.ReadP.N:ReadP[0]
+                                    <[AuthenticationAPI.LoginResponse]>_R))
+                     (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                               <[AuthenticationAPI.LoginResponse]>_R))) -}
+d714606d69514d42fd78eec3a8f84b4b
+  $fReadLoginResponse_$creadPrec ::
+    Text.ParserCombinators.ReadPrec.ReadPrec
+      AuthenticationAPI.LoginResponse
+  {- Arity: 1,
+     Unfolding: InlineRule (0, True, True)
+                AuthenticationAPI.$fReadLoginResponse2
+                  `cast`
+                (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                          <AuthenticationAPI.LoginResponse>_R)) -}
+d714606d69514d42fd78eec3a8f84b4b
+  $fReadLoginResponse_$creadsPrec ::
+    GHC.Types.Int
+    -> Text.ParserCombinators.ReadP.ReadS
+         AuthenticationAPI.LoginResponse
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (eta :: GHC.Types.Int) ->
+                 Text.ParserCombinators.ReadP.run
+                   @ AuthenticationAPI.LoginResponse
+                   ((GHC.Read.$fReadDouble10
+                       @ AuthenticationAPI.LoginResponse
+                       AuthenticationAPI.$fReadLoginResponse3
+                         `cast`
+                       (Trans
+                            (<Text.ParserCombinators.ReadPrec.Prec>_R
+                             ->_R Sym (Text.ParserCombinators.ReadP.N:ReadP[0]
+                                           <AuthenticationAPI.LoginResponse>_R))
+                            (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                      <AuthenticationAPI.LoginResponse>_R)))
+                       eta)
+                      `cast`
+                    (Text.ParserCombinators.ReadP.N:ReadP[0]
+                         <AuthenticationAPI.LoginResponse>_R)
+                      @ AuthenticationAPI.LoginResponse
+                      (Text.ParserCombinators.ReadP.$fApplicativeP_$cpure
+                         @ AuthenticationAPI.LoginResponse))) -}
+24334f840a91ca3e236dbff409821791
+  $fReadToken :: GHC.Read.Read AuthenticationAPI.Token
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ AuthenticationAPI.Token
+                  AuthenticationAPI.$fReadToken_$creadsPrec
+                  AuthenticationAPI.$fReadToken_$creadList
+                  AuthenticationAPI.$fReadToken_$creadPrec
+                  AuthenticationAPI.$fReadToken_$creadListPrec -}
+24334f840a91ca3e236dbff409821791
+  $fReadToken1 ::
+    Text.ParserCombinators.ReadPrec.Prec
+    -> forall b.
+       ([AuthenticationAPI.Token] -> Text.ParserCombinators.ReadP.P b)
+       -> Text.ParserCombinators.ReadP.P b
+  {- Arity: 2, Strictness: <L,A><L,C(U)>,
+     Unfolding: InlineRule (2, True, True)
+                (\ (eta :: Text.ParserCombinators.ReadPrec.Prec)
+                   @ b
+                   (eta1 :: [AuthenticationAPI.Token]
+                            -> Text.ParserCombinators.ReadP.P b) ->
+                 GHC.Read.$wlist
+                   @ AuthenticationAPI.Token
+                   AuthenticationAPI.$fReadToken2
+                     `cast`
+                   (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                             <AuthenticationAPI.Token>_R))
+                   @ b
+                   eta1) -}
+24334f840a91ca3e236dbff409821791
+  $fReadToken2 ::
+    Text.ParserCombinators.ReadPrec.Prec
+    -> Text.ParserCombinators.ReadP.ReadP AuthenticationAPI.Token
+  {- Arity: 1,
+     Unfolding: (GHC.Read.$fReadDouble10
+                   @ AuthenticationAPI.Token
+                   AuthenticationAPI.$fReadToken3
+                     `cast`
+                   (Trans
+                        (<Text.ParserCombinators.ReadPrec.Prec>_R
+                         ->_R Sym (Text.ParserCombinators.ReadP.N:ReadP[0]
+                                       <AuthenticationAPI.Token>_R))
+                        (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                  <AuthenticationAPI.Token>_R)))) -}
+24334f840a91ca3e236dbff409821791
+  $fReadToken3 ::
+    Text.ParserCombinators.ReadPrec.Prec
+    -> forall b.
+       (AuthenticationAPI.Token -> Text.ParserCombinators.ReadP.P b)
+       -> Text.ParserCombinators.ReadP.P b
+  {- Arity: 2, Strictness: <S(S),1*U(U)><L,C(U)>, Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Text.ParserCombinators.ReadPrec.Prec)
+                   @ b
+                   (w1 :: AuthenticationAPI.Token
+                          -> Text.ParserCombinators.ReadP.P b) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 AuthenticationAPI.$w$creadPrec2 ww1 @ b w1 }) -}
+24334f840a91ca3e236dbff409821791
+  $fReadToken4 ::
+    Text.ParserCombinators.ReadP.P [AuthenticationAPI.Token]
+  {- Unfolding: (GHC.Read.$wlist
+                   @ AuthenticationAPI.Token
+                   AuthenticationAPI.$fReadToken2
+                     `cast`
+                   (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                             <AuthenticationAPI.Token>_R))
+                   @ [AuthenticationAPI.Token]
+                   (Text.ParserCombinators.ReadP.$fApplicativeP_$cpure
+                      @ [AuthenticationAPI.Token])) -}
+24334f840a91ca3e236dbff409821791
+  $fReadToken_$creadList ::
+    Text.ParserCombinators.ReadP.ReadS [AuthenticationAPI.Token]
+  {- Arity: 1,
+     Unfolding: (Text.ParserCombinators.ReadP.run
+                   @ [AuthenticationAPI.Token]
+                   AuthenticationAPI.$fReadToken4) -}
+24334f840a91ca3e236dbff409821791
+  $fReadToken_$creadListPrec ::
+    Text.ParserCombinators.ReadPrec.ReadPrec [AuthenticationAPI.Token]
+  {- Arity: 2, Strictness: <L,A><L,C(U)>,
+     Unfolding: InlineRule (0, True, True)
+                AuthenticationAPI.$fReadToken1
+                  `cast`
+                (Trans
+                     (<Text.ParserCombinators.ReadPrec.Prec>_R
+                      ->_R Sym (Text.ParserCombinators.ReadP.N:ReadP[0]
+                                    <[AuthenticationAPI.Token]>_R))
+                     (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                               <[AuthenticationAPI.Token]>_R))) -}
+24334f840a91ca3e236dbff409821791
+  $fReadToken_$creadPrec ::
+    Text.ParserCombinators.ReadPrec.ReadPrec AuthenticationAPI.Token
+  {- Arity: 1,
+     Unfolding: InlineRule (0, True, True)
+                AuthenticationAPI.$fReadToken2
+                  `cast`
+                (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                          <AuthenticationAPI.Token>_R)) -}
+24334f840a91ca3e236dbff409821791
+  $fReadToken_$creadsPrec ::
+    GHC.Types.Int
+    -> Text.ParserCombinators.ReadP.ReadS AuthenticationAPI.Token
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (eta :: GHC.Types.Int) ->
+                 Text.ParserCombinators.ReadP.run
+                   @ AuthenticationAPI.Token
+                   ((GHC.Read.$fReadDouble10
+                       @ AuthenticationAPI.Token
+                       AuthenticationAPI.$fReadToken3
+                         `cast`
+                       (Trans
+                            (<Text.ParserCombinators.ReadPrec.Prec>_R
+                             ->_R Sym (Text.ParserCombinators.ReadP.N:ReadP[0]
+                                           <AuthenticationAPI.Token>_R))
+                            (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                      <AuthenticationAPI.Token>_R)))
+                       eta)
+                      `cast`
+                    (Text.ParserCombinators.ReadP.N:ReadP[0]
+                         <AuthenticationAPI.Token>_R)
+                      @ AuthenticationAPI.Token
+                      (Text.ParserCombinators.ReadP.$fApplicativeP_$cpure
+                         @ AuthenticationAPI.Token))) -}
+415d56d50298b55d1498f2b8a7073204
+  $fReadUserInfo :: GHC.Read.Read AuthenticationAPI.UserInfo
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ AuthenticationAPI.UserInfo
+                  AuthenticationAPI.$fReadUserInfo_$creadsPrec
+                  AuthenticationAPI.$fReadUserInfo_$creadList
+                  AuthenticationAPI.$fReadUserInfo_$creadPrec
+                  AuthenticationAPI.$fReadUserInfo_$creadListPrec -}
+415d56d50298b55d1498f2b8a7073204
+  $fReadUserInfo1 ::
+    Text.ParserCombinators.ReadPrec.Prec
+    -> forall b.
+       ([AuthenticationAPI.UserInfo] -> Text.ParserCombinators.ReadP.P b)
+       -> Text.ParserCombinators.ReadP.P b
+  {- Arity: 2, Strictness: <L,A><L,C(U)>,
+     Unfolding: InlineRule (2, True, True)
+                (\ (eta :: Text.ParserCombinators.ReadPrec.Prec)
+                   @ b
+                   (eta1 :: [AuthenticationAPI.UserInfo]
+                            -> Text.ParserCombinators.ReadP.P b) ->
+                 GHC.Read.$wlist
+                   @ AuthenticationAPI.UserInfo
+                   AuthenticationAPI.$fReadUserInfo2
+                     `cast`
+                   (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                             <AuthenticationAPI.UserInfo>_R))
+                   @ b
+                   eta1) -}
+415d56d50298b55d1498f2b8a7073204
+  $fReadUserInfo2 ::
+    Text.ParserCombinators.ReadPrec.Prec
+    -> Text.ParserCombinators.ReadP.ReadP AuthenticationAPI.UserInfo
+  {- Arity: 1,
+     Unfolding: (GHC.Read.$fReadDouble10
+                   @ AuthenticationAPI.UserInfo
+                   AuthenticationAPI.$fReadUserInfo3
+                     `cast`
+                   (Trans
+                        (<Text.ParserCombinators.ReadPrec.Prec>_R
+                         ->_R Sym (Text.ParserCombinators.ReadP.N:ReadP[0]
+                                       <AuthenticationAPI.UserInfo>_R))
+                        (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                  <AuthenticationAPI.UserInfo>_R)))) -}
+415d56d50298b55d1498f2b8a7073204
+  $fReadUserInfo3 ::
+    Text.ParserCombinators.ReadPrec.Prec
+    -> forall b.
+       (AuthenticationAPI.UserInfo -> Text.ParserCombinators.ReadP.P b)
+       -> Text.ParserCombinators.ReadP.P b
+  {- Arity: 2, Strictness: <S(S),1*U(U)><L,C(U)>, Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Text.ParserCombinators.ReadPrec.Prec)
+                   @ b
+                   (w1 :: AuthenticationAPI.UserInfo
+                          -> Text.ParserCombinators.ReadP.P b) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 AuthenticationAPI.$w$creadPrec3 ww1 @ b w1 }) -}
+415d56d50298b55d1498f2b8a7073204
+  $fReadUserInfo4 ::
+    Text.ParserCombinators.ReadP.P [AuthenticationAPI.UserInfo]
+  {- Unfolding: (GHC.Read.$wlist
+                   @ AuthenticationAPI.UserInfo
+                   AuthenticationAPI.$fReadUserInfo2
+                     `cast`
+                   (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                             <AuthenticationAPI.UserInfo>_R))
+                   @ [AuthenticationAPI.UserInfo]
+                   (Text.ParserCombinators.ReadP.$fApplicativeP_$cpure
+                      @ [AuthenticationAPI.UserInfo])) -}
+415d56d50298b55d1498f2b8a7073204
+  $fReadUserInfo_$creadList ::
+    Text.ParserCombinators.ReadP.ReadS [AuthenticationAPI.UserInfo]
+  {- Arity: 1,
+     Unfolding: (Text.ParserCombinators.ReadP.run
+                   @ [AuthenticationAPI.UserInfo]
+                   AuthenticationAPI.$fReadUserInfo4) -}
+415d56d50298b55d1498f2b8a7073204
+  $fReadUserInfo_$creadListPrec ::
+    Text.ParserCombinators.ReadPrec.ReadPrec
+      [AuthenticationAPI.UserInfo]
+  {- Arity: 2, Strictness: <L,A><L,C(U)>,
+     Unfolding: InlineRule (0, True, True)
+                AuthenticationAPI.$fReadUserInfo1
+                  `cast`
+                (Trans
+                     (<Text.ParserCombinators.ReadPrec.Prec>_R
+                      ->_R Sym (Text.ParserCombinators.ReadP.N:ReadP[0]
+                                    <[AuthenticationAPI.UserInfo]>_R))
+                     (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                               <[AuthenticationAPI.UserInfo]>_R))) -}
+415d56d50298b55d1498f2b8a7073204
+  $fReadUserInfo_$creadPrec ::
+    Text.ParserCombinators.ReadPrec.ReadPrec AuthenticationAPI.UserInfo
+  {- Arity: 1,
+     Unfolding: InlineRule (0, True, True)
+                AuthenticationAPI.$fReadUserInfo2
+                  `cast`
+                (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                          <AuthenticationAPI.UserInfo>_R)) -}
+415d56d50298b55d1498f2b8a7073204
+  $fReadUserInfo_$creadsPrec ::
+    GHC.Types.Int
+    -> Text.ParserCombinators.ReadP.ReadS AuthenticationAPI.UserInfo
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (eta :: GHC.Types.Int) ->
+                 Text.ParserCombinators.ReadP.run
+                   @ AuthenticationAPI.UserInfo
+                   ((GHC.Read.$fReadDouble10
+                       @ AuthenticationAPI.UserInfo
+                       AuthenticationAPI.$fReadUserInfo3
+                         `cast`
+                       (Trans
+                            (<Text.ParserCombinators.ReadPrec.Prec>_R
+                             ->_R Sym (Text.ParserCombinators.ReadP.N:ReadP[0]
+                                           <AuthenticationAPI.UserInfo>_R))
+                            (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                      <AuthenticationAPI.UserInfo>_R)))
+                       eta)
+                      `cast`
+                    (Text.ParserCombinators.ReadP.N:ReadP[0]
+                         <AuthenticationAPI.UserInfo>_R)
+                      @ AuthenticationAPI.UserInfo
+                      (Text.ParserCombinators.ReadP.$fApplicativeP_$cpure
+                         @ AuthenticationAPI.UserInfo))) -}
+fbc6afcf120c33d037eca21a8763339a
   $fShowLoginRequest :: GHC.Show.Show AuthenticationAPI.LoginRequest
   DFunId
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -4305,7 +4861,7 @@ cdcb402c9858382cee7116ffef1e28d5
                   AuthenticationAPI.$fShowLoginRequest_$cshowsPrec
                   AuthenticationAPI.$fShowLoginRequest_$cshow
                   AuthenticationAPI.$fShowLoginRequest_$cshowList -}
-6d91cc3fb807d3aaa3434356b2788b66
+fbc6afcf120c33d037eca21a8763339a
   $fShowLoginRequest1 ::
     AuthenticationAPI.LoginRequest -> GHC.Show.ShowS
   {- Arity: 2,
@@ -4322,7 +4878,7 @@ cdcb402c9858382cee7116ffef1e28d5
 faa692114ddef5f4afc9235d3602a984
   $fShowLoginRequest4 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "LoginRequest {"#) -}
-6d91cc3fb807d3aaa3434356b2788b66
+fbc6afcf120c33d037eca21a8763339a
   $fShowLoginRequest_$cshow ::
     AuthenticationAPI.LoginRequest -> GHC.Base.String
   {- Arity: 1, Strictness: <S,1*U(1*U)>,
@@ -4332,14 +4888,14 @@ faa692114ddef5f4afc9235d3602a984
                    GHC.Show.shows22
                    x
                    (GHC.Types.[] @ GHC.Types.Char)) -}
-6d91cc3fb807d3aaa3434356b2788b66
+fbc6afcf120c33d037eca21a8763339a
   $fShowLoginRequest_$cshowList ::
     [AuthenticationAPI.LoginRequest] -> GHC.Show.ShowS
   {- Arity: 2,
      Unfolding: (GHC.Show.showList__
                    @ AuthenticationAPI.LoginRequest
                    AuthenticationAPI.$fShowLoginRequest1) -}
-6d91cc3fb807d3aaa3434356b2788b66
+fbc6afcf120c33d037eca21a8763339a
   $fShowLoginRequest_$cshowsPrec ::
     GHC.Types.Int -> AuthenticationAPI.LoginRequest -> GHC.Show.ShowS
   {- Arity: 3, Strictness: <S(S),1*U(U)><S,1*U(1*U)><L,U>,
@@ -4351,7 +4907,7 @@ faa692114ddef5f4afc9235d3602a984
                  case w of ww { GHC.Types.I# ww1 ->
                  case w1 of ww2 { AuthenticationAPI.LoginRequest ww3 ->
                  AuthenticationAPI.$w$cshowsPrec ww1 ww3 w2 } }) -}
-2db1ad9c0fbc6ed1e420977a6e778b23
+d714606d69514d42fd78eec3a8f84b4b
   $fShowLoginResponse ::
     GHC.Show.Show AuthenticationAPI.LoginResponse
   DFunId
@@ -4361,7 +4917,7 @@ faa692114ddef5f4afc9235d3602a984
                   AuthenticationAPI.$fShowLoginResponse_$cshowsPrec
                   AuthenticationAPI.$fShowLoginResponse_$cshow
                   AuthenticationAPI.$fShowLoginResponse_$cshowList -}
-2db1ad9c0fbc6ed1e420977a6e778b23
+d714606d69514d42fd78eec3a8f84b4b
   $fShowLoginResponse1 ::
     AuthenticationAPI.LoginResponse -> GHC.Show.ShowS
   {- Arity: 2,
@@ -4375,7 +4931,7 @@ faa692114ddef5f4afc9235d3602a984
 982c6dc904c3fd3366a0cf6835578834
   $fShowLoginResponse3 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "LoginResponse {"#) -}
-2db1ad9c0fbc6ed1e420977a6e778b23
+d714606d69514d42fd78eec3a8f84b4b
   $fShowLoginResponse_$cshow ::
     AuthenticationAPI.LoginResponse -> GHC.Base.String
   {- Arity: 1, Strictness: <S,1*U(1*U)>,
@@ -4385,14 +4941,14 @@ faa692114ddef5f4afc9235d3602a984
                    GHC.Show.shows22
                    x
                    (GHC.Types.[] @ GHC.Types.Char)) -}
-2db1ad9c0fbc6ed1e420977a6e778b23
+d714606d69514d42fd78eec3a8f84b4b
   $fShowLoginResponse_$cshowList ::
     [AuthenticationAPI.LoginResponse] -> GHC.Show.ShowS
   {- Arity: 2,
      Unfolding: (GHC.Show.showList__
                    @ AuthenticationAPI.LoginResponse
                    AuthenticationAPI.$fShowLoginResponse1) -}
-2db1ad9c0fbc6ed1e420977a6e778b23
+d714606d69514d42fd78eec3a8f84b4b
   $fShowLoginResponse_$cshowsPrec ::
     GHC.Types.Int -> AuthenticationAPI.LoginResponse -> GHC.Show.ShowS
   {- Arity: 3, Strictness: <S(S),1*U(U)><S,1*U(1*U)><L,U>,
@@ -4456,7 +5012,7 @@ cdcb402c9858382cee7116ffef1e28d5
                  case w of ww { GHC.Types.I# ww1 ->
                  case w1 of ww2 { AuthenticationAPI.ResponseData ww3 ->
                  AuthenticationAPI.$w$cshowsPrec2 ww1 ww3 w2 } }) -}
-20ee82adf00866e71a884ff28ecb1cf9
+24334f840a91ca3e236dbff409821791
   $fShowToken :: GHC.Show.Show AuthenticationAPI.Token
   DFunId
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -4465,7 +5021,7 @@ cdcb402c9858382cee7116ffef1e28d5
                   AuthenticationAPI.$fShowToken_$cshowsPrec
                   AuthenticationAPI.$fShowToken_$cshow
                   AuthenticationAPI.$fShowToken_$cshowList -}
-20ee82adf00866e71a884ff28ecb1cf9
+24334f840a91ca3e236dbff409821791
   $fShowToken1 :: AuthenticationAPI.Token -> GHC.Show.ShowS
   {- Arity: 2,
      Unfolding: (\ (w :: AuthenticationAPI.Token)
@@ -4490,7 +5046,7 @@ a0ac943ad407353281a27fd535ca3584
 9999593ef644b50ae87e4b57e9d89750
   $fShowToken7 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "Token {"#) -}
-20ee82adf00866e71a884ff28ecb1cf9
+24334f840a91ca3e236dbff409821791
   $fShowToken_$cshow :: AuthenticationAPI.Token -> GHC.Base.String
   {- Arity: 1, Strictness: <S,1*U(1*U,1*U,1*U,1*U)>,
      Unfolding: InlineRule (1, True, False)
@@ -4499,14 +5055,14 @@ a0ac943ad407353281a27fd535ca3584
                    GHC.Show.shows22
                    x
                    (GHC.Types.[] @ GHC.Types.Char)) -}
-20ee82adf00866e71a884ff28ecb1cf9
+24334f840a91ca3e236dbff409821791
   $fShowToken_$cshowList ::
     [AuthenticationAPI.Token] -> GHC.Show.ShowS
   {- Arity: 2,
      Unfolding: (GHC.Show.showList__
                    @ AuthenticationAPI.Token
                    AuthenticationAPI.$fShowToken1) -}
-20ee82adf00866e71a884ff28ecb1cf9
+24334f840a91ca3e236dbff409821791
   $fShowToken_$cshowsPrec ::
     GHC.Types.Int -> AuthenticationAPI.Token -> GHC.Show.ShowS
   {- Arity: 3,
@@ -4519,7 +5075,7 @@ a0ac943ad407353281a27fd535ca3584
                  case w of ww { GHC.Types.I# ww1 ->
                  case w1 of ww2 { AuthenticationAPI.Token ww3 ww4 ww5 ww6 ->
                  AuthenticationAPI.$w$cshowsPrec3 ww1 ww3 ww4 ww5 ww6 w2 } }) -}
-23828aedb602d9d8f1cf58842874ba5c
+415d56d50298b55d1498f2b8a7073204
   $fShowUserInfo :: GHC.Show.Show AuthenticationAPI.UserInfo
   DFunId
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -4528,7 +5084,7 @@ a0ac943ad407353281a27fd535ca3584
                   AuthenticationAPI.$fShowUserInfo_$cshowsPrec
                   AuthenticationAPI.$fShowUserInfo_$cshow
                   AuthenticationAPI.$fShowUserInfo_$cshowList -}
-23828aedb602d9d8f1cf58842874ba5c
+415d56d50298b55d1498f2b8a7073204
   $fShowUserInfo1 :: AuthenticationAPI.UserInfo -> GHC.Show.ShowS
   {- Arity: 2,
      Unfolding: (\ (w :: AuthenticationAPI.UserInfo)
@@ -4544,7 +5100,7 @@ a0ac943ad407353281a27fd535ca3584
 7506d1ff7fb9aff73e671a5377e28c01
   $fShowUserInfo4 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "UserInfo {"#) -}
-23828aedb602d9d8f1cf58842874ba5c
+415d56d50298b55d1498f2b8a7073204
   $fShowUserInfo_$cshow ::
     AuthenticationAPI.UserInfo -> GHC.Base.String
   {- Arity: 1, Strictness: <S,1*U(1*U,1*U)>,
@@ -4554,14 +5110,14 @@ a0ac943ad407353281a27fd535ca3584
                    GHC.Show.shows22
                    x
                    (GHC.Types.[] @ GHC.Types.Char)) -}
-23828aedb602d9d8f1cf58842874ba5c
+415d56d50298b55d1498f2b8a7073204
   $fShowUserInfo_$cshowList ::
     [AuthenticationAPI.UserInfo] -> GHC.Show.ShowS
   {- Arity: 2,
      Unfolding: (GHC.Show.showList__
                    @ AuthenticationAPI.UserInfo
                    AuthenticationAPI.$fShowUserInfo1) -}
-23828aedb602d9d8f1cf58842874ba5c
+415d56d50298b55d1498f2b8a7073204
   $fShowUserInfo_$cshowsPrec ::
     GHC.Types.Int -> AuthenticationAPI.UserInfo -> GHC.Show.ShowS
   {- Arity: 3, Strictness: <S(S),1*U(U)><S,1*U(1*U,1*U)><L,U>,
@@ -4573,7 +5129,7 @@ a0ac943ad407353281a27fd535ca3584
                  case w of ww { GHC.Types.I# ww1 ->
                  case w1 of ww2 { AuthenticationAPI.UserInfo ww3 ww4 ->
                  AuthenticationAPI.$w$cshowsPrec4 ww1 ww3 ww4 w2 } }) -}
-6d91cc3fb807d3aaa3434356b2788b66
+fbc6afcf120c33d037eca21a8763339a
   $fToBSONLoginRequest ::
     Data.Bson.Generic.ToBSON AuthenticationAPI.LoginRequest
   DFunId
@@ -4652,7 +5208,7 @@ cc9286cf750b24cfbaac99dae2c458a7
                    AuthenticationAPI.$fFromBSONLoginRequest4
                    0#
                    ipv }) -}
-6d91cc3fb807d3aaa3434356b2788b66
+fbc6afcf120c33d037eca21a8763339a
   $fToBSONLoginRequest_$ctoBSON ::
     AuthenticationAPI.LoginRequest -> Data.Bson.Document
   {- Arity: 1, Strictness: <L,1*U(1*U)>,
@@ -4766,7 +5322,7 @@ cc9286cf750b24cfbaac99dae2c458a7
                      GHC.Generics.$WSTrue
                        `cast`
                      (Sym (GHC.Generics.N:SingI[0]) <GHC.Types.Bool>_N <'GHC.Types.True>_N)) -}
-20ee82adf00866e71a884ff28ecb1cf9
+24334f840a91ca3e236dbff409821791
   $fToBSONToken :: Data.Bson.Generic.ToBSON AuthenticationAPI.Token
   DFunId
   {- Arity: 1, Strictness: <L,1*U(U,U,U,U)>,
@@ -5306,7 +5862,7 @@ d0d877a092d5c9c4b4161c231431adb5
                  case w1 of ww { GHC.Generics.:*: ww1 ww2 ->
                  case ww1 of ww3 { GHC.Generics.:*: ww4 ww5 ->
                  AuthenticationAPI.$w$dGToBSON @ a1 ww4 ww5 ww2 } }) -}
-20ee82adf00866e71a884ff28ecb1cf9
+24334f840a91ca3e236dbff409821791
   $fToBSONToken_$s$dmtoBSON ::
     AuthenticationAPI.Token -> Data.Bson.Document
   {- Arity: 1, Strictness: <L,1*U(U,U,U,U)>,
@@ -5374,7 +5930,7 @@ d0d877a092d5c9c4b4161c231431adb5
                      GHC.Generics.$WSTrue
                        `cast`
                      (Sym (GHC.Generics.N:SingI[0]) <GHC.Types.Bool>_N <'GHC.Types.True>_N)) -}
-20ee82adf00866e71a884ff28ecb1cf9
+24334f840a91ca3e236dbff409821791
   $fToBSONToken_$sconstructorCount ::
     AuthenticationAPI.Token -> GHC.Types.Int
   {- Arity: 1, HasNoCafRefs, Strictness: <L,A>m,
@@ -5386,7 +5942,7 @@ d0d877a092d5c9c4b4161c231431adb5
                       (Sym (AuthenticationAPI.Rep_Token[0])))
                    @ GHC.Prim.Any
                    (AuthenticationAPI.$fGenericToken_$cfrom @ GHC.Prim.Any x)) -}
-23828aedb602d9d8f1cf58842874ba5c
+415d56d50298b55d1498f2b8a7073204
   $fToBSONUserInfo ::
     Data.Bson.Generic.ToBSON AuthenticationAPI.UserInfo
   DFunId
@@ -5481,7 +6037,7 @@ e83f681ffc5abd7da6006e7f4629633a
                    AuthenticationAPI.$fFromBSONUserInfo8
                    0#
                    ipv }) -}
-23828aedb602d9d8f1cf58842874ba5c
+415d56d50298b55d1498f2b8a7073204
   $fToBSONUserInfo_$ctoBSON ::
     AuthenticationAPI.UserInfo -> Data.Bson.Document
   {- Arity: 1, Strictness: <L,1*U(U,U)>,
@@ -6202,7 +6758,7 @@ dd2f47dc39c2be934ff6fd9c555f18bc
                       @ GHC.Types.Char
                       @ GHC.Prim.Any
                       x)) -}
-6d91cc3fb807d3aaa3434356b2788b66
+fbc6afcf120c33d037eca21a8763339a
   $fToJSONLoginRequest ::
     Data.Aeson.Types.Class.ToJSON AuthenticationAPI.LoginRequest
   DFunId
@@ -6211,7 +6767,7 @@ dd2f47dc39c2be934ff6fd9c555f18bc
                   @ AuthenticationAPI.LoginRequest
                   AuthenticationAPI.$fToJSONLoginRequest_$ctoJSON
                   AuthenticationAPI.$fToJSONLoginRequest_$ctoEncoding -}
-6d91cc3fb807d3aaa3434356b2788b66
+fbc6afcf120c33d037eca21a8763339a
   $fToJSONLoginRequest1 ::
     AuthenticationAPI.LoginRequest
     -> Data.Aeson.Types.Generic.Tagged
@@ -6271,7 +6827,7 @@ dd2f47dc39c2be934ff6fd9c555f18bc
                    AuthenticationAPI.$fFromBSONLoginRequest4
                    0#
                    ipv }) -}
-6d91cc3fb807d3aaa3434356b2788b66
+fbc6afcf120c33d037eca21a8763339a
   $fToJSONLoginRequest_$ctoEncoding ::
     AuthenticationAPI.LoginRequest
     -> Data.Aeson.Types.Internal.Encoding
@@ -6283,7 +6839,7 @@ dd2f47dc39c2be934ff6fd9c555f18bc
                   `cast`
                 (<AuthenticationAPI.LoginRequest>_R
                  ->_R Sym (Data.Aeson.Types.Internal.N:Encoding[0])) -}
-6d91cc3fb807d3aaa3434356b2788b66
+fbc6afcf120c33d037eca21a8763339a
   $fToJSONLoginRequest_$ctoJSON ::
     AuthenticationAPI.LoginRequest -> Data.Aeson.Types.Internal.Value
   {- Arity: 1, Strictness: <L,1*U(1*U)>m1,
@@ -6294,7 +6850,7 @@ dd2f47dc39c2be934ff6fd9c555f18bc
                  ->_R Data.Aeson.Types.Generic.N:Tagged[0]
                           <Data.Aeson.Types.Generic.True>_P
                           <Data.Aeson.Types.Internal.Value>_R) -}
-2db1ad9c0fbc6ed1e420977a6e778b23
+d714606d69514d42fd78eec3a8f84b4b
   $fToJSONLoginResponse ::
     Data.Aeson.Types.Class.ToJSON AuthenticationAPI.LoginResponse
   DFunId
@@ -6303,7 +6859,7 @@ dd2f47dc39c2be934ff6fd9c555f18bc
                   @ AuthenticationAPI.LoginResponse
                   AuthenticationAPI.$fToJSONLoginResponse_$ctoJSON
                   AuthenticationAPI.$fToJSONLoginResponse_$ctoEncoding -}
-2db1ad9c0fbc6ed1e420977a6e778b23
+d714606d69514d42fd78eec3a8f84b4b
   $fToJSONLoginResponse1 ::
     AuthenticationAPI.LoginResponse
     -> Data.Aeson.Types.Generic.Tagged
@@ -6360,7 +6916,7 @@ dd2f47dc39c2be934ff6fd9c555f18bc
                    AuthenticationAPI.$fFromBSONLoginResponse4
                    0#
                    ipv }) -}
-2db1ad9c0fbc6ed1e420977a6e778b23
+d714606d69514d42fd78eec3a8f84b4b
   $fToJSONLoginResponse_$ctoEncoding ::
     AuthenticationAPI.LoginResponse
     -> Data.Aeson.Types.Internal.Encoding
@@ -6372,7 +6928,7 @@ dd2f47dc39c2be934ff6fd9c555f18bc
                   `cast`
                 (<AuthenticationAPI.LoginResponse>_R
                  ->_R Sym (Data.Aeson.Types.Internal.N:Encoding[0])) -}
-2db1ad9c0fbc6ed1e420977a6e778b23
+d714606d69514d42fd78eec3a8f84b4b
   $fToJSONLoginResponse_$ctoJSON ::
     AuthenticationAPI.LoginResponse -> Data.Aeson.Types.Internal.Value
   {- Arity: 1, Strictness: <L,1*U(1*U)>m1,
@@ -6472,7 +7028,7 @@ cdcb402c9858382cee7116ffef1e28d5
                  ->_R Data.Aeson.Types.Generic.N:Tagged[0]
                           <Data.Aeson.Types.Generic.True>_P
                           <Data.Aeson.Types.Internal.Value>_R) -}
-20ee82adf00866e71a884ff28ecb1cf9
+24334f840a91ca3e236dbff409821791
   $fToJSONToken ::
     Data.Aeson.Types.Class.ToJSON AuthenticationAPI.Token
   DFunId
@@ -6481,7 +7037,7 @@ cdcb402c9858382cee7116ffef1e28d5
                   @ AuthenticationAPI.Token
                   AuthenticationAPI.$fToJSONToken_$ctoJSON
                   AuthenticationAPI.$fToJSONToken_$ctoEncoding -}
-20ee82adf00866e71a884ff28ecb1cf9
+24334f840a91ca3e236dbff409821791
   $fToJSONToken1 ::
     AuthenticationAPI.Token
     -> Data.Aeson.Types.Generic.Tagged
@@ -6602,7 +7158,7 @@ cdcb402c9858382cee7116ffef1e28d5
                    (w1 :: GHC.Generics.K1 GHC.Generics.R [GHC.Types.Char] a1) ->
                  case AuthenticationAPI.$w$dGToJSON3 @ a1 w1 of ww { Unit# ww1 ->
                  Data.Aeson.Types.Internal.String ww1 }) -}
-20ee82adf00866e71a884ff28ecb1cf9
+24334f840a91ca3e236dbff409821791
   $fToJSONToken_$ctoEncoding ::
     AuthenticationAPI.Token -> Data.Aeson.Types.Internal.Encoding
   {- Arity: 1, Strictness: <S,1*U(U,U,U,U)>,
@@ -6614,7 +7170,7 @@ cdcb402c9858382cee7116ffef1e28d5
                   `cast`
                 (<AuthenticationAPI.Token>_R
                  ->_R Sym (Data.Aeson.Types.Internal.N:Encoding[0])) -}
-20ee82adf00866e71a884ff28ecb1cf9
+24334f840a91ca3e236dbff409821791
   $fToJSONToken_$ctoJSON ::
     AuthenticationAPI.Token -> Data.Aeson.Types.Internal.Value
   {- Arity: 1, Strictness: <S,1*U(U,U,U,U)>m1,
@@ -6625,7 +7181,7 @@ cdcb402c9858382cee7116ffef1e28d5
                  ->_R Data.Aeson.Types.Generic.N:Tagged[0]
                           <Data.Aeson.Types.Generic.True>_P
                           <Data.Aeson.Types.Internal.Value>_R) -}
-23828aedb602d9d8f1cf58842874ba5c
+415d56d50298b55d1498f2b8a7073204
   $fToJSONUserInfo ::
     Data.Aeson.Types.Class.ToJSON AuthenticationAPI.UserInfo
   DFunId
@@ -6634,7 +7190,7 @@ cdcb402c9858382cee7116ffef1e28d5
                   @ AuthenticationAPI.UserInfo
                   AuthenticationAPI.$fToJSONUserInfo_$ctoJSON
                   AuthenticationAPI.$fToJSONUserInfo_$ctoEncoding -}
-23828aedb602d9d8f1cf58842874ba5c
+415d56d50298b55d1498f2b8a7073204
   $fToJSONUserInfo1 ::
     AuthenticationAPI.UserInfo
     -> Data.Aeson.Types.Generic.Tagged
@@ -6699,7 +7255,7 @@ afdb182b71073d993d43e790d9db7ee6
                    AuthenticationAPI.$fFromBSONUserInfo8
                    0#
                    ipv }) -}
-23828aedb602d9d8f1cf58842874ba5c
+415d56d50298b55d1498f2b8a7073204
   $fToJSONUserInfo_$ctoEncoding ::
     AuthenticationAPI.UserInfo -> Data.Aeson.Types.Internal.Encoding
   {- Arity: 1, Strictness: <S,1*U(1*U,1*U)>,
@@ -6711,7 +7267,7 @@ afdb182b71073d993d43e790d9db7ee6
                   `cast`
                 (<AuthenticationAPI.UserInfo>_R
                  ->_R Sym (Data.Aeson.Types.Internal.N:Encoding[0])) -}
-23828aedb602d9d8f1cf58842874ba5c
+415d56d50298b55d1498f2b8a7073204
   $fToJSONUserInfo_$ctoJSON ::
     AuthenticationAPI.UserInfo -> Data.Aeson.Types.Internal.Value
   {- Arity: 1, Strictness: <S,1*U(1*U,1*U)>m1,
@@ -6722,6 +7278,9 @@ afdb182b71073d993d43e790d9db7ee6
                  ->_R Data.Aeson.Types.Generic.N:Tagged[0]
                           <Data.Aeson.Types.Generic.True>_P
                           <Data.Aeson.Types.Internal.Value>_R) -}
+84a9d79e199e1cea63a33f9199077007
+  $s$dmfromBSON22 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "LoginResponse"#) -}
 eed76e074b7b031c598c687b47cc7d3f
   $tc'LoginRequest :: GHC.Types.TyCon
   {- HasNoCafRefs, Strictness: m,
@@ -6857,6 +7416,71 @@ a4df12e9ec7de7f931164630b6f872c4
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS
                    "use-haskell-api-0.1.0.0-3nD5NWCHf1N83LkkK3wDn9"#) -}
+b0a7475a0c21930d834685f8216a1fe9
+  $w$c/= ::
+    GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Types.Bool
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <S,1*U><L,1*U><S,1*U><L,1*U>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Base.String)
+                   (ww1 :: GHC.Base.String)
+                   (ww2 :: GHC.Base.String)
+                   (ww3 :: GHC.Base.String) ->
+                 case GHC.Base.eqString ww ww2 of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True
+                   -> case GHC.Base.eqString ww1 ww3 of wild1 {
+                        GHC.Types.False -> GHC.Types.True
+                        GHC.Types.True -> GHC.Types.False } }) -}
+782eca5a428c7fe0cc0e1a4528d9ab39
+  $w$c== ::
+    GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Types.Bool
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <S,1*U><L,1*U><S,1*U><L,1*U>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Base.String)
+                   (ww1 :: GHC.Base.String)
+                   (ww2 :: GHC.Base.String)
+                   (ww3 :: GHC.Base.String) ->
+                 case GHC.Base.eqString ww ww2 of wild {
+                   GHC.Types.False -> GHC.Types.False
+                   GHC.Types.True -> GHC.Base.eqString ww1 ww3 }) -}
+fbc6afcf120c33d037eca21a8763339a
+  $w$creadPrec ::
+    GHC.Prim.Int#
+    -> forall b.
+       (AuthenticationAPI.LoginRequest
+        -> Text.ParserCombinators.ReadP.P b)
+       -> Text.ParserCombinators.ReadP.P b
+  {- Arity: 2, Strictness: <S,U><L,C(U)>, Inline: [0] -}
+d714606d69514d42fd78eec3a8f84b4b
+  $w$creadPrec1 ::
+    GHC.Prim.Int#
+    -> forall b.
+       (AuthenticationAPI.LoginResponse
+        -> Text.ParserCombinators.ReadP.P b)
+       -> Text.ParserCombinators.ReadP.P b
+  {- Arity: 2, Strictness: <S,U><L,C(U)>, Inline: [0] -}
+24334f840a91ca3e236dbff409821791
+  $w$creadPrec2 ::
+    GHC.Prim.Int#
+    -> forall b.
+       (AuthenticationAPI.Token -> Text.ParserCombinators.ReadP.P b)
+       -> Text.ParserCombinators.ReadP.P b
+  {- Arity: 2, Strictness: <S,U><L,C(U)>, Inline: [0] -}
+415d56d50298b55d1498f2b8a7073204
+  $w$creadPrec3 ::
+    GHC.Prim.Int#
+    -> forall b.
+       (AuthenticationAPI.UserInfo -> Text.ParserCombinators.ReadP.P b)
+       -> Text.ParserCombinators.ReadP.P b
+  {- Arity: 2, Strictness: <S,U><L,C(U)>, Inline: [0] -}
 0247e93380837f1822a8a456b802f1e2
   $w$cshowsPrec ::
     GHC.Prim.Int#
@@ -9867,7 +10491,7 @@ c3b7d700e4ed546a714f4c0bb1ba28d7
           Data.Text.Internal.Text #)
   {- Arity: 5, Strictness: <L,U(U)><L,U(U)><S,1*U><S,U><S,U>,
      Inline: [0] -}
-c3a36c4298048fa52b872e37782d3aed
+241ea8378e5c07dfc5905346b0fb2a2f
   type API =
     ("login"
      Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
@@ -9882,11 +10506,11 @@ c3a36c4298048fa52b872e37782d3aed
                                                       Servant.API.Sub.:> Servant.API.Verbs.Post
                                                                            '[Servant.API.ContentTypes.JSON]
                                                                            GHC.Types.Bool))
-6d91cc3fb807d3aaa3434356b2788b66
+fbc6afcf120c33d037eca21a8763339a
   data LoginRequest = LoginRequest {userInfo :: GHC.Base.String}
-2db1ad9c0fbc6ed1e420977a6e778b23
+d714606d69514d42fd78eec3a8f84b4b
   data LoginResponse = LoginResponse {token :: GHC.Base.String}
-6d91cc3fb807d3aaa3434356b2788b66
+fbc6afcf120c33d037eca21a8763339a
   axiom Rep_LoginRequest::
       GHC.Generics.Rep AuthenticationAPI.LoginRequest
         = GHC.Generics.D1
@@ -9905,7 +10529,7 @@ c3a36c4298048fa52b872e37782d3aed
                      'GHC.Generics.NoSourceStrictness
                      'GHC.Generics.DecidedLazy)
                   (GHC.Generics.Rec0 GHC.Base.String)))
-2db1ad9c0fbc6ed1e420977a6e778b23
+d714606d69514d42fd78eec3a8f84b4b
   axiom Rep_LoginResponse::
       GHC.Generics.Rep AuthenticationAPI.LoginResponse
         = GHC.Generics.D1
@@ -9943,7 +10567,7 @@ cdcb402c9858382cee7116ffef1e28d5
                      'GHC.Generics.NoSourceStrictness
                      'GHC.Generics.DecidedLazy)
                   (GHC.Generics.Rec0 GHC.Base.String)))
-20ee82adf00866e71a884ff28ecb1cf9
+24334f840a91ca3e236dbff409821791
   axiom Rep_Token::
       GHC.Generics.Rep AuthenticationAPI.Token
         = GHC.Generics.D1
@@ -9983,7 +10607,7 @@ cdcb402c9858382cee7116ffef1e28d5
                                                         'GHC.Generics.NoSourceStrictness
                                                         'GHC.Generics.DecidedLazy)
                                                      (GHC.Generics.Rec0 GHC.Base.String))))
-23828aedb602d9d8f1cf58842874ba5c
+415d56d50298b55d1498f2b8a7073204
   axiom Rep_UserInfo::
       GHC.Generics.Rep AuthenticationAPI.UserInfo
         = GHC.Generics.D1
@@ -10011,17 +10635,17 @@ cdcb402c9858382cee7116ffef1e28d5
                                    (GHC.Generics.Rec0 GHC.Base.String)))
 cdcb402c9858382cee7116ffef1e28d5
   data ResponseData = ResponseData {response :: GHC.Base.String}
-20ee82adf00866e71a884ff28ecb1cf9
+24334f840a91ca3e236dbff409821791
   data Token
     = Token {ticket :: GHC.Base.String,
              sessionKey :: GHC.Base.String,
              timeout :: GHC.Base.String,
              user :: GHC.Base.String}
-23828aedb602d9d8f1cf58842874ba5c
+415d56d50298b55d1498f2b8a7073204
   data UserInfo
     = UserInfo {username :: GHC.Base.String,
                 password :: GHC.Base.String}
-56b117c5a40c05f69d62d2e7ec1dcf1d
+f6f35d95172d0c947f8fd0502c33d1b6
   password :: AuthenticationAPI.UserInfo -> GHC.Base.String
   RecSel Left AuthenticationAPI.UserInfo
   {- Arity: 1, HasNoCafRefs, Strictness: <S(LS),1*U(A,1*U)>,
@@ -10035,7 +10659,7 @@ df0b448f8b3879c578fffd27d5555422
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: AuthenticationAPI.ResponseData) ->
                  case ds of wild { AuthenticationAPI.ResponseData ds1 -> ds1 }) -}
-af65a00ba22e4db661016b1a497c5a17
+b3c696dbbadac214be14d776022de316
   sessionKey :: AuthenticationAPI.Token -> GHC.Base.String
   RecSel Left AuthenticationAPI.Token
   {- Arity: 1, HasNoCafRefs, Strictness: <S(LSLL),1*U(A,1*U,A,A)>,
@@ -10043,7 +10667,7 @@ af65a00ba22e4db661016b1a497c5a17
                 (\ (ds :: AuthenticationAPI.Token) ->
                  case ds of wild { AuthenticationAPI.Token ds1 ds2 ds3 ds4 ->
                  ds2 }) -}
-9be394cd548f58855b5bd4be16c99b9e
+b70c4d47f94b6e3485cc89a334cc273d
   ticket :: AuthenticationAPI.Token -> GHC.Base.String
   RecSel Left AuthenticationAPI.Token
   {- Arity: 1, HasNoCafRefs, Strictness: <S(SLLL),1*U(1*U,A,A,A)>,
@@ -10051,7 +10675,7 @@ af65a00ba22e4db661016b1a497c5a17
                 (\ (ds :: AuthenticationAPI.Token) ->
                  case ds of wild { AuthenticationAPI.Token ds1 ds2 ds3 ds4 ->
                  ds1 }) -}
-c878e458f4f5c5e681a46a1fd902dd25
+62c433a13ccb953b994c9bf21ef5698e
   timeout :: AuthenticationAPI.Token -> GHC.Base.String
   RecSel Left AuthenticationAPI.Token
   {- Arity: 1, HasNoCafRefs, Strictness: <S(LLSL),1*U(A,A,1*U,A)>,
@@ -10059,14 +10683,14 @@ c878e458f4f5c5e681a46a1fd902dd25
                 (\ (ds :: AuthenticationAPI.Token) ->
                  case ds of wild { AuthenticationAPI.Token ds1 ds2 ds3 ds4 ->
                  ds3 }) -}
-77fb21748ece3301d99f0e648ff9cfe1
+08b5a725e5d6716a9fb3c460d67adbe9
   token :: AuthenticationAPI.LoginResponse -> GHC.Base.String
   RecSel Left AuthenticationAPI.LoginResponse
   {- Arity: 1, HasNoCafRefs, Strictness: <S(S),1*U(1*U)>,
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: AuthenticationAPI.LoginResponse) ->
                  case ds of wild { AuthenticationAPI.LoginResponse ds1 -> ds1 }) -}
-cd4a03000b4aa37cf1c577c7c5e7f30e
+1f8757a91311c08b4e0477d00eba9fd7
   user :: AuthenticationAPI.Token -> GHC.Base.String
   RecSel Left AuthenticationAPI.Token
   {- Arity: 1, HasNoCafRefs, Strictness: <S(LLLS),1*U(A,A,A,1*U)>,
@@ -10074,20 +10698,22 @@ cd4a03000b4aa37cf1c577c7c5e7f30e
                 (\ (ds :: AuthenticationAPI.Token) ->
                  case ds of wild { AuthenticationAPI.Token ds1 ds2 ds3 ds4 ->
                  ds4 }) -}
-cdbfad6505c572fa4981854ca0eae7ec
+b8b7601a914e4334f86bc8047dc96e6b
   userInfo :: AuthenticationAPI.LoginRequest -> GHC.Base.String
   RecSel Left AuthenticationAPI.LoginRequest
   {- Arity: 1, HasNoCafRefs, Strictness: <S(S),1*U(1*U)>,
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: AuthenticationAPI.LoginRequest) ->
                  case ds of wild { AuthenticationAPI.LoginRequest ds1 -> ds1 }) -}
-50ed7725a804e44005ad4205ed1bf720
+55171bc6da777e9128ee0ac9b79a3027
   username :: AuthenticationAPI.UserInfo -> GHC.Base.String
   RecSel Left AuthenticationAPI.UserInfo
   {- Arity: 1, HasNoCafRefs, Strictness: <S(SL),1*U(1*U,A)>,
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: AuthenticationAPI.UserInfo) ->
                  case ds of wild { AuthenticationAPI.UserInfo ds1 ds2 -> ds1 }) -}
+instance GHC.Classes.Eq [AuthenticationAPI.UserInfo]
+  = AuthenticationAPI.$fEqUserInfo
 instance Data.Bson.Generic.FromBSON [AuthenticationAPI.LoginRequest]
   = AuthenticationAPI.$fFromBSONLoginRequest
 instance Data.Bson.Generic.FromBSON [AuthenticationAPI.LoginResponse]
@@ -10120,6 +10746,14 @@ instance GHC.Generics.Generic [AuthenticationAPI.Token]
   = AuthenticationAPI.$fGenericToken
 instance GHC.Generics.Generic [AuthenticationAPI.UserInfo]
   = AuthenticationAPI.$fGenericUserInfo
+instance GHC.Read.Read [AuthenticationAPI.LoginRequest]
+  = AuthenticationAPI.$fReadLoginRequest
+instance GHC.Read.Read [AuthenticationAPI.LoginResponse]
+  = AuthenticationAPI.$fReadLoginResponse
+instance GHC.Read.Read [AuthenticationAPI.Token]
+  = AuthenticationAPI.$fReadToken
+instance GHC.Read.Read [AuthenticationAPI.UserInfo]
+  = AuthenticationAPI.$fReadUserInfo
 instance GHC.Show.Show [AuthenticationAPI.LoginRequest]
   = AuthenticationAPI.$fShowLoginRequest
 instance GHC.Show.Show [AuthenticationAPI.LoginResponse]

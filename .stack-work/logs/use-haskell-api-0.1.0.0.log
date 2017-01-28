@@ -1,6 +1,6 @@
 Preprocessing library use-haskell-api-0.1.0.0...
 [4 of 5] Compiling AuthenticationAPI ( src/AuthenticationAPI.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/AuthenticationAPI.o )
-[5 of 5] Compiling AuthenticationAPIClient ( src/AuthenticationAPIClient.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/AuthenticationAPIClient.o )
+[5 of 5] Compiling AuthenticationAPIClient ( src/AuthenticationAPIClient.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/AuthenticationAPIClient.o ) [AuthenticationAPI changed]
 
 src/AuthenticationAPIClient.hs:22:7: warning: [-Wtabs]
     Tab character found here, and in two further locations.

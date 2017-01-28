@@ -27,19 +27,19 @@ import           Data.Time.Clock
 
 data UserInfo = UserInfo { username :: String
                          , password :: String
-                         } deriving (Show, Generic, FromJSON, ToJSON, ToBSON, FromBSON)
+                         } deriving (Show, Generic, FromJSON, ToJSON, ToBSON, FromBSON, Read, Eq)
 
 data Token = Token { ticket     :: String
                    , sessionKey :: String
                    , timeout    :: String
                    , user       :: String
-                   } deriving (Show, Generic, FromJSON, ToJSON, ToBSON, FromBSON)
+                   } deriving (Show, Generic, FromJSON, ToJSON, ToBSON, FromBSON, Read)
 
 data LoginResponse = LoginResponse { token :: String 
-                                   } deriving (Generic, ToJSON, FromJSON,FromBSON, Show)
+                                   } deriving (Generic, ToJSON, FromJSON,FromBSON, Show, Read)
 
 data LoginRequest = LoginRequest { userInfo :: String
-                                 } deriving (Show, Generic, FromJSON, ToJSON, ToBSON, FromBSON)
+                                 } deriving (Show, Generic, FromJSON, ToJSON, ToBSON, FromBSON, Read)
 
 deriving instance FromBSON String  -- we need these as BSON does not provide
 deriving instance ToBSON   String
