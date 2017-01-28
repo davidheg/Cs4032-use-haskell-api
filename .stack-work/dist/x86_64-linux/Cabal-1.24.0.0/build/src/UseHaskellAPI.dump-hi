@@ -1,12 +1,12 @@
 
 ==================== FINAL INTERFACE ====================
-2017-01-26 15:22:31.539982 UTC
+2017-01-28 22:11:05.618551 UTC
 
 interface use-haskell-api-0.1.0.0-3nD5NWCHf1N83LkkK3wDn9:UseHaskellAPI [orphan module] [family instance module] 8001
-  interface hash: ad68e8b832c6638eb66af8ce7d20283d
-  ABI hash: e9f1b83526e56817a6e90b7d7c8c715d
-  export-list hash: b057b951c1e4d2c254c17d42eae210ea
-  orphan hash: 47c9b332ed32c7720f35c8ced109fc5e
+  interface hash: 348400f9528480fd4bc8de3bb8c83771
+  ABI hash: fce31ac15bea525682ce6ef6302a096f
+  export-list hash: 631f3f9ecb79837ca55c9fc34bc8f1e8
+  orphan hash: 025a5712962fd53d33fd059a06e24486
   flag hash: b0e3f8b573d72bae0f984477a0acb626
   sig of: Nothing
   used TH splices: False
@@ -16,6 +16,7 @@ exports:
   UseHaskellAPI.FileTime{UseHaskellAPI.FileTime fileName time}
   UseHaskellAPI.Message{UseHaskellAPI.Message message name}
   UseHaskellAPI.ResponseData{UseHaskellAPI.ResponseData response}
+  UseHaskellAPI.SearchFile{UseHaskellAPI.SearchFile namefile nameuser}
   UseHaskellAPI.UserFile{UseHaskellAPI.UserFile contents filename path users}
   UseHaskellAPI.UserInfo{UseHaskellAPI.UserInfo password username}
   UseHaskellAPI.UserRequest{UseHaskellAPI.UserRequest file user}
@@ -961,7 +962,326 @@ b678f12817a411ee6f3ad54ba718e055
                                 'GHC.Generics.NoSourceStrictness
                                 'GHC.Generics.DecidedLazy) f a) ->
                  UseHaskellAPI.$fFromBSONResponseData4) -}
-203cae548ea585a44186038e6962eb5b
+04064aef1c56e4686142734f566da330
+  $fFromBSONSearchFile ::
+    Data.Bson.Generic.FromBSON UseHaskellAPI.SearchFile
+  DFunId
+  {- Arity: 1, Strictness: <S,U>, Inline: INLINE (sat-args=0),
+     Unfolding: InlineRule (0, False, True)
+                UseHaskellAPI.$fFromBSONSearchFile_$cfromBSON
+                  `cast`
+                (Sym (Data.Bson.Generic.N:FromBSON[0]
+                          <UseHaskellAPI.SearchFile>_N)) -}
+dec30fd04cddc53f299a65d848d9fd26
+  $fFromBSONSearchFile1 ::
+    GHC.Generics.SingI ('GHC.Base.Just "namefile")
+  {- Unfolding: InlineRule (0, True, True)
+                UseHaskellAPI.$fFromBSONSearchFile2
+                  `cast`
+                (Trans
+                     (Sym (GHC.Generics.D:R:SingMaybeb0[0] <GHC.Types.Symbol>_N))
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Base.Maybe
+                                                       GHC.Types.Symbol>_N) <'GHC.Base.Just
+                                                                               "namefile">_N) -}
+eba3f0a6f38340f44a5a569ef9c8b345
+  $fFromBSONSearchFile2 ::
+    GHC.Generics.R:SingMaybeb
+      GHC.Types.Symbol ('GHC.Base.Just "namefile")
+  {- Unfolding: (GHC.Generics.SJust
+                   @ GHC.Types.Symbol
+                   @ ('GHC.Base.Just "namefile")
+                   @ "namefile"
+                   @~ <'GHC.Base.Just "namefile">_N
+                   UseHaskellAPI.$fFromBSONSearchFile3
+                     `cast`
+                   (Sym (GHC.Generics.D:R:SingSymbols0[0]) <"namefile">_N)) -}
+b832af46f06d225baa457bd46c12fc3e
+  $fFromBSONSearchFile3 :: GHC.Generics.R:SingSymbols "namefile"
+  {- Strictness: m,
+     Unfolding: (GHC.Generics.SSym
+                   @ "namefile"
+                   UseHaskellAPI.$fFromBSONSearchFile4
+                     `cast`
+                   (Trans
+                        (Sym (GHC.TypeLits.N:SSymbol[0] <"namefile">_P))
+                        (Sym (GHC.TypeLits.N:KnownSymbol[0]) <"namefile">_N))) -}
+566c323393e6e3aa8fceb7cb22cab5b4
+  $fFromBSONSearchFile4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "namefile"#) -}
+14ee237017c6bf06ceb0a575efd3c26d
+  $fFromBSONSearchFile5 ::
+    GHC.Generics.SingI ('GHC.Base.Just "nameuser")
+  {- Unfolding: InlineRule (0, True, True)
+                UseHaskellAPI.$fFromBSONSearchFile6
+                  `cast`
+                (Trans
+                     (Sym (GHC.Generics.D:R:SingMaybeb0[0] <GHC.Types.Symbol>_N))
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Base.Maybe
+                                                       GHC.Types.Symbol>_N) <'GHC.Base.Just
+                                                                               "nameuser">_N) -}
+ff2387692a5ffd121aabf7963cc5234a
+  $fFromBSONSearchFile6 ::
+    GHC.Generics.R:SingMaybeb
+      GHC.Types.Symbol ('GHC.Base.Just "nameuser")
+  {- Unfolding: (GHC.Generics.SJust
+                   @ GHC.Types.Symbol
+                   @ ('GHC.Base.Just "nameuser")
+                   @ "nameuser"
+                   @~ <'GHC.Base.Just "nameuser">_N
+                   UseHaskellAPI.$fFromBSONSearchFile7
+                     `cast`
+                   (Sym (GHC.Generics.D:R:SingSymbols0[0]) <"nameuser">_N)) -}
+d2a1665c9b76f1a3f76c784402c795c0
+  $fFromBSONSearchFile7 :: GHC.Generics.R:SingSymbols "nameuser"
+  {- Strictness: m,
+     Unfolding: (GHC.Generics.SSym
+                   @ "nameuser"
+                   UseHaskellAPI.$fFromBSONSearchFile8
+                     `cast`
+                   (Trans
+                        (Sym (GHC.TypeLits.N:SSymbol[0] <"nameuser">_P))
+                        (Sym (GHC.TypeLits.N:KnownSymbol[0]) <"nameuser">_N))) -}
+2ddbe1011b49cd930d1bbd36f3b214d3
+  $fFromBSONSearchFile8 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "nameuser"#) -}
+04064aef1c56e4686142734f566da330
+  $fFromBSONSearchFile_$cfromBSON ::
+    Data.Bson.Document -> GHC.Base.Maybe UseHaskellAPI.SearchFile
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (doc :: Data.Bson.Document) ->
+                 case Data.Bson.Generic.$w$cgenericFromBSON
+                        @ [GHC.Types.Char]
+                        @ ('GHC.Generics.MetaSel
+                             ('GHC.Base.Just "nameuser")
+                             'GHC.Generics.NoSourceUnpackedness
+                             'GHC.Generics.NoSourceStrictness
+                             'GHC.Generics.DecidedLazy)
+                        @ GHC.Generics.R
+                        Data.Bson.Generic.$fGFromBSONM12_$s$fVal[]
+                        UseHaskellAPI.$fFromBSONSearchFile_$s$fSelectorMetaMetaSel1
+                        @ GHC.Prim.Any
+                        doc of wild {
+                   GHC.Base.Nothing -> GHC.Base.Nothing @ UseHaskellAPI.SearchFile
+                   GHC.Base.Just x
+                   -> case Data.Bson.Generic.$w$cgenericFromBSON
+                             @ [GHC.Types.Char]
+                             @ ('GHC.Generics.MetaSel
+                                  ('GHC.Base.Just "namefile")
+                                  'GHC.Generics.NoSourceUnpackedness
+                                  'GHC.Generics.NoSourceStrictness
+                                  'GHC.Generics.DecidedLazy)
+                             @ GHC.Generics.R
+                             Data.Bson.Generic.$fGFromBSONM12_$s$fVal[]
+                             UseHaskellAPI.$fFromBSONSearchFile_$s$fSelectorMetaMetaSel
+                             @ GHC.Prim.Any
+                             doc of wild1 {
+                        GHC.Base.Nothing -> GHC.Base.Nothing @ UseHaskellAPI.SearchFile
+                        GHC.Base.Just x1
+                        -> GHC.Base.Just
+                             @ UseHaskellAPI.SearchFile
+                             (UseHaskellAPI.SearchFile
+                                x `cast`
+                                (Trans
+                                     (GHC.Generics.N:M1[0]
+                                          <GHC.Generics.S>_P
+                                          <'GHC.Generics.MetaSel
+                                             ('GHC.Base.Just "nameuser")
+                                             'GHC.Generics.NoSourceUnpackedness
+                                             'GHC.Generics.NoSourceStrictness
+                                             'GHC.Generics.DecidedLazy>_P
+                                          <GHC.Generics.K1
+                                             GHC.Generics.R GHC.Base.String>_R <GHC.Prim.Any>_N)
+                                     (GHC.Generics.N:K1[0]
+                                          <GHC.Generics.R>_P <GHC.Base.String>_R <GHC.Prim.Any>_P))
+                                x1
+                                  `cast`
+                                (Trans
+                                     (GHC.Generics.N:M1[0]
+                                          <GHC.Generics.S>_P
+                                          <'GHC.Generics.MetaSel
+                                             ('GHC.Base.Just "namefile")
+                                             'GHC.Generics.NoSourceUnpackedness
+                                             'GHC.Generics.NoSourceStrictness
+                                             'GHC.Generics.DecidedLazy>_P
+                                          <GHC.Generics.K1
+                                             GHC.Generics.R GHC.Base.String>_R <GHC.Prim.Any>_N)
+                                     (GHC.Generics.N:K1[0]
+                                          <GHC.Generics.R>_P
+                                          <GHC.Base.String>_R
+                                          <GHC.Prim.Any>_P))) } }) -}
+79f16ad3aa99f8444f6162e8a37c1f0f
+  $fFromBSONSearchFile_$s$fSelectorMetaMetaSel ::
+    GHC.Generics.Selector
+      ('GHC.Generics.MetaSel
+         ('GHC.Base.Just "namefile")
+         'GHC.Generics.NoSourceUnpackedness
+         'GHC.Generics.NoSourceStrictness
+         'GHC.Generics.DecidedLazy)
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ GHC.Generics.Meta
+                  @ ('GHC.Generics.MetaSel
+                       ('GHC.Base.Just "namefile")
+                       'GHC.Generics.NoSourceUnpackedness
+                       'GHC.Generics.NoSourceStrictness
+                       'GHC.Generics.DecidedLazy)
+                  UseHaskellAPI.$fFromBSONSearchFile_$s$fSelectorMetaMetaSel_$cselName
+                  (GHC.Generics.$fSelectorMetaMetaSel_$cselSourceUnpackedness
+                     @ ('GHC.Base.Just "namefile")
+                     @ 'GHC.Generics.NoSourceUnpackedness
+                     @ 'GHC.Generics.NoSourceStrictness
+                     @ 'GHC.Generics.DecidedLazy
+                     UseHaskellAPI.$fFromBSONSearchFile1
+                     GHC.Generics.$WSNoSourceUnpackedness
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceUnpackedness>_N <'GHC.Generics.NoSourceUnpackedness>_N)
+                     GHC.Generics.$WSNoSourceStrictness
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceStrictness>_N <'GHC.Generics.NoSourceStrictness>_N)
+                     GHC.Generics.$WSDecidedLazy
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.DecidedStrictness>_N <'GHC.Generics.DecidedLazy>_N))
+                  (GHC.Generics.$fSelectorMetaMetaSel_$cselSourceStrictness
+                     @ ('GHC.Base.Just "namefile")
+                     @ 'GHC.Generics.NoSourceUnpackedness
+                     @ 'GHC.Generics.NoSourceStrictness
+                     @ 'GHC.Generics.DecidedLazy
+                     UseHaskellAPI.$fFromBSONSearchFile1
+                     GHC.Generics.$WSNoSourceUnpackedness
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceUnpackedness>_N <'GHC.Generics.NoSourceUnpackedness>_N)
+                     GHC.Generics.$WSNoSourceStrictness
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceStrictness>_N <'GHC.Generics.NoSourceStrictness>_N)
+                     GHC.Generics.$WSDecidedLazy
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.DecidedStrictness>_N <'GHC.Generics.DecidedLazy>_N))
+                  (GHC.Generics.$fSelectorMetaMetaSel_$cselDecidedStrictness
+                     @ ('GHC.Base.Just "namefile")
+                     @ 'GHC.Generics.NoSourceUnpackedness
+                     @ 'GHC.Generics.NoSourceStrictness
+                     @ 'GHC.Generics.DecidedLazy
+                     UseHaskellAPI.$fFromBSONSearchFile1
+                     GHC.Generics.$WSNoSourceUnpackedness
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceUnpackedness>_N <'GHC.Generics.NoSourceUnpackedness>_N)
+                     GHC.Generics.$WSNoSourceStrictness
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceStrictness>_N <'GHC.Generics.NoSourceStrictness>_N)
+                     GHC.Generics.$WSDecidedLazy
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.DecidedStrictness>_N <'GHC.Generics.DecidedLazy>_N)) -}
+24716ec04941676424923bda1eaf9fca
+  $fFromBSONSearchFile_$s$fSelectorMetaMetaSel1 ::
+    GHC.Generics.Selector
+      ('GHC.Generics.MetaSel
+         ('GHC.Base.Just "nameuser")
+         'GHC.Generics.NoSourceUnpackedness
+         'GHC.Generics.NoSourceStrictness
+         'GHC.Generics.DecidedLazy)
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ GHC.Generics.Meta
+                  @ ('GHC.Generics.MetaSel
+                       ('GHC.Base.Just "nameuser")
+                       'GHC.Generics.NoSourceUnpackedness
+                       'GHC.Generics.NoSourceStrictness
+                       'GHC.Generics.DecidedLazy)
+                  UseHaskellAPI.$fFromBSONSearchFile_$s$fSelectorMetaMetaSel_$cselName1
+                  (GHC.Generics.$fSelectorMetaMetaSel_$cselSourceUnpackedness
+                     @ ('GHC.Base.Just "nameuser")
+                     @ 'GHC.Generics.NoSourceUnpackedness
+                     @ 'GHC.Generics.NoSourceStrictness
+                     @ 'GHC.Generics.DecidedLazy
+                     UseHaskellAPI.$fFromBSONSearchFile5
+                     GHC.Generics.$WSNoSourceUnpackedness
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceUnpackedness>_N <'GHC.Generics.NoSourceUnpackedness>_N)
+                     GHC.Generics.$WSNoSourceStrictness
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceStrictness>_N <'GHC.Generics.NoSourceStrictness>_N)
+                     GHC.Generics.$WSDecidedLazy
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.DecidedStrictness>_N <'GHC.Generics.DecidedLazy>_N))
+                  (GHC.Generics.$fSelectorMetaMetaSel_$cselSourceStrictness
+                     @ ('GHC.Base.Just "nameuser")
+                     @ 'GHC.Generics.NoSourceUnpackedness
+                     @ 'GHC.Generics.NoSourceStrictness
+                     @ 'GHC.Generics.DecidedLazy
+                     UseHaskellAPI.$fFromBSONSearchFile5
+                     GHC.Generics.$WSNoSourceUnpackedness
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceUnpackedness>_N <'GHC.Generics.NoSourceUnpackedness>_N)
+                     GHC.Generics.$WSNoSourceStrictness
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceStrictness>_N <'GHC.Generics.NoSourceStrictness>_N)
+                     GHC.Generics.$WSDecidedLazy
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.DecidedStrictness>_N <'GHC.Generics.DecidedLazy>_N))
+                  (GHC.Generics.$fSelectorMetaMetaSel_$cselDecidedStrictness
+                     @ ('GHC.Base.Just "nameuser")
+                     @ 'GHC.Generics.NoSourceUnpackedness
+                     @ 'GHC.Generics.NoSourceStrictness
+                     @ 'GHC.Generics.DecidedLazy
+                     UseHaskellAPI.$fFromBSONSearchFile5
+                     GHC.Generics.$WSNoSourceUnpackedness
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceUnpackedness>_N <'GHC.Generics.NoSourceUnpackedness>_N)
+                     GHC.Generics.$WSNoSourceStrictness
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceStrictness>_N <'GHC.Generics.NoSourceStrictness>_N)
+                     GHC.Generics.$WSDecidedLazy
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.DecidedStrictness>_N <'GHC.Generics.DecidedLazy>_N)) -}
+8252df4be8576b4be37628b8ca6f0576
+  $fFromBSONSearchFile_$s$fSelectorMetaMetaSel_$cselName ::
+    forall k (t :: GHC.Generics.Meta
+                   -> (GHC.Types.* -> GHC.Types.*) -> k -> *) (f :: GHC.Types.*
+                                                                    -> GHC.Types.*) (a :: k).
+    t ('GHC.Generics.MetaSel
+         ('GHC.Base.Just "namefile")
+         'GHC.Generics.NoSourceUnpackedness
+         'GHC.Generics.NoSourceStrictness
+         'GHC.Generics.DecidedLazy) f a
+    -> [GHC.Types.Char]
+  {- Arity: 1, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ k
+                   @ (t :: GHC.Generics.Meta
+                           -> (GHC.Types.* -> GHC.Types.*) -> k -> *)
+                   @ (f :: GHC.Types.* -> GHC.Types.*)
+                   @ (a :: k)
+                   (ds1 :: t ('GHC.Generics.MetaSel
+                                ('GHC.Base.Just "namefile")
+                                'GHC.Generics.NoSourceUnpackedness
+                                'GHC.Generics.NoSourceStrictness
+                                'GHC.Generics.DecidedLazy) f a) ->
+                 UseHaskellAPI.$fFromBSONSearchFile4) -}
+45e1e189b1229d3274189f631e7b220e
+  $fFromBSONSearchFile_$s$fSelectorMetaMetaSel_$cselName1 ::
+    forall k (t :: GHC.Generics.Meta
+                   -> (GHC.Types.* -> GHC.Types.*) -> k -> *) (f :: GHC.Types.*
+                                                                    -> GHC.Types.*) (a :: k).
+    t ('GHC.Generics.MetaSel
+         ('GHC.Base.Just "nameuser")
+         'GHC.Generics.NoSourceUnpackedness
+         'GHC.Generics.NoSourceStrictness
+         'GHC.Generics.DecidedLazy) f a
+    -> [GHC.Types.Char]
+  {- Arity: 1, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ k
+                   @ (t :: GHC.Generics.Meta
+                           -> (GHC.Types.* -> GHC.Types.*) -> k -> *)
+                   @ (f :: GHC.Types.* -> GHC.Types.*)
+                   @ (a :: k)
+                   (ds1 :: t ('GHC.Generics.MetaSel
+                                ('GHC.Base.Just "nameuser")
+                                'GHC.Generics.NoSourceUnpackedness
+                                'GHC.Generics.NoSourceStrictness
+                                'GHC.Generics.DecidedLazy) f a) ->
+                 UseHaskellAPI.$fFromBSONSearchFile8) -}
+83faf21fd8d6263dbcae6d331b28970e
   $fFromBSONUserFile ::
     Data.Bson.Generic.FromBSON UseHaskellAPI.UserFile
   DFunId
@@ -1150,7 +1470,7 @@ e56ba932dc9077cf3f8ec7d437465534
 81bc961ec89d43ebef5956777d901c21
   $fFromBSONUserFile9 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "users"#) -}
-203cae548ea585a44186038e6962eb5b
+83faf21fd8d6263dbcae6d331b28970e
   $fFromBSONUserFile_$cfromBSON ::
     Data.Bson.Document -> GHC.Base.Maybe UseHaskellAPI.UserFile
   {- Arity: 1, Strictness: <S,U>,
@@ -1249,7 +1569,7 @@ e56ba932dc9077cf3f8ec7d437465534
                                                                                         (GHC.Generics.Rec0
                                                                                            GHC.Base.String)))>_R))
                                      (Sub (Sym (UseHaskellAPI.Rep_UserFile[0])))) <GHC.Prim.Any>_N)) }) -}
-203cae548ea585a44186038e6962eb5b
+83faf21fd8d6263dbcae6d331b28970e
   $fFromBSONUserFile_$cto ::
     GHC.Generics.Rep UseHaskellAPI.UserFile x -> UseHaskellAPI.UserFile
   {- Arity: 1, HasNoCafRefs,
@@ -1749,7 +2069,7 @@ ff1f13c91cfe3eafca42634061523fc1
                                 'GHC.Generics.NoSourceStrictness
                                 'GHC.Generics.DecidedLazy) f a) ->
                  UseHaskellAPI.$fFromBSONUserFile17) -}
-be6ea76a420fdf3399242fa067c4073c
+2e68e1c3782cc066831e527014721fd5
   $fFromBSONUserInfo ::
     Data.Bson.Generic.FromBSON UseHaskellAPI.UserInfo
   DFunId
@@ -1831,7 +2151,7 @@ a7d0963e3ab9e617cc3b4e1603f0d535
 4d8d80a999fdd914a654bb8f95dcadd7
   $fFromBSONUserInfo8 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "username"#) -}
-be6ea76a420fdf3399242fa067c4073c
+2e68e1c3782cc066831e527014721fd5
   $fFromBSONUserInfo_$cfromBSON ::
     Data.Bson.Document -> GHC.Base.Maybe UseHaskellAPI.UserInfo
   {- Arity: 1, Strictness: <S,U>,
@@ -2068,7 +2388,7 @@ b33a07bf9535b5d2fe8da33d16c4c24b
                                 'GHC.Generics.NoSourceStrictness
                                 'GHC.Generics.DecidedLazy) f a) ->
                  UseHaskellAPI.$fFromBSONUserInfo8) -}
-13ff60b3b126b88a5233eb938acc75d9
+76d24c97090f46d21490dbb86baa2ef2
   $fFromBSONUserRequest ::
     Data.Bson.Generic.FromBSON UseHaskellAPI.UserRequest
   DFunId
@@ -2148,7 +2468,7 @@ e358d720600d141c63ddfbdc59a37fef
 9b284179262d792ec54cbcc84c0b45ef
   $fFromBSONUserRequest8 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "user"#) -}
-13ff60b3b126b88a5233eb938acc75d9
+76d24c97090f46d21490dbb86baa2ef2
   $fFromBSONUserRequest_$cfromBSON ::
     Data.Bson.Document -> GHC.Base.Maybe UseHaskellAPI.UserRequest
   {- Arity: 1, Strictness: <S,U>,
@@ -3455,7 +3775,264 @@ e39e0a92ceb0571f4cef67a5b3fda47d
                    `cast`
                  (Sym (Data.Aeson.Types.Internal.N:Parser[0]
                            <UseHaskellAPI.ResponseData>_R))) -}
-203cae548ea585a44186038e6962eb5b
+04064aef1c56e4686142734f566da330
+  $fFromJSONSearchFile ::
+    Data.Aeson.Types.Class.FromJSON UseHaskellAPI.SearchFile
+  DFunId
+  {- Arity: 1, Strictness: <L,U>, Inline: INLINE (sat-args=0),
+     Unfolding: InlineRule (0, False, True)
+                UseHaskellAPI.$fFromJSONSearchFile_$cparseJSON
+                  `cast`
+                (Sym (Data.Aeson.Types.Class.N:FromJSON[0]
+                          <UseHaskellAPI.SearchFile>_N)) -}
+1dbaac6ae364d4c18af009b2f2ea9a9a
+  $fFromJSONSearchFile1 ::
+    Data.Aeson.Types.Internal.Options
+    -> GHC.Base.Maybe Data.Text.Internal.Text
+    -> Data.Aeson.Types.Internal.Value
+    -> Data.Aeson.Types.Generic.Tagged
+         Data.Aeson.Types.Generic.True
+         (Data.Aeson.Types.Internal.Parser
+            ((GHC.Generics.:*:)
+               (GHC.Generics.S1
+                  ('GHC.Generics.MetaSel
+                     ('GHC.Base.Just "nameuser")
+                     'GHC.Generics.NoSourceUnpackedness
+                     'GHC.Generics.NoSourceStrictness
+                     'GHC.Generics.DecidedLazy)
+                  (GHC.Generics.Rec0 GHC.Base.String))
+               (GHC.Generics.S1
+                  ('GHC.Generics.MetaSel
+                     ('GHC.Base.Just "namefile")
+                     'GHC.Generics.NoSourceUnpackedness
+                     'GHC.Generics.NoSourceStrictness
+                     'GHC.Generics.DecidedLazy)
+                  (GHC.Generics.Rec0 GHC.Base.String))
+               a))
+  {- Arity: 3, Strictness: <L,U(U,U,U,U,U,U)><L,A><S,1*U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, True)
+                (\ @ a
+                   (w :: Data.Aeson.Types.Internal.Options)
+                   (w1 :: GHC.Base.Maybe Data.Text.Internal.Text)
+                   (w2 :: Data.Aeson.Types.Internal.Value) ->
+                 UseHaskellAPI.$w$dConsFromJSON'2 @ a w w2) -}
+6c2bc6d8b1485619262460fba5645917
+  $fFromJSONSearchFile2 ::
+    Data.Aeson.Types.Internal.Options
+    -> Data.Aeson.Types.Internal.Value
+    -> Data.Aeson.Types.Internal.Parser
+         (GHC.Generics.K1 GHC.Generics.R [GHC.Types.Char] a1)
+  {- Arity: 2, Strictness: <L,A><L,1*U>, Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, True)
+                (\ @ a1
+                   (w :: Data.Aeson.Types.Internal.Options)
+                   (w1 :: Data.Aeson.Types.Internal.Value) ->
+                 UseHaskellAPI.$w$dGFromJSON3 @ a1 w1) -}
+37ccf714f95751f5b81b9ee4c2c4ab87
+  $fFromJSONSearchFile3 ::
+    (GHC.Generics.:*:)
+      (GHC.Generics.M1
+         GHC.Generics.S
+         ('GHC.Generics.MetaSel
+            ('GHC.Base.Just "nameuser")
+            'GHC.Generics.NoSourceUnpackedness
+            'GHC.Generics.NoSourceStrictness
+            'GHC.Generics.DecidedLazy)
+         (GHC.Generics.Rec0 GHC.Base.String))
+      (GHC.Generics.M1
+         GHC.Generics.S
+         ('GHC.Generics.MetaSel
+            ('GHC.Base.Just "namefile")
+            'GHC.Generics.NoSourceUnpackedness
+            'GHC.Generics.NoSourceStrictness
+            'GHC.Generics.DecidedLazy)
+         (GHC.Generics.Rec0 GHC.Base.String))
+      a
+    -> GHC.Types.Bool
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ a
+                   (eta :: (GHC.Generics.:*:)
+                             (GHC.Generics.M1
+                                GHC.Generics.S
+                                ('GHC.Generics.MetaSel
+                                   ('GHC.Base.Just "nameuser")
+                                   'GHC.Generics.NoSourceUnpackedness
+                                   'GHC.Generics.NoSourceStrictness
+                                   'GHC.Generics.DecidedLazy)
+                                (GHC.Generics.Rec0 GHC.Base.String))
+                             (GHC.Generics.M1
+                                GHC.Generics.S
+                                ('GHC.Generics.MetaSel
+                                   ('GHC.Base.Just "namefile")
+                                   'GHC.Generics.NoSourceUnpackedness
+                                   'GHC.Generics.NoSourceStrictness
+                                   'GHC.Generics.DecidedLazy)
+                                (GHC.Generics.Rec0 GHC.Base.String))
+                             a) ->
+                 GHC.Types.False) -}
+04064aef1c56e4686142734f566da330
+  $fFromJSONSearchFile_$cparseJSON ::
+    Data.Aeson.Types.Internal.Value
+    -> Data.Aeson.Types.Internal.Parser UseHaskellAPI.SearchFile
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: (\ (x :: Data.Aeson.Types.Internal.Value) ->
+                 let {
+                   m :: Data.Aeson.Types.Internal.Parser
+                          ((GHC.Generics.:*:)
+                             (GHC.Generics.S1
+                                ('GHC.Generics.MetaSel
+                                   ('GHC.Base.Just "nameuser")
+                                   'GHC.Generics.NoSourceUnpackedness
+                                   'GHC.Generics.NoSourceStrictness
+                                   'GHC.Generics.DecidedLazy)
+                                (GHC.Generics.Rec0 GHC.Base.String))
+                             (GHC.Generics.S1
+                                ('GHC.Generics.MetaSel
+                                   ('GHC.Base.Just "namefile")
+                                   'GHC.Generics.NoSourceUnpackedness
+                                   'GHC.Generics.NoSourceStrictness
+                                   'GHC.Generics.DecidedLazy)
+                                (GHC.Generics.Rec0 GHC.Base.String))
+                             GHC.Prim.Any)
+                   = Data.Aeson.Types.Generic.$fConsFromJSONf_$cconsParseJSON
+                       @ (GHC.Generics.S1
+                            ('GHC.Generics.MetaSel
+                               ('GHC.Base.Just "nameuser")
+                               'GHC.Generics.NoSourceUnpackedness
+                               'GHC.Generics.NoSourceStrictness
+                               'GHC.Generics.DecidedLazy)
+                            (GHC.Generics.Rec0 GHC.Base.String)
+                          GHC.Generics.:*: GHC.Generics.S1
+                                             ('GHC.Generics.MetaSel
+                                                ('GHC.Base.Just "namefile")
+                                                'GHC.Generics.NoSourceUnpackedness
+                                                'GHC.Generics.NoSourceStrictness
+                                                'GHC.Generics.DecidedLazy)
+                                             (GHC.Generics.Rec0 GHC.Base.String))
+                       @ Data.Aeson.Types.Generic.True
+                       UseHaskellAPI.$fFromJSONSearchFile3
+                         `cast`
+                       (Sym (Data.Aeson.Types.Generic.N:IsRecord[0]
+                                 <GHC.Generics.M1
+                                    GHC.Generics.S
+                                    ('GHC.Generics.MetaSel
+                                       ('GHC.Base.Just "nameuser")
+                                       'GHC.Generics.NoSourceUnpackedness
+                                       'GHC.Generics.NoSourceStrictness
+                                       'GHC.Generics.DecidedLazy)
+                                    (GHC.Generics.Rec0 GHC.Base.String)
+                                  GHC.Generics.:*: GHC.Generics.M1
+                                                     GHC.Generics.S
+                                                     ('GHC.Generics.MetaSel
+                                                        ('GHC.Base.Just "namefile")
+                                                        'GHC.Generics.NoSourceUnpackedness
+                                                        'GHC.Generics.NoSourceStrictness
+                                                        'GHC.Generics.DecidedLazy)
+                                                     (GHC.Generics.Rec0 GHC.Base.String)>_N
+                                 <Data.Aeson.Types.Generic.True>_N))
+                       UseHaskellAPI.$fFromJSONSearchFile1
+                         `cast`
+                       (Sym (Data.Aeson.Types.Generic.N:ConsFromJSON'[0]
+                                 <GHC.Generics.S1
+                                    ('GHC.Generics.MetaSel
+                                       ('GHC.Base.Just "nameuser")
+                                       'GHC.Generics.NoSourceUnpackedness
+                                       'GHC.Generics.NoSourceStrictness
+                                       'GHC.Generics.DecidedLazy)
+                                    (GHC.Generics.Rec0 GHC.Base.String)
+                                  GHC.Generics.:*: GHC.Generics.S1
+                                                     ('GHC.Generics.MetaSel
+                                                        ('GHC.Base.Just "namefile")
+                                                        'GHC.Generics.NoSourceUnpackedness
+                                                        'GHC.Generics.NoSourceStrictness
+                                                        'GHC.Generics.DecidedLazy)
+                                                     (GHC.Generics.Rec0 GHC.Base.String)>_N
+                                 <Data.Aeson.Types.Generic.True>_N))
+                       @ GHC.Prim.Any
+                       Data.Aeson.Types.Internal.defaultOptions
+                       x
+                 } in
+                 (\ @ (f1 :: * -> *)
+                    @ r
+                    (path1 :: Data.Aeson.Types.Internal.JSONPath)
+                    (kf :: Data.Aeson.Types.Internal.Failure f1 r)
+                    (ks :: Data.Aeson.Types.Internal.Success
+                             UseHaskellAPI.SearchFile f1 r) ->
+                  m `cast`
+                  (Data.Aeson.Types.Internal.N:Parser[0]
+                       <(GHC.Generics.:*:)
+                          (GHC.Generics.S1
+                             ('GHC.Generics.MetaSel
+                                ('GHC.Base.Just "nameuser")
+                                'GHC.Generics.NoSourceUnpackedness
+                                'GHC.Generics.NoSourceStrictness
+                                'GHC.Generics.DecidedLazy)
+                             (GHC.Generics.Rec0 GHC.Base.String))
+                          (GHC.Generics.S1
+                             ('GHC.Generics.MetaSel
+                                ('GHC.Base.Just "namefile")
+                                'GHC.Generics.NoSourceUnpackedness
+                                'GHC.Generics.NoSourceStrictness
+                                'GHC.Generics.DecidedLazy)
+                             (GHC.Generics.Rec0 GHC.Base.String))
+                          GHC.Prim.Any>_R)
+                    @ f1
+                    @ r
+                    path1
+                    kf
+                    (\ (a2 :: (GHC.Generics.:*:)
+                                (GHC.Generics.S1
+                                   ('GHC.Generics.MetaSel
+                                      ('GHC.Base.Just "nameuser")
+                                      'GHC.Generics.NoSourceUnpackedness
+                                      'GHC.Generics.NoSourceStrictness
+                                      'GHC.Generics.DecidedLazy)
+                                   (GHC.Generics.Rec0 GHC.Base.String))
+                                (GHC.Generics.S1
+                                   ('GHC.Generics.MetaSel
+                                      ('GHC.Base.Just "namefile")
+                                      'GHC.Generics.NoSourceUnpackedness
+                                      'GHC.Generics.NoSourceStrictness
+                                      'GHC.Generics.DecidedLazy)
+                                   (GHC.Generics.Rec0 GHC.Base.String))
+                                GHC.Prim.Any) ->
+                     ks
+                       (case a2 of wild { GHC.Generics.:*: ds ds1 ->
+                        UseHaskellAPI.SearchFile
+                          ds
+                            `cast`
+                          (Trans
+                               (GHC.Generics.N:M1[0]
+                                    <GHC.Generics.S>_P
+                                    <'GHC.Generics.MetaSel
+                                       ('GHC.Base.Just "nameuser")
+                                       'GHC.Generics.NoSourceUnpackedness
+                                       'GHC.Generics.NoSourceStrictness
+                                       'GHC.Generics.DecidedLazy>_P
+                                    <GHC.Generics.K1
+                                       GHC.Generics.R GHC.Base.String>_R <GHC.Prim.Any>_N)
+                               (GHC.Generics.N:K1[0]
+                                    <GHC.Generics.R>_P <GHC.Base.String>_R <GHC.Prim.Any>_P))
+                          ds1
+                            `cast`
+                          (Trans
+                               (GHC.Generics.N:M1[0]
+                                    <GHC.Generics.S>_P
+                                    <'GHC.Generics.MetaSel
+                                       ('GHC.Base.Just "namefile")
+                                       'GHC.Generics.NoSourceUnpackedness
+                                       'GHC.Generics.NoSourceStrictness
+                                       'GHC.Generics.DecidedLazy>_P
+                                    <GHC.Generics.K1
+                                       GHC.Generics.R GHC.Base.String>_R <GHC.Prim.Any>_N)
+                               (GHC.Generics.N:K1[0]
+                                    <GHC.Generics.R>_P <GHC.Base.String>_R <GHC.Prim.Any>_P)) })))
+                   `cast`
+                 (Sym (Data.Aeson.Types.Internal.N:Parser[0]
+                           <UseHaskellAPI.SearchFile>_R))) -}
+83faf21fd8d6263dbcae6d331b28970e
   $fFromJSONUserFile ::
     Data.Aeson.Types.Class.FromJSON UseHaskellAPI.UserFile
   DFunId
@@ -3465,7 +4042,7 @@ e39e0a92ceb0571f4cef67a5b3fda47d
                   `cast`
                 (Sym (Data.Aeson.Types.Class.N:FromJSON[0]
                           <UseHaskellAPI.UserFile>_N)) -}
-096f2131439d23cdebfe679d27e3a253
+7e600a9a864156035e1777b2bdac57ab
   $fFromJSONUserFile1 ::
     Data.Aeson.Types.Internal.Options
     -> GHC.Base.Maybe Data.Text.Internal.Text
@@ -3510,8 +4087,8 @@ e39e0a92ceb0571f4cef67a5b3fda47d
                    (w :: Data.Aeson.Types.Internal.Options)
                    (w1 :: GHC.Base.Maybe Data.Text.Internal.Text)
                    (w2 :: Data.Aeson.Types.Internal.Value) ->
-                 UseHaskellAPI.$w$dConsFromJSON'2 @ a w w2) -}
-96f3cd7421f38fa0b384400f7382396d
+                 UseHaskellAPI.$w$dConsFromJSON'3 @ a w w2) -}
+a80504c45b4ea556147a63fe1f993306
   $fFromJSONUserFile2 ::
     Data.Aeson.Types.Internal.Options
     -> Data.Aeson.Types.Internal.Value
@@ -3522,7 +4099,7 @@ e39e0a92ceb0571f4cef67a5b3fda47d
                 (\ @ a1
                    (w :: Data.Aeson.Types.Internal.Options)
                    (w1 :: Data.Aeson.Types.Internal.Value) ->
-                 UseHaskellAPI.$w$dGFromJSON3 @ a1 w1) -}
+                 UseHaskellAPI.$w$dGFromJSON4 @ a1 w1) -}
 3e2b5f43cdc41095ae619dbb89f4b17d
   $fFromJSONUserFile3 ::
     (GHC.Generics.:*:)
@@ -3590,7 +4167,7 @@ e39e0a92ceb0571f4cef67a5b3fda47d
                                                  (GHC.Generics.Rec0 GHC.Base.String))
                              a) ->
                  GHC.Types.False) -}
-203cae548ea585a44186038e6962eb5b
+83faf21fd8d6263dbcae6d331b28970e
   $fFromJSONUserFile_$cparseJSON ::
     Data.Aeson.Types.Internal.Value
     -> Data.Aeson.Types.Internal.Parser UseHaskellAPI.UserFile
@@ -3892,7 +4469,7 @@ e39e0a92ceb0571f4cef67a5b3fda47d
                    `cast`
                  (Sym (Data.Aeson.Types.Internal.N:Parser[0]
                            <UseHaskellAPI.UserFile>_R))) -}
-be6ea76a420fdf3399242fa067c4073c
+2e68e1c3782cc066831e527014721fd5
   $fFromJSONUserInfo ::
     Data.Aeson.Types.Class.FromJSON UseHaskellAPI.UserInfo
   DFunId
@@ -3902,7 +4479,7 @@ be6ea76a420fdf3399242fa067c4073c
                   `cast`
                 (Sym (Data.Aeson.Types.Class.N:FromJSON[0]
                           <UseHaskellAPI.UserInfo>_N)) -}
-a17f7c406183f35c06ece5f6c470225f
+ec214fb1b0ef9f0aca3cde3b4505f398
   $fFromJSONUserInfo1 ::
     Data.Aeson.Types.Internal.Options
     -> GHC.Base.Maybe Data.Text.Internal.Text
@@ -3933,8 +4510,8 @@ a17f7c406183f35c06ece5f6c470225f
                    (w :: Data.Aeson.Types.Internal.Options)
                    (w1 :: GHC.Base.Maybe Data.Text.Internal.Text)
                    (w2 :: Data.Aeson.Types.Internal.Value) ->
-                 UseHaskellAPI.$w$dConsFromJSON'3 @ a w w2) -}
-82a4cba866b18c4a21bac51f44a6bf13
+                 UseHaskellAPI.$w$dConsFromJSON'4 @ a w w2) -}
+d50fb89715ef395d89d78d2905659ee5
   $fFromJSONUserInfo2 ::
     Data.Aeson.Types.Internal.Options
     -> Data.Aeson.Types.Internal.Value
@@ -3945,7 +4522,7 @@ a17f7c406183f35c06ece5f6c470225f
                 (\ @ a1
                    (w :: Data.Aeson.Types.Internal.Options)
                    (w1 :: Data.Aeson.Types.Internal.Value) ->
-                 UseHaskellAPI.$w$dGFromJSON4 @ a1 w1) -}
+                 UseHaskellAPI.$w$dGFromJSON5 @ a1 w1) -}
 f3eef58174074669415ff31014a888cc
   $fFromJSONUserInfo3 ::
     (GHC.Generics.:*:)
@@ -3989,7 +4566,7 @@ f3eef58174074669415ff31014a888cc
                                 (GHC.Generics.Rec0 GHC.Base.String))
                              a) ->
                  GHC.Types.False) -}
-be6ea76a420fdf3399242fa067c4073c
+2e68e1c3782cc066831e527014721fd5
   $fFromJSONUserInfo_$cparseJSON ::
     Data.Aeson.Types.Internal.Value
     -> Data.Aeson.Types.Internal.Parser UseHaskellAPI.UserInfo
@@ -4149,7 +4726,7 @@ be6ea76a420fdf3399242fa067c4073c
                    `cast`
                  (Sym (Data.Aeson.Types.Internal.N:Parser[0]
                            <UseHaskellAPI.UserInfo>_R))) -}
-13ff60b3b126b88a5233eb938acc75d9
+76d24c97090f46d21490dbb86baa2ef2
   $fFromJSONUserRequest ::
     Data.Aeson.Types.Class.FromJSON UseHaskellAPI.UserRequest
   DFunId
@@ -4159,7 +4736,7 @@ be6ea76a420fdf3399242fa067c4073c
                   `cast`
                 (Sym (Data.Aeson.Types.Class.N:FromJSON[0]
                           <UseHaskellAPI.UserRequest>_N)) -}
-17250b473c6a06a05fa32c0f1fc29afa
+ec18e03d9e5a2433246467faeed9320f
   $fFromJSONUserRequest1 ::
     Data.Aeson.Types.Internal.Options
     -> GHC.Base.Maybe Data.Text.Internal.Text
@@ -4190,8 +4767,8 @@ be6ea76a420fdf3399242fa067c4073c
                    (w :: Data.Aeson.Types.Internal.Options)
                    (w1 :: GHC.Base.Maybe Data.Text.Internal.Text)
                    (w2 :: Data.Aeson.Types.Internal.Value) ->
-                 UseHaskellAPI.$w$dConsFromJSON'4 @ a w w2) -}
-ebf13a81c225e867101e2cf50c63e33c
+                 UseHaskellAPI.$w$dConsFromJSON'5 @ a w w2) -}
+ae66f72e6fb37be48ff106bd7e0ae917
   $fFromJSONUserRequest2 ::
     Data.Aeson.Types.Internal.Options
     -> Data.Aeson.Types.Internal.Value
@@ -4202,7 +4779,7 @@ ebf13a81c225e867101e2cf50c63e33c
                 (\ @ a1
                    (w :: Data.Aeson.Types.Internal.Options)
                    (w1 :: Data.Aeson.Types.Internal.Value) ->
-                 UseHaskellAPI.$w$dGFromJSON5 @ a1 w1) -}
+                 UseHaskellAPI.$w$dGFromJSON6 @ a1 w1) -}
 6dad647b4a898c4e73c119cecf11a5d6
   $fFromJSONUserRequest3 ::
     (GHC.Generics.:*:)
@@ -4246,7 +4823,7 @@ ebf13a81c225e867101e2cf50c63e33c
                                 (GHC.Generics.Rec0 GHC.Base.String))
                              a) ->
                  GHC.Types.False) -}
-13ff60b3b126b88a5233eb938acc75d9
+76d24c97090f46d21490dbb86baa2ef2
   $fFromJSONUserRequest_$cparseJSON ::
     Data.Aeson.Types.Internal.Value
     -> Data.Aeson.Types.Internal.Parser UseHaskellAPI.UserRequest
@@ -4933,7 +5510,210 @@ e39e0a92ceb0571f4cef67a5b3fda47d
                                                GHC.Generics.R GHC.Base.String>_R))) <x>_N)
                         (GHC.Generics.N:K1[0]
                              <GHC.Generics.R>_P <GHC.Base.String>_R <x>_P))) -}
-203cae548ea585a44186038e6962eb5b
+04064aef1c56e4686142734f566da330
+  $fGenericSearchFile ::
+    GHC.Generics.Generic UseHaskellAPI.SearchFile
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ UseHaskellAPI.SearchFile
+                  UseHaskellAPI.$fGenericSearchFile_$cfrom
+                  UseHaskellAPI.$fGenericSearchFile_$cto -}
+04064aef1c56e4686142734f566da330
+  $fGenericSearchFile_$cfrom ::
+    UseHaskellAPI.SearchFile
+    -> GHC.Generics.Rep UseHaskellAPI.SearchFile x
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U,U)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ x (ds :: UseHaskellAPI.SearchFile) ->
+                 case ds of wild { UseHaskellAPI.SearchFile g1 g2 ->
+                 (GHC.Generics.:*:
+                    @ (GHC.Generics.M1
+                         GHC.Generics.S
+                         ('GHC.Generics.MetaSel
+                            ('GHC.Base.Just "nameuser")
+                            'GHC.Generics.NoSourceUnpackedness
+                            'GHC.Generics.NoSourceStrictness
+                            'GHC.Generics.DecidedLazy)
+                         (GHC.Generics.K1 GHC.Generics.R GHC.Base.String))
+                    @ (GHC.Generics.M1
+                         GHC.Generics.S
+                         ('GHC.Generics.MetaSel
+                            ('GHC.Base.Just "namefile")
+                            'GHC.Generics.NoSourceUnpackedness
+                            'GHC.Generics.NoSourceStrictness
+                            'GHC.Generics.DecidedLazy)
+                         (GHC.Generics.K1 GHC.Generics.R GHC.Base.String))
+                    @ x
+                    g1
+                      `cast`
+                    (Trans
+                         (Sym (GHC.Generics.N:K1[0]
+                                   <GHC.Generics.R>_P <GHC.Base.String>_R <x>_P))
+                         (Sym (GHC.Generics.N:M1[0]
+                                   <GHC.Generics.S>_P
+                                   <'GHC.Generics.MetaSel
+                                      ('GHC.Base.Just "nameuser")
+                                      'GHC.Generics.NoSourceUnpackedness
+                                      'GHC.Generics.NoSourceStrictness
+                                      'GHC.Generics.DecidedLazy>_P
+                                   <GHC.Generics.K1 GHC.Generics.R GHC.Base.String>_R) <x>_N))
+                    g2
+                      `cast`
+                    (Trans
+                         (Sym (GHC.Generics.N:K1[0]
+                                   <GHC.Generics.R>_P <GHC.Base.String>_R <x>_P))
+                         (Sym (GHC.Generics.N:M1[0]
+                                   <GHC.Generics.S>_P
+                                   <'GHC.Generics.MetaSel
+                                      ('GHC.Base.Just "namefile")
+                                      'GHC.Generics.NoSourceUnpackedness
+                                      'GHC.Generics.NoSourceStrictness
+                                      'GHC.Generics.DecidedLazy>_P
+                                   <GHC.Generics.K1 GHC.Generics.R GHC.Base.String>_R) <x>_N)))
+                   `cast`
+                 (Trans
+                      (Sym (GHC.Generics.N:M1[0]
+                                <GHC.Generics.C>_P
+                                <'GHC.Generics.MetaCons
+                                   "SearchFile" 'GHC.Generics.PrefixI 'GHC.Types.True>_P
+                                <GHC.Generics.M1
+                                   GHC.Generics.S
+                                   ('GHC.Generics.MetaSel
+                                      ('GHC.Base.Just "nameuser")
+                                      'GHC.Generics.NoSourceUnpackedness
+                                      'GHC.Generics.NoSourceStrictness
+                                      'GHC.Generics.DecidedLazy)
+                                   (GHC.Generics.K1 GHC.Generics.R GHC.Base.String)
+                                 GHC.Generics.:*: GHC.Generics.M1
+                                                    GHC.Generics.S
+                                                    ('GHC.Generics.MetaSel
+                                                       ('GHC.Base.Just "namefile")
+                                                       'GHC.Generics.NoSourceUnpackedness
+                                                       'GHC.Generics.NoSourceStrictness
+                                                       'GHC.Generics.DecidedLazy)
+                                                    (GHC.Generics.K1
+                                                       GHC.Generics.R GHC.Base.String)>_R))
+                      (Trans
+                           (Sym (GHC.Generics.N:M1[0]
+                                     <GHC.Generics.D>_P
+                                     <'GHC.Generics.MetaData
+                                        "SearchFile"
+                                        "UseHaskellAPI"
+                                        "use-haskell-api-0.1.0.0-3nD5NWCHf1N83LkkK3wDn9"
+                                        'GHC.Types.False>_P
+                                     <GHC.Generics.M1
+                                        GHC.Generics.C
+                                        ('GHC.Generics.MetaCons
+                                           "SearchFile" 'GHC.Generics.PrefixI 'GHC.Types.True)
+                                        (GHC.Generics.M1
+                                           GHC.Generics.S
+                                           ('GHC.Generics.MetaSel
+                                              ('GHC.Base.Just "nameuser")
+                                              'GHC.Generics.NoSourceUnpackedness
+                                              'GHC.Generics.NoSourceStrictness
+                                              'GHC.Generics.DecidedLazy)
+                                           (GHC.Generics.K1 GHC.Generics.R GHC.Base.String)
+                                         GHC.Generics.:*: GHC.Generics.M1
+                                                            GHC.Generics.S
+                                                            ('GHC.Generics.MetaSel
+                                                               ('GHC.Base.Just "namefile")
+                                                               'GHC.Generics.NoSourceUnpackedness
+                                                               'GHC.Generics.NoSourceStrictness
+                                                               'GHC.Generics.DecidedLazy)
+                                                            (GHC.Generics.K1
+                                                               GHC.Generics.R GHC.Base.String))>_R))
+                           (Sub (Sym (UseHaskellAPI.Rep_SearchFile[0])))) <x>_N) }) -}
+04064aef1c56e4686142734f566da330
+  $fGenericSearchFile_$cto ::
+    GHC.Generics.Rep UseHaskellAPI.SearchFile x
+    -> UseHaskellAPI.SearchFile
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U,U)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ x (ds :: GHC.Generics.Rep UseHaskellAPI.SearchFile x) ->
+                 case ds
+                        `cast`
+                      (Trans
+                           (Sub (UseHaskellAPI.Rep_SearchFile[0]))
+                           (Trans
+                                (GHC.Generics.N:M1[0]
+                                     <GHC.Generics.D>_P
+                                     <'GHC.Generics.MetaData
+                                        "SearchFile"
+                                        "UseHaskellAPI"
+                                        "use-haskell-api-0.1.0.0-3nD5NWCHf1N83LkkK3wDn9"
+                                        'GHC.Types.False>_P
+                                     <GHC.Generics.M1
+                                        GHC.Generics.C
+                                        ('GHC.Generics.MetaCons
+                                           "SearchFile" 'GHC.Generics.PrefixI 'GHC.Types.True)
+                                        (GHC.Generics.M1
+                                           GHC.Generics.S
+                                           ('GHC.Generics.MetaSel
+                                              ('GHC.Base.Just "nameuser")
+                                              'GHC.Generics.NoSourceUnpackedness
+                                              'GHC.Generics.NoSourceStrictness
+                                              'GHC.Generics.DecidedLazy)
+                                           (GHC.Generics.K1 GHC.Generics.R GHC.Base.String)
+                                         GHC.Generics.:*: GHC.Generics.M1
+                                                            GHC.Generics.S
+                                                            ('GHC.Generics.MetaSel
+                                                               ('GHC.Base.Just "namefile")
+                                                               'GHC.Generics.NoSourceUnpackedness
+                                                               'GHC.Generics.NoSourceStrictness
+                                                               'GHC.Generics.DecidedLazy)
+                                                            (GHC.Generics.K1
+                                                               GHC.Generics.R GHC.Base.String))>_R)
+                                (GHC.Generics.N:M1[0]
+                                     <GHC.Generics.C>_P
+                                     <'GHC.Generics.MetaCons
+                                        "SearchFile" 'GHC.Generics.PrefixI 'GHC.Types.True>_P
+                                     <GHC.Generics.M1
+                                        GHC.Generics.S
+                                        ('GHC.Generics.MetaSel
+                                           ('GHC.Base.Just "nameuser")
+                                           'GHC.Generics.NoSourceUnpackedness
+                                           'GHC.Generics.NoSourceStrictness
+                                           'GHC.Generics.DecidedLazy)
+                                        (GHC.Generics.K1 GHC.Generics.R GHC.Base.String)
+                                      GHC.Generics.:*: GHC.Generics.M1
+                                                         GHC.Generics.S
+                                                         ('GHC.Generics.MetaSel
+                                                            ('GHC.Base.Just "namefile")
+                                                            'GHC.Generics.NoSourceUnpackedness
+                                                            'GHC.Generics.NoSourceStrictness
+                                                            'GHC.Generics.DecidedLazy)
+                                                         (GHC.Generics.K1
+                                                            GHC.Generics.R
+                                                            GHC.Base.String)>_R)) <x>_N) of wild { GHC.Generics.:*: ds1 ds2 ->
+                 UseHaskellAPI.SearchFile
+                   ds1
+                     `cast`
+                   (Trans
+                        (GHC.Generics.N:M1[0]
+                             <GHC.Generics.S>_P
+                             <'GHC.Generics.MetaSel
+                                ('GHC.Base.Just "nameuser")
+                                'GHC.Generics.NoSourceUnpackedness
+                                'GHC.Generics.NoSourceStrictness
+                                'GHC.Generics.DecidedLazy>_P
+                             <GHC.Generics.K1 GHC.Generics.R GHC.Base.String>_R <x>_N)
+                        (GHC.Generics.N:K1[0]
+                             <GHC.Generics.R>_P <GHC.Base.String>_R <x>_P))
+                   ds2
+                     `cast`
+                   (Trans
+                        (GHC.Generics.N:M1[0]
+                             <GHC.Generics.S>_P
+                             <'GHC.Generics.MetaSel
+                                ('GHC.Base.Just "namefile")
+                                'GHC.Generics.NoSourceUnpackedness
+                                'GHC.Generics.NoSourceStrictness
+                                'GHC.Generics.DecidedLazy>_P
+                             <GHC.Generics.K1 GHC.Generics.R GHC.Base.String>_R <x>_N)
+                        (GHC.Generics.N:K1[0]
+                             <GHC.Generics.R>_P <GHC.Base.String>_R <x>_P)) }) -}
+83faf21fd8d6263dbcae6d331b28970e
   $fGenericUserFile :: GHC.Generics.Generic UseHaskellAPI.UserFile
   DFunId
   {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -4941,7 +5721,7 @@ e39e0a92ceb0571f4cef67a5b3fda47d
                   @ UseHaskellAPI.UserFile
                   UseHaskellAPI.$fGenericUserFile_$cfrom
                   UseHaskellAPI.$fFromBSONUserFile_$cto -}
-203cae548ea585a44186038e6962eb5b
+83faf21fd8d6263dbcae6d331b28970e
   $fGenericUserFile_$cfrom ::
     UseHaskellAPI.UserFile -> GHC.Generics.Rep UseHaskellAPI.UserFile x
   {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U,U,U,U)>m,
@@ -5162,7 +5942,7 @@ e39e0a92ceb0571f4cef67a5b3fda47d
                                                                                  GHC.Generics.R
                                                                                  GHC.Base.String)))>_R))
                            (Sub (Sym (UseHaskellAPI.Rep_UserFile[0])))) <x>_N) }) -}
-be6ea76a420fdf3399242fa067c4073c
+2e68e1c3782cc066831e527014721fd5
   $fGenericUserInfo :: GHC.Generics.Generic UseHaskellAPI.UserInfo
   DFunId
   {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -5170,7 +5950,7 @@ be6ea76a420fdf3399242fa067c4073c
                   @ UseHaskellAPI.UserInfo
                   UseHaskellAPI.$fGenericUserInfo_$cfrom
                   UseHaskellAPI.$fGenericUserInfo_$cto -}
-be6ea76a420fdf3399242fa067c4073c
+2e68e1c3782cc066831e527014721fd5
   $fGenericUserInfo_$cfrom ::
     UseHaskellAPI.UserInfo -> GHC.Generics.Rep UseHaskellAPI.UserInfo x
   {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U,U)>m,
@@ -5274,7 +6054,7 @@ be6ea76a420fdf3399242fa067c4073c
                                                             (GHC.Generics.K1
                                                                GHC.Generics.R GHC.Base.String))>_R))
                            (Sub (Sym (UseHaskellAPI.Rep_UserInfo[0])))) <x>_N) }) -}
-be6ea76a420fdf3399242fa067c4073c
+2e68e1c3782cc066831e527014721fd5
   $fGenericUserInfo_$cto ::
     GHC.Generics.Rep UseHaskellAPI.UserInfo x -> UseHaskellAPI.UserInfo
   {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U,U)>m,
@@ -5362,7 +6142,7 @@ be6ea76a420fdf3399242fa067c4073c
                              <GHC.Generics.K1 GHC.Generics.R GHC.Base.String>_R <x>_N)
                         (GHC.Generics.N:K1[0]
                              <GHC.Generics.R>_P <GHC.Base.String>_R <x>_P)) }) -}
-13ff60b3b126b88a5233eb938acc75d9
+76d24c97090f46d21490dbb86baa2ef2
   $fGenericUserRequest ::
     GHC.Generics.Generic UseHaskellAPI.UserRequest
   DFunId
@@ -5371,7 +6151,7 @@ be6ea76a420fdf3399242fa067c4073c
                   @ UseHaskellAPI.UserRequest
                   UseHaskellAPI.$fGenericUserRequest_$cfrom
                   UseHaskellAPI.$fGenericUserRequest_$cto -}
-13ff60b3b126b88a5233eb938acc75d9
+76d24c97090f46d21490dbb86baa2ef2
   $fGenericUserRequest_$cfrom ::
     UseHaskellAPI.UserRequest
     -> GHC.Generics.Rep UseHaskellAPI.UserRequest x
@@ -5476,7 +6256,7 @@ be6ea76a420fdf3399242fa067c4073c
                                                             (GHC.Generics.K1
                                                                GHC.Generics.R GHC.Base.String))>_R))
                            (Sub (Sym (UseHaskellAPI.Rep_UserRequest[0])))) <x>_N) }) -}
-13ff60b3b126b88a5233eb938acc75d9
+76d24c97090f46d21490dbb86baa2ef2
   $fGenericUserRequest_$cto ::
     GHC.Generics.Rep UseHaskellAPI.UserRequest x
     -> UseHaskellAPI.UserRequest
@@ -5728,7 +6508,61 @@ e39e0a92ceb0571f4cef67a5b3fda47d
                  case w of ww { GHC.Types.I# ww1 ->
                  case w1 of ww2 { UseHaskellAPI.ResponseData ww3 ->
                  UseHaskellAPI.$w$cshowsPrec2 ww1 ww3 w2 } }) -}
-203cae548ea585a44186038e6962eb5b
+04064aef1c56e4686142734f566da330
+  $fShowSearchFile :: GHC.Show.Show UseHaskellAPI.SearchFile
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ UseHaskellAPI.SearchFile
+                  UseHaskellAPI.$fShowSearchFile_$cshowsPrec
+                  UseHaskellAPI.$fShowSearchFile_$cshow
+                  UseHaskellAPI.$fShowSearchFile_$cshowList -}
+04064aef1c56e4686142734f566da330
+  $fShowSearchFile1 :: UseHaskellAPI.SearchFile -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (\ (w :: UseHaskellAPI.SearchFile)
+                   (w1 :: GHC.Base.String) ->
+                 case w of ww { UseHaskellAPI.SearchFile ww1 ww2 ->
+                 UseHaskellAPI.$w$cshowsPrec3 0# ww1 ww2 w1 }) -}
+9b9e86c0287e5252476241fb048bafbf
+  $fShowSearchFile2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "namefile = "#) -}
+46e15d5f4f77679516b4fc104060025f
+  $fShowSearchFile3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "nameuser = "#) -}
+65ef8661a4197af60cc29635c5301ac6
+  $fShowSearchFile4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "SearchFile {"#) -}
+04064aef1c56e4686142734f566da330
+  $fShowSearchFile_$cshow ::
+    UseHaskellAPI.SearchFile -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U(1*U,1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: UseHaskellAPI.SearchFile) ->
+                 UseHaskellAPI.$fShowSearchFile_$cshowsPrec
+                   GHC.Show.shows22
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+04064aef1c56e4686142734f566da330
+  $fShowSearchFile_$cshowList ::
+    [UseHaskellAPI.SearchFile] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ UseHaskellAPI.SearchFile
+                   UseHaskellAPI.$fShowSearchFile1) -}
+04064aef1c56e4686142734f566da330
+  $fShowSearchFile_$cshowsPrec ::
+    GHC.Types.Int -> UseHaskellAPI.SearchFile -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <S(S),1*U(U)><S,1*U(1*U,1*U)><L,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: UseHaskellAPI.SearchFile)
+                   (w2 :: GHC.Base.String) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 case w1 of ww2 { UseHaskellAPI.SearchFile ww3 ww4 ->
+                 UseHaskellAPI.$w$cshowsPrec3 ww1 ww3 ww4 w2 } }) -}
+83faf21fd8d6263dbcae6d331b28970e
   $fShowUserFile :: GHC.Show.Show UseHaskellAPI.UserFile
   DFunId
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -5737,13 +6571,13 @@ e39e0a92ceb0571f4cef67a5b3fda47d
                   UseHaskellAPI.$fShowUserFile_$cshowsPrec
                   UseHaskellAPI.$fShowUserFile_$cshow
                   UseHaskellAPI.$fShowUserFile_$cshowList -}
-203cae548ea585a44186038e6962eb5b
+83faf21fd8d6263dbcae6d331b28970e
   $fShowUserFile1 :: UseHaskellAPI.UserFile -> GHC.Show.ShowS
   {- Arity: 2,
      Unfolding: (\ (w :: UseHaskellAPI.UserFile)
                    (w1 :: GHC.Base.String) ->
                  case w of ww { UseHaskellAPI.UserFile ww1 ww2 ww3 ww4 ->
-                 UseHaskellAPI.$w$cshowsPrec3 0# ww1 ww2 ww3 ww4 w1 }) -}
+                 UseHaskellAPI.$w$cshowsPrec4 0# ww1 ww2 ww3 ww4 w1 }) -}
 95b6a4153def53d71fddba3f06031339
   $fShowUserFile2 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "contents = "#) -}
@@ -5759,7 +6593,7 @@ baccfa21f6e1ece17e5076176c60db77
 535eb584575359622252b38cf9d03eea
   $fShowUserFile6 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "UserFile {"#) -}
-203cae548ea585a44186038e6962eb5b
+83faf21fd8d6263dbcae6d331b28970e
   $fShowUserFile_$cshow :: UseHaskellAPI.UserFile -> GHC.Base.String
   {- Arity: 1, Strictness: <S,1*U(1*U,1*U,1*U,1*U)>,
      Unfolding: InlineRule (1, True, False)
@@ -5768,14 +6602,14 @@ baccfa21f6e1ece17e5076176c60db77
                    GHC.Show.shows22
                    x
                    (GHC.Types.[] @ GHC.Types.Char)) -}
-203cae548ea585a44186038e6962eb5b
+83faf21fd8d6263dbcae6d331b28970e
   $fShowUserFile_$cshowList ::
     [UseHaskellAPI.UserFile] -> GHC.Show.ShowS
   {- Arity: 2,
      Unfolding: (GHC.Show.showList__
                    @ UseHaskellAPI.UserFile
                    UseHaskellAPI.$fShowUserFile1) -}
-203cae548ea585a44186038e6962eb5b
+83faf21fd8d6263dbcae6d331b28970e
   $fShowUserFile_$cshowsPrec ::
     GHC.Types.Int -> UseHaskellAPI.UserFile -> GHC.Show.ShowS
   {- Arity: 3,
@@ -5787,8 +6621,8 @@ baccfa21f6e1ece17e5076176c60db77
                    (w2 :: GHC.Base.String) ->
                  case w of ww { GHC.Types.I# ww1 ->
                  case w1 of ww2 { UseHaskellAPI.UserFile ww3 ww4 ww5 ww6 ->
-                 UseHaskellAPI.$w$cshowsPrec3 ww1 ww3 ww4 ww5 ww6 w2 } }) -}
-be6ea76a420fdf3399242fa067c4073c
+                 UseHaskellAPI.$w$cshowsPrec4 ww1 ww3 ww4 ww5 ww6 w2 } }) -}
+2e68e1c3782cc066831e527014721fd5
   $fShowUserInfo :: GHC.Show.Show UseHaskellAPI.UserInfo
   DFunId
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -5797,13 +6631,13 @@ be6ea76a420fdf3399242fa067c4073c
                   UseHaskellAPI.$fShowUserInfo_$cshowsPrec
                   UseHaskellAPI.$fShowUserInfo_$cshow
                   UseHaskellAPI.$fShowUserInfo_$cshowList -}
-be6ea76a420fdf3399242fa067c4073c
+2e68e1c3782cc066831e527014721fd5
   $fShowUserInfo1 :: UseHaskellAPI.UserInfo -> GHC.Show.ShowS
   {- Arity: 2,
      Unfolding: (\ (w :: UseHaskellAPI.UserInfo)
                    (w1 :: GHC.Base.String) ->
                  case w of ww { UseHaskellAPI.UserInfo ww1 ww2 ->
-                 UseHaskellAPI.$w$cshowsPrec4 0# ww1 ww2 w1 }) -}
+                 UseHaskellAPI.$w$cshowsPrec5 0# ww1 ww2 w1 }) -}
 5e4da6d61817f499a632a10bc1883f48
   $fShowUserInfo2 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "password = "#) -}
@@ -5813,7 +6647,7 @@ be6ea76a420fdf3399242fa067c4073c
 c45a01c136fe1bb32f44c20f19943069
   $fShowUserInfo4 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "UserInfo {"#) -}
-be6ea76a420fdf3399242fa067c4073c
+2e68e1c3782cc066831e527014721fd5
   $fShowUserInfo_$cshow :: UseHaskellAPI.UserInfo -> GHC.Base.String
   {- Arity: 1, Strictness: <S,1*U(1*U,1*U)>,
      Unfolding: InlineRule (1, True, False)
@@ -5822,14 +6656,14 @@ be6ea76a420fdf3399242fa067c4073c
                    GHC.Show.shows22
                    x
                    (GHC.Types.[] @ GHC.Types.Char)) -}
-be6ea76a420fdf3399242fa067c4073c
+2e68e1c3782cc066831e527014721fd5
   $fShowUserInfo_$cshowList ::
     [UseHaskellAPI.UserInfo] -> GHC.Show.ShowS
   {- Arity: 2,
      Unfolding: (GHC.Show.showList__
                    @ UseHaskellAPI.UserInfo
                    UseHaskellAPI.$fShowUserInfo1) -}
-be6ea76a420fdf3399242fa067c4073c
+2e68e1c3782cc066831e527014721fd5
   $fShowUserInfo_$cshowsPrec ::
     GHC.Types.Int -> UseHaskellAPI.UserInfo -> GHC.Show.ShowS
   {- Arity: 3, Strictness: <S(S),1*U(U)><S,1*U(1*U,1*U)><L,U>,
@@ -5840,8 +6674,8 @@ be6ea76a420fdf3399242fa067c4073c
                    (w2 :: GHC.Base.String) ->
                  case w of ww { GHC.Types.I# ww1 ->
                  case w1 of ww2 { UseHaskellAPI.UserInfo ww3 ww4 ->
-                 UseHaskellAPI.$w$cshowsPrec4 ww1 ww3 ww4 w2 } }) -}
-13ff60b3b126b88a5233eb938acc75d9
+                 UseHaskellAPI.$w$cshowsPrec5 ww1 ww3 ww4 w2 } }) -}
+76d24c97090f46d21490dbb86baa2ef2
   $fShowUserRequest :: GHC.Show.Show UseHaskellAPI.UserRequest
   DFunId
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -5850,13 +6684,13 @@ be6ea76a420fdf3399242fa067c4073c
                   UseHaskellAPI.$fShowUserRequest_$cshowsPrec
                   UseHaskellAPI.$fShowUserRequest_$cshow
                   UseHaskellAPI.$fShowUserRequest_$cshowList -}
-13ff60b3b126b88a5233eb938acc75d9
+76d24c97090f46d21490dbb86baa2ef2
   $fShowUserRequest1 :: UseHaskellAPI.UserRequest -> GHC.Show.ShowS
   {- Arity: 2,
      Unfolding: (\ (w :: UseHaskellAPI.UserRequest)
                    (w1 :: GHC.Base.String) ->
                  case w of ww { UseHaskellAPI.UserRequest ww1 ww2 ->
-                 UseHaskellAPI.$w$cshowsPrec5 0# ww1 ww2 w1 }) -}
+                 UseHaskellAPI.$w$cshowsPrec6 0# ww1 ww2 w1 }) -}
 583547e1958e04c12401bb12ddc16aae
   $fShowUserRequest2 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "file = "#) -}
@@ -5866,7 +6700,7 @@ be6ea76a420fdf3399242fa067c4073c
 fe8f8b200839ca24736e8c33d972474e
   $fShowUserRequest4 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "UserRequest {"#) -}
-13ff60b3b126b88a5233eb938acc75d9
+76d24c97090f46d21490dbb86baa2ef2
   $fShowUserRequest_$cshow ::
     UseHaskellAPI.UserRequest -> GHC.Base.String
   {- Arity: 1, Strictness: <S,1*U(1*U,1*U)>,
@@ -5876,14 +6710,14 @@ fe8f8b200839ca24736e8c33d972474e
                    GHC.Show.shows22
                    x
                    (GHC.Types.[] @ GHC.Types.Char)) -}
-13ff60b3b126b88a5233eb938acc75d9
+76d24c97090f46d21490dbb86baa2ef2
   $fShowUserRequest_$cshowList ::
     [UseHaskellAPI.UserRequest] -> GHC.Show.ShowS
   {- Arity: 2,
      Unfolding: (GHC.Show.showList__
                    @ UseHaskellAPI.UserRequest
                    UseHaskellAPI.$fShowUserRequest1) -}
-13ff60b3b126b88a5233eb938acc75d9
+76d24c97090f46d21490dbb86baa2ef2
   $fShowUserRequest_$cshowsPrec ::
     GHC.Types.Int -> UseHaskellAPI.UserRequest -> GHC.Show.ShowS
   {- Arity: 3, Strictness: <S(S),1*U(U)><S,1*U(1*U,1*U)><L,U>,
@@ -5894,7 +6728,7 @@ fe8f8b200839ca24736e8c33d972474e
                    (w2 :: GHC.Base.String) ->
                  case w of ww { GHC.Types.I# ww1 ->
                  case w1 of ww2 { UseHaskellAPI.UserRequest ww3 ww4 ->
-                 UseHaskellAPI.$w$cshowsPrec5 ww1 ww3 ww4 w2 } }) -}
+                 UseHaskellAPI.$w$cshowsPrec6 ww1 ww3 ww4 w2 } }) -}
 e39e0a92ceb0571f4cef67a5b3fda47d
   $fToBSONFileTime :: Data.Bson.Generic.ToBSON UseHaskellAPI.FileTime
   DFunId
@@ -6421,7 +7255,272 @@ e6d677379c9776da41ff9d5e3f7f48e1
                      GHC.Generics.$WSTrue
                        `cast`
                      (Sym (GHC.Generics.N:SingI[0]) <GHC.Types.Bool>_N <'GHC.Types.True>_N)) -}
-203cae548ea585a44186038e6962eb5b
+04064aef1c56e4686142734f566da330
+  $fToBSONSearchFile ::
+    Data.Bson.Generic.ToBSON UseHaskellAPI.SearchFile
+  DFunId
+  {- Arity: 1, Strictness: <L,1*U(U,U)>, Inline: INLINE (sat-args=0),
+     Unfolding: InlineRule (0, False, True)
+                UseHaskellAPI.$fToBSONSearchFile_$ctoBSON
+                  `cast`
+                (Sym (Data.Bson.Generic.N:ToBSON[0]
+                          <UseHaskellAPI.SearchFile>_N)) -}
+6715de62defa60849de433c2cb41cd34
+  $fToBSONSearchFile1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "SearchFile"#) -}
+81c5382e7b9e90d8d17bc2c308942346
+  $fToBSONSearchFile2 ::
+    GHC.Types.Int
+    -> (GHC.Generics.:*:)
+         (GHC.Generics.M1
+            GHC.Generics.S
+            ('GHC.Generics.MetaSel
+               ('GHC.Base.Just "nameuser")
+               'GHC.Generics.NoSourceUnpackedness
+               'GHC.Generics.NoSourceStrictness
+               'GHC.Generics.DecidedLazy)
+            (GHC.Generics.Rec0 GHC.Base.String))
+         (GHC.Generics.M1
+            GHC.Generics.S
+            ('GHC.Generics.MetaSel
+               ('GHC.Base.Just "namefile")
+               'GHC.Generics.NoSourceUnpackedness
+               'GHC.Generics.NoSourceStrictness
+               'GHC.Generics.DecidedLazy)
+            (GHC.Generics.Rec0 GHC.Base.String))
+         a1
+    -> [Data.Bson.Field]
+  {- Arity: 2, Strictness: <L,A><S,1*U(1*U,1*U)>, Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a1
+                   (w :: GHC.Types.Int)
+                   (w1 :: (GHC.Generics.:*:)
+                            (GHC.Generics.M1
+                               GHC.Generics.S
+                               ('GHC.Generics.MetaSel
+                                  ('GHC.Base.Just "nameuser")
+                                  'GHC.Generics.NoSourceUnpackedness
+                                  'GHC.Generics.NoSourceStrictness
+                                  'GHC.Generics.DecidedLazy)
+                               (GHC.Generics.Rec0 GHC.Base.String))
+                            (GHC.Generics.M1
+                               GHC.Generics.S
+                               ('GHC.Generics.MetaSel
+                                  ('GHC.Base.Just "namefile")
+                                  'GHC.Generics.NoSourceUnpackedness
+                                  'GHC.Generics.NoSourceStrictness
+                                  'GHC.Generics.DecidedLazy)
+                               (GHC.Generics.Rec0 GHC.Base.String))
+                            a1) ->
+                 case w1 of ww { GHC.Generics.:*: ww1 ww2 ->
+                 UseHaskellAPI.$w$dGToBSON2 @ a1 ww1 ww2 }) -}
+3e89a19d5bae12ff54e4f8a7cdfcdcbb
+  $fToBSONSearchFile3 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1,
+     Unfolding: (\ (s1 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        8#
+                        s1 of ds1 { (#,#) ipv ipv1 ->
+                 Data.Bson.Generic.$wouter2
+                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
+                   Data.Bson.Generic.$fFromBSONObjectKey5
+                   UseHaskellAPI.$fFromBSONSearchFile4
+                   0#
+                   ipv }) -}
+f1e75d7bfd7fcdf422a4474ae9b29f7b
+  $fToBSONSearchFile4 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1,
+     Unfolding: (\ (s1 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        8#
+                        s1 of ds1 { (#,#) ipv ipv1 ->
+                 Data.Bson.Generic.$wouter2
+                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
+                   Data.Bson.Generic.$fFromBSONObjectKey5
+                   UseHaskellAPI.$fFromBSONSearchFile8
+                   0#
+                   ipv }) -}
+04064aef1c56e4686142734f566da330
+  $fToBSONSearchFile_$ctoBSON ::
+    UseHaskellAPI.SearchFile -> Data.Bson.Document
+  {- Arity: 1, Strictness: <L,1*U(U,U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (a1 :: UseHaskellAPI.SearchFile) ->
+                 Data.Bson.Generic.$w$cgenericToBSON1
+                   @ (GHC.Generics.S1
+                        ('GHC.Generics.MetaSel
+                           ('GHC.Base.Just "nameuser")
+                           'GHC.Generics.NoSourceUnpackedness
+                           'GHC.Generics.NoSourceStrictness
+                           'GHC.Generics.DecidedLazy)
+                        (GHC.Generics.Rec0 GHC.Base.String)
+                      GHC.Generics.:*: GHC.Generics.S1
+                                         ('GHC.Generics.MetaSel
+                                            ('GHC.Base.Just "namefile")
+                                            'GHC.Generics.NoSourceUnpackedness
+                                            'GHC.Generics.NoSourceStrictness
+                                            'GHC.Generics.DecidedLazy)
+                                         (GHC.Generics.Rec0 GHC.Base.String))
+                   @ ('GHC.Generics.MetaCons
+                        "SearchFile" 'GHC.Generics.PrefixI 'GHC.Types.True)
+                   UseHaskellAPI.$fToBSONSearchFile2
+                     `cast`
+                   (Sym (Data.Bson.Generic.N:GToBSON[0]
+                             <GHC.Generics.M1
+                                GHC.Generics.S
+                                ('GHC.Generics.MetaSel
+                                   ('GHC.Base.Just "nameuser")
+                                   'GHC.Generics.NoSourceUnpackedness
+                                   'GHC.Generics.NoSourceStrictness
+                                   'GHC.Generics.DecidedLazy)
+                                (GHC.Generics.Rec0 GHC.Base.String)
+                              GHC.Generics.:*: GHC.Generics.M1
+                                                 GHC.Generics.S
+                                                 ('GHC.Generics.MetaSel
+                                                    ('GHC.Base.Just "namefile")
+                                                    'GHC.Generics.NoSourceUnpackedness
+                                                    'GHC.Generics.NoSourceStrictness
+                                                    'GHC.Generics.DecidedLazy)
+                                                 (GHC.Generics.Rec0 GHC.Base.String)>_N))
+                   UseHaskellAPI.$fToBSONSearchFile_$s$fConstructorMetaMetaCons
+                   @ GHC.Prim.Any
+                   1#
+                   (case a1 of wild { UseHaskellAPI.SearchFile g1 g2 ->
+                    (GHC.Generics.:*:
+                       @ (GHC.Generics.M1
+                            GHC.Generics.S
+                            ('GHC.Generics.MetaSel
+                               ('GHC.Base.Just "nameuser")
+                               'GHC.Generics.NoSourceUnpackedness
+                               'GHC.Generics.NoSourceStrictness
+                               'GHC.Generics.DecidedLazy)
+                            (GHC.Generics.K1 GHC.Generics.R GHC.Base.String))
+                       @ (GHC.Generics.M1
+                            GHC.Generics.S
+                            ('GHC.Generics.MetaSel
+                               ('GHC.Base.Just "namefile")
+                               'GHC.Generics.NoSourceUnpackedness
+                               'GHC.Generics.NoSourceStrictness
+                               'GHC.Generics.DecidedLazy)
+                            (GHC.Generics.K1 GHC.Generics.R GHC.Base.String))
+                       @ GHC.Prim.Any
+                       g1
+                         `cast`
+                       (Trans
+                            (Sym (GHC.Generics.N:K1[0]
+                                      <GHC.Generics.R>_P <GHC.Base.String>_R <GHC.Prim.Any>_P))
+                            (Sym (GHC.Generics.N:M1[0]
+                                      <GHC.Generics.S>_P
+                                      <'GHC.Generics.MetaSel
+                                         ('GHC.Base.Just "nameuser")
+                                         'GHC.Generics.NoSourceUnpackedness
+                                         'GHC.Generics.NoSourceStrictness
+                                         'GHC.Generics.DecidedLazy>_P
+                                      <GHC.Generics.K1
+                                         GHC.Generics.R GHC.Base.String>_R) <GHC.Prim.Any>_N))
+                       g2
+                         `cast`
+                       (Trans
+                            (Sym (GHC.Generics.N:K1[0]
+                                      <GHC.Generics.R>_P <GHC.Base.String>_R <GHC.Prim.Any>_P))
+                            (Sym (GHC.Generics.N:M1[0]
+                                      <GHC.Generics.S>_P
+                                      <'GHC.Generics.MetaSel
+                                         ('GHC.Base.Just "namefile")
+                                         'GHC.Generics.NoSourceUnpackedness
+                                         'GHC.Generics.NoSourceStrictness
+                                         'GHC.Generics.DecidedLazy>_P
+                                      <GHC.Generics.K1
+                                         GHC.Generics.R GHC.Base.String>_R) <GHC.Prim.Any>_N)))
+                      `cast`
+                    (Sym (GHC.Generics.N:M1[0]
+                              <GHC.Generics.C>_P
+                              <'GHC.Generics.MetaCons
+                                 "SearchFile" 'GHC.Generics.PrefixI 'GHC.Types.True>_P
+                              <GHC.Generics.M1
+                                 GHC.Generics.S
+                                 ('GHC.Generics.MetaSel
+                                    ('GHC.Base.Just "nameuser")
+                                    'GHC.Generics.NoSourceUnpackedness
+                                    'GHC.Generics.NoSourceStrictness
+                                    'GHC.Generics.DecidedLazy)
+                                 (GHC.Generics.K1 GHC.Generics.R GHC.Base.String)
+                               GHC.Generics.:*: GHC.Generics.M1
+                                                  GHC.Generics.S
+                                                  ('GHC.Generics.MetaSel
+                                                     ('GHC.Base.Just "namefile")
+                                                     'GHC.Generics.NoSourceUnpackedness
+                                                     'GHC.Generics.NoSourceStrictness
+                                                     'GHC.Generics.DecidedLazy)
+                                                  (GHC.Generics.K1
+                                                     GHC.Generics.R
+                                                     GHC.Base.String)>_R) <GHC.Prim.Any>_N) })) -}
+17e2aad488d3857180e8bf347af2ec29
+  $fToBSONSearchFile_$s$fConstructorMetaMetaCons ::
+    GHC.Generics.Constructor
+      ('GHC.Generics.MetaCons
+         "SearchFile" 'GHC.Generics.PrefixI 'GHC.Types.True)
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ GHC.Generics.Meta
+                  @ ('GHC.Generics.MetaCons
+                       "SearchFile" 'GHC.Generics.PrefixI 'GHC.Types.True)
+                  (GHC.Generics.$fConstructorMetaMetaCons_$cconName
+                     @ "SearchFile"
+                     @ 'GHC.Generics.PrefixI
+                     @ 'GHC.Types.True
+                     UseHaskellAPI.$fToBSONSearchFile1
+                       `cast`
+                     (Trans
+                          (Sym (GHC.TypeLits.N:SSymbol[0] <"SearchFile">_P))
+                          (Sym (GHC.TypeLits.N:KnownSymbol[0]) <"SearchFile">_N))
+                     GHC.Generics.$WSPrefix
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.FixityI>_N <'GHC.Generics.PrefixI>_N)
+                     GHC.Generics.$WSTrue
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Types.Bool>_N <'GHC.Types.True>_N))
+                  (GHC.Generics.$fConstructorMetaMetaCons_$cconFixity
+                     @ "SearchFile"
+                     @ 'GHC.Generics.PrefixI
+                     @ 'GHC.Types.True
+                     UseHaskellAPI.$fToBSONSearchFile1
+                       `cast`
+                     (Trans
+                          (Sym (GHC.TypeLits.N:SSymbol[0] <"SearchFile">_P))
+                          (Sym (GHC.TypeLits.N:KnownSymbol[0]) <"SearchFile">_N))
+                     GHC.Generics.$WSPrefix
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.FixityI>_N <'GHC.Generics.PrefixI>_N)
+                     GHC.Generics.$WSTrue
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Types.Bool>_N <'GHC.Types.True>_N))
+                  (GHC.Generics.$fConstructorMetaMetaCons_$cconIsRecord
+                     @ "SearchFile"
+                     @ 'GHC.Generics.PrefixI
+                     @ 'GHC.Types.True
+                     UseHaskellAPI.$fToBSONSearchFile1
+                       `cast`
+                     (Trans
+                          (Sym (GHC.TypeLits.N:SSymbol[0] <"SearchFile">_P))
+                          (Sym (GHC.TypeLits.N:KnownSymbol[0]) <"SearchFile">_N))
+                     GHC.Generics.$WSPrefix
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.FixityI>_N <'GHC.Generics.PrefixI>_N)
+                     GHC.Generics.$WSTrue
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Types.Bool>_N <'GHC.Types.True>_N)) -}
+83faf21fd8d6263dbcae6d331b28970e
   $fToBSONUserFile :: Data.Bson.Generic.ToBSON UseHaskellAPI.UserFile
   DFunId
   {- Arity: 1, Strictness: <L,1*U(U,U,U,U)>,
@@ -6602,7 +7701,7 @@ e6d677379c9776da41ff9d5e3f7f48e1
                                                                         GHC.Base.String))))
                             a1) ->
                  Data.Bson.Generic.$dmfromBSON1) -}
-3cb0572632a078a437388f3a7e35ed44
+b7908ff10c158e0994073cd38a30af15
   $fToBSONUserFile3 ::
     Data.Bson.Generic.GToBSON
       (GHC.Generics.D1
@@ -6686,7 +7785,7 @@ e6d677379c9776da41ff9d5e3f7f48e1
                                                                          'GHC.Generics.DecidedLazy)
                                                                       (GHC.Generics.Rec0
                                                                          GHC.Base.String))))>_N)) -}
-0f8a087249c9541e4b94f0e5d1097cbb
+8cd84f40a842bfda1264b78cca938f4f
   $fToBSONUserFile4 ::
     GHC.Types.Int
     -> GHC.Generics.M1
@@ -6887,7 +7986,7 @@ e6d677379c9776da41ff9d5e3f7f48e1
 dfdb78b899abf64e594ac8ca4fbeedcb
   $fToBSONUserFile5 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "UserFile"#) -}
-35c8e986751813af3159a377e65fb8ba
+6c671ed56885c1e87fdd3283738562d8
   $fToBSONUserFile6 ::
     GHC.Types.Int
     -> (GHC.Generics.:*:)
@@ -6959,8 +8058,8 @@ dfdb78b899abf64e594ac8ca4fbeedcb
                             a1) ->
                  case w1 of ww { GHC.Generics.:*: ww1 ww2 ->
                  case ww1 of ww3 { GHC.Generics.:*: ww4 ww5 ->
-                 UseHaskellAPI.$w$dGToBSON2 @ a1 ww4 ww5 ww2 } }) -}
-203cae548ea585a44186038e6962eb5b
+                 UseHaskellAPI.$w$dGToBSON3 @ a1 ww4 ww5 ww2 } }) -}
+83faf21fd8d6263dbcae6d331b28970e
   $fToBSONUserFile_$s$dmtoBSON ::
     UseHaskellAPI.UserFile -> Data.Bson.Document
   {- Arity: 1, Strictness: <L,1*U(U,U,U,U)>,
@@ -7028,7 +8127,7 @@ f5cdffb8d28ceb67d2e3fe291ffa85f3
                      GHC.Generics.$WSTrue
                        `cast`
                      (Sym (GHC.Generics.N:SingI[0]) <GHC.Types.Bool>_N <'GHC.Types.True>_N)) -}
-203cae548ea585a44186038e6962eb5b
+83faf21fd8d6263dbcae6d331b28970e
   $fToBSONUserFile_$sconstructorCount ::
     UseHaskellAPI.UserFile -> GHC.Types.Int
   {- Arity: 1, HasNoCafRefs, Strictness: <L,A>m,
@@ -7040,7 +8139,7 @@ f5cdffb8d28ceb67d2e3fe291ffa85f3
                       (Sym (UseHaskellAPI.Rep_UserFile[0])))
                    @ GHC.Prim.Any
                    (UseHaskellAPI.$fGenericUserFile_$cfrom @ GHC.Prim.Any x)) -}
-be6ea76a420fdf3399242fa067c4073c
+2e68e1c3782cc066831e527014721fd5
   $fToBSONUserInfo :: Data.Bson.Generic.ToBSON UseHaskellAPI.UserInfo
   DFunId
   {- Arity: 1, Strictness: <L,1*U(U,U)>, Inline: INLINE (sat-args=0),
@@ -7051,7 +8150,7 @@ be6ea76a420fdf3399242fa067c4073c
 713dfa1f7ebad64198e19c7fac314929
   $fToBSONUserInfo1 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "UserInfo"#) -}
-726ea5299b29300b6321c0e0a392ee1d
+b43ef9d09116aa40a67e5aed532880ac
   $fToBSONUserInfo2 ::
     GHC.Types.Int
     -> (GHC.Generics.:*:)
@@ -7096,7 +8195,7 @@ be6ea76a420fdf3399242fa067c4073c
                                (GHC.Generics.Rec0 GHC.Base.String))
                             a1) ->
                  case w1 of ww { GHC.Generics.:*: ww1 ww2 ->
-                 UseHaskellAPI.$w$dGToBSON3 @ a1 ww1 ww2 }) -}
+                 UseHaskellAPI.$w$dGToBSON4 @ a1 ww1 ww2 }) -}
 ea732021f3f7a49abf629060918b3f38
   $fToBSONUserInfo3 ::
     GHC.Prim.State# GHC.Prim.RealWorld
@@ -7133,7 +8232,7 @@ ea732021f3f7a49abf629060918b3f38
                    UseHaskellAPI.$fFromBSONUserInfo8
                    0#
                    ipv }) -}
-be6ea76a420fdf3399242fa067c4073c
+2e68e1c3782cc066831e527014721fd5
   $fToBSONUserInfo_$ctoBSON ::
     UseHaskellAPI.UserInfo -> Data.Bson.Document
   {- Arity: 1, Strictness: <L,1*U(U,U)>,
@@ -7303,7 +8402,7 @@ be6ea76a420fdf3399242fa067c4073c
                      GHC.Generics.$WSTrue
                        `cast`
                      (Sym (GHC.Generics.N:SingI[0]) <GHC.Types.Bool>_N <'GHC.Types.True>_N)) -}
-13ff60b3b126b88a5233eb938acc75d9
+76d24c97090f46d21490dbb86baa2ef2
   $fToBSONUserRequest ::
     Data.Bson.Generic.ToBSON UseHaskellAPI.UserRequest
   DFunId
@@ -7316,7 +8415,7 @@ be6ea76a420fdf3399242fa067c4073c
 0895f791e521353526b1a25eb5c52151
   $fToBSONUserRequest1 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "UserRequest"#) -}
-292c92709d5829d4fd53beb589ec664f
+d64f01b00a8ac6f5d4becf6cac15eee0
   $fToBSONUserRequest2 ::
     GHC.Types.Int
     -> (GHC.Generics.:*:)
@@ -7361,7 +8460,7 @@ be6ea76a420fdf3399242fa067c4073c
                                (GHC.Generics.Rec0 GHC.Base.String))
                             a1) ->
                  case w1 of ww { GHC.Generics.:*: ww1 ww2 ->
-                 UseHaskellAPI.$w$dGToBSON4 @ a1 ww1 ww2 }) -}
+                 UseHaskellAPI.$w$dGToBSON5 @ a1 ww1 ww2 }) -}
 2fcdbee0f07cfa00879a03cac0e3f029
   $fToBSONUserRequest3 ::
     GHC.Prim.State# GHC.Prim.RealWorld
@@ -7398,7 +8497,7 @@ b3f4990d87648295374dde9bca60772e
                    UseHaskellAPI.$fFromBSONUserRequest8
                    0#
                    ipv }) -}
-13ff60b3b126b88a5233eb938acc75d9
+76d24c97090f46d21490dbb86baa2ef2
   $fToBSONUserRequest_$ctoBSON ::
     UseHaskellAPI.UserRequest -> Data.Bson.Document
   {- Arity: 1, Strictness: <L,1*U(U,U)>,
@@ -7568,7 +8667,7 @@ d9faf07cec21dc81ac40eb4f427e4682
                      GHC.Generics.$WSTrue
                        `cast`
                      (Sym (GHC.Generics.N:SingI[0]) <GHC.Types.Bool>_N <'GHC.Types.True>_N)) -}
-de61c5024124fee3df59f58a193ef735
+c4f46bf8e4eebede38fa69a8f54e5b6d
   $fToBSON[] :: Data.Bson.Generic.ToBSON [GHC.Types.Char]
   DFunId
   {- Arity: 1, Strictness: <S,1*U>, Inline: INLINE (sat-args=0),
@@ -7731,7 +8830,7 @@ de61c5024124fee3df59f58a193ef735
                                                    (GHC.Generics.Rec0 [GHC.Types.Char])))
                             a1) ->
                  UseHaskellAPI.$fFromBSON[]_lvl47) -}
-47d6791203388a6f0177a3e17395a909
+a70c5f7d9c862422097ca3d9f25af33c
   $fToBSON[]3 ::
     Data.Bson.Generic.GToBSON
       (GHC.Generics.D1
@@ -7826,7 +8925,7 @@ de61c5024124fee3df59f58a193ef735
                                                                              'GHC.Generics.DecidedLazy)
                                                                           (GHC.Generics.Rec0
                                                                              [GHC.Types.Char])))>_N))) -}
-03c70b0e6ad0eddae89e3361e3f842df
+588db5a3f6ec0d1b0b19f777d287938a
   $fToBSON[]4 ::
     GHC.Types.Int
     -> (GHC.Generics.:+:)
@@ -7889,7 +8988,7 @@ de61c5024124fee3df59f58a193ef735
                                                    (GHC.Generics.Rec0 [GHC.Types.Char])))
                             a1) ->
                  case w of ww { GHC.Types.I# ww1 ->
-                 UseHaskellAPI.$w$dGToBSON5 @ a1 ww1 w1 }) -}
+                 UseHaskellAPI.$w$dGToBSON6 @ a1 ww1 w1 }) -}
 e94724efc59f041865561429e46ce747
   $fToBSON[]5 ::
     GHC.Generics.SingI
@@ -7917,7 +9016,7 @@ e94724efc59f041865561429e46ce747
 fb3244a8d3f94c47cca78337191b06e7
   $fToBSON[]7 :: GHC.Integer.Type.Integer
   {- HasNoCafRefs, Unfolding: (9) -}
-827e89ebaa7652d2c24175f9060747e3
+d068bcae9b024f3a924316a27827e333
   $fToBSON[]8 ::
     GHC.Types.Int
     -> (GHC.Generics.:*:)
@@ -7963,7 +9062,7 @@ fb3244a8d3f94c47cca78337191b06e7
                                (GHC.Generics.Rec0 [GHC.Types.Char]))
                             a1) ->
                  case w1 of ww { GHC.Generics.:*: ww1 ww2 ->
-                 UseHaskellAPI.$w$dGToBSON6 @ a1 ww1 ww2 }) -}
+                 UseHaskellAPI.$w$dGToBSON7 @ a1 ww1 ww2 }) -}
 7a1831fd2565e160370a1d4bffba33fd
   $fToBSON[]9 ::
     GHC.Prim.State# GHC.Prim.RealWorld
@@ -7982,7 +9081,7 @@ fb3244a8d3f94c47cca78337191b06e7
                    (GHC.Types.[] @ GHC.Types.Char)
                    0#
                    ipv }) -}
-5a08943d430fe29b48e69ff99175acf3
+55623f85e8b95c3a2f4512b3e7ac71b1
   $fToBSON[]_$s$dmtoBSON :: [GHC.Types.Char] -> Data.Bson.Document
   {- Arity: 1, Strictness: <S,1*U>,
      Unfolding: InlineRule (-4, True, False)
@@ -8404,7 +9503,104 @@ cc40b9dd3cd4af2e0548c8a2de235c60
                  ->_R Data.Aeson.Types.Generic.N:Tagged[0]
                           <Data.Aeson.Types.Generic.True>_P
                           <Data.Aeson.Types.Internal.Value>_R) -}
-203cae548ea585a44186038e6962eb5b
+04064aef1c56e4686142734f566da330
+  $fToJSONSearchFile ::
+    Data.Aeson.Types.Class.ToJSON UseHaskellAPI.SearchFile
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ UseHaskellAPI.SearchFile
+                  UseHaskellAPI.$fToJSONSearchFile_$ctoJSON
+                  UseHaskellAPI.$fToJSONSearchFile_$ctoEncoding -}
+04064aef1c56e4686142734f566da330
+  $fToJSONSearchFile1 ::
+    UseHaskellAPI.SearchFile
+    -> Data.Aeson.Types.Generic.Tagged
+         Data.Aeson.Types.Generic.True Data.Aeson.Types.Internal.Value
+  {- Arity: 1, Strictness: <S,1*U(1*U,1*U)>m1, Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: UseHaskellAPI.SearchFile) ->
+                 case w of ww { UseHaskellAPI.SearchFile ww1 ww2 ->
+                 case UseHaskellAPI.$w$ctoJSON2 ww1 ww2 of ww3 { Unit# ww4 ->
+                 (Data.Aeson.Types.Internal.Object ww4)
+                   `cast`
+                 (Sym (Data.Aeson.Types.Generic.N:Tagged[0]
+                           <Data.Aeson.Types.Generic.True>_P
+                           <Data.Aeson.Types.Internal.Value>_R)) } }) -}
+891ec169f0f3e2830018ba7bfe088d29
+  $fToJSONSearchFile2 :: Data.Text.Internal.Text
+  {- Unfolding: (case GHC.Magic.runRW#
+                        @ 'GHC.Types.PtrRepLifted
+                        @ Data.Text.Internal.Text
+                        UseHaskellAPI.$fToJSONSearchFile3 of ds7 { (#,#) ipv ipv1 ->
+                 ipv1 }) -}
+cba5fb7d1a7a884e75c07286a3600063
+  $fToJSONSearchFile3 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1,
+     Unfolding: (\ (s1 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        8#
+                        s1 of ds7 { (#,#) ipv ipv1 ->
+                 Data.Aeson.Types.Generic.$wouter6
+                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
+                   Data.Aeson.Types.Generic.$fFromPairM2
+                   UseHaskellAPI.$fFromBSONSearchFile4
+                   0#
+                   ipv }) -}
+a76145fc50f9ce544851e6c83fccfb79
+  $fToJSONSearchFile4 :: Data.Text.Internal.Text
+  {- Unfolding: (case GHC.Magic.runRW#
+                        @ 'GHC.Types.PtrRepLifted
+                        @ Data.Text.Internal.Text
+                        UseHaskellAPI.$fToJSONSearchFile5 of ds7 { (#,#) ipv ipv1 ->
+                 ipv1 }) -}
+7d4dcd3996047852ae14befd27acb907
+  $fToJSONSearchFile5 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1,
+     Unfolding: (\ (s1 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        8#
+                        s1 of ds7 { (#,#) ipv ipv1 ->
+                 Data.Aeson.Types.Generic.$wouter6
+                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
+                   Data.Aeson.Types.Generic.$fFromPairM2
+                   UseHaskellAPI.$fFromBSONSearchFile8
+                   0#
+                   ipv }) -}
+04064aef1c56e4686142734f566da330
+  $fToJSONSearchFile_$ctoEncoding ::
+    UseHaskellAPI.SearchFile -> Data.Aeson.Types.Internal.Encoding
+  {- Arity: 1, Strictness: <S,1*U(1*U,1*U)>,
+     Inline: INLINE (sat-args=0),
+     Unfolding: InlineRule (0, False, False)
+                (\ (eta :: UseHaskellAPI.SearchFile) ->
+                 Data.Aeson.Encode.Builder.encodeToBuilder
+                   (UseHaskellAPI.$fToJSONSearchFile_$ctoJSON eta))
+                  `cast`
+                (<UseHaskellAPI.SearchFile>_R
+                 ->_R Sym (Data.Aeson.Types.Internal.N:Encoding[0])) -}
+04064aef1c56e4686142734f566da330
+  $fToJSONSearchFile_$ctoJSON ::
+    UseHaskellAPI.SearchFile -> Data.Aeson.Types.Internal.Value
+  {- Arity: 1, Strictness: <S,1*U(1*U,1*U)>m1,
+     Unfolding: InlineRule (0, True, True)
+                UseHaskellAPI.$fToJSONSearchFile1
+                  `cast`
+                (<UseHaskellAPI.SearchFile>_R
+                 ->_R Data.Aeson.Types.Generic.N:Tagged[0]
+                          <Data.Aeson.Types.Generic.True>_P
+                          <Data.Aeson.Types.Internal.Value>_R) -}
+83faf21fd8d6263dbcae6d331b28970e
   $fToJSONUserFile ::
     Data.Aeson.Types.Class.ToJSON UseHaskellAPI.UserFile
   DFunId
@@ -8413,7 +9609,7 @@ cc40b9dd3cd4af2e0548c8a2de235c60
                   @ UseHaskellAPI.UserFile
                   UseHaskellAPI.$fToJSONUserFile_$ctoJSON
                   UseHaskellAPI.$fToJSONUserFile_$ctoEncoding -}
-203cae548ea585a44186038e6962eb5b
+83faf21fd8d6263dbcae6d331b28970e
   $fToJSONUserFile1 ::
     UseHaskellAPI.UserFile
     -> Data.Aeson.Types.Generic.Tagged
@@ -8522,7 +9718,7 @@ cc40b9dd3cd4af2e0548c8a2de235c60
                  (Sym (Data.Aeson.Types.Generic.N:Tagged[0]
                            <Data.Aeson.Types.Generic.True>_P
                            <Data.Aeson.Types.Internal.Value>_R)) } }) -}
-4adb8d415ad8c7ff0a4013f4ca37cd35
+ab83c737594080530c9359588636a880
   $fToJSONUserFile2 ::
     Data.Aeson.Types.Internal.Options
     -> GHC.Generics.K1 GHC.Generics.R [GHC.Types.Char] a1
@@ -8532,9 +9728,9 @@ cc40b9dd3cd4af2e0548c8a2de235c60
                 (\ @ a1
                    (w :: Data.Aeson.Types.Internal.Options)
                    (w1 :: GHC.Generics.K1 GHC.Generics.R [GHC.Types.Char] a1) ->
-                 case UseHaskellAPI.$w$dGToJSON3 @ a1 w1 of ww { Unit# ww1 ->
+                 case UseHaskellAPI.$w$dGToJSON4 @ a1 w1 of ww { Unit# ww1 ->
                  Data.Aeson.Types.Internal.String ww1 }) -}
-203cae548ea585a44186038e6962eb5b
+83faf21fd8d6263dbcae6d331b28970e
   $fToJSONUserFile_$ctoEncoding ::
     UseHaskellAPI.UserFile -> Data.Aeson.Types.Internal.Encoding
   {- Arity: 1, Strictness: <S,1*U(U,U,U,U)>,
@@ -8546,7 +9742,7 @@ cc40b9dd3cd4af2e0548c8a2de235c60
                   `cast`
                 (<UseHaskellAPI.UserFile>_R
                  ->_R Sym (Data.Aeson.Types.Internal.N:Encoding[0])) -}
-203cae548ea585a44186038e6962eb5b
+83faf21fd8d6263dbcae6d331b28970e
   $fToJSONUserFile_$ctoJSON ::
     UseHaskellAPI.UserFile -> Data.Aeson.Types.Internal.Value
   {- Arity: 1, Strictness: <S,1*U(U,U,U,U)>m1,
@@ -8557,7 +9753,7 @@ cc40b9dd3cd4af2e0548c8a2de235c60
                  ->_R Data.Aeson.Types.Generic.N:Tagged[0]
                           <Data.Aeson.Types.Generic.True>_P
                           <Data.Aeson.Types.Internal.Value>_R) -}
-be6ea76a420fdf3399242fa067c4073c
+2e68e1c3782cc066831e527014721fd5
   $fToJSONUserInfo ::
     Data.Aeson.Types.Class.ToJSON UseHaskellAPI.UserInfo
   DFunId
@@ -8566,7 +9762,7 @@ be6ea76a420fdf3399242fa067c4073c
                   @ UseHaskellAPI.UserInfo
                   UseHaskellAPI.$fToJSONUserInfo_$ctoJSON
                   UseHaskellAPI.$fToJSONUserInfo_$ctoEncoding -}
-be6ea76a420fdf3399242fa067c4073c
+2e68e1c3782cc066831e527014721fd5
   $fToJSONUserInfo1 ::
     UseHaskellAPI.UserInfo
     -> Data.Aeson.Types.Generic.Tagged
@@ -8575,7 +9771,7 @@ be6ea76a420fdf3399242fa067c4073c
      Unfolding: InlineRule (1, True, False)
                 (\ (w :: UseHaskellAPI.UserInfo) ->
                  case w of ww { UseHaskellAPI.UserInfo ww1 ww2 ->
-                 case UseHaskellAPI.$w$ctoJSON2 ww1 ww2 of ww3 { Unit# ww4 ->
+                 case UseHaskellAPI.$w$ctoJSON3 ww1 ww2 of ww3 { Unit# ww4 ->
                  (Data.Aeson.Types.Internal.Object ww4)
                    `cast`
                  (Sym (Data.Aeson.Types.Generic.N:Tagged[0]
@@ -8631,7 +9827,7 @@ e5232a8d997d8bc06f1ee4932bb9df03
                    UseHaskellAPI.$fFromBSONUserInfo8
                    0#
                    ipv }) -}
-be6ea76a420fdf3399242fa067c4073c
+2e68e1c3782cc066831e527014721fd5
   $fToJSONUserInfo_$ctoEncoding ::
     UseHaskellAPI.UserInfo -> Data.Aeson.Types.Internal.Encoding
   {- Arity: 1, Strictness: <S,1*U(1*U,1*U)>,
@@ -8643,7 +9839,7 @@ be6ea76a420fdf3399242fa067c4073c
                   `cast`
                 (<UseHaskellAPI.UserInfo>_R
                  ->_R Sym (Data.Aeson.Types.Internal.N:Encoding[0])) -}
-be6ea76a420fdf3399242fa067c4073c
+2e68e1c3782cc066831e527014721fd5
   $fToJSONUserInfo_$ctoJSON ::
     UseHaskellAPI.UserInfo -> Data.Aeson.Types.Internal.Value
   {- Arity: 1, Strictness: <S,1*U(1*U,1*U)>m1,
@@ -8654,7 +9850,7 @@ be6ea76a420fdf3399242fa067c4073c
                  ->_R Data.Aeson.Types.Generic.N:Tagged[0]
                           <Data.Aeson.Types.Generic.True>_P
                           <Data.Aeson.Types.Internal.Value>_R) -}
-13ff60b3b126b88a5233eb938acc75d9
+76d24c97090f46d21490dbb86baa2ef2
   $fToJSONUserRequest ::
     Data.Aeson.Types.Class.ToJSON UseHaskellAPI.UserRequest
   DFunId
@@ -8663,7 +9859,7 @@ be6ea76a420fdf3399242fa067c4073c
                   @ UseHaskellAPI.UserRequest
                   UseHaskellAPI.$fToJSONUserRequest_$ctoJSON
                   UseHaskellAPI.$fToJSONUserRequest_$ctoEncoding -}
-13ff60b3b126b88a5233eb938acc75d9
+76d24c97090f46d21490dbb86baa2ef2
   $fToJSONUserRequest1 ::
     UseHaskellAPI.UserRequest
     -> Data.Aeson.Types.Generic.Tagged
@@ -8672,7 +9868,7 @@ be6ea76a420fdf3399242fa067c4073c
      Unfolding: InlineRule (1, True, False)
                 (\ (w :: UseHaskellAPI.UserRequest) ->
                  case w of ww { UseHaskellAPI.UserRequest ww1 ww2 ->
-                 case UseHaskellAPI.$w$ctoJSON3 ww1 ww2 of ww3 { Unit# ww4 ->
+                 case UseHaskellAPI.$w$ctoJSON4 ww1 ww2 of ww3 { Unit# ww4 ->
                  (Data.Aeson.Types.Internal.Object ww4)
                    `cast`
                  (Sym (Data.Aeson.Types.Generic.N:Tagged[0]
@@ -8728,7 +9924,7 @@ be6ea76a420fdf3399242fa067c4073c
                    UseHaskellAPI.$fFromBSONUserRequest8
                    0#
                    ipv }) -}
-13ff60b3b126b88a5233eb938acc75d9
+76d24c97090f46d21490dbb86baa2ef2
   $fToJSONUserRequest_$ctoEncoding ::
     UseHaskellAPI.UserRequest -> Data.Aeson.Types.Internal.Encoding
   {- Arity: 1, Strictness: <S,1*U(1*U,1*U)>,
@@ -8740,7 +9936,7 @@ be6ea76a420fdf3399242fa067c4073c
                   `cast`
                 (<UseHaskellAPI.UserRequest>_R
                  ->_R Sym (Data.Aeson.Types.Internal.N:Encoding[0])) -}
-13ff60b3b126b88a5233eb938acc75d9
+76d24c97090f46d21490dbb86baa2ef2
   $fToJSONUserRequest_$ctoJSON ::
     UseHaskellAPI.UserRequest -> Data.Aeson.Types.Internal.Value
   {- Arity: 1, Strictness: <S,1*U(1*U,1*U)>m1,
@@ -8787,6 +9983,18 @@ c6c0205068096b8394f93ceee89ae188
   $tc'ResponseData1 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "'ResponseData"#) -}
+14eff865af10d096def3d864278fcfba
+  $tc'SearchFile :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   16937980058293166160##
+                   9476954353089283013##
+                   UseHaskellAPI.$trModule
+                   UseHaskellAPI.$tc'SearchFile1) -}
+359c1bdb0f4d72069fd278dff38d0c31
+  $tc'SearchFile1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'SearchFile"#) -}
 465e9768c8dd4e5b559045a9b96a3721
   $tc'UserFile :: GHC.Types.TyCon
   {- HasNoCafRefs, Strictness: m,
@@ -8859,6 +10067,18 @@ bf8ca4c87533149c0886ed282905b211
   $tcResponseData1 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "ResponseData"#) -}
+d5a44c9025d3a9a6b4d22520df67c1f3
+  $tcSearchFile :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   1801511404281776904##
+                   16464026865033399967##
+                   UseHaskellAPI.$trModule
+                   UseHaskellAPI.$tcSearchFile1) -}
+e9b060b114f7aa533cee5934a974bbf0
+  $tcSearchFile1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "SearchFile"#) -}
 eff45b730e521cf9734185f1ed0e2e35
   $tcUserFile :: GHC.Types.TyCon
   {- HasNoCafRefs, Strictness: m,
@@ -9063,8 +10283,65 @@ e966d3127cf1d66985933668a3165f75
                         @ GHC.Types.Char
                         GHC.Show.shows9
                         (p (GHC.Types.: @ GHC.Types.Char GHC.Show.shows6 w)) }) -}
-b4a0a8736d17601414d214e679552b76
+ef5b776b12df1031b0340186df35cee0
   $w$cshowsPrec3 ::
+    GHC.Prim.Int#
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+  {- Arity: 4, Strictness: <S,U><L,1*U><L,1*U><L,U>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (ww1 :: GHC.Base.String)
+                   (ww2 :: GHC.Base.String)
+                   (w :: GHC.Base.String) ->
+                 let {
+                   p :: GHC.Show.ShowS {- Arity: 1, Strictness: <L,1*U> -}
+                   = \ (x :: GHC.Base.String)[OneShot] ->
+                     GHC.Base.++
+                       @ GHC.Types.Char
+                       UseHaskellAPI.$fShowSearchFile4
+                       (GHC.Base.++
+                          @ GHC.Types.Char
+                          UseHaskellAPI.$fShowSearchFile3
+                          (GHC.Types.:
+                             @ GHC.Types.Char
+                             GHC.Show.shows8
+                             (GHC.Show.showLitString
+                                ww1
+                                (GHC.Types.:
+                                   @ GHC.Types.Char
+                                   GHC.Show.shows8
+                                   (GHC.Base.++
+                                      @ GHC.Types.Char
+                                      UseHaskellAPI.$fShowFileTime4
+                                      (GHC.Base.++
+                                         @ GHC.Types.Char
+                                         UseHaskellAPI.$fShowSearchFile2
+                                         (GHC.Types.:
+                                            @ GHC.Types.Char
+                                            GHC.Show.shows8
+                                            (GHC.Show.showLitString
+                                               ww2
+                                               (GHC.Types.:
+                                                  @ GHC.Types.Char
+                                                  GHC.Show.shows8
+                                                  (GHC.Base.++
+                                                     @ GHC.Types.Char
+                                                     UseHaskellAPI.$fShowFileTime2
+                                                     x))))))))))
+                 } in
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.>=# ww 11#) of wild {
+                   GHC.Types.False -> p w
+                   GHC.Types.True
+                   -> GHC.Types.:
+                        @ GHC.Types.Char
+                        GHC.Show.shows9
+                        (p (GHC.Types.: @ GHC.Types.Char GHC.Show.shows6 w)) }) -}
+b231e4582f2598c2a908ded0fde7ee36
+  $w$cshowsPrec4 ::
     GHC.Prim.Int#
     -> GHC.Base.String
     -> GHC.Base.String
@@ -9153,8 +10430,8 @@ b4a0a8736d17601414d214e679552b76
                         @ GHC.Types.Char
                         GHC.Show.shows9
                         (p (GHC.Types.: @ GHC.Types.Char GHC.Show.shows6 w)) }) -}
-0b62d6993c490eb40d28c030c4b63c42
-  $w$cshowsPrec4 ::
+a6e8cfac15ba978b6a080da35e87c9e9
+  $w$cshowsPrec5 ::
     GHC.Prim.Int#
     -> GHC.Base.String
     -> GHC.Base.String
@@ -9210,8 +10487,8 @@ b4a0a8736d17601414d214e679552b76
                         @ GHC.Types.Char
                         GHC.Show.shows9
                         (p (GHC.Types.: @ GHC.Types.Char GHC.Show.shows6 w)) }) -}
-611543c35e56801a3eba3f83ec2aabea
-  $w$cshowsPrec5 ::
+b9b7dc5f8d6bf7efab0f68b777e5a1e3
+  $w$cshowsPrec6 ::
     GHC.Prim.Int#
     -> GHC.Base.String
     -> GHC.Base.String
@@ -9341,7 +10618,7 @@ b4a0a8736d17601414d214e679552b76
                            @ Data.Text.Internal.Text
                            @ Data.Aeson.Types.Internal.Value) of dt { DEFAULT ->
                  (# dt #) }) -}
-4b4dbfc45d92eecf63dcdd6b840ac699
+02726a1214c1a41019a408df0d094212
   $w$ctoJSON2 ::
     GHC.Base.String
     -> GHC.Base.String -> (# Data.Aeson.Types.Internal.Object #)
@@ -9351,8 +10628,8 @@ b4a0a8736d17601414d214e679552b76
                         @ Data.Aeson.Types.Internal.Value
                         (GHC.Types.:
                            @ (Data.Text.Internal.Text, Data.Aeson.Types.Internal.Value)
-                           (UseHaskellAPI.$fToJSONUserInfo4,
-                            case UseHaskellAPI.$w$dGToJSON4
+                           (UseHaskellAPI.$fToJSONSearchFile4,
+                            case UseHaskellAPI.$w$dGToJSON3
                                    @ GHC.Prim.Any
                                    ww
                                      `cast`
@@ -9363,8 +10640,8 @@ b4a0a8736d17601414d214e679552b76
                             Data.Aeson.Types.Internal.String ww3 })
                            (GHC.Types.:
                               @ (Data.Text.Internal.Text, Data.Aeson.Types.Internal.Value)
-                              (UseHaskellAPI.$fToJSONUserInfo2,
-                               case UseHaskellAPI.$w$dGToJSON4
+                              (UseHaskellAPI.$fToJSONSearchFile2,
+                               case UseHaskellAPI.$w$dGToJSON3
                                       @ GHC.Prim.Any
                                       ww1
                                         `cast`
@@ -9378,7 +10655,7 @@ b4a0a8736d17601414d214e679552b76
                            @ Data.Text.Internal.Text
                            @ Data.Aeson.Types.Internal.Value) of dt { DEFAULT ->
                  (# dt #) }) -}
-f7f58a48e4925efe6fcec4d2d2d1bb7c
+f6918571415f1f887e09bc4c3347a059
   $w$ctoJSON3 ::
     GHC.Base.String
     -> GHC.Base.String -> (# Data.Aeson.Types.Internal.Object #)
@@ -9388,7 +10665,7 @@ f7f58a48e4925efe6fcec4d2d2d1bb7c
                         @ Data.Aeson.Types.Internal.Value
                         (GHC.Types.:
                            @ (Data.Text.Internal.Text, Data.Aeson.Types.Internal.Value)
-                           (UseHaskellAPI.$fToJSONUserRequest4,
+                           (UseHaskellAPI.$fToJSONUserInfo4,
                             case UseHaskellAPI.$w$dGToJSON5
                                    @ GHC.Prim.Any
                                    ww
@@ -9400,8 +10677,45 @@ f7f58a48e4925efe6fcec4d2d2d1bb7c
                             Data.Aeson.Types.Internal.String ww3 })
                            (GHC.Types.:
                               @ (Data.Text.Internal.Text, Data.Aeson.Types.Internal.Value)
-                              (UseHaskellAPI.$fToJSONUserRequest2,
+                              (UseHaskellAPI.$fToJSONUserInfo2,
                                case UseHaskellAPI.$w$dGToJSON5
+                                      @ GHC.Prim.Any
+                                      ww1
+                                        `cast`
+                                      (Sym (GHC.Generics.N:K1[0]
+                                                <GHC.Generics.R>_P
+                                                <GHC.Base.String>_R
+                                                <GHC.Prim.Any>_P)) of ww2 { Unit# ww3 ->
+                               Data.Aeson.Types.Internal.String ww3 })
+                              (GHC.Types.[] @ Data.Aeson.Types.Internal.Pair)))
+                        (Data.HashMap.Base.Empty
+                           @ Data.Text.Internal.Text
+                           @ Data.Aeson.Types.Internal.Value) of dt { DEFAULT ->
+                 (# dt #) }) -}
+43acd400c4a36fddb815809f0491f97a
+  $w$ctoJSON4 ::
+    GHC.Base.String
+    -> GHC.Base.String -> (# Data.Aeson.Types.Internal.Object #)
+  {- Arity: 2, Strictness: <L,1*U><L,1*U>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Base.String) (ww1 :: GHC.Base.String) ->
+                 case Data.Aeson.Types.Internal.$sfromList1
+                        @ Data.Aeson.Types.Internal.Value
+                        (GHC.Types.:
+                           @ (Data.Text.Internal.Text, Data.Aeson.Types.Internal.Value)
+                           (UseHaskellAPI.$fToJSONUserRequest4,
+                            case UseHaskellAPI.$w$dGToJSON6
+                                   @ GHC.Prim.Any
+                                   ww
+                                     `cast`
+                                   (Sym (GHC.Generics.N:K1[0]
+                                             <GHC.Generics.R>_P
+                                             <GHC.Base.String>_R
+                                             <GHC.Prim.Any>_P)) of ww2 { Unit# ww3 ->
+                            Data.Aeson.Types.Internal.String ww3 })
+                           (GHC.Types.:
+                              @ (Data.Text.Internal.Text, Data.Aeson.Types.Internal.Value)
+                              (UseHaskellAPI.$fToJSONUserRequest2,
+                               case UseHaskellAPI.$w$dGToJSON6
                                       @ GHC.Prim.Any
                                       ww1
                                         `cast`
@@ -9933,8 +11247,267 @@ f36ffb103721aa6259513ccec1dec149
                                                  'GHC.Generics.DecidedLazy)
                                               (GHC.Generics.Rec0 GHC.Base.String))
                                            a)>_R))) }) -}
-86130093094aed16204fa7d70fe6653a
+2686c8f0169831668ccc62d0eb945af8
   $w$dConsFromJSON'2 ::
+    Data.Aeson.Types.Internal.Options
+    -> Data.Aeson.Types.Internal.Value
+    -> Data.Aeson.Types.Generic.Tagged
+         Data.Aeson.Types.Generic.True
+         (Data.Aeson.Types.Internal.Parser
+            ((GHC.Generics.:*:)
+               (GHC.Generics.S1
+                  ('GHC.Generics.MetaSel
+                     ('GHC.Base.Just "nameuser")
+                     'GHC.Generics.NoSourceUnpackedness
+                     'GHC.Generics.NoSourceStrictness
+                     'GHC.Generics.DecidedLazy)
+                  (GHC.Generics.Rec0 GHC.Base.String))
+               (GHC.Generics.S1
+                  ('GHC.Generics.MetaSel
+                     ('GHC.Base.Just "namefile")
+                     'GHC.Generics.NoSourceUnpackedness
+                     'GHC.Generics.NoSourceStrictness
+                     'GHC.Generics.DecidedLazy)
+                  (GHC.Generics.Rec0 GHC.Base.String))
+               a))
+  {- Arity: 2, Strictness: <L,U(U,U,U,U,U,U)><S,1*U>, Inline: [0],
+     Unfolding: (\ @ a
+                   (w :: Data.Aeson.Types.Internal.Options)
+                   (w1 :: Data.Aeson.Types.Internal.Value) ->
+                 case w1 of wild {
+                   DEFAULT
+                   -> (Data.Aeson.Types.Class.typeMismatch
+                         @ ((GHC.Generics.:*:)
+                              (GHC.Generics.S1
+                                 ('GHC.Generics.MetaSel
+                                    ('GHC.Base.Just "nameuser")
+                                    'GHC.Generics.NoSourceUnpackedness
+                                    'GHC.Generics.NoSourceStrictness
+                                    'GHC.Generics.DecidedLazy)
+                                 (GHC.Generics.Rec0 GHC.Base.String))
+                              (GHC.Generics.S1
+                                 ('GHC.Generics.MetaSel
+                                    ('GHC.Base.Just "namefile")
+                                    'GHC.Generics.NoSourceUnpackedness
+                                    'GHC.Generics.NoSourceStrictness
+                                    'GHC.Generics.DecidedLazy)
+                                 (GHC.Generics.Rec0 GHC.Base.String))
+                              a)
+                         Data.Aeson.Types.Generic.$fConsFromJSON'fTrue1
+                         wild)
+                        `cast`
+                      (Sym (Data.Aeson.Types.Generic.N:Tagged[0]
+                                <Data.Aeson.Types.Generic.True>_P
+                                <Data.Aeson.Types.Internal.Parser
+                                   ((GHC.Generics.:*:)
+                                      (GHC.Generics.S1
+                                         ('GHC.Generics.MetaSel
+                                            ('GHC.Base.Just "nameuser")
+                                            'GHC.Generics.NoSourceUnpackedness
+                                            'GHC.Generics.NoSourceStrictness
+                                            'GHC.Generics.DecidedLazy)
+                                         (GHC.Generics.Rec0 GHC.Base.String))
+                                      (GHC.Generics.S1
+                                         ('GHC.Generics.MetaSel
+                                            ('GHC.Base.Just "namefile")
+                                            'GHC.Generics.NoSourceUnpackedness
+                                            'GHC.Generics.NoSourceStrictness
+                                            'GHC.Generics.DecidedLazy)
+                                         (GHC.Generics.Rec0 GHC.Base.String))
+                                      a)>_R))
+                   Data.Aeson.Types.Internal.Object obj
+                   -> let {
+                        e :: Data.Aeson.Types.Internal.Parser
+                               (GHC.Generics.M1
+                                  GHC.Generics.S
+                                  ('GHC.Generics.MetaSel
+                                     ('GHC.Base.Just "namefile")
+                                     'GHC.Generics.NoSourceUnpackedness
+                                     'GHC.Generics.NoSourceStrictness
+                                     'GHC.Generics.DecidedLazy)
+                                  (GHC.Generics.Rec0 GHC.Base.String)
+                                  a)
+                        = Data.Aeson.Types.Generic.$fFromRecordM10_$cparseRecord
+                            @ ('GHC.Generics.MetaSel
+                                 ('GHC.Base.Just "namefile")
+                                 'GHC.Generics.NoSourceUnpackedness
+                                 'GHC.Generics.NoSourceStrictness
+                                 'GHC.Generics.DecidedLazy)
+                            @ (GHC.Generics.K1 GHC.Generics.R GHC.Base.String)
+                            UseHaskellAPI.$fFromBSONSearchFile_$s$fSelectorMetaMetaSel
+                            UseHaskellAPI.$fFromJSONSearchFile2
+                              `cast`
+                            (Sym (Data.Aeson.Types.Class.N:GFromJSON[0]
+                                      <GHC.Generics.K1 GHC.Generics.R [GHC.Types.Char]>_N))
+                            @ a
+                            w
+                            (GHC.Base.Nothing @ Data.Text.Internal.Text)
+                            obj
+                      } in
+                      let {
+                        m :: Data.Aeson.Types.Internal.Parser
+                               (GHC.Generics.M1
+                                  GHC.Generics.S
+                                  ('GHC.Generics.MetaSel
+                                     ('GHC.Base.Just "nameuser")
+                                     'GHC.Generics.NoSourceUnpackedness
+                                     'GHC.Generics.NoSourceStrictness
+                                     'GHC.Generics.DecidedLazy)
+                                  (GHC.Generics.Rec0 GHC.Base.String)
+                                  a)
+                        = Data.Aeson.Types.Generic.$fFromRecordM10_$cparseRecord
+                            @ ('GHC.Generics.MetaSel
+                                 ('GHC.Base.Just "nameuser")
+                                 'GHC.Generics.NoSourceUnpackedness
+                                 'GHC.Generics.NoSourceStrictness
+                                 'GHC.Generics.DecidedLazy)
+                            @ (GHC.Generics.K1 GHC.Generics.R GHC.Base.String)
+                            UseHaskellAPI.$fFromBSONSearchFile_$s$fSelectorMetaMetaSel1
+                            UseHaskellAPI.$fFromJSONSearchFile2
+                              `cast`
+                            (Sym (Data.Aeson.Types.Class.N:GFromJSON[0]
+                                      <GHC.Generics.K1 GHC.Generics.R [GHC.Types.Char]>_N))
+                            @ a
+                            w
+                            (GHC.Base.Nothing @ Data.Text.Internal.Text)
+                            obj
+                      } in
+                      (\ @ (f :: * -> *)
+                         @ r
+                         (path1 :: Data.Aeson.Types.Internal.JSONPath)
+                         (kf :: Data.Aeson.Types.Internal.Failure f r)
+                         (ks :: Data.Aeson.Types.Internal.Success
+                                  ((GHC.Generics.:*:)
+                                     (GHC.Generics.M1
+                                        GHC.Generics.S
+                                        ('GHC.Generics.MetaSel
+                                           ('GHC.Base.Just "nameuser")
+                                           'GHC.Generics.NoSourceUnpackedness
+                                           'GHC.Generics.NoSourceStrictness
+                                           'GHC.Generics.DecidedLazy)
+                                        (GHC.Generics.Rec0 GHC.Base.String))
+                                     (GHC.Generics.M1
+                                        GHC.Generics.S
+                                        ('GHC.Generics.MetaSel
+                                           ('GHC.Base.Just "namefile")
+                                           'GHC.Generics.NoSourceUnpackedness
+                                           'GHC.Generics.NoSourceStrictness
+                                           'GHC.Generics.DecidedLazy)
+                                        (GHC.Generics.Rec0 GHC.Base.String))
+                                     a)
+                                  f
+                                  r) ->
+                       m `cast`
+                       (Data.Aeson.Types.Internal.N:Parser[0]
+                            <GHC.Generics.M1
+                               GHC.Generics.S
+                               ('GHC.Generics.MetaSel
+                                  ('GHC.Base.Just "nameuser")
+                                  'GHC.Generics.NoSourceUnpackedness
+                                  'GHC.Generics.NoSourceStrictness
+                                  'GHC.Generics.DecidedLazy)
+                               (GHC.Generics.Rec0 GHC.Base.String)
+                               a>_R)
+                         @ f
+                         @ r
+                         path1
+                         kf
+                         (\ (a2 :: GHC.Generics.M1
+                                     GHC.Generics.S
+                                     ('GHC.Generics.MetaSel
+                                        ('GHC.Base.Just "nameuser")
+                                        'GHC.Generics.NoSourceUnpackedness
+                                        'GHC.Generics.NoSourceStrictness
+                                        'GHC.Generics.DecidedLazy)
+                                     (GHC.Generics.Rec0 GHC.Base.String)
+                                     a) ->
+                          e `cast`
+                          (Data.Aeson.Types.Internal.N:Parser[0]
+                               <GHC.Generics.M1
+                                  GHC.Generics.S
+                                  ('GHC.Generics.MetaSel
+                                     ('GHC.Base.Just "namefile")
+                                     'GHC.Generics.NoSourceUnpackedness
+                                     'GHC.Generics.NoSourceStrictness
+                                     'GHC.Generics.DecidedLazy)
+                                  (GHC.Generics.Rec0 GHC.Base.String)
+                                  a>_R)
+                            @ f
+                            @ r
+                            path1
+                            kf
+                            (\ (a3 :: GHC.Generics.M1
+                                        GHC.Generics.S
+                                        ('GHC.Generics.MetaSel
+                                           ('GHC.Base.Just "namefile")
+                                           'GHC.Generics.NoSourceUnpackedness
+                                           'GHC.Generics.NoSourceStrictness
+                                           'GHC.Generics.DecidedLazy)
+                                        (GHC.Generics.Rec0 GHC.Base.String)
+                                        a) ->
+                             ks
+                               (GHC.Generics.:*:
+                                  @ (GHC.Generics.M1
+                                       GHC.Generics.S
+                                       ('GHC.Generics.MetaSel
+                                          ('GHC.Base.Just "nameuser")
+                                          'GHC.Generics.NoSourceUnpackedness
+                                          'GHC.Generics.NoSourceStrictness
+                                          'GHC.Generics.DecidedLazy)
+                                       (GHC.Generics.Rec0 GHC.Base.String))
+                                  @ (GHC.Generics.M1
+                                       GHC.Generics.S
+                                       ('GHC.Generics.MetaSel
+                                          ('GHC.Base.Just "namefile")
+                                          'GHC.Generics.NoSourceUnpackedness
+                                          'GHC.Generics.NoSourceStrictness
+                                          'GHC.Generics.DecidedLazy)
+                                       (GHC.Generics.Rec0 GHC.Base.String))
+                                  @ a
+                                  a2
+                                  a3))))
+                        `cast`
+                      (Trans
+                           (Sym (Data.Aeson.Types.Internal.N:Parser[0]
+                                     <(GHC.Generics.:*:)
+                                        (GHC.Generics.M1
+                                           GHC.Generics.S
+                                           ('GHC.Generics.MetaSel
+                                              ('GHC.Base.Just "nameuser")
+                                              'GHC.Generics.NoSourceUnpackedness
+                                              'GHC.Generics.NoSourceStrictness
+                                              'GHC.Generics.DecidedLazy)
+                                           (GHC.Generics.Rec0 GHC.Base.String))
+                                        (GHC.Generics.M1
+                                           GHC.Generics.S
+                                           ('GHC.Generics.MetaSel
+                                              ('GHC.Base.Just "namefile")
+                                              'GHC.Generics.NoSourceUnpackedness
+                                              'GHC.Generics.NoSourceStrictness
+                                              'GHC.Generics.DecidedLazy)
+                                           (GHC.Generics.Rec0 GHC.Base.String))
+                                        a>_R))
+                           (Sym (Data.Aeson.Types.Generic.N:Tagged[0]
+                                     <Data.Aeson.Types.Generic.True>_P
+                                     <Data.Aeson.Types.Internal.Parser
+                                        ((GHC.Generics.:*:)
+                                           (GHC.Generics.S1
+                                              ('GHC.Generics.MetaSel
+                                                 ('GHC.Base.Just "nameuser")
+                                                 'GHC.Generics.NoSourceUnpackedness
+                                                 'GHC.Generics.NoSourceStrictness
+                                                 'GHC.Generics.DecidedLazy)
+                                              (GHC.Generics.Rec0 GHC.Base.String))
+                                           (GHC.Generics.S1
+                                              ('GHC.Generics.MetaSel
+                                                 ('GHC.Base.Just "namefile")
+                                                 'GHC.Generics.NoSourceUnpackedness
+                                                 'GHC.Generics.NoSourceStrictness
+                                                 'GHC.Generics.DecidedLazy)
+                                              (GHC.Generics.Rec0 GHC.Base.String))
+                                           a)>_R))) }) -}
+a84873199ae52715b85ff27a44bd2d85
+  $w$dConsFromJSON'3 ::
     Data.Aeson.Types.Internal.Options
     -> Data.Aeson.Types.Internal.Value
     -> Data.Aeson.Types.Generic.Tagged
@@ -10448,8 +12021,8 @@ f36ffb103721aa6259513ccec1dec149
                                                                   'GHC.Generics.DecidedLazy)
                                                                (GHC.Generics.Rec0 GHC.Base.String))
                                            a)>_R))) }) -}
-f8b56200f7cd2488425d0f5fd109aca4
-  $w$dConsFromJSON'3 ::
+4a09fc4923b23a116d7967e298d4bb27
+  $w$dConsFromJSON'4 ::
     Data.Aeson.Types.Internal.Options
     -> Data.Aeson.Types.Internal.Value
     -> Data.Aeson.Types.Generic.Tagged
@@ -10707,8 +12280,8 @@ f8b56200f7cd2488425d0f5fd109aca4
                                                  'GHC.Generics.DecidedLazy)
                                               (GHC.Generics.Rec0 GHC.Base.String))
                                            a)>_R))) }) -}
-0b5fb09097835e7d64ad860b65f6f77d
-  $w$dConsFromJSON'4 ::
+c9eb5679a7eb2672f7e733325f6b27d3
+  $w$dConsFromJSON'5 ::
     Data.Aeson.Types.Internal.Options
     -> Data.Aeson.Types.Internal.Value
     -> Data.Aeson.Types.Generic.Tagged
@@ -12301,6 +13874,110 @@ cd5fc2377d67cb53ff08030795fb5360
                    `cast`
                  (Sym (Data.Aeson.Types.Internal.N:Parser[0]
                            <GHC.Generics.K1 GHC.Generics.R [GHC.Types.Char] a1>_R))) -}
+c999f865099b2e2273d04156ff1dfa76
+  $w$dGFromJSON6 ::
+    Data.Aeson.Types.Internal.Value
+    -> Data.Aeson.Types.Internal.Parser
+         (GHC.Generics.K1 GHC.Generics.R [GHC.Types.Char] a1)
+  {- Arity: 1, Strictness: <L,1*U>, Inline: [0],
+     Unfolding: (\ @ a1 (w :: Data.Aeson.Types.Internal.Value) ->
+                 let {
+                   m :: Data.Aeson.Types.Internal.Parser [GHC.Types.Char]
+                   = case w of wild {
+                       DEFAULT
+                       -> Data.Aeson.Types.Class.typeMismatch
+                            @ [GHC.Types.Char]
+                            UseHaskellAPI.$fFromJSONFileTime3
+                            wild
+                       Data.Aeson.Types.Internal.String txt
+                       -> case txt of wild1 { Data.Text.Internal.Text dt dt1 dt2 ->
+                          let {
+                            a2 :: [GHC.Types.Char]
+                            = let {
+                                end :: GHC.Prim.Int# = GHC.Prim.+# dt1 dt2
+                              } in
+                              letrec {
+                                $wunfold :: GHC.Prim.Int# -> [GHC.Types.Char]
+                                  {- Arity: 1, Strictness: <S,U>, Inline: [0] -}
+                                = \ (ww :: GHC.Prim.Int#) ->
+                                  case GHC.Prim.tagToEnum#
+                                         @ GHC.Types.Bool
+                                         (GHC.Prim.>=# ww end) of wild2 {
+                                    GHC.Types.False
+                                    -> case GHC.Prim.indexWord16Array# dt ww of r# { DEFAULT ->
+                                       case GHC.Prim.tagToEnum#
+                                              @ GHC.Types.Bool
+                                              (GHC.Prim.geWord# r# 55296##) of wild3 {
+                                         GHC.Types.False
+                                         -> GHC.Types.:
+                                              @ GHC.Types.Char
+                                              (GHC.Types.C# (GHC.Prim.chr# (GHC.Prim.word2Int# r#)))
+                                              ($wunfold (GHC.Prim.+# ww 1#))
+                                         GHC.Types.True
+                                         -> case GHC.Prim.tagToEnum#
+                                                   @ GHC.Types.Bool
+                                                   (GHC.Prim.leWord# r# 56319##) of wild4 {
+                                              GHC.Types.False
+                                              -> GHC.Types.:
+                                                   @ GHC.Types.Char
+                                                   (GHC.Types.C#
+                                                      (GHC.Prim.chr# (GHC.Prim.word2Int# r#)))
+                                                   ($wunfold (GHC.Prim.+# ww 1#))
+                                              GHC.Types.True
+                                              -> case GHC.Prim.indexWord16Array#
+                                                        dt
+                                                        (GHC.Prim.+# ww 1#) of r#1 { DEFAULT ->
+                                                 GHC.Types.:
+                                                   @ GHC.Types.Char
+                                                   (GHC.Types.C#
+                                                      (GHC.Prim.chr#
+                                                         (GHC.Prim.+#
+                                                            (GHC.Prim.+#
+                                                               (GHC.Prim.uncheckedIShiftL#
+                                                                  (GHC.Prim.-#
+                                                                     (GHC.Prim.word2Int# r#)
+                                                                     55296#)
+                                                                  10#)
+                                                               (GHC.Prim.-#
+                                                                  (GHC.Prim.word2Int# r#1)
+                                                                  56320#))
+                                                            65536#)))
+                                                   ($wunfold (GHC.Prim.+# ww 2#)) } } } }
+                                    GHC.Types.True -> GHC.Types.[] @ GHC.Types.Char }
+                              } in
+                              $wunfold dt1
+                          } in
+                          (\ @ (f1 :: * -> *)
+                             @ r
+                             (_path :: Data.Aeson.Types.Internal.JSONPath)
+                             (_kf :: Data.Aeson.Types.Internal.Failure f1 r)
+                             (ks :: Data.Aeson.Types.Internal.Success [GHC.Types.Char] f1 r) ->
+                           ks a2)
+                            `cast`
+                          (Sym (Data.Aeson.Types.Internal.N:Parser[0]
+                                    <[GHC.Types.Char]>_R)) } }
+                 } in
+                 (\ @ (f1 :: * -> *)
+                    @ r
+                    (path1 :: Data.Aeson.Types.Internal.JSONPath)
+                    (kf :: Data.Aeson.Types.Internal.Failure f1 r)
+                    (ks :: Data.Aeson.Types.Internal.Success
+                             (GHC.Generics.K1 GHC.Generics.R [GHC.Types.Char] a1) f1 r) ->
+                  m `cast`
+                  (Data.Aeson.Types.Internal.N:Parser[0] <[GHC.Types.Char]>_R)
+                    @ f1
+                    @ r
+                    path1
+                    kf
+                    (\ (a2 :: [GHC.Types.Char]) ->
+                     ks
+                       a2
+                         `cast`
+                       (Sym (GHC.Generics.N:K1[0]
+                                 <GHC.Generics.R>_P <[GHC.Types.Char]>_R <a1>_P))))
+                   `cast`
+                 (Sym (Data.Aeson.Types.Internal.N:Parser[0]
+                           <GHC.Generics.K1 GHC.Generics.R [GHC.Types.Char] a1>_R))) -}
 e44df3874c8b72c192c25f9ae5a8b700
   $w$dGToBSON ::
     GHC.Generics.M1
@@ -12543,8 +14220,129 @@ c1cdd6cd0a00986bab0d516cfaa5ef81
                                        ipv7 }) of ds2 { (#,#) ipv7 ipv8 ->
                              ipv8 })) } })
                       (GHC.Types.[] @ Data.Bson.Field))) -}
-dfd30b08c53ffd78bb3ed916e55b513f
+47faa04d13bf3097ad58473338fc8039
   $w$dGToBSON2 ::
+    GHC.Generics.M1
+      GHC.Generics.S
+      ('GHC.Generics.MetaSel
+         ('GHC.Base.Just "nameuser")
+         'GHC.Generics.NoSourceUnpackedness
+         'GHC.Generics.NoSourceStrictness
+         'GHC.Generics.DecidedLazy)
+      (GHC.Generics.Rec0 GHC.Base.String)
+      a1
+    -> GHC.Generics.M1
+         GHC.Generics.S
+         ('GHC.Generics.MetaSel
+            ('GHC.Base.Just "namefile")
+            'GHC.Generics.NoSourceUnpackedness
+            'GHC.Generics.NoSourceStrictness
+            'GHC.Generics.DecidedLazy)
+         (GHC.Generics.Rec0 GHC.Base.String)
+         a1
+    -> [Data.Bson.Field]
+  {- Arity: 2, Strictness: <L,1*U><L,1*U>, Inline: [0],
+     Unfolding: (\ @ a1
+                   (ww :: GHC.Generics.M1
+                            GHC.Generics.S
+                            ('GHC.Generics.MetaSel
+                               ('GHC.Base.Just "nameuser")
+                               'GHC.Generics.NoSourceUnpackedness
+                               'GHC.Generics.NoSourceStrictness
+                               'GHC.Generics.DecidedLazy)
+                            (GHC.Generics.Rec0 GHC.Base.String)
+                            a1)
+                   (ww1 :: GHC.Generics.M1
+                             GHC.Generics.S
+                             ('GHC.Generics.MetaSel
+                                ('GHC.Base.Just "namefile")
+                                'GHC.Generics.NoSourceUnpackedness
+                                'GHC.Generics.NoSourceStrictness
+                                'GHC.Generics.DecidedLazy)
+                             (GHC.Generics.Rec0 GHC.Base.String)
+                             a1) ->
+                 GHC.Base.++
+                   @ Data.Bson.Field
+                   (GHC.Types.:
+                      @ Data.Bson.Field
+                      (case GHC.Magic.runRW#
+                              @ 'GHC.Types.PtrRepLifted
+                              @ Data.Text.Internal.Text
+                              UseHaskellAPI.$fToBSONSearchFile4 of ds1 { (#,#) ipv ipv1 ->
+                       case ipv1 of dt1 { Data.Text.Internal.Text ipv2 ipv3 ipv4 ->
+                       Data.Bson.:=
+                         dt1
+                         (Data.Bson.String
+                            (case GHC.Magic.runRW#
+                                    @ 'GHC.Types.PtrRepLifted
+                                    @ Data.Text.Internal.Text
+                                    (\ (s1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                                     case GHC.Prim.newByteArray#
+                                            @ GHC.Prim.RealWorld
+                                            8#
+                                            s1 of ds2 { (#,#) ipv7 ipv8 ->
+                                     Data.Bson.$wouter
+                                       (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv8)
+                                       Data.Bson.$fValChar2
+                                       ww
+                                         `cast`
+                                       (Trans
+                                            (GHC.Generics.N:M1[0]
+                                                 <GHC.Generics.S>_P
+                                                 <'GHC.Generics.MetaSel
+                                                    ('GHC.Base.Just "nameuser")
+                                                    'GHC.Generics.NoSourceUnpackedness
+                                                    'GHC.Generics.NoSourceStrictness
+                                                    'GHC.Generics.DecidedLazy>_P
+                                                 <GHC.Generics.K1
+                                                    GHC.Generics.R [GHC.Types.Char]>_R <a1>_N)
+                                            (GHC.Generics.N:K1[0]
+                                                 <GHC.Generics.R>_P <[GHC.Types.Char]>_R <a1>_P))
+                                       0#
+                                       ipv7 }) of ds2 { (#,#) ipv7 ipv8 ->
+                             ipv8 })) } })
+                      (GHC.Types.[] @ Data.Bson.Field))
+                   (GHC.Types.:
+                      @ Data.Bson.Field
+                      (case GHC.Magic.runRW#
+                              @ 'GHC.Types.PtrRepLifted
+                              @ Data.Text.Internal.Text
+                              UseHaskellAPI.$fToBSONSearchFile3 of ds1 { (#,#) ipv ipv1 ->
+                       case ipv1 of dt1 { Data.Text.Internal.Text ipv2 ipv3 ipv4 ->
+                       Data.Bson.:=
+                         dt1
+                         (Data.Bson.String
+                            (case GHC.Magic.runRW#
+                                    @ 'GHC.Types.PtrRepLifted
+                                    @ Data.Text.Internal.Text
+                                    (\ (s1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                                     case GHC.Prim.newByteArray#
+                                            @ GHC.Prim.RealWorld
+                                            8#
+                                            s1 of ds2 { (#,#) ipv7 ipv8 ->
+                                     Data.Bson.$wouter
+                                       (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv8)
+                                       Data.Bson.$fValChar2
+                                       ww1
+                                         `cast`
+                                       (Trans
+                                            (GHC.Generics.N:M1[0]
+                                                 <GHC.Generics.S>_P
+                                                 <'GHC.Generics.MetaSel
+                                                    ('GHC.Base.Just "namefile")
+                                                    'GHC.Generics.NoSourceUnpackedness
+                                                    'GHC.Generics.NoSourceStrictness
+                                                    'GHC.Generics.DecidedLazy>_P
+                                                 <GHC.Generics.K1
+                                                    GHC.Generics.R [GHC.Types.Char]>_R <a1>_N)
+                                            (GHC.Generics.N:K1[0]
+                                                 <GHC.Generics.R>_P <[GHC.Types.Char]>_R <a1>_P))
+                                       0#
+                                       ipv7 }) of ds2 { (#,#) ipv7 ipv8 ->
+                             ipv8 })) } })
+                      (GHC.Types.[] @ Data.Bson.Field))) -}
+2307aefbaec3b428a96e8e3f1651dafe
+  $w$dGToBSON3 ::
     GHC.Generics.S1
       ('GHC.Generics.MetaSel
          ('GHC.Base.Just "filename")
@@ -12580,8 +14378,8 @@ dfd30b08c53ffd78bb3ed916e55b513f
     -> [Data.Bson.Field]
   {- Arity: 3, Strictness: <L,1*U><L,1*U><L,1*U(1*U,1*U)>,
      Inline: [0] -}
-c31a455e2fbae388b0141c52ea967df9
-  $w$dGToBSON3 ::
+24747f047991a3646fefad71631b2ffc
+  $w$dGToBSON4 ::
     GHC.Generics.M1
       GHC.Generics.S
       ('GHC.Generics.MetaSel
@@ -12701,8 +14499,8 @@ c31a455e2fbae388b0141c52ea967df9
                                        ipv7 }) of ds2 { (#,#) ipv7 ipv8 ->
                              ipv8 })) } })
                       (GHC.Types.[] @ Data.Bson.Field))) -}
-e310033a477e735e80e05dab324a4883
-  $w$dGToBSON4 ::
+96456381b97c8174ad91872ad0950a85
+  $w$dGToBSON5 ::
     GHC.Generics.M1
       GHC.Generics.S
       ('GHC.Generics.MetaSel
@@ -12822,8 +14620,8 @@ e310033a477e735e80e05dab324a4883
                                        ipv7 }) of ds2 { (#,#) ipv7 ipv8 ->
                              ipv8 })) } })
                       (GHC.Types.[] @ Data.Bson.Field))) -}
-a9cc7f1cabb90c867f08a44f3017e700
-  $w$dGToBSON5 ::
+e8be371333f7747a87c15e5c9312613b
+  $w$dGToBSON6 ::
     GHC.Prim.Int#
     -> (GHC.Generics.:+:)
          (GHC.Generics.M1
@@ -12939,8 +14737,8 @@ a9cc7f1cabb90c867f08a44f3017e700
                         @ a1
                         ww
                         x }) -}
-87a62c9b12289f2e5a317d7ca1f651b1
-  $w$dGToBSON6 ::
+b6cecf42170c8853ac5f8f6a463fdd33
+  $w$dGToBSON7 ::
     GHC.Generics.M1
       GHC.Generics.S
       ('GHC.Generics.MetaSel
@@ -13196,7 +14994,32 @@ db5367ac01b2cd7dd6bd7e2f043705cb
                            ipv }) of ds1 { (#,#) ipv ipv1 ->
                  case ipv1 of dt { Data.Text.Internal.Text ipv2 ipv3 ipv4 ->
                  (# dt #) } }) -}
-29ff7974ced23c37e287eaf78a130a15
+cbde05311ae797671a40e8a73a72b513
+  $w$dGToJSON6 ::
+    GHC.Generics.K1 GHC.Generics.R [GHC.Types.Char] a1
+    -> (# Data.Text.Internal.Text #)
+  {- Arity: 1, Strictness: <S,1*U>, Inline: [0],
+     Unfolding: (\ @ a1
+                   (w :: GHC.Generics.K1 GHC.Generics.R [GHC.Types.Char] a1) ->
+                 case GHC.Magic.runRW#
+                        @ 'GHC.Types.PtrRepLifted
+                        @ Data.Text.Internal.Text
+                        (\ (s1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                         case GHC.Prim.newByteArray#
+                                @ GHC.Prim.RealWorld
+                                8#
+                                s1 of ds1 { (#,#) ipv ipv1 ->
+                         UseHaskellAPI.$wouter6
+                           (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
+                           UseHaskellAPI.$fToJSONFileTime4
+                           w `cast`
+                           (GHC.Generics.N:K1[0]
+                                <GHC.Generics.R>_P <[GHC.Types.Char]>_R <a1>_P)
+                           0#
+                           ipv }) of ds1 { (#,#) ipv ipv1 ->
+                 case ipv1 of dt { Data.Text.Internal.Text ipv2 ipv3 ipv4 ->
+                 (# dt #) } }) -}
+09acb485b8a482eac6a86f117ccd58cd
   $w$dRecordToPairs ::
     Data.Aeson.Types.Internal.Options
     -> GHC.Generics.S1
@@ -13400,7 +15223,18 @@ d5f10a4078b811251430e6da0425194c
           Data.Text.Internal.Text #)
   {- Arity: 5, Strictness: <L,U(U)><L,U(U)><S,1*U><S,U><S,U>,
      Inline: [0] -}
-0837d39f92cce6a1ac43778e902ed112
+293b8a3891be4fd796a208ae2200c777
+  $wouter6 ::
+    Data.Text.Array.MArray GHC.Prim.RealWorld
+    -> GHC.Types.Int
+    -> [GHC.Types.Char]
+    -> GHC.Prim.Int#
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 5, Strictness: <L,U(U)><L,U(U)><S,1*U><S,U><S,U>,
+     Inline: [0] -}
+e14f44196224349483ee1ed37e9126ac
   type API =
     ("load_environment_variables"
      Servant.API.Sub.:> (Servant.API.QueryParam.QueryParam
@@ -13441,9 +15275,9 @@ d5f10a4078b811251430e6da0425194c
                                                                                                                                                                                                     '[Servant.API.ContentTypes.JSON]
                                                                                                                                                                                                     GHC.Types.Bool))
                                                                                                                                                           Servant.API.Alternative.:<|> (("searchFiles"
-                                                                                                                                                                                         Servant.API.Sub.:> (Servant.API.QueryParam.QueryParam
-                                                                                                                                                                                                               "filename"
-                                                                                                                                                                                                               GHC.Base.String
+                                                                                                                                                                                         Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
+                                                                                                                                                                                                               '[Servant.API.ContentTypes.JSON]
+                                                                                                                                                                                                               UseHaskellAPI.SearchFile
                                                                                                                                                                                                              Servant.API.Sub.:> Servant.API.Verbs.Get
                                                                                                                                                                                                                                   '[Servant.API.ContentTypes.JSON]
                                                                                                                                                                                                                                   [UseHaskellAPI.UserFile]))
@@ -13538,7 +15372,33 @@ e39e0a92ceb0571f4cef67a5b3fda47d
                      'GHC.Generics.NoSourceStrictness
                      'GHC.Generics.DecidedLazy)
                   (GHC.Generics.Rec0 GHC.Base.String)))
-203cae548ea585a44186038e6962eb5b
+04064aef1c56e4686142734f566da330
+  axiom Rep_SearchFile::
+      GHC.Generics.Rep UseHaskellAPI.SearchFile
+        = GHC.Generics.D1
+            ('GHC.Generics.MetaData
+               "SearchFile"
+               "UseHaskellAPI"
+               "use-haskell-api-0.1.0.0-3nD5NWCHf1N83LkkK3wDn9"
+               'GHC.Types.False)
+            (GHC.Generics.C1
+               ('GHC.Generics.MetaCons
+                  "SearchFile" 'GHC.Generics.PrefixI 'GHC.Types.True)
+               (GHC.Generics.S1
+                  ('GHC.Generics.MetaSel
+                     ('GHC.Base.Just "nameuser")
+                     'GHC.Generics.NoSourceUnpackedness
+                     'GHC.Generics.NoSourceStrictness
+                     'GHC.Generics.DecidedLazy)
+                  (GHC.Generics.Rec0 GHC.Base.String)
+                GHC.Generics.:*: GHC.Generics.S1
+                                   ('GHC.Generics.MetaSel
+                                      ('GHC.Base.Just "namefile")
+                                      'GHC.Generics.NoSourceUnpackedness
+                                      'GHC.Generics.NoSourceStrictness
+                                      'GHC.Generics.DecidedLazy)
+                                   (GHC.Generics.Rec0 GHC.Base.String)))
+83faf21fd8d6263dbcae6d331b28970e
   axiom Rep_UserFile::
       GHC.Generics.Rep UseHaskellAPI.UserFile
         = GHC.Generics.D1
@@ -13578,7 +15438,7 @@ e39e0a92ceb0571f4cef67a5b3fda47d
                                                         'GHC.Generics.NoSourceStrictness
                                                         'GHC.Generics.DecidedLazy)
                                                      (GHC.Generics.Rec0 GHC.Base.String))))
-be6ea76a420fdf3399242fa067c4073c
+2e68e1c3782cc066831e527014721fd5
   axiom Rep_UserInfo::
       GHC.Generics.Rep UseHaskellAPI.UserInfo
         = GHC.Generics.D1
@@ -13604,7 +15464,7 @@ be6ea76a420fdf3399242fa067c4073c
                                       'GHC.Generics.NoSourceStrictness
                                       'GHC.Generics.DecidedLazy)
                                    (GHC.Generics.Rec0 GHC.Base.String)))
-13ff60b3b126b88a5233eb938acc75d9
+76d24c97090f46d21490dbb86baa2ef2
   axiom Rep_UserRequest::
       GHC.Generics.Rep UseHaskellAPI.UserRequest
         = GHC.Generics.D1
@@ -13632,20 +15492,24 @@ be6ea76a420fdf3399242fa067c4073c
                                    (GHC.Generics.Rec0 GHC.Base.String)))
 93cc54404beb4e0e5c49acc2b2f03d3e
   data ResponseData = ResponseData {response :: GHC.Base.String}
-203cae548ea585a44186038e6962eb5b
+04064aef1c56e4686142734f566da330
+  data SearchFile
+    = SearchFile {nameuser :: GHC.Base.String,
+                  namefile :: GHC.Base.String}
+83faf21fd8d6263dbcae6d331b28970e
   data UserFile
     = UserFile {filename :: GHC.Base.String,
                 path :: GHC.Base.String,
                 users :: GHC.Base.String,
                 contents :: GHC.Base.String}
-be6ea76a420fdf3399242fa067c4073c
+2e68e1c3782cc066831e527014721fd5
   data UserInfo
     = UserInfo {username :: GHC.Base.String,
                 password :: GHC.Base.String}
-13ff60b3b126b88a5233eb938acc75d9
+76d24c97090f46d21490dbb86baa2ef2
   data UserRequest
     = UserRequest {user :: GHC.Base.String, file :: GHC.Base.String}
-111d427d9c587cd229a5aae2c7001db0
+df7e9e4cbf75726b1a9f5aadd23de88b
   contents :: UseHaskellAPI.UserFile -> GHC.Base.String
   RecSel Left UseHaskellAPI.UserFile
   {- Arity: 1, HasNoCafRefs, Strictness: <S(LLLS),1*U(A,A,A,1*U)>,
@@ -13653,7 +15517,7 @@ be6ea76a420fdf3399242fa067c4073c
                 (\ (ds :: UseHaskellAPI.UserFile) ->
                  case ds of wild { UseHaskellAPI.UserFile ds1 ds2 ds3 ds4 ->
                  ds4 }) -}
-6300ebd903d38d6f618ae74dc089f0b4
+0020bcb0218109850a603cdead5f1f92
   file :: UseHaskellAPI.UserRequest -> GHC.Base.String
   RecSel Left UseHaskellAPI.UserRequest
   {- Arity: 1, HasNoCafRefs, Strictness: <S(LS),1*U(A,1*U)>,
@@ -13667,7 +15531,7 @@ be6ea76a420fdf3399242fa067c4073c
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: UseHaskellAPI.FileTime) ->
                  case ds of wild { UseHaskellAPI.FileTime ds1 ds2 -> ds1 }) -}
-8441f0621c107c3d3f27cd06b47c5875
+762e4a6b48530d215175d6692ddd435d
   filename :: UseHaskellAPI.UserFile -> GHC.Base.String
   RecSel Left UseHaskellAPI.UserFile
   {- Arity: 1, HasNoCafRefs, Strictness: <S(SLLL),1*U(1*U,A,A,A)>,
@@ -13689,14 +15553,28 @@ b71607388742472a041d07017f36d2c9
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: UseHaskellAPI.Message) ->
                  case ds of wild { UseHaskellAPI.Message ds1 ds2 -> ds1 }) -}
-a93d1cb864d97be6998db213e5d179fc
+b82f0329317f1578121c3f4b51020445
+  namefile :: UseHaskellAPI.SearchFile -> GHC.Base.String
+  RecSel Left UseHaskellAPI.SearchFile
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LS),1*U(A,1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: UseHaskellAPI.SearchFile) ->
+                 case ds of wild { UseHaskellAPI.SearchFile ds1 ds2 -> ds2 }) -}
+d8b629eacce43372e3783817e3b53f13
+  nameuser :: UseHaskellAPI.SearchFile -> GHC.Base.String
+  RecSel Left UseHaskellAPI.SearchFile
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SL),1*U(1*U,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: UseHaskellAPI.SearchFile) ->
+                 case ds of wild { UseHaskellAPI.SearchFile ds1 ds2 -> ds1 }) -}
+dd560073efd7ec0717c66ad9e4c85db8
   password :: UseHaskellAPI.UserInfo -> GHC.Base.String
   RecSel Left UseHaskellAPI.UserInfo
   {- Arity: 1, HasNoCafRefs, Strictness: <S(LS),1*U(A,1*U)>,
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: UseHaskellAPI.UserInfo) ->
                  case ds of wild { UseHaskellAPI.UserInfo ds1 ds2 -> ds2 }) -}
-cf78652d5e5ca465bea567b14dbb4199
+222bcfa7b35c9bc5f5852f3f443cdff4
   path :: UseHaskellAPI.UserFile -> GHC.Base.String
   RecSel Left UseHaskellAPI.UserFile
   {- Arity: 1, HasNoCafRefs, Strictness: <S(LSLL),1*U(A,1*U,A,A)>,
@@ -13718,21 +15596,21 @@ d294aa19bb1e655f12ad8943463242be
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: UseHaskellAPI.FileTime) ->
                  case ds of wild { UseHaskellAPI.FileTime ds1 ds2 -> ds2 }) -}
-26c5215add8046e198e899f5ad0f38a7
+e576f183ed9dd2149d83738561dc8893
   user :: UseHaskellAPI.UserRequest -> GHC.Base.String
   RecSel Left UseHaskellAPI.UserRequest
   {- Arity: 1, HasNoCafRefs, Strictness: <S(SL),1*U(1*U,A)>,
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: UseHaskellAPI.UserRequest) ->
                  case ds of wild { UseHaskellAPI.UserRequest ds1 ds2 -> ds1 }) -}
-bcaffc6636f3ed63534a1fe32aa20772
+1b140e22d796a4acd58202b0716132ca
   username :: UseHaskellAPI.UserInfo -> GHC.Base.String
   RecSel Left UseHaskellAPI.UserInfo
   {- Arity: 1, HasNoCafRefs, Strictness: <S(SL),1*U(1*U,A)>,
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: UseHaskellAPI.UserInfo) ->
                  case ds of wild { UseHaskellAPI.UserInfo ds1 ds2 -> ds1 }) -}
-dca32b948832746c1ce091dcf25b10cb
+8265bd21c8f0ed2f1ed03c1aca36cc2b
   users :: UseHaskellAPI.UserFile -> GHC.Base.String
   RecSel Left UseHaskellAPI.UserFile
   {- Arity: 1, HasNoCafRefs, Strictness: <S(LLSL),1*U(A,A,1*U,A)>,
@@ -13746,6 +15624,8 @@ instance Data.Bson.Generic.FromBSON [UseHaskellAPI.Message]
   = UseHaskellAPI.$fFromBSONMessage
 instance Data.Bson.Generic.FromBSON [UseHaskellAPI.ResponseData]
   = UseHaskellAPI.$fFromBSONResponseData
+instance Data.Bson.Generic.FromBSON [UseHaskellAPI.SearchFile]
+  = UseHaskellAPI.$fFromBSONSearchFile
 instance Data.Bson.Generic.FromBSON [UseHaskellAPI.UserFile]
   = UseHaskellAPI.$fFromBSONUserFile
 instance Data.Bson.Generic.FromBSON [UseHaskellAPI.UserInfo]
@@ -13760,6 +15640,8 @@ instance Data.Aeson.Types.Class.FromJSON [UseHaskellAPI.Message]
   = UseHaskellAPI.$fFromJSONMessage
 instance Data.Aeson.Types.Class.FromJSON [UseHaskellAPI.ResponseData]
   = UseHaskellAPI.$fFromJSONResponseData
+instance Data.Aeson.Types.Class.FromJSON [UseHaskellAPI.SearchFile]
+  = UseHaskellAPI.$fFromJSONSearchFile
 instance Data.Aeson.Types.Class.FromJSON [UseHaskellAPI.UserFile]
   = UseHaskellAPI.$fFromJSONUserFile
 instance Data.Aeson.Types.Class.FromJSON [UseHaskellAPI.UserInfo]
@@ -13772,6 +15654,8 @@ instance GHC.Generics.Generic [UseHaskellAPI.Message]
   = UseHaskellAPI.$fGenericMessage
 instance GHC.Generics.Generic [UseHaskellAPI.ResponseData]
   = UseHaskellAPI.$fGenericResponseData
+instance GHC.Generics.Generic [UseHaskellAPI.SearchFile]
+  = UseHaskellAPI.$fGenericSearchFile
 instance GHC.Generics.Generic [UseHaskellAPI.UserFile]
   = UseHaskellAPI.$fGenericUserFile
 instance GHC.Generics.Generic [UseHaskellAPI.UserInfo]
@@ -13784,6 +15668,8 @@ instance GHC.Show.Show [UseHaskellAPI.Message]
   = UseHaskellAPI.$fShowMessage
 instance GHC.Show.Show [UseHaskellAPI.ResponseData]
   = UseHaskellAPI.$fShowResponseData
+instance GHC.Show.Show [UseHaskellAPI.SearchFile]
+  = UseHaskellAPI.$fShowSearchFile
 instance GHC.Show.Show [UseHaskellAPI.UserFile]
   = UseHaskellAPI.$fShowUserFile
 instance GHC.Show.Show [UseHaskellAPI.UserInfo]
@@ -13794,6 +15680,8 @@ instance Data.Bson.Generic.ToBSON [UseHaskellAPI.FileTime]
   = UseHaskellAPI.$fToBSONFileTime
 instance Data.Bson.Generic.ToBSON [UseHaskellAPI.Message]
   = UseHaskellAPI.$fToBSONMessage
+instance Data.Bson.Generic.ToBSON [UseHaskellAPI.SearchFile]
+  = UseHaskellAPI.$fToBSONSearchFile
 instance Data.Bson.Generic.ToBSON [UseHaskellAPI.UserFile]
   = UseHaskellAPI.$fToBSONUserFile
 instance Data.Bson.Generic.ToBSON [UseHaskellAPI.UserInfo]
@@ -13807,6 +15695,8 @@ instance Data.Aeson.Types.Class.ToJSON [UseHaskellAPI.Message]
   = UseHaskellAPI.$fToJSONMessage
 instance Data.Aeson.Types.Class.ToJSON [UseHaskellAPI.ResponseData]
   = UseHaskellAPI.$fToJSONResponseData
+instance Data.Aeson.Types.Class.ToJSON [UseHaskellAPI.SearchFile]
+  = UseHaskellAPI.$fToJSONSearchFile
 instance Data.Aeson.Types.Class.ToJSON [UseHaskellAPI.UserFile]
   = UseHaskellAPI.$fToJSONUserFile
 instance Data.Aeson.Types.Class.ToJSON [UseHaskellAPI.UserInfo]
@@ -13821,6 +15711,8 @@ family instance GHC.Generics.Rep [UseHaskellAPI.FileTime]
   = UseHaskellAPI.Rep_FileTime
 family instance GHC.Generics.Rep [UseHaskellAPI.UserInfo]
   = UseHaskellAPI.Rep_UserInfo
+family instance GHC.Generics.Rep [UseHaskellAPI.SearchFile]
+  = UseHaskellAPI.Rep_SearchFile
 family instance GHC.Generics.Rep [UseHaskellAPI.UserFile]
   = UseHaskellAPI.Rep_UserFile
 family instance GHC.Generics.Rep [UseHaskellAPI.Message]
@@ -13899,6 +15791,19 @@ family instance GHC.Generics.Rep [UseHaskellAPI.Message]
                                          $dSingI
                                          $dSingI1
   = UseHaskellAPI.$fToBSONMessage_$s$fConstructorMetaMetaCons
+"SPEC/UseHaskellAPI $fConstructorMetaMetaCons @ "SearchFile" @ 'PrefixI @ 'True" [ALWAYS] forall ($dKnownSymbol :: GHC.TypeLits.KnownSymbol
+                                                                                                                     "SearchFile")
+                                                                                                 ($dSingI :: GHC.Generics.SingI
+                                                                                                               'GHC.Generics.PrefixI)
+                                                                                                 ($dSingI1 :: GHC.Generics.SingI
+                                                                                                                'GHC.Types.True)
+  GHC.Generics.$fConstructorMetaMetaCons @ "SearchFile"
+                                         @ 'GHC.Generics.PrefixI
+                                         @ 'GHC.Types.True
+                                         $dKnownSymbol
+                                         $dSingI
+                                         $dSingI1
+  = UseHaskellAPI.$fToBSONSearchFile_$s$fConstructorMetaMetaCons
 "SPEC/UseHaskellAPI $fConstructorMetaMetaCons @ "UserFile" @ 'PrefixI @ 'True" [ALWAYS] forall ($dKnownSymbol :: GHC.TypeLits.KnownSymbol
                                                                                                                    "UserFile")
                                                                                                ($dSingI :: GHC.Generics.SingI
@@ -14082,6 +15987,44 @@ family instance GHC.Generics.Rep [UseHaskellAPI.Message]
                                      $dSingI2
                                      $dSingI3
   = UseHaskellAPI.$fFromBSONMessage_$s$fSelectorMetaMetaSel1
+"SPEC/UseHaskellAPI $fSelectorMetaMetaSel @ ('Just
+                                              "namefile") @ 'NoSourceUnpackedness @ 'NoSourceStrictness @ 'DecidedLazy" [ALWAYS] forall ($dSingI :: GHC.Generics.SingI
+                                                                                                                                                                                                         ('GHC.Base.Just
+                                                                                                                                                                                                            "namefile"))
+                                                                                                                                                                                           ($dSingI1 :: GHC.Generics.SingI
+                                                                                                                                                                                                          'GHC.Generics.NoSourceUnpackedness)
+                                                                                                                                                                                           ($dSingI2 :: GHC.Generics.SingI
+                                                                                                                                                                                                          'GHC.Generics.NoSourceStrictness)
+                                                                                                                                                                                           ($dSingI3 :: GHC.Generics.SingI
+                                                                                                                                                                                                          'GHC.Generics.DecidedLazy)
+  GHC.Generics.$fSelectorMetaMetaSel @ ('GHC.Base.Just "namefile")
+                                     @ 'GHC.Generics.NoSourceUnpackedness
+                                     @ 'GHC.Generics.NoSourceStrictness
+                                     @ 'GHC.Generics.DecidedLazy
+                                     $dSingI
+                                     $dSingI1
+                                     $dSingI2
+                                     $dSingI3
+  = UseHaskellAPI.$fFromBSONSearchFile_$s$fSelectorMetaMetaSel
+"SPEC/UseHaskellAPI $fSelectorMetaMetaSel @ ('Just
+                                              "nameuser") @ 'NoSourceUnpackedness @ 'NoSourceStrictness @ 'DecidedLazy" [ALWAYS] forall ($dSingI :: GHC.Generics.SingI
+                                                                                                                                                                                                         ('GHC.Base.Just
+                                                                                                                                                                                                            "nameuser"))
+                                                                                                                                                                                           ($dSingI1 :: GHC.Generics.SingI
+                                                                                                                                                                                                          'GHC.Generics.NoSourceUnpackedness)
+                                                                                                                                                                                           ($dSingI2 :: GHC.Generics.SingI
+                                                                                                                                                                                                          'GHC.Generics.NoSourceStrictness)
+                                                                                                                                                                                           ($dSingI3 :: GHC.Generics.SingI
+                                                                                                                                                                                                          'GHC.Generics.DecidedLazy)
+  GHC.Generics.$fSelectorMetaMetaSel @ ('GHC.Base.Just "nameuser")
+                                     @ 'GHC.Generics.NoSourceUnpackedness
+                                     @ 'GHC.Generics.NoSourceStrictness
+                                     @ 'GHC.Generics.DecidedLazy
+                                     $dSingI
+                                     $dSingI1
+                                     $dSingI2
+                                     $dSingI3
+  = UseHaskellAPI.$fFromBSONSearchFile_$s$fSelectorMetaMetaSel1
 "SPEC/UseHaskellAPI $fSelectorMetaMetaSel @ ('Just
                                               "password") @ 'NoSourceUnpackedness @ 'NoSourceStrictness @ 'DecidedLazy" [ALWAYS] forall ($dSingI :: GHC.Generics.SingI
                                                                                                                                                                                                          ('GHC.Base.Just
@@ -14352,6 +16295,46 @@ family instance GHC.Generics.Rep [UseHaskellAPI.Message]
                                                $dSingI2
                                                $dSingI3
   = UseHaskellAPI.$fFromBSONMessage_$s$fSelectorMetaMetaSel_$cselName1
+"SPEC/UseHaskellAPI $fSelectorMetaMetaSel_$cselName @ ('Just
+                                                        "namefile") @ 'NoSourceUnpackedness @ 'NoSourceStrictness @ 'DecidedLazy" [ALWAYS] forall ($dSingI :: GHC.Generics.SingI
+                                                                                                                                                                                                                             ('GHC.Base.Just
+                                                                                                                                                                                                                                "namefile"))
+                                                                                                                                                                                                               ($dSingI1 :: GHC.Generics.SingI
+                                                                                                                                                                                                                              'GHC.Generics.NoSourceUnpackedness)
+                                                                                                                                                                                                               ($dSingI2 :: GHC.Generics.SingI
+                                                                                                                                                                                                                              'GHC.Generics.NoSourceStrictness)
+                                                                                                                                                                                                               ($dSingI3 :: GHC.Generics.SingI
+                                                                                                                                                                                                                              'GHC.Generics.DecidedLazy)
+  GHC.Generics.$fSelectorMetaMetaSel_$cselName @ ('GHC.Base.Just
+                                                    "namefile")
+                                               @ 'GHC.Generics.NoSourceUnpackedness
+                                               @ 'GHC.Generics.NoSourceStrictness
+                                               @ 'GHC.Generics.DecidedLazy
+                                               $dSingI
+                                               $dSingI1
+                                               $dSingI2
+                                               $dSingI3
+  = UseHaskellAPI.$fFromBSONSearchFile_$s$fSelectorMetaMetaSel_$cselName
+"SPEC/UseHaskellAPI $fSelectorMetaMetaSel_$cselName @ ('Just
+                                                        "nameuser") @ 'NoSourceUnpackedness @ 'NoSourceStrictness @ 'DecidedLazy" [ALWAYS] forall ($dSingI :: GHC.Generics.SingI
+                                                                                                                                                                                                                             ('GHC.Base.Just
+                                                                                                                                                                                                                                "nameuser"))
+                                                                                                                                                                                                               ($dSingI1 :: GHC.Generics.SingI
+                                                                                                                                                                                                                              'GHC.Generics.NoSourceUnpackedness)
+                                                                                                                                                                                                               ($dSingI2 :: GHC.Generics.SingI
+                                                                                                                                                                                                                              'GHC.Generics.NoSourceStrictness)
+                                                                                                                                                                                                               ($dSingI3 :: GHC.Generics.SingI
+                                                                                                                                                                                                                              'GHC.Generics.DecidedLazy)
+  GHC.Generics.$fSelectorMetaMetaSel_$cselName @ ('GHC.Base.Just
+                                                    "nameuser")
+                                               @ 'GHC.Generics.NoSourceUnpackedness
+                                               @ 'GHC.Generics.NoSourceStrictness
+                                               @ 'GHC.Generics.DecidedLazy
+                                               $dSingI
+                                               $dSingI1
+                                               $dSingI2
+                                               $dSingI3
+  = UseHaskellAPI.$fFromBSONSearchFile_$s$fSelectorMetaMetaSel_$cselName1
 "SPEC/UseHaskellAPI $fSelectorMetaMetaSel_$cselName @ ('Just
                                                         "password") @ 'NoSourceUnpackedness @ 'NoSourceStrictness @ 'DecidedLazy" [ALWAYS] forall ($dSingI :: GHC.Generics.SingI
                                                                                                                                                                                                                              ('GHC.Base.Just

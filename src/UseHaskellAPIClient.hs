@@ -25,7 +25,7 @@ storeMessage :: Message -> ClientM Bool
 searchMessage :: Maybe String -> ClientM [Message]
 performRestCall :: Maybe String -> ClientM ResponseData
 uploadFile :: UserFile -> ClientM Bool
-searchFiles ::  Maybe String -> ClientM [UserFile]
+searchFiles :: SearchFile -> ClientM [UserFile]
 fileTypeTwo :: UserRequest -> ClientM Bool
 fileUpdate ::  FileTime -> ClientM Bool
 

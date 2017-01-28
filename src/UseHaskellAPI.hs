@@ -7,7 +7,7 @@
 {-# LANGUAGE TypeOperators        #-}
 {-# LANGUAGE TypeSynonymInstances #-}
 
-module UseHaskellAPI (Message(..), UserFile(..), ResponseData(..), API(..), UserInfo(..), UserRequest(..), FileTime(..)) where
+module UseHaskellAPI (Message(..), UserFile(..), ResponseData(..), API(..), UserInfo(..), UserRequest(..), FileTime(..), SearchFile(..)) where
 
 
 import           Data.Aeson
@@ -36,6 +36,10 @@ data UserFile = UserFile { filename :: String
                          , users :: String
                          , contents :: String
                          } deriving (Show, Generic, FromJSON, ToJSON, ToBSON, FromBSON)
+
+data SearchFile = SearchFile { nameuser :: String
+                             , namefile :: String
+                             } deriving (Show, Generic, FromJSON, ToJSON, ToBSON, FromBSON)
 
 data UserInfo = UserInfo { username :: String
                          , password :: String
@@ -71,7 +75,7 @@ type API = "load_environment_variables" :> QueryParam "name" String     :> Get '
       :<|> "searchMessage"              :> QueryParam "name" String     :> Get '[JSON] [Message]
       :<|> "performRESTCall"            :> QueryParam "filter" String   :> Get '[JSON] ResponseData
       :<|> "uploadFile"                 :> ReqBody '[JSON] UserFile     :> Post '[JSON] Bool
-      :<|> "searchFiles"                :> QueryParam "filename" String :> Get '[JSON] [UserFile]
+      :<|> "searchFiles"                :> ReqBody '[JSON] SearchFile   :> Get '[JSON] [UserFile]
       :<|> "fileTypeTwo"                :> ReqBody '[JSON] UserRequest  :> Post '[JSON] Bool
       :<|> "fileUpdate"                 :> ReqBody '[JSON] FileTime     :> Post '[JSON] Bool
 
