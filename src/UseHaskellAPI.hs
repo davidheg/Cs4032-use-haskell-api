@@ -7,7 +7,7 @@
 {-# LANGUAGE TypeOperators        #-}
 {-# LANGUAGE TypeSynonymInstances #-}
 
-module UseHaskellAPI (Message(..), UserFile(..), ResponseData(..), API(..), UserInfo(..), UserRequest(..), FileTime(..), SearchFile(..)) where
+module UseHaskellAPI (Message(..), UserFile(..), ResponseData(..), API(..), UserInfo(..), EncryptedMessage (..), FileTime(..)) where
 
 
 import           Data.Aeson
@@ -35,23 +35,20 @@ data UserFile = UserFile { filename :: String
                          , path :: String
                          , users :: String
                          , contents :: String
-                         } deriving (Show, Generic, FromJSON, ToJSON, ToBSON, FromBSON)
+                         } deriving (Show, Generic, FromJSON, ToJSON, ToBSON, FromBSON, Eq, Read)
 
-data SearchFile = SearchFile { nameuser :: String
-                             , namefile :: String
-                             } deriving (Show, Generic, FromJSON, ToJSON, ToBSON, FromBSON)
+data EncryptedMessage = EncryptedMessage { usertype :: String
+                                         , filetype :: String
+                                         , ticket   :: String
+                                         } deriving (Show, Generic, FromJSON, ToJSON, ToBSON, FromBSON, Eq, Read)
 
 data UserInfo = UserInfo { username :: String
                          , password :: String
-                         } deriving (Show, Generic, FromJSON, ToJSON, ToBSON, FromBSON)
+                         } deriving (Show, Generic, FromJSON, ToJSON, ToBSON, FromBSON, Eq, Read)
 
-data FileTime = FileTime { fileName :: String
+data FileTime = FileTime  { fileName :: String
                           , time :: String
-                          } deriving (Show, Generic, FromJSON, ToJSON, ToBSON, FromBSON)
-
-data UserRequest = UserRequest { user :: String
-                               , file :: String
-                               } deriving (Show, Generic, FromJSON, ToJSON, ToBSON, FromBSON)
+                          } deriving (Show, Generic, FromJSON, ToJSON, ToBSON, FromBSON, Read, Eq)
 
 -- | We will also define a simple data type for returning data from a REST call, again with nothing special or
 -- particular in the response, but instead merely as a demonstration.
@@ -69,15 +66,14 @@ data ResponseData = ResponseData { response :: String
 -- is Post, then there will be a single ReqBody element that defines the type being transmitted. The return type for
 -- each method is noted in the last element in the :> chain.
 
-type API = "load_environment_variables" :> QueryParam "name" String     :> Get '[JSON] ResponseData
+type API = "load_environment_variables" :> QueryParam "name" String         :> Get  '[JSON] ResponseData
       :<|> "getREADME"                  :> Get '[JSON] ResponseData
-      :<|> "storeMessage"               :> ReqBody '[JSON] Message      :> Post '[JSON] Bool
-      :<|> "searchMessage"              :> QueryParam "name" String     :> Get '[JSON] [Message]
-      :<|> "performRESTCall"            :> QueryParam "filter" String   :> Get '[JSON] ResponseData
-      :<|> "uploadFile"                 :> ReqBody '[JSON] UserFile     :> Post '[JSON] Bool
-      :<|> "searchFiles"                :> ReqBody '[JSON] SearchFile   :> Get '[JSON] [UserFile]
-      :<|> "fileTypeTwo"                :> ReqBody '[JSON] UserRequest  :> Post '[JSON] Bool
-      :<|> "fileUpdate"                 :> ReqBody '[JSON] FileTime     :> Post '[JSON] Bool
+      :<|> "storeMessage"               :> ReqBody '[JSON] Message          :> Post '[JSON] Bool
+      :<|> "searchMessage"              :> QueryParam "name" String         :> Get  '[JSON] [Message]
+      :<|> "performRESTCall"            :> QueryParam "filter" String       :> Get  '[JSON] ResponseData
+      :<|> "uploadFile"                 :> ReqBody '[JSON] EncryptedMessage :> Post '[JSON] Bool
+      :<|> "searchFiles"                :> ReqBody '[JSON] EncryptedMessage       :> Get  '[JSON] [UserFile]
+      :<|> "fileUpdate"                 :> ReqBody '[JSON] FileTime         :> Post '[JSON] Bool
 
 
 

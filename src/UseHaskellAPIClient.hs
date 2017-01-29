@@ -24,13 +24,12 @@ getREADME :: ClientM ResponseData
 storeMessage :: Message -> ClientM Bool
 searchMessage :: Maybe String -> ClientM [Message]
 performRestCall :: Maybe String -> ClientM ResponseData
-uploadFile :: UserFile -> ClientM Bool
-searchFiles :: SearchFile -> ClientM [UserFile]
-fileTypeTwo :: UserRequest -> ClientM Bool
-fileUpdate ::  FileTime -> ClientM Bool
+uploadFile  :: EncryptedMessage -> ClientM Bool
+searchFiles :: EncryptedMessage -> ClientM [UserFile]
+fileUpdate  ::  FileTime -> ClientM Bool
 
 -- | The following provides the implementations of these types
 -- Note that the order of the functions must match the endpoints in the type API from UseHaskell.hs
 
-(loadEnvVars :<|> getREADME :<|> storeMessage :<|> searchMessage :<|> performRestCall :<|> uploadFile :<|> searchFiles :<|> fileTypeTwo
- :<|> fileUpdate) = client restAPI
+(loadEnvVars :<|> getREADME :<|> storeMessage :<|> searchMessage :<|> performRestCall :<|> uploadFile :<|> searchFiles 
+	:<|> fileUpdate) = client restAPI
