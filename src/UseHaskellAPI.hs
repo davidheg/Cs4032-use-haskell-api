@@ -7,7 +7,7 @@
 {-# LANGUAGE TypeOperators        #-}
 {-# LANGUAGE TypeSynonymInstances #-}
 
-module UseHaskellAPI (Message(..), UserFile(..), ResponseData(..), API(..), UserInfo(..), EncryptedMessage (..), FileTime(..)) where
+module UseHaskellAPI (Message(..), UserFile(..), ResponseData(..), API(..), UserInfo(..), EncryptedMessage (..), FileTime(..), EncryptedReponse(..)) where
 
 
 import           Data.Aeson
@@ -42,6 +42,10 @@ data EncryptedMessage = EncryptedMessage { usertype :: String
                                          , ticket   :: String
                                          } deriving (Show, Generic, FromJSON, ToJSON, ToBSON, FromBSON, Eq, Read)
 
+data EncryptedReponse = EncryptedReponse { userString :: String
+                                         , file :: String
+                                         } deriving (Show, Generic, FromJSON, ToJSON, ToBSON, FromBSON, Eq, Read)
+
 data UserInfo = UserInfo { username :: String
                          , password :: String
                          } deriving (Show, Generic, FromJSON, ToJSON, ToBSON, FromBSON, Eq, Read)
@@ -72,7 +76,7 @@ type API = "load_environment_variables" :> QueryParam "name" String         :> G
       :<|> "searchMessage"              :> QueryParam "name" String         :> Get  '[JSON] [Message]
       :<|> "performRESTCall"            :> QueryParam "filter" String       :> Get  '[JSON] ResponseData
       :<|> "uploadFile"                 :> ReqBody '[JSON] EncryptedMessage :> Post '[JSON] Bool
-      :<|> "searchFiles"                :> ReqBody '[JSON] EncryptedMessage       :> Get  '[JSON] [UserFile]
+      :<|> "searchFiles"                :> ReqBody '[JSON] EncryptedMessage :> Get  '[JSON] EncryptedReponse
       :<|> "fileUpdate"                 :> ReqBody '[JSON] FileTime         :> Post '[JSON] Bool
 
 

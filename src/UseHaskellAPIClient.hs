@@ -25,8 +25,8 @@ storeMessage :: Message -> ClientM Bool
 searchMessage :: Maybe String -> ClientM [Message]
 performRestCall :: Maybe String -> ClientM ResponseData
 uploadFile  :: EncryptedMessage -> ClientM Bool
-searchFiles :: EncryptedMessage -> ClientM [UserFile]
-fileUpdate  ::  FileTime -> ClientM Bool
+searchFiles :: EncryptedMessage -> ClientM EncryptedReponse
+fileUpdate  :: FileTime -> ClientM Bool
 
 -- | The following provides the implementations of these types
 -- Note that the order of the functions must match the endpoints in the type API from UseHaskell.hs
