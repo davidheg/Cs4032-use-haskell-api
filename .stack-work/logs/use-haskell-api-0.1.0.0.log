@@ -1,5 +1,4 @@
 Preprocessing library use-haskell-api-0.1.0.0...
-[4 of 5] Compiling UseHaskellAPI    ( src/UseHaskellAPI.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/UseHaskellAPI.o )
 [5 of 5] Compiling UseHaskellAPIClient ( src/UseHaskellAPIClient.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/UseHaskellAPIClient.o )
 
 src/UseHaskellAPIClient.hs:35:1: warning: [-Wtabs]
