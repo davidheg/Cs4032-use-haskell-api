@@ -1,12 +1,12 @@
 
 ==================== FINAL INTERFACE ====================
-2017-02-03 13:49:20.495807 UTC
+2017-02-03 15:32:43.324397 UTC
 
 interface use-haskell-api-0.1.0.0-3nD5NWCHf1N83LkkK3wDn9:LockAPIClient 8001
-  interface hash: 0f5741e490d24d272fe3015bfbeaab1c
-  ABI hash: fd6773a50eeda16d8ed883de94c19e23
-  export-list hash: 3188ba3872af93ac903778b831111ca7
-  orphan hash: f335acceb4929f656564395625885cf7
+  interface hash: 3a76c0fa1249a00023995d06445a10cc
+  ABI hash: 94eac6d7ce6254dc722a5bbcc56ea41f
+  export-list hash: 94a544c14edb0a2d58d317392cbe9453
+  orphan hash: a5263f079c944e0bd39b0ca21cd2d6f5
   flag hash: c0019f874b7b051e01cc1d441922ac04
   sig of: Nothing
   used TH splices: False
@@ -159,12 +159,12 @@ import  -/  servant-0.9.1.1@servant-0.9.1.1-1YvZcaz0OLV3uNDBdJkKrY:Servant.API 9
 import  -/  servant-0.9.1.1@servant-0.9.1.1-1YvZcaz0OLV3uNDBdJkKrY:Servant.API.Alternative a8f3f7a60f7890ff9e0a1e9385ffa181
 import  -/  servant-client-0.9.1.1@servant-client-0.9.1.1-2qgn4HLUhDF108ixpaTeg8:Servant.Client 8b7ae71607f6884bbd925274a2a97ffe
 import  -/  servant-client-0.9.1.1@servant-client-0.9.1.1-2qgn4HLUhDF108ixpaTeg8:Servant.Common.Req ac79c9e42e8ab6edbf3cb34d80d7e914
-import  -/  LockAPI 0dd55842794a316d073f4da84dc0c0f9
-  exports: ca1ecb9db7f69e40b3353c690ddde037
-  API 34e83fe81a9ee2ba5f6540ef06a47a95
-  Lock c165c86568daee379f1d6bc767af773f
-  LockRequest 59af277d867951fd43fdccbad0972355
-08f78e8256cd60760ed78c075201c481
+import  -/  LockAPI 9143657db3ef53a2be52d14ab938f1c8
+  exports: 248d20415a19d68575bfff61accdd805
+  API 059c1ae95b00aefd9955e2fe8e94602c
+  Lock 3f46b47bca0d30c34d2493cedc43f91d
+  LockRequest deca9264e453cce668ca5207fe836b7d
+b7c848d11d12e5d6577138d0298c4cfc
   $s$fMimeUnrenderTYPEJSONa ::
     Servant.API.ContentTypes.MimeUnrender
       Servant.API.ContentTypes.JSON (GHC.Base.Maybe LockAPI.Lock)
@@ -177,7 +177,7 @@ import  -/  LockAPI 0dd55842794a316d073f4da84dc0c0f9
                      @ (GHC.Base.Maybe LockAPI.Lock)
                      LockAPIClient.$s$fMimeUnrenderTYPEJSONa_$dFromJSON)
                   LockAPIClient.$s$fMimeUnrenderTYPEJSONa_$s$fMimeUnrenderTYPEJSONa_$cmimeUnrender -}
-b8d0d3f024ac82d14d20ab07facc8a5a
+57ba819e01ee835f20c42d9b75e1cabf
   $s$fMimeUnrenderTYPEJSONa1 ::
     Data.Aeson.Types.Internal.Value
     -> Data.Aeson.Types.Internal.Parser (GHC.Base.Maybe LockAPI.Lock)
@@ -202,7 +202,7 @@ bb0129c37d6e23dc15346c86fc0b36c8
                        `cast`
                      (Sym (Data.Aeson.Types.Class.N:FromJSON[0] <GHC.Types.Bool>_N)))
                   LockAPIClient.$s$fMimeUnrenderTYPEJSONa_$s$fMimeUnrenderTYPEJSONa_$cmimeUnrender1 -}
-ff70f992c69a930534ef680c24ef52ef
+1d172b7321ceb6f8b613824f66e5c45f
   $s$fMimeUnrenderTYPEJSONa_$dFromJSON ::
     Data.Aeson.Types.Class.FromJSON (GHC.Base.Maybe LockAPI.Lock)
   {- Arity: 1,
@@ -211,7 +211,7 @@ ff70f992c69a930534ef680c24ef52ef
                   `cast`
                 (Sym (Data.Aeson.Types.Class.N:FromJSON[0]
                           <GHC.Base.Maybe LockAPI.Lock>_N)) -}
-dda86e64507dd7304cd53a9f652fc5dc
+209e2bccfa135198b05d614a4de74d21
   $s$fMimeUnrenderTYPEJSONa_$s$fMimeUnrenderTYPEJSONa_$cmimeUnrender ::
     Data.Proxy.Proxy Servant.API.ContentTypes.JSON
     -> Data.ByteString.Lazy.Internal.ByteString
@@ -281,12 +281,12 @@ b872547f3d901e1245e8337ecd63c614
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS
                    "use-haskell-api-0.1.0.0-3nD5NWCHf1N83LkkK3wDn9"#) -}
-15b17f22b7e69dc31db29983028f1713
+ad82d8245f79a3480eac8219ec5b68a7
   lockAPI :: Data.Proxy.Proxy LockAPI.API
   {- HasNoCafRefs,
      Unfolding: InlineRule (0, True, True)
                 (Data.Proxy.Proxy @ * @ LockAPI.API) -}
-6090036303bdd0986cb808b14c89732f
+86d38456a82e6a73eeefa31e06f8ab1b
   releaseLock ::
     LockAPI.Lock -> Servant.Common.Req.ClientM GHC.Types.Bool
   {- Arity: 1, Strictness: <L,1*U(1*U,1*U)>,
@@ -300,7 +300,7 @@ b872547f3d901e1245e8337ecd63c614
                                <'Network.HTTP.Types.Method.POST>_N
                                <'[Servant.API.ContentTypes.JSON]>_N
                                <200>_N)) -}
-b8ac03b387561304a0940394aa1ddee7
+e94ba13d38f0cc8b01e754d3de8b9165
   releaseLock1 ::
     LockAPI.Lock
     -> Servant.Client.Client
@@ -360,7 +360,7 @@ c0af09d76564bd73759cecdb71e7ad59
                    @ GHC.Types.Char
                    (GHC.Types.[] @ GHC.Types.Char)
                    LockAPIClient.$sclient2) -}
-00f5364857ac06578d23fb37c17024f1
+f59fa3e21e25571723a2cd7eed4e858a
   requestLock ::
     LockAPI.LockRequest
     -> Servant.Common.Req.ClientM (GHC.Base.Maybe LockAPI.Lock)
@@ -375,7 +375,7 @@ c0af09d76564bd73759cecdb71e7ad59
                                <'Network.HTTP.Types.Method.GET>_N
                                <'[Servant.API.ContentTypes.JSON]>_N
                                <200>_N)) -}
-1d37d7f90119e3e1d62cd7323982cedd
+02a277e24e2299cd94911cb5ceb55016
   requestLock1 ::
     LockAPI.LockRequest
     -> Servant.Client.Client

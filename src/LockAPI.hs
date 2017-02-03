@@ -24,9 +24,6 @@ import           Data.Time.Clock
 
 -- The relevant code is thus commented out here and the use-haskell-api library content is used instead
 
-deriving instance FromBSON String  -- we need these as BSON does not provide
-deriving instance ToBSON   String
-
 
 data LockRequest = LockRequest  { filename     :: String
                                 , username     :: String
@@ -37,7 +34,10 @@ data LockRequest = LockRequest  { filename     :: String
 
 data Lock = Lock { fileID :: String
                  , user :: String 
-                 } deriving (Generic, ToJSON, FromJSON,FromBSON, Read, Eq, Show)
+                 } deriving (Show, Generic, FromJSON, ToJSON, ToBSON, FromBSON, Read, Eq)
+
+deriving instance FromBSON String  -- we need these as BSON does not provide
+deriving instance ToBSON   String
 
 -- | Next we will define the API for the REST service. This is defined as a 'type' using a special syntax from the
 -- Servant Library. A REST endpoint is defined by chaining together a series of elements in the format `A :> B :> C`. A

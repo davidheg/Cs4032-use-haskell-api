@@ -1,12 +1,12 @@
 
 ==================== FINAL INTERFACE ====================
-2017-02-03 13:49:16.806592 UTC
+2017-02-03 15:32:40.984259 UTC
 
 interface use-haskell-api-0.1.0.0-3nD5NWCHf1N83LkkK3wDn9:LockAPI [orphan module] [family instance module] 8001
-  interface hash: 55b7b5721255de8f8762b2966ce39681
-  ABI hash: 0dd55842794a316d073f4da84dc0c0f9
-  export-list hash: ca1ecb9db7f69e40b3353c690ddde037
-  orphan hash: cfde007c4ab1826f8e09a3e9959a6c25
+  interface hash: 1a1b7d307434b17f5e166dc3e4bad18a
+  ABI hash: 9143657db3ef53a2be52d14ab938f1c8
+  export-list hash: 248d20415a19d68575bfff61accdd805
+  orphan hash: b743b7b95470896b41bd889033c0b669
   flag hash: b0e3f8b573d72bae0f984477a0acb626
   sig of: Nothing
   used TH splices: False
@@ -156,13 +156,13 @@ import  -/  servant-0.9.1.1@servant-0.9.1.1-1YvZcaz0OLV3uNDBdJkKrY:Servant.API.S
 import  -/  servant-0.9.1.1@servant-0.9.1.1-1YvZcaz0OLV3uNDBdJkKrY:Servant.API.Verbs 16180854d75d1ecf87215b310ce5d353
 import  -/  servant-server-0.9.1.1@servant-server-0.9.1.1-FKQvXJjQ1586gh3lj2fX3G:Servant a941d94ca23174dd63fc0fee91773582
 import  -/  time-1.6.0.1@time-1.6.0.1:Data.Time.Clock b91051c7767d1f23314064be1d4311d7
-c165c86568daee379f1d6bc767af773f
+3f46b47bca0d30c34d2493cedc43f91d
   $fEqLock :: GHC.Classes.Eq LockAPI.Lock
   DFunId
   {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
      Unfolding: DFun:.
                   @ LockAPI.Lock LockAPI.$fEqLock_$c== LockAPI.$fEqLock_$c/= -}
-59af277d867951fd43fdccbad0972355
+deca9264e453cce668ca5207fe836b7d
   $fEqLockRequest :: GHC.Classes.Eq LockAPI.LockRequest
   DFunId
   {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -170,7 +170,7 @@ c165c86568daee379f1d6bc767af773f
                   @ LockAPI.LockRequest
                   LockAPI.$fEqLockRequest_$c==
                   LockAPI.$fEqLockRequest_$c/= -}
-59af277d867951fd43fdccbad0972355
+deca9264e453cce668ca5207fe836b7d
   $fEqLockRequest_$c/= ::
     LockAPI.LockRequest -> LockAPI.LockRequest -> GHC.Types.Bool
   {- Arity: 2, HasNoCafRefs,
@@ -181,7 +181,7 @@ c165c86568daee379f1d6bc767af773f
                  case w of ww { LockAPI.LockRequest ww1 ww2 ->
                  case w1 of ww3 { LockAPI.LockRequest ww4 ww5 ->
                  LockAPI.$w$c/=1 ww1 ww2 ww4 ww5 } }) -}
-59af277d867951fd43fdccbad0972355
+deca9264e453cce668ca5207fe836b7d
   $fEqLockRequest_$c== ::
     LockAPI.LockRequest -> LockAPI.LockRequest -> GHC.Types.Bool
   {- Arity: 2, HasNoCafRefs,
@@ -192,7 +192,7 @@ c165c86568daee379f1d6bc767af773f
                  case w of ww { LockAPI.LockRequest ww1 ww2 ->
                  case w1 of ww3 { LockAPI.LockRequest ww4 ww5 ->
                  LockAPI.$w$c==1 ww1 ww2 ww4 ww5 } }) -}
-c165c86568daee379f1d6bc767af773f
+3f46b47bca0d30c34d2493cedc43f91d
   $fEqLock_$c/= :: LockAPI.Lock -> LockAPI.Lock -> GHC.Types.Bool
   {- Arity: 2, HasNoCafRefs,
      Strictness: <S(SL),1*U(1*U,1*U)><S(SL),1*U(1*U,1*U)>,
@@ -202,7 +202,7 @@ c165c86568daee379f1d6bc767af773f
                  case w of ww { LockAPI.Lock ww1 ww2 ->
                  case w1 of ww3 { LockAPI.Lock ww4 ww5 ->
                  LockAPI.$w$c/= ww1 ww2 ww4 ww5 } }) -}
-c165c86568daee379f1d6bc767af773f
+3f46b47bca0d30c34d2493cedc43f91d
   $fEqLock_$c== :: LockAPI.Lock -> LockAPI.Lock -> GHC.Types.Bool
   {- Arity: 2, HasNoCafRefs,
      Strictness: <S(SL),1*U(1*U,1*U)><S(SL),1*U(1*U,1*U)>,
@@ -212,7 +212,7 @@ c165c86568daee379f1d6bc767af773f
                  case w of ww { LockAPI.Lock ww1 ww2 ->
                  case w1 of ww3 { LockAPI.Lock ww4 ww5 ->
                  LockAPI.$w$c== ww1 ww2 ww4 ww5 } }) -}
-c165c86568daee379f1d6bc767af773f
+3f46b47bca0d30c34d2493cedc43f91d
   $fFromBSONLock :: Data.Bson.Generic.FromBSON LockAPI.Lock
   DFunId
   {- Arity: 1, Strictness: <S,U>, Inline: INLINE (sat-args=0),
@@ -289,7 +289,7 @@ a6ee1b31219de1c5d2744aad5588882e
 93f5d58b30185d4528f0213738b5b4f5
   $fFromBSONLock8 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "fileID"#) -}
-59af277d867951fd43fdccbad0972355
+deca9264e453cce668ca5207fe836b7d
   $fFromBSONLockRequest ::
     Data.Bson.Generic.FromBSON LockAPI.LockRequest
   DFunId
@@ -370,7 +370,7 @@ d6f44f7ce2fb272c5a98bc617459c253
 b9031a944baec1b7354e94141ddcf352
   $fFromBSONLockRequest8 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "filename"#) -}
-59af277d867951fd43fdccbad0972355
+deca9264e453cce668ca5207fe836b7d
   $fFromBSONLockRequest_$cfromBSON ::
     Data.Bson.Document -> GHC.Base.Maybe LockAPI.LockRequest
   {- Arity: 1, Strictness: <S,U>,
@@ -607,7 +607,7 @@ c981591acdca88cc6acbd957bf8aaea7
                                 'GHC.Generics.NoSourceStrictness
                                 'GHC.Generics.DecidedLazy) f a) ->
                  LockAPI.$fFromBSONLockRequest8) -}
-c165c86568daee379f1d6bc767af773f
+3f46b47bca0d30c34d2493cedc43f91d
   $fFromBSONLock_$cfromBSON ::
     Data.Bson.Document -> GHC.Base.Maybe LockAPI.Lock
   {- Arity: 1, Strictness: <S,U>,
@@ -1169,7 +1169,7 @@ fbe16de7be66ddc3f06a7a3c36ca0856
 9e38c38acae80141a830783bbd89fa82
   $fFromBSON[]_lvl47 :: GHC.Types.Int
   {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 2#) -}
-c165c86568daee379f1d6bc767af773f
+3f46b47bca0d30c34d2493cedc43f91d
   $fFromJSONLock :: Data.Aeson.Types.Class.FromJSON LockAPI.Lock
   DFunId
   {- Arity: 1, Strictness: <L,U>, Inline: INLINE (sat-args=0),
@@ -1267,7 +1267,7 @@ d9e1fa0156fa9d5e81a1c644a669e537
                                 (GHC.Generics.Rec0 GHC.Base.String))
                              a) ->
                  GHC.Types.False) -}
-59af277d867951fd43fdccbad0972355
+deca9264e453cce668ca5207fe836b7d
   $fFromJSONLockRequest ::
     Data.Aeson.Types.Class.FromJSON LockAPI.LockRequest
   DFunId
@@ -1364,7 +1364,7 @@ d9e1fa0156fa9d5e81a1c644a669e537
                                 (GHC.Generics.Rec0 GHC.Base.String))
                              a) ->
                  GHC.Types.False) -}
-59af277d867951fd43fdccbad0972355
+deca9264e453cce668ca5207fe836b7d
   $fFromJSONLockRequest_$cparseJSON ::
     Data.Aeson.Types.Internal.Value
     -> Data.Aeson.Types.Internal.Parser LockAPI.LockRequest
@@ -1524,7 +1524,7 @@ d9e1fa0156fa9d5e81a1c644a669e537
                    `cast`
                  (Sym (Data.Aeson.Types.Internal.N:Parser[0]
                            <LockAPI.LockRequest>_R))) -}
-c165c86568daee379f1d6bc767af773f
+3f46b47bca0d30c34d2493cedc43f91d
   $fFromJSONLock_$cparseJSON ::
     Data.Aeson.Types.Internal.Value
     -> Data.Aeson.Types.Internal.Parser LockAPI.Lock
@@ -1682,7 +1682,7 @@ c165c86568daee379f1d6bc767af773f
                                     <GHC.Generics.R>_P <GHC.Base.String>_R <GHC.Prim.Any>_P)) })))
                    `cast`
                  (Sym (Data.Aeson.Types.Internal.N:Parser[0] <LockAPI.Lock>_R))) -}
-c165c86568daee379f1d6bc767af773f
+3f46b47bca0d30c34d2493cedc43f91d
   $fGenericLock :: GHC.Generics.Generic LockAPI.Lock
   DFunId
   {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -1690,7 +1690,7 @@ c165c86568daee379f1d6bc767af773f
                   @ LockAPI.Lock
                   LockAPI.$fGenericLock_$cfrom
                   LockAPI.$fGenericLock_$cto -}
-59af277d867951fd43fdccbad0972355
+deca9264e453cce668ca5207fe836b7d
   $fGenericLockRequest :: GHC.Generics.Generic LockAPI.LockRequest
   DFunId
   {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -1698,7 +1698,7 @@ c165c86568daee379f1d6bc767af773f
                   @ LockAPI.LockRequest
                   LockAPI.$fGenericLockRequest_$cfrom
                   LockAPI.$fGenericLockRequest_$cto -}
-59af277d867951fd43fdccbad0972355
+deca9264e453cce668ca5207fe836b7d
   $fGenericLockRequest_$cfrom ::
     LockAPI.LockRequest -> GHC.Generics.Rep LockAPI.LockRequest x
   {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U,U)>m,
@@ -1802,7 +1802,7 @@ c165c86568daee379f1d6bc767af773f
                                                             (GHC.Generics.K1
                                                                GHC.Generics.R GHC.Base.String))>_R))
                            (Sub (Sym (LockAPI.Rep_LockRequest[0])))) <x>_N) }) -}
-59af277d867951fd43fdccbad0972355
+deca9264e453cce668ca5207fe836b7d
   $fGenericLockRequest_$cto ::
     GHC.Generics.Rep LockAPI.LockRequest x -> LockAPI.LockRequest
   {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U,U)>m,
@@ -1890,7 +1890,7 @@ c165c86568daee379f1d6bc767af773f
                              <GHC.Generics.K1 GHC.Generics.R GHC.Base.String>_R <x>_N)
                         (GHC.Generics.N:K1[0]
                              <GHC.Generics.R>_P <GHC.Base.String>_R <x>_P)) }) -}
-c165c86568daee379f1d6bc767af773f
+3f46b47bca0d30c34d2493cedc43f91d
   $fGenericLock_$cfrom ::
     LockAPI.Lock -> GHC.Generics.Rep LockAPI.Lock x
   {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U,U)>m,
@@ -1994,7 +1994,7 @@ c165c86568daee379f1d6bc767af773f
                                                             (GHC.Generics.K1
                                                                GHC.Generics.R GHC.Base.String))>_R))
                            (Sub (Sym (LockAPI.Rep_Lock[0])))) <x>_N) }) -}
-c165c86568daee379f1d6bc767af773f
+3f46b47bca0d30c34d2493cedc43f91d
   $fGenericLock_$cto ::
     GHC.Generics.Rep LockAPI.Lock x -> LockAPI.Lock
   {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U,U)>m,
@@ -2082,7 +2082,7 @@ c165c86568daee379f1d6bc767af773f
                              <GHC.Generics.K1 GHC.Generics.R GHC.Base.String>_R <x>_N)
                         (GHC.Generics.N:K1[0]
                              <GHC.Generics.R>_P <GHC.Base.String>_R <x>_P)) }) -}
-c165c86568daee379f1d6bc767af773f
+3f46b47bca0d30c34d2493cedc43f91d
   $fReadLock :: GHC.Read.Read LockAPI.Lock
   DFunId
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -2092,7 +2092,7 @@ c165c86568daee379f1d6bc767af773f
                   LockAPI.$fReadLock_$creadList
                   LockAPI.$fReadLock_$creadPrec
                   LockAPI.$fReadLock_$creadListPrec -}
-c165c86568daee379f1d6bc767af773f
+3f46b47bca0d30c34d2493cedc43f91d
   $fReadLock1 ::
     Text.ParserCombinators.ReadPrec.Prec
     -> forall b.
@@ -2111,7 +2111,7 @@ c165c86568daee379f1d6bc767af773f
                              <LockAPI.Lock>_R))
                    @ b
                    eta1) -}
-c165c86568daee379f1d6bc767af773f
+3f46b47bca0d30c34d2493cedc43f91d
   $fReadLock2 ::
     Text.ParserCombinators.ReadPrec.Prec
     -> Text.ParserCombinators.ReadP.ReadP LockAPI.Lock
@@ -2126,7 +2126,7 @@ c165c86568daee379f1d6bc767af773f
                                        <LockAPI.Lock>_R))
                         (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
                                   <LockAPI.Lock>_R)))) -}
-c165c86568daee379f1d6bc767af773f
+3f46b47bca0d30c34d2493cedc43f91d
   $fReadLock3 ::
     Text.ParserCombinators.ReadPrec.Prec
     -> forall b.
@@ -2139,7 +2139,7 @@ c165c86568daee379f1d6bc767af773f
                    (w1 :: LockAPI.Lock -> Text.ParserCombinators.ReadP.P b) ->
                  case w of ww { GHC.Types.I# ww1 ->
                  LockAPI.$w$creadPrec ww1 @ b w1 }) -}
-c165c86568daee379f1d6bc767af773f
+3f46b47bca0d30c34d2493cedc43f91d
   $fReadLock4 :: Text.ParserCombinators.ReadP.P [LockAPI.Lock]
   {- Unfolding: (GHC.Read.$wlist
                    @ LockAPI.Lock
@@ -2150,7 +2150,7 @@ c165c86568daee379f1d6bc767af773f
                    @ [LockAPI.Lock]
                    (Text.ParserCombinators.ReadP.$fApplicativeP_$cpure
                       @ [LockAPI.Lock])) -}
-59af277d867951fd43fdccbad0972355
+deca9264e453cce668ca5207fe836b7d
   $fReadLockRequest :: GHC.Read.Read LockAPI.LockRequest
   DFunId
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -2160,7 +2160,7 @@ c165c86568daee379f1d6bc767af773f
                   LockAPI.$fReadLockRequest_$creadList
                   LockAPI.$fReadLockRequest_$creadPrec
                   LockAPI.$fReadLockRequest_$creadListPrec -}
-59af277d867951fd43fdccbad0972355
+deca9264e453cce668ca5207fe836b7d
   $fReadLockRequest1 ::
     Text.ParserCombinators.ReadPrec.Prec
     -> forall b.
@@ -2180,7 +2180,7 @@ c165c86568daee379f1d6bc767af773f
                              <LockAPI.LockRequest>_R))
                    @ b
                    eta1) -}
-59af277d867951fd43fdccbad0972355
+deca9264e453cce668ca5207fe836b7d
   $fReadLockRequest2 ::
     Text.ParserCombinators.ReadPrec.Prec
     -> Text.ParserCombinators.ReadP.ReadP LockAPI.LockRequest
@@ -2195,7 +2195,7 @@ c165c86568daee379f1d6bc767af773f
                                        <LockAPI.LockRequest>_R))
                         (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
                                   <LockAPI.LockRequest>_R)))) -}
-59af277d867951fd43fdccbad0972355
+deca9264e453cce668ca5207fe836b7d
   $fReadLockRequest3 ::
     Text.ParserCombinators.ReadPrec.Prec
     -> forall b.
@@ -2208,7 +2208,7 @@ c165c86568daee379f1d6bc767af773f
                    (w1 :: LockAPI.LockRequest -> Text.ParserCombinators.ReadP.P b) ->
                  case w of ww { GHC.Types.I# ww1 ->
                  LockAPI.$w$creadPrec1 ww1 @ b w1 }) -}
-59af277d867951fd43fdccbad0972355
+deca9264e453cce668ca5207fe836b7d
   $fReadLockRequest4 ::
     Text.ParserCombinators.ReadP.P [LockAPI.LockRequest]
   {- Unfolding: (GHC.Read.$wlist
@@ -2220,14 +2220,14 @@ c165c86568daee379f1d6bc767af773f
                    @ [LockAPI.LockRequest]
                    (Text.ParserCombinators.ReadP.$fApplicativeP_$cpure
                       @ [LockAPI.LockRequest])) -}
-59af277d867951fd43fdccbad0972355
+deca9264e453cce668ca5207fe836b7d
   $fReadLockRequest_$creadList ::
     Text.ParserCombinators.ReadP.ReadS [LockAPI.LockRequest]
   {- Arity: 1,
      Unfolding: (Text.ParserCombinators.ReadP.run
                    @ [LockAPI.LockRequest]
                    LockAPI.$fReadLockRequest4) -}
-59af277d867951fd43fdccbad0972355
+deca9264e453cce668ca5207fe836b7d
   $fReadLockRequest_$creadListPrec ::
     Text.ParserCombinators.ReadPrec.ReadPrec [LockAPI.LockRequest]
   {- Arity: 2, Strictness: <L,A><L,C(U)>,
@@ -2240,7 +2240,7 @@ c165c86568daee379f1d6bc767af773f
                                     <[LockAPI.LockRequest]>_R))
                      (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
                                <[LockAPI.LockRequest]>_R))) -}
-59af277d867951fd43fdccbad0972355
+deca9264e453cce668ca5207fe836b7d
   $fReadLockRequest_$creadPrec ::
     Text.ParserCombinators.ReadPrec.ReadPrec LockAPI.LockRequest
   {- Arity: 1,
@@ -2249,7 +2249,7 @@ c165c86568daee379f1d6bc767af773f
                   `cast`
                 (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
                           <LockAPI.LockRequest>_R)) -}
-59af277d867951fd43fdccbad0972355
+deca9264e453cce668ca5207fe836b7d
   $fReadLockRequest_$creadsPrec ::
     GHC.Types.Int
     -> Text.ParserCombinators.ReadP.ReadS LockAPI.LockRequest
@@ -2274,14 +2274,14 @@ c165c86568daee379f1d6bc767af773f
                       @ LockAPI.LockRequest
                       (Text.ParserCombinators.ReadP.$fApplicativeP_$cpure
                          @ LockAPI.LockRequest))) -}
-c165c86568daee379f1d6bc767af773f
+3f46b47bca0d30c34d2493cedc43f91d
   $fReadLock_$creadList ::
     Text.ParserCombinators.ReadP.ReadS [LockAPI.Lock]
   {- Arity: 1,
      Unfolding: (Text.ParserCombinators.ReadP.run
                    @ [LockAPI.Lock]
                    LockAPI.$fReadLock4) -}
-c165c86568daee379f1d6bc767af773f
+3f46b47bca0d30c34d2493cedc43f91d
   $fReadLock_$creadListPrec ::
     Text.ParserCombinators.ReadPrec.ReadPrec [LockAPI.Lock]
   {- Arity: 2, Strictness: <L,A><L,C(U)>,
@@ -2294,7 +2294,7 @@ c165c86568daee379f1d6bc767af773f
                                     <[LockAPI.Lock]>_R))
                      (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
                                <[LockAPI.Lock]>_R))) -}
-c165c86568daee379f1d6bc767af773f
+3f46b47bca0d30c34d2493cedc43f91d
   $fReadLock_$creadPrec ::
     Text.ParserCombinators.ReadPrec.ReadPrec LockAPI.Lock
   {- Arity: 1,
@@ -2303,7 +2303,7 @@ c165c86568daee379f1d6bc767af773f
                   `cast`
                 (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
                           <LockAPI.Lock>_R)) -}
-c165c86568daee379f1d6bc767af773f
+3f46b47bca0d30c34d2493cedc43f91d
   $fReadLock_$creadsPrec ::
     GHC.Types.Int -> Text.ParserCombinators.ReadP.ReadS LockAPI.Lock
   {- Arity: 1, Strictness: <L,U>,
@@ -2327,7 +2327,7 @@ c165c86568daee379f1d6bc767af773f
                       @ LockAPI.Lock
                       (Text.ParserCombinators.ReadP.$fApplicativeP_$cpure
                          @ LockAPI.Lock))) -}
-c165c86568daee379f1d6bc767af773f
+3f46b47bca0d30c34d2493cedc43f91d
   $fShowLock :: GHC.Show.Show LockAPI.Lock
   DFunId
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -2336,7 +2336,7 @@ c165c86568daee379f1d6bc767af773f
                   LockAPI.$fShowLock_$cshowsPrec
                   LockAPI.$fShowLock_$cshow
                   LockAPI.$fShowLock_$cshowList -}
-c165c86568daee379f1d6bc767af773f
+3f46b47bca0d30c34d2493cedc43f91d
   $fShowLock1 :: LockAPI.Lock -> GHC.Show.ShowS
   {- Arity: 2,
      Unfolding: (\ (w :: LockAPI.Lock) (w1 :: GHC.Base.String) ->
@@ -2357,7 +2357,7 @@ c165c86568daee379f1d6bc767af773f
 b6cf227dbaa7af5e6a6ea48c7ceeb428
   $fShowLock6 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "Lock {"#) -}
-59af277d867951fd43fdccbad0972355
+deca9264e453cce668ca5207fe836b7d
   $fShowLockRequest :: GHC.Show.Show LockAPI.LockRequest
   DFunId
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -2366,7 +2366,7 @@ b6cf227dbaa7af5e6a6ea48c7ceeb428
                   LockAPI.$fShowLockRequest_$cshowsPrec
                   LockAPI.$fShowLockRequest_$cshow
                   LockAPI.$fShowLockRequest_$cshowList -}
-59af277d867951fd43fdccbad0972355
+deca9264e453cce668ca5207fe836b7d
   $fShowLockRequest1 :: LockAPI.LockRequest -> GHC.Show.ShowS
   {- Arity: 2,
      Unfolding: (\ (w :: LockAPI.LockRequest) (w1 :: GHC.Base.String) ->
@@ -2381,7 +2381,7 @@ b6dd5fd3930c9010c55691e3abb88c0a
 ce3b846b8efab3c2461cca797fd6b57c
   $fShowLockRequest4 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "LockRequest {"#) -}
-59af277d867951fd43fdccbad0972355
+deca9264e453cce668ca5207fe836b7d
   $fShowLockRequest_$cshow :: LockAPI.LockRequest -> GHC.Base.String
   {- Arity: 1, Strictness: <S,1*U(1*U,1*U)>,
      Unfolding: InlineRule (1, True, False)
@@ -2390,14 +2390,14 @@ ce3b846b8efab3c2461cca797fd6b57c
                    GHC.Show.shows22
                    x
                    (GHC.Types.[] @ GHC.Types.Char)) -}
-59af277d867951fd43fdccbad0972355
+deca9264e453cce668ca5207fe836b7d
   $fShowLockRequest_$cshowList ::
     [LockAPI.LockRequest] -> GHC.Show.ShowS
   {- Arity: 2,
      Unfolding: (GHC.Show.showList__
                    @ LockAPI.LockRequest
                    LockAPI.$fShowLockRequest1) -}
-59af277d867951fd43fdccbad0972355
+deca9264e453cce668ca5207fe836b7d
   $fShowLockRequest_$cshowsPrec ::
     GHC.Types.Int -> LockAPI.LockRequest -> GHC.Show.ShowS
   {- Arity: 3, Strictness: <S(S),1*U(U)><S,1*U(1*U,1*U)><L,U>,
@@ -2409,7 +2409,7 @@ ce3b846b8efab3c2461cca797fd6b57c
                  case w of ww { GHC.Types.I# ww1 ->
                  case w1 of ww2 { LockAPI.LockRequest ww3 ww4 ->
                  LockAPI.$w$cshowsPrec1 ww1 ww3 ww4 w2 } }) -}
-c165c86568daee379f1d6bc767af773f
+3f46b47bca0d30c34d2493cedc43f91d
   $fShowLock_$cshow :: LockAPI.Lock -> GHC.Base.String
   {- Arity: 1, Strictness: <S,1*U(1*U,1*U)>,
      Unfolding: InlineRule (1, True, False)
@@ -2418,13 +2418,13 @@ c165c86568daee379f1d6bc767af773f
                    GHC.Show.shows22
                    x
                    (GHC.Types.[] @ GHC.Types.Char)) -}
-c165c86568daee379f1d6bc767af773f
+3f46b47bca0d30c34d2493cedc43f91d
   $fShowLock_$cshowList :: [LockAPI.Lock] -> GHC.Show.ShowS
   {- Arity: 2,
      Unfolding: (GHC.Show.showList__
                    @ LockAPI.Lock
                    LockAPI.$fShowLock1) -}
-c165c86568daee379f1d6bc767af773f
+3f46b47bca0d30c34d2493cedc43f91d
   $fShowLock_$cshowsPrec ::
     GHC.Types.Int -> LockAPI.Lock -> GHC.Show.ShowS
   {- Arity: 3, Strictness: <S(S),1*U(U)><S,1*U(1*U,1*U)><L,U>,
@@ -2436,7 +2436,100 @@ c165c86568daee379f1d6bc767af773f
                  case w of ww { GHC.Types.I# ww1 ->
                  case w1 of ww2 { LockAPI.Lock ww3 ww4 ->
                  LockAPI.$w$cshowsPrec ww1 ww3 ww4 w2 } }) -}
-59af277d867951fd43fdccbad0972355
+3f46b47bca0d30c34d2493cedc43f91d
+  $fToBSONLock :: Data.Bson.Generic.ToBSON LockAPI.Lock
+  DFunId
+  {- Arity: 1, Strictness: <L,1*U(U,U)>, Inline: INLINE (sat-args=0),
+     Unfolding: InlineRule (0, False, True)
+                LockAPI.$fToBSONLock_$ctoBSON
+                  `cast`
+                (Sym (Data.Bson.Generic.N:ToBSON[0] <LockAPI.Lock>_N)) -}
+74b367ad5ea7fd60d40a1a0a16e4c93c
+  $fToBSONLock1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Lock"#) -}
+0b97f36e3c3e535f33a7f5eb0a6583cf
+  $fToBSONLock2 ::
+    GHC.Types.Int
+    -> (GHC.Generics.:*:)
+         (GHC.Generics.M1
+            GHC.Generics.S
+            ('GHC.Generics.MetaSel
+               ('GHC.Base.Just "fileID")
+               'GHC.Generics.NoSourceUnpackedness
+               'GHC.Generics.NoSourceStrictness
+               'GHC.Generics.DecidedLazy)
+            (GHC.Generics.Rec0 GHC.Base.String))
+         (GHC.Generics.M1
+            GHC.Generics.S
+            ('GHC.Generics.MetaSel
+               ('GHC.Base.Just "user")
+               'GHC.Generics.NoSourceUnpackedness
+               'GHC.Generics.NoSourceStrictness
+               'GHC.Generics.DecidedLazy)
+            (GHC.Generics.Rec0 GHC.Base.String))
+         a1
+    -> [Data.Bson.Field]
+  {- Arity: 2, Strictness: <L,A><S,1*U(1*U,1*U)>, Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a1
+                   (w :: GHC.Types.Int)
+                   (w1 :: (GHC.Generics.:*:)
+                            (GHC.Generics.M1
+                               GHC.Generics.S
+                               ('GHC.Generics.MetaSel
+                                  ('GHC.Base.Just "fileID")
+                                  'GHC.Generics.NoSourceUnpackedness
+                                  'GHC.Generics.NoSourceStrictness
+                                  'GHC.Generics.DecidedLazy)
+                               (GHC.Generics.Rec0 GHC.Base.String))
+                            (GHC.Generics.M1
+                               GHC.Generics.S
+                               ('GHC.Generics.MetaSel
+                                  ('GHC.Base.Just "user")
+                                  'GHC.Generics.NoSourceUnpackedness
+                                  'GHC.Generics.NoSourceStrictness
+                                  'GHC.Generics.DecidedLazy)
+                               (GHC.Generics.Rec0 GHC.Base.String))
+                            a1) ->
+                 case w1 of ww { GHC.Generics.:*: ww1 ww2 ->
+                 LockAPI.$w$dGToBSON @ a1 ww1 ww2 }) -}
+f28300af195dc70e43e75f97c165e3fb
+  $fToBSONLock3 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1,
+     Unfolding: (\ (s1 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        8#
+                        s1 of ds1 { (#,#) ipv ipv1 ->
+                 Data.Bson.Generic.$wouter2
+                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
+                   Data.Bson.Generic.$fFromBSONObjectKey5
+                   LockAPI.$fFromBSONLock4
+                   0#
+                   ipv }) -}
+3d386735041fc881c03d52e7b5b215fb
+  $fToBSONLock4 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1,
+     Unfolding: (\ (s1 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        8#
+                        s1 of ds1 { (#,#) ipv ipv1 ->
+                 Data.Bson.Generic.$wouter2
+                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
+                   Data.Bson.Generic.$fFromBSONObjectKey5
+                   LockAPI.$fFromBSONLock8
+                   0#
+                   ipv }) -}
+deca9264e453cce668ca5207fe836b7d
   $fToBSONLockRequest :: Data.Bson.Generic.ToBSON LockAPI.LockRequest
   DFunId
   {- Arity: 1, Strictness: <L,1*U(U,U)>, Inline: INLINE (sat-args=0),
@@ -2447,7 +2540,7 @@ c165c86568daee379f1d6bc767af773f
 dae51ff8f8bea821e7a995354411ad8c
   $fToBSONLockRequest1 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "LockRequest"#) -}
-79a6d72324df1224e4d9af5faac99809
+dcc4d5d6c668d6bcea68f40be1ada12b
   $fToBSONLockRequest2 ::
     GHC.Types.Int
     -> (GHC.Generics.:*:)
@@ -2492,7 +2585,7 @@ dae51ff8f8bea821e7a995354411ad8c
                                (GHC.Generics.Rec0 GHC.Base.String))
                             a1) ->
                  case w1 of ww { GHC.Generics.:*: ww1 ww2 ->
-                 LockAPI.$w$dGToBSON @ a1 ww1 ww2 }) -}
+                 LockAPI.$w$dGToBSON1 @ a1 ww1 ww2 }) -}
 60d2adda2476323fd51172e90c59fd22
   $fToBSONLockRequest3 ::
     GHC.Prim.State# GHC.Prim.RealWorld
@@ -2529,7 +2622,7 @@ dae51ff8f8bea821e7a995354411ad8c
                    LockAPI.$fFromBSONLockRequest8
                    0#
                    ipv }) -}
-59af277d867951fd43fdccbad0972355
+deca9264e453cce668ca5207fe836b7d
   $fToBSONLockRequest_$ctoBSON ::
     LockAPI.LockRequest -> Data.Bson.Document
   {- Arity: 1, Strictness: <L,1*U(U,U)>,
@@ -2699,7 +2792,176 @@ dae51ff8f8bea821e7a995354411ad8c
                      GHC.Generics.$WSTrue
                        `cast`
                      (Sym (GHC.Generics.N:SingI[0]) <GHC.Types.Bool>_N <'GHC.Types.True>_N)) -}
-c1cd45e239e50e392bf8053607be6939
+3f46b47bca0d30c34d2493cedc43f91d
+  $fToBSONLock_$ctoBSON :: LockAPI.Lock -> Data.Bson.Document
+  {- Arity: 1, Strictness: <L,1*U(U,U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (a1 :: LockAPI.Lock) ->
+                 Data.Bson.Generic.$w$cgenericToBSON1
+                   @ (GHC.Generics.S1
+                        ('GHC.Generics.MetaSel
+                           ('GHC.Base.Just "fileID")
+                           'GHC.Generics.NoSourceUnpackedness
+                           'GHC.Generics.NoSourceStrictness
+                           'GHC.Generics.DecidedLazy)
+                        (GHC.Generics.Rec0 GHC.Base.String)
+                      GHC.Generics.:*: GHC.Generics.S1
+                                         ('GHC.Generics.MetaSel
+                                            ('GHC.Base.Just "user")
+                                            'GHC.Generics.NoSourceUnpackedness
+                                            'GHC.Generics.NoSourceStrictness
+                                            'GHC.Generics.DecidedLazy)
+                                         (GHC.Generics.Rec0 GHC.Base.String))
+                   @ ('GHC.Generics.MetaCons
+                        "Lock" 'GHC.Generics.PrefixI 'GHC.Types.True)
+                   LockAPI.$fToBSONLock2
+                     `cast`
+                   (Sym (Data.Bson.Generic.N:GToBSON[0]
+                             <GHC.Generics.M1
+                                GHC.Generics.S
+                                ('GHC.Generics.MetaSel
+                                   ('GHC.Base.Just "fileID")
+                                   'GHC.Generics.NoSourceUnpackedness
+                                   'GHC.Generics.NoSourceStrictness
+                                   'GHC.Generics.DecidedLazy)
+                                (GHC.Generics.Rec0 GHC.Base.String)
+                              GHC.Generics.:*: GHC.Generics.M1
+                                                 GHC.Generics.S
+                                                 ('GHC.Generics.MetaSel
+                                                    ('GHC.Base.Just "user")
+                                                    'GHC.Generics.NoSourceUnpackedness
+                                                    'GHC.Generics.NoSourceStrictness
+                                                    'GHC.Generics.DecidedLazy)
+                                                 (GHC.Generics.Rec0 GHC.Base.String)>_N))
+                   LockAPI.$fToBSONLock_$s$fConstructorMetaMetaCons
+                   @ GHC.Prim.Any
+                   1#
+                   (case a1 of wild { LockAPI.Lock g1 g2 ->
+                    (GHC.Generics.:*:
+                       @ (GHC.Generics.M1
+                            GHC.Generics.S
+                            ('GHC.Generics.MetaSel
+                               ('GHC.Base.Just "fileID")
+                               'GHC.Generics.NoSourceUnpackedness
+                               'GHC.Generics.NoSourceStrictness
+                               'GHC.Generics.DecidedLazy)
+                            (GHC.Generics.K1 GHC.Generics.R GHC.Base.String))
+                       @ (GHC.Generics.M1
+                            GHC.Generics.S
+                            ('GHC.Generics.MetaSel
+                               ('GHC.Base.Just "user")
+                               'GHC.Generics.NoSourceUnpackedness
+                               'GHC.Generics.NoSourceStrictness
+                               'GHC.Generics.DecidedLazy)
+                            (GHC.Generics.K1 GHC.Generics.R GHC.Base.String))
+                       @ GHC.Prim.Any
+                       g1
+                         `cast`
+                       (Trans
+                            (Sym (GHC.Generics.N:K1[0]
+                                      <GHC.Generics.R>_P <GHC.Base.String>_R <GHC.Prim.Any>_P))
+                            (Sym (GHC.Generics.N:M1[0]
+                                      <GHC.Generics.S>_P
+                                      <'GHC.Generics.MetaSel
+                                         ('GHC.Base.Just "fileID")
+                                         'GHC.Generics.NoSourceUnpackedness
+                                         'GHC.Generics.NoSourceStrictness
+                                         'GHC.Generics.DecidedLazy>_P
+                                      <GHC.Generics.K1
+                                         GHC.Generics.R GHC.Base.String>_R) <GHC.Prim.Any>_N))
+                       g2
+                         `cast`
+                       (Trans
+                            (Sym (GHC.Generics.N:K1[0]
+                                      <GHC.Generics.R>_P <GHC.Base.String>_R <GHC.Prim.Any>_P))
+                            (Sym (GHC.Generics.N:M1[0]
+                                      <GHC.Generics.S>_P
+                                      <'GHC.Generics.MetaSel
+                                         ('GHC.Base.Just "user")
+                                         'GHC.Generics.NoSourceUnpackedness
+                                         'GHC.Generics.NoSourceStrictness
+                                         'GHC.Generics.DecidedLazy>_P
+                                      <GHC.Generics.K1
+                                         GHC.Generics.R GHC.Base.String>_R) <GHC.Prim.Any>_N)))
+                      `cast`
+                    (Sym (GHC.Generics.N:M1[0]
+                              <GHC.Generics.C>_P
+                              <'GHC.Generics.MetaCons
+                                 "Lock" 'GHC.Generics.PrefixI 'GHC.Types.True>_P
+                              <GHC.Generics.M1
+                                 GHC.Generics.S
+                                 ('GHC.Generics.MetaSel
+                                    ('GHC.Base.Just "fileID")
+                                    'GHC.Generics.NoSourceUnpackedness
+                                    'GHC.Generics.NoSourceStrictness
+                                    'GHC.Generics.DecidedLazy)
+                                 (GHC.Generics.K1 GHC.Generics.R GHC.Base.String)
+                               GHC.Generics.:*: GHC.Generics.M1
+                                                  GHC.Generics.S
+                                                  ('GHC.Generics.MetaSel
+                                                     ('GHC.Base.Just "user")
+                                                     'GHC.Generics.NoSourceUnpackedness
+                                                     'GHC.Generics.NoSourceStrictness
+                                                     'GHC.Generics.DecidedLazy)
+                                                  (GHC.Generics.K1
+                                                     GHC.Generics.R
+                                                     GHC.Base.String)>_R) <GHC.Prim.Any>_N) })) -}
+a715ee24ef62b8929cfe4ef672aa0347
+  $fToBSONLock_$s$fConstructorMetaMetaCons ::
+    GHC.Generics.Constructor
+      ('GHC.Generics.MetaCons
+         "Lock" 'GHC.Generics.PrefixI 'GHC.Types.True)
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ GHC.Generics.Meta
+                  @ ('GHC.Generics.MetaCons
+                       "Lock" 'GHC.Generics.PrefixI 'GHC.Types.True)
+                  (GHC.Generics.$fConstructorMetaMetaCons_$cconName
+                     @ "Lock"
+                     @ 'GHC.Generics.PrefixI
+                     @ 'GHC.Types.True
+                     LockAPI.$fToBSONLock1
+                       `cast`
+                     (Trans
+                          (Sym (GHC.TypeLits.N:SSymbol[0] <"Lock">_P))
+                          (Sym (GHC.TypeLits.N:KnownSymbol[0]) <"Lock">_N))
+                     GHC.Generics.$WSPrefix
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.FixityI>_N <'GHC.Generics.PrefixI>_N)
+                     GHC.Generics.$WSTrue
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Types.Bool>_N <'GHC.Types.True>_N))
+                  (GHC.Generics.$fConstructorMetaMetaCons_$cconFixity
+                     @ "Lock"
+                     @ 'GHC.Generics.PrefixI
+                     @ 'GHC.Types.True
+                     LockAPI.$fToBSONLock1
+                       `cast`
+                     (Trans
+                          (Sym (GHC.TypeLits.N:SSymbol[0] <"Lock">_P))
+                          (Sym (GHC.TypeLits.N:KnownSymbol[0]) <"Lock">_N))
+                     GHC.Generics.$WSPrefix
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.FixityI>_N <'GHC.Generics.PrefixI>_N)
+                     GHC.Generics.$WSTrue
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Types.Bool>_N <'GHC.Types.True>_N))
+                  (GHC.Generics.$fConstructorMetaMetaCons_$cconIsRecord
+                     @ "Lock"
+                     @ 'GHC.Generics.PrefixI
+                     @ 'GHC.Types.True
+                     LockAPI.$fToBSONLock1
+                       `cast`
+                     (Trans
+                          (Sym (GHC.TypeLits.N:SSymbol[0] <"Lock">_P))
+                          (Sym (GHC.TypeLits.N:KnownSymbol[0]) <"Lock">_N))
+                     GHC.Generics.$WSPrefix
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.FixityI>_N <'GHC.Generics.PrefixI>_N)
+                     GHC.Generics.$WSTrue
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Types.Bool>_N <'GHC.Types.True>_N)) -}
+cd0a285e5f131549feda7320181a09b2
   $fToBSON[] :: Data.Bson.Generic.ToBSON [GHC.Types.Char]
   DFunId
   {- Arity: 1, Strictness: <S,1*U>, Inline: INLINE (sat-args=0),
@@ -2862,7 +3124,7 @@ c601ce09644660f4fd5076ca774ae671
                                                    (GHC.Generics.Rec0 [GHC.Types.Char])))
                             a1) ->
                  LockAPI.$fFromBSON[]_lvl47) -}
-e68cf9123a6b593ac704cafd0cefbf0c
+bba9996d4a794149193b2ee4b4622c26
   $fToBSON[]3 ::
     Data.Bson.Generic.GToBSON
       (GHC.Generics.D1
@@ -2957,7 +3219,7 @@ e68cf9123a6b593ac704cafd0cefbf0c
                                                                              'GHC.Generics.DecidedLazy)
                                                                           (GHC.Generics.Rec0
                                                                              [GHC.Types.Char])))>_N))) -}
-0e0b1709a1ed1e532db5384922c71c1c
+efb3ca14594192d3d8c87f602783a0b5
   $fToBSON[]4 ::
     GHC.Types.Int
     -> (GHC.Generics.:+:)
@@ -3020,7 +3282,7 @@ e68cf9123a6b593ac704cafd0cefbf0c
                                                    (GHC.Generics.Rec0 [GHC.Types.Char])))
                             a1) ->
                  case w of ww { GHC.Types.I# ww1 ->
-                 LockAPI.$w$dGToBSON1 @ a1 ww1 w1 }) -}
+                 LockAPI.$w$dGToBSON2 @ a1 ww1 w1 }) -}
 ab8909d6eaf10b613c66dbf71527d057
   $fToBSON[]5 ::
     GHC.Generics.SingI
@@ -3048,7 +3310,7 @@ ab8909d6eaf10b613c66dbf71527d057
 713fb89f8e11892884daa1efd8c7c82e
   $fToBSON[]7 :: GHC.Integer.Type.Integer
   {- HasNoCafRefs, Unfolding: (9) -}
-a67e67a0033727625846900f8271774b
+41a13ab569d03a70829a914d8fc81444
   $fToBSON[]8 ::
     GHC.Types.Int
     -> (GHC.Generics.:*:)
@@ -3094,7 +3356,7 @@ a67e67a0033727625846900f8271774b
                                (GHC.Generics.Rec0 [GHC.Types.Char]))
                             a1) ->
                  case w1 of ww { GHC.Generics.:*: ww1 ww2 ->
-                 LockAPI.$w$dGToBSON2 @ a1 ww1 ww2 }) -}
+                 LockAPI.$w$dGToBSON3 @ a1 ww1 ww2 }) -}
 ed06d0575f4ea8d0ed768b5254a7e01c
   $fToBSON[]9 ::
     GHC.Prim.State# GHC.Prim.RealWorld
@@ -3113,7 +3375,7 @@ ed06d0575f4ea8d0ed768b5254a7e01c
                    (GHC.Types.[] @ GHC.Types.Char)
                    0#
                    ipv }) -}
-2bb18aa9073b68ab27d07a1ecc68e2f9
+57fce0b74c7e87424eb2319301da192a
   $fToBSON[]_$s$dmtoBSON :: [GHC.Types.Char] -> Data.Bson.Document
   {- Arity: 1, Strictness: <S,1*U>,
      Unfolding: InlineRule (-4, True, False)
@@ -3250,7 +3512,7 @@ ad684dffb21952b51b0362286b5d5a75
                       @ GHC.Types.Char
                       @ GHC.Prim.Any
                       x)) -}
-c165c86568daee379f1d6bc767af773f
+3f46b47bca0d30c34d2493cedc43f91d
   $fToJSONLock :: Data.Aeson.Types.Class.ToJSON LockAPI.Lock
   DFunId
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -3258,7 +3520,7 @@ c165c86568daee379f1d6bc767af773f
                   @ LockAPI.Lock
                   LockAPI.$fToJSONLock_$ctoJSON
                   LockAPI.$fToJSONLock_$ctoEncoding -}
-c165c86568daee379f1d6bc767af773f
+3f46b47bca0d30c34d2493cedc43f91d
   $fToJSONLock1 ::
     LockAPI.Lock
     -> Data.Aeson.Types.Generic.Tagged
@@ -3326,7 +3588,7 @@ d109e97f0c3f054e17c46ec8c077e758
                    LockAPI.$fFromBSONLock8
                    0#
                    ipv }) -}
-59af277d867951fd43fdccbad0972355
+deca9264e453cce668ca5207fe836b7d
   $fToJSONLockRequest ::
     Data.Aeson.Types.Class.ToJSON LockAPI.LockRequest
   DFunId
@@ -3335,7 +3597,7 @@ d109e97f0c3f054e17c46ec8c077e758
                   @ LockAPI.LockRequest
                   LockAPI.$fToJSONLockRequest_$ctoJSON
                   LockAPI.$fToJSONLockRequest_$ctoEncoding -}
-59af277d867951fd43fdccbad0972355
+deca9264e453cce668ca5207fe836b7d
   $fToJSONLockRequest1 ::
     LockAPI.LockRequest
     -> Data.Aeson.Types.Generic.Tagged
@@ -3400,7 +3662,7 @@ c0993927d577a0e995eadfa0cd348794
                    LockAPI.$fFromBSONLockRequest8
                    0#
                    ipv }) -}
-59af277d867951fd43fdccbad0972355
+deca9264e453cce668ca5207fe836b7d
   $fToJSONLockRequest_$ctoEncoding ::
     LockAPI.LockRequest -> Data.Aeson.Types.Internal.Encoding
   {- Arity: 1, Strictness: <S,1*U(1*U,1*U)>,
@@ -3412,7 +3674,7 @@ c0993927d577a0e995eadfa0cd348794
                   `cast`
                 (<LockAPI.LockRequest>_R
                  ->_R Sym (Data.Aeson.Types.Internal.N:Encoding[0])) -}
-59af277d867951fd43fdccbad0972355
+deca9264e453cce668ca5207fe836b7d
   $fToJSONLockRequest_$ctoJSON ::
     LockAPI.LockRequest -> Data.Aeson.Types.Internal.Value
   {- Arity: 1, Strictness: <S,1*U(1*U,1*U)>m1,
@@ -3423,7 +3685,7 @@ c0993927d577a0e995eadfa0cd348794
                  ->_R Data.Aeson.Types.Generic.N:Tagged[0]
                           <Data.Aeson.Types.Generic.True>_P
                           <Data.Aeson.Types.Internal.Value>_R) -}
-c165c86568daee379f1d6bc767af773f
+3f46b47bca0d30c34d2493cedc43f91d
   $fToJSONLock_$ctoEncoding ::
     LockAPI.Lock -> Data.Aeson.Types.Internal.Encoding
   {- Arity: 1, Strictness: <S,1*U(1*U,1*U)>,
@@ -3435,7 +3697,7 @@ c165c86568daee379f1d6bc767af773f
                   `cast`
                 (<LockAPI.Lock>_R
                  ->_R Sym (Data.Aeson.Types.Internal.N:Encoding[0])) -}
-c165c86568daee379f1d6bc767af773f
+3f46b47bca0d30c34d2493cedc43f91d
   $fToJSONLock_$ctoJSON ::
     LockAPI.Lock -> Data.Aeson.Types.Internal.Value
   {- Arity: 1, Strictness: <S,1*U(1*U,1*U)>m1,
@@ -3446,9 +3708,6 @@ c165c86568daee379f1d6bc767af773f
                  ->_R Data.Aeson.Types.Generic.N:Tagged[0]
                           <Data.Aeson.Types.Generic.True>_P
                           <Data.Aeson.Types.Internal.Value>_R) -}
-74a33a36337e5722bf4667a00500b72d
-  $s$dmfromBSON13 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "Lock"#) -}
 9eea9f217271a1ac16fe3055a176f75d
   $tc'Lock :: GHC.Types.TyCon
   {- HasNoCafRefs, Strictness: m,
@@ -3582,14 +3841,14 @@ f383bfd4f6c3f66a2c28a5482e221efb
                  case GHC.Base.eqString ww ww2 of wild {
                    GHC.Types.False -> GHC.Types.False
                    GHC.Types.True -> GHC.Base.eqString ww1 ww3 }) -}
-c165c86568daee379f1d6bc767af773f
+3f46b47bca0d30c34d2493cedc43f91d
   $w$creadPrec ::
     GHC.Prim.Int#
     -> forall b.
        (LockAPI.Lock -> Text.ParserCombinators.ReadP.P b)
        -> Text.ParserCombinators.ReadP.P b
   {- Arity: 2, Strictness: <S,U><L,C(U)>, Inline: [0] -}
-59af277d867951fd43fdccbad0972355
+deca9264e453cce668ca5207fe836b7d
   $w$creadPrec1 ::
     GHC.Prim.Int#
     -> forall b.
@@ -4904,8 +5163,129 @@ fdfdf05a55f24956e67a0a30c515319d
                    `cast`
                  (Sym (Data.Aeson.Types.Internal.N:Parser[0]
                            <GHC.Generics.K1 GHC.Generics.R [GHC.Types.Char] a1>_R))) -}
-2e8ff595e659fce08afea2ca548d5474
+787f08a25532fdaba4aa27151d4529df
   $w$dGToBSON ::
+    GHC.Generics.M1
+      GHC.Generics.S
+      ('GHC.Generics.MetaSel
+         ('GHC.Base.Just "fileID")
+         'GHC.Generics.NoSourceUnpackedness
+         'GHC.Generics.NoSourceStrictness
+         'GHC.Generics.DecidedLazy)
+      (GHC.Generics.Rec0 GHC.Base.String)
+      a1
+    -> GHC.Generics.M1
+         GHC.Generics.S
+         ('GHC.Generics.MetaSel
+            ('GHC.Base.Just "user")
+            'GHC.Generics.NoSourceUnpackedness
+            'GHC.Generics.NoSourceStrictness
+            'GHC.Generics.DecidedLazy)
+         (GHC.Generics.Rec0 GHC.Base.String)
+         a1
+    -> [Data.Bson.Field]
+  {- Arity: 2, Strictness: <L,1*U><L,1*U>, Inline: [0],
+     Unfolding: (\ @ a1
+                   (ww :: GHC.Generics.M1
+                            GHC.Generics.S
+                            ('GHC.Generics.MetaSel
+                               ('GHC.Base.Just "fileID")
+                               'GHC.Generics.NoSourceUnpackedness
+                               'GHC.Generics.NoSourceStrictness
+                               'GHC.Generics.DecidedLazy)
+                            (GHC.Generics.Rec0 GHC.Base.String)
+                            a1)
+                   (ww1 :: GHC.Generics.M1
+                             GHC.Generics.S
+                             ('GHC.Generics.MetaSel
+                                ('GHC.Base.Just "user")
+                                'GHC.Generics.NoSourceUnpackedness
+                                'GHC.Generics.NoSourceStrictness
+                                'GHC.Generics.DecidedLazy)
+                             (GHC.Generics.Rec0 GHC.Base.String)
+                             a1) ->
+                 GHC.Base.++
+                   @ Data.Bson.Field
+                   (GHC.Types.:
+                      @ Data.Bson.Field
+                      (case GHC.Magic.runRW#
+                              @ 'GHC.Types.PtrRepLifted
+                              @ Data.Text.Internal.Text
+                              LockAPI.$fToBSONLock4 of ds1 { (#,#) ipv ipv1 ->
+                       case ipv1 of dt1 { Data.Text.Internal.Text ipv2 ipv3 ipv4 ->
+                       Data.Bson.:=
+                         dt1
+                         (Data.Bson.String
+                            (case GHC.Magic.runRW#
+                                    @ 'GHC.Types.PtrRepLifted
+                                    @ Data.Text.Internal.Text
+                                    (\ (s1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                                     case GHC.Prim.newByteArray#
+                                            @ GHC.Prim.RealWorld
+                                            8#
+                                            s1 of ds2 { (#,#) ipv7 ipv8 ->
+                                     Data.Bson.$wouter
+                                       (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv8)
+                                       Data.Bson.$fValChar2
+                                       ww
+                                         `cast`
+                                       (Trans
+                                            (GHC.Generics.N:M1[0]
+                                                 <GHC.Generics.S>_P
+                                                 <'GHC.Generics.MetaSel
+                                                    ('GHC.Base.Just "fileID")
+                                                    'GHC.Generics.NoSourceUnpackedness
+                                                    'GHC.Generics.NoSourceStrictness
+                                                    'GHC.Generics.DecidedLazy>_P
+                                                 <GHC.Generics.K1
+                                                    GHC.Generics.R [GHC.Types.Char]>_R <a1>_N)
+                                            (GHC.Generics.N:K1[0]
+                                                 <GHC.Generics.R>_P <[GHC.Types.Char]>_R <a1>_P))
+                                       0#
+                                       ipv7 }) of ds2 { (#,#) ipv7 ipv8 ->
+                             ipv8 })) } })
+                      (GHC.Types.[] @ Data.Bson.Field))
+                   (GHC.Types.:
+                      @ Data.Bson.Field
+                      (case GHC.Magic.runRW#
+                              @ 'GHC.Types.PtrRepLifted
+                              @ Data.Text.Internal.Text
+                              LockAPI.$fToBSONLock3 of ds1 { (#,#) ipv ipv1 ->
+                       case ipv1 of dt1 { Data.Text.Internal.Text ipv2 ipv3 ipv4 ->
+                       Data.Bson.:=
+                         dt1
+                         (Data.Bson.String
+                            (case GHC.Magic.runRW#
+                                    @ 'GHC.Types.PtrRepLifted
+                                    @ Data.Text.Internal.Text
+                                    (\ (s1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                                     case GHC.Prim.newByteArray#
+                                            @ GHC.Prim.RealWorld
+                                            8#
+                                            s1 of ds2 { (#,#) ipv7 ipv8 ->
+                                     Data.Bson.$wouter
+                                       (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv8)
+                                       Data.Bson.$fValChar2
+                                       ww1
+                                         `cast`
+                                       (Trans
+                                            (GHC.Generics.N:M1[0]
+                                                 <GHC.Generics.S>_P
+                                                 <'GHC.Generics.MetaSel
+                                                    ('GHC.Base.Just "user")
+                                                    'GHC.Generics.NoSourceUnpackedness
+                                                    'GHC.Generics.NoSourceStrictness
+                                                    'GHC.Generics.DecidedLazy>_P
+                                                 <GHC.Generics.K1
+                                                    GHC.Generics.R [GHC.Types.Char]>_R <a1>_N)
+                                            (GHC.Generics.N:K1[0]
+                                                 <GHC.Generics.R>_P <[GHC.Types.Char]>_R <a1>_P))
+                                       0#
+                                       ipv7 }) of ds2 { (#,#) ipv7 ipv8 ->
+                             ipv8 })) } })
+                      (GHC.Types.[] @ Data.Bson.Field))) -}
+772f86e1a7a18125c756a0faee523381
+  $w$dGToBSON1 ::
     GHC.Generics.M1
       GHC.Generics.S
       ('GHC.Generics.MetaSel
@@ -5025,8 +5405,8 @@ fdfdf05a55f24956e67a0a30c515319d
                                        ipv7 }) of ds2 { (#,#) ipv7 ipv8 ->
                              ipv8 })) } })
                       (GHC.Types.[] @ Data.Bson.Field))) -}
-ee35652b209f56693019c5a022266989
-  $w$dGToBSON1 ::
+6e28c538e5d1813522d7ddb8b5c60c8e
+  $w$dGToBSON2 ::
     GHC.Prim.Int#
     -> (GHC.Generics.:+:)
          (GHC.Generics.M1
@@ -5142,8 +5522,8 @@ ee35652b209f56693019c5a022266989
                         @ a1
                         ww
                         x }) -}
-c155db1de93fe1dd32f0ebf8a0e670ca
-  $w$dGToBSON2 ::
+959c54fb240a7fc167565cf3487dc805
+  $w$dGToBSON3 ::
     GHC.Generics.M1
       GHC.Generics.S
       ('GHC.Generics.MetaSel
@@ -5321,7 +5701,7 @@ a9b6f6fcc2c57f0bbd22db011ed0ed77
           Data.Text.Internal.Text #)
   {- Arity: 5, Strictness: <L,U(U)><L,U(U)><S,1*U><S,U><S,U>,
      Inline: [0] -}
-34e83fe81a9ee2ba5f6540ef06a47a95
+059c1ae95b00aefd9955e2fe8e94602c
   type API =
     ("requestLock"
      Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
@@ -5336,14 +5716,14 @@ a9b6f6fcc2c57f0bbd22db011ed0ed77
                                                       Servant.API.Sub.:> Servant.API.Verbs.Post
                                                                            '[Servant.API.ContentTypes.JSON]
                                                                            GHC.Types.Bool))
-c165c86568daee379f1d6bc767af773f
+3f46b47bca0d30c34d2493cedc43f91d
   data Lock
     = Lock {fileID :: GHC.Base.String, user :: GHC.Base.String}
-59af277d867951fd43fdccbad0972355
+deca9264e453cce668ca5207fe836b7d
   data LockRequest
     = LockRequest {filename :: GHC.Base.String,
                    username :: GHC.Base.String}
-c165c86568daee379f1d6bc767af773f
+3f46b47bca0d30c34d2493cedc43f91d
   axiom Rep_Lock::
       GHC.Generics.Rep LockAPI.Lock
         = GHC.Generics.D1
@@ -5369,7 +5749,7 @@ c165c86568daee379f1d6bc767af773f
                                       'GHC.Generics.NoSourceStrictness
                                       'GHC.Generics.DecidedLazy)
                                    (GHC.Generics.Rec0 GHC.Base.String)))
-59af277d867951fd43fdccbad0972355
+deca9264e453cce668ca5207fe836b7d
   axiom Rep_LockRequest::
       GHC.Generics.Rep LockAPI.LockRequest
         = GHC.Generics.D1
@@ -5395,28 +5775,28 @@ c165c86568daee379f1d6bc767af773f
                                       'GHC.Generics.NoSourceStrictness
                                       'GHC.Generics.DecidedLazy)
                                    (GHC.Generics.Rec0 GHC.Base.String)))
-e04680e53b72fda8890b6e93a80a5a28
+1457478019e1d424b208e95064047949
   fileID :: LockAPI.Lock -> GHC.Base.String
   RecSel Left LockAPI.Lock
   {- Arity: 1, HasNoCafRefs, Strictness: <S(SL),1*U(1*U,A)>,
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: LockAPI.Lock) ->
                  case ds of wild { LockAPI.Lock ds1 ds2 -> ds1 }) -}
-f44f833b87af85f61d15fc471cb2a74a
+eee4a34a70461ade6ef860f218e80a55
   filename :: LockAPI.LockRequest -> GHC.Base.String
   RecSel Left LockAPI.LockRequest
   {- Arity: 1, HasNoCafRefs, Strictness: <S(SL),1*U(1*U,A)>,
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: LockAPI.LockRequest) ->
                  case ds of wild { LockAPI.LockRequest ds1 ds2 -> ds1 }) -}
-567129d13ca367baf6402829dffd05da
+010e95c5b27e2a056121996fabd99b63
   user :: LockAPI.Lock -> GHC.Base.String
   RecSel Left LockAPI.Lock
   {- Arity: 1, HasNoCafRefs, Strictness: <S(LS),1*U(A,1*U)>,
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: LockAPI.Lock) ->
                  case ds of wild { LockAPI.Lock ds1 ds2 -> ds2 }) -}
-5513f140627fd074f9acd3c43383cd9a
+2019984872108d9f6454a449dfe79aed
   username :: LockAPI.LockRequest -> GHC.Base.String
   RecSel Left LockAPI.LockRequest
   {- Arity: 1, HasNoCafRefs, Strictness: <S(LS),1*U(A,1*U)>,
@@ -5445,6 +5825,8 @@ instance GHC.Read.Read [LockAPI.LockRequest]
 instance GHC.Show.Show [LockAPI.Lock] = LockAPI.$fShowLock
 instance GHC.Show.Show [LockAPI.LockRequest]
   = LockAPI.$fShowLockRequest
+instance Data.Bson.Generic.ToBSON [LockAPI.Lock]
+  = LockAPI.$fToBSONLock
 instance Data.Bson.Generic.ToBSON [LockAPI.LockRequest]
   = LockAPI.$fToBSONLockRequest
 instance Data.Bson.Generic.ToBSON [[]] = LockAPI.$fToBSON[]
@@ -5487,6 +5869,19 @@ family instance GHC.Generics.Rep [LockAPI.LockRequest]
                                          $dSingI
                                          $dSingI1
   = LockAPI.$fToBSON[]_$s$fConstructorMetaMetaCons
+"SPEC/LockAPI $fConstructorMetaMetaCons @ "Lock" @ 'PrefixI @ 'True" [ALWAYS] forall ($dKnownSymbol :: GHC.TypeLits.KnownSymbol
+                                                                                                         "Lock")
+                                                                                     ($dSingI :: GHC.Generics.SingI
+                                                                                                   'GHC.Generics.PrefixI)
+                                                                                     ($dSingI1 :: GHC.Generics.SingI
+                                                                                                    'GHC.Types.True)
+  GHC.Generics.$fConstructorMetaMetaCons @ "Lock"
+                                         @ 'GHC.Generics.PrefixI
+                                         @ 'GHC.Types.True
+                                         $dKnownSymbol
+                                         $dSingI
+                                         $dSingI1
+  = LockAPI.$fToBSONLock_$s$fConstructorMetaMetaCons
 "SPEC/LockAPI $fConstructorMetaMetaCons @ "LockRequest" @ 'PrefixI @ 'True" [ALWAYS] forall ($dKnownSymbol :: GHC.TypeLits.KnownSymbol
                                                                                                                 "LockRequest")
                                                                                             ($dSingI :: GHC.Generics.SingI
