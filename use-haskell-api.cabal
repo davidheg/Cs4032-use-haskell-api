@@ -20,6 +20,8 @@ library
                      , UseHaskellAPIClient
                      , AuthenticationAPI
                      , AuthenticationAPIClient
+                     , LockAPI
+                     , LockAPIClient
   build-depends:       base >= 4.7 && < 5
                      , servant
                      , servant-client
