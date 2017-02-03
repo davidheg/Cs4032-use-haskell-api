@@ -7,7 +7,7 @@
 {-# LANGUAGE TypeOperators        #-}
 {-# LANGUAGE TypeSynonymInstances #-}
 
-module LockAPI (LockRequest(..), Lock(..) ) where
+module LockAPI (LockRequest(..), Lock(..), API(..) ) where
 
 
 import           Data.Aeson

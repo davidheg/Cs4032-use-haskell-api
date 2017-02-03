@@ -10,7 +10,7 @@ module LockAPIClient where
 import           Data.Proxy
 import           Servant.API
 import           Servant.Client
-import           UseHaskellAPI
+import           LockAPI
 
 
 lockAPI :: Proxy API
